@@ -1,0 +1,48 @@
+
+{% assign date = 'now' | date: "%s" |plus: 0 %}
+{% assign affirmed = shop.metafields.pricelock.affirmed %}
+{% assign diffSeconds = date|minus: affirmed %}
+{% assign last = diffSeconds | divided_by: 3600 | divided_by: 24 %}
+{% if last < 2 %}
+
+    {% if shop.metafields.pricelock.require_tag_text == nil or shop.metafields.pricelock.require_tag_text == "" %}
+        {% assign tag_requirement_met = 'yes' %}
+    {% else %}
+    {% assign has_tag = 0 %}
+    {% for tag in customer.tags %}
+        {% if shop.metafields.pricelock.require_tag_text == tag %}
+            {% assign has_tag = 1 %}
+        {% endif %}
+    {% endfor %}
+    {% if has_tag == 1 %}
+        {% assign tag_requirement_met = 'yes' %}
+    {% endif %}
+{% endif %}
+
+{% unless product.price %}
+    {% assign product = item %}
+{% endunless %}
+{% unless product.price %}
+    {% assign product = qvp %}
+{% endunless %}
+
+{% if customer == nil or tag_requirement_met != 'yes' %}
+  {% assign in_hidden_collect = false %}
+  {% for c in product.collections %}
+    {% if c.metafields.pricelock.enabled == 1%}
+        {% assign in_hidden_collect = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% if in_hidden_collect or product.metafields.pricelock.enabled == 1 or shop.metafields.pricelock.hide_all_prices == 1 %}
+  	
+  {% else %}
+  	{% include 'talon_pricelock_show_price_product-form_56C834DD' %}
+  {% endif %}
+{% else %}
+	{% include 'talon_pricelock_show_price_product-form_56C834DD' %}
+{% endif %}
+{% else %}
+	{% include 'talon_pricelock_show_price_product-form_56C834DD' %}
+{% endif %}
+        

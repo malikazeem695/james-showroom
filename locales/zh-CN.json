@@ -1,54 +1,13 @@
 {
-  "store_availability": {
-    "general": {
-      "in_stock": "有现货",
-      "out_of_stock": "缺货",
-      "view_store_info": "查看店铺信息",
-      "check_other_stores": "查看其他商店的空房情况",
-      "available_for_pick_up_at_html": "可在<b>{{ location_name }}<\/b>取件",
-      "unavailable_for_pick_up_at_html": "目前在<b>{{ location_name }}<\/b>不可用的取件",
-      "available_for_pick_up_at_time_html": "提供接送服务，{{ pick_up_time }}",
-      "unavailable_for_pick_up_at_time_html": "取件目前不可用",
-      "kilometers": "km",
-      "miles": "mi"
-    }
-  },
-  "product": {
-    "price": {
-      "range_html": "{{ price_min }} - {{ price_max }}",
-      "unit_pricing_html": "{{ unit_quantity }} | {{ unit_price }} \/ {{ unit_measurement}}"
-    },
-    "badge": {
-      "sale_percentage_range_html": "保存到{{ price_percent }}％",
-      "sale_percentage_single_html": "保存{{ price_percent }}％",
-      "sale_money_range_html": "保存最多{{ price }}",
-      "sale_money_single_html": "保存{{ price }}",
-      "sold_out": "卖光了",
-      "sale": "销售",
-      "in_stock": "有存货"
-    }
-  },
-  "sections": {
-    "complementary_product_block": {
-      "from": "从",
-      "now": "现在",
-      "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} \/ {{ unit_measure }}",
-      "view_details": "查看产品"
-    }
-  },
   "general": {
+    "meta": {
+      "tagged_html": "标签语法",
+      "page": "页面"
+    },
     "404": {
       "title": "找不到页面",
       "subtext": "抱歉，我们找不到你要求的页面",
       "continue_shopping_html": "试试看其他搜寻或<a href=\"\/collections\/all\">继续购物<\/a>"
-    },
-    "accessibility": {
-      "total_reviews": "总评",
-      "star_reviews_info": "{{ rating_value }} {{ rating_max }}星"
-    },
-    "meta": {
-      "tagged_html": "标签语法",
-      "page": "页面"
     },
     "password_page": {
       "opening_soon": "即将开幕",
@@ -59,11 +18,12 @@
       "login_form_password_label": "密码",
       "login_form_password_placeholder": "你的密码",
       "login_form_submit": "登入",
+      "signup_form_heading": "营业时间",
       "signup_form_submit": "提交",
       "signup_form_success": "提交成功! 我们即将在开幕前寄邮件给您",
       "admin_link_html": "你是店主吗?",
       "password_link": "输入密码",
-      "powered_by_shopify_html": "此网页使用<a href=\"https:\/\/www.shopify.com\/&ref=out-of-the-sandbox\" target=\"_blank\" rel=\"nofollow\">Shopify<\/a>系统"
+      "powered_by_shopify_html": "此网页使用<a href=\"https:\/\/www.shopify.com\/?ref=out-of-the-sandbox\" target=\"_blank\">Shopify<\/a>系统"
     },
     "forms": {
       "post_error": "表单填写有误请重新填写",
@@ -93,32 +53,13 @@
       "load_more": "更多",
       "all_results": "更多",
       "placeholder": "搜寻...",
-      "placeholder_with_blog_name": "搜索{{ blog_title }}...",
       "placeholder_with_shop_name": "搜寻{{ shop_name }}...",
       "submit": "搜寻",
       "results_count": {
         "zero": "零",
         "one": "一",
         "other": "其他"
-      },
-      "results_text": "{{ results }} 为 “{{ search_terms }}” 找到",
-      "no_results_text": "{{ results }} 為了 “{{ search_terms }}”",
-      "close": "关闭"
-    },
-    "predictive_search": {
-      "no_results_text": "找不到匹配结果。",
-      "query_suggestions_heading": "建议",
-      "product_suggestions_heading": "产品",
-      "posts_suggestions_heading": "帖子",
-      "pages_suggestions_heading": "页面",
-      "pages_and_posts_suggestions_heading": "帖子和页面",
-      "search_button_label": "搜索 “{{ search_terms }}”"
-    },
-    "currency": {
-      "dropdown_label": "货币"
-    },
-    "language": {
-      "dropdown_label": "语言"
+      }
     }
   },
   "blogs": {
@@ -142,8 +83,7 @@
       "next_article_html": "下一篇文章",
       "tags": "标签",
       "author": "作者",
-      "comment_meta_html": "<strong>{{ author }}<\/strong>于<strong><time datetime=\"{{ date }}\">{{ date }}<\/time><\/strong>",
-      "read_time": "读"
+      "comment_meta_html": "<strong>{{ author }}<\/strong>于<strong><time datetime=\"{{ date }}\">{{ date }}<\/time><\/strong>"
     },
     "counts": {
       "comments_with_count": {
@@ -175,7 +115,6 @@
       "all_collection_title": "所有{{ title }}",
       "quick_shop": "+快速浏览",
       "load_more": "更多",
-      "load_more_collections": "加载更多收藏",
       "new": "新品",
       "coming_soon": "即将上市",
       "pre_order": "预购",
@@ -188,18 +127,21 @@
       "product_types": "品项",
       "vendors": "供应商",
       "tags": "标签",
-      "cancel": "不接受邀请",
-      "clear": "清除",
-      "apply_filter": "申请",
-      "clear_all": "清除所有",
-      "from": "从",
-      "to": "到"
+      "cancel": "不接受邀请"
     },
     "sorting": {
       "title": "排序依据",
       "sort_collection": "排序",
       "filter": "过滤",
-      "filter_collection": "过滤{{ title }}"
+      "filter_collection": "过滤{{ title }}",
+      "featured": "注目商品",
+      "best_selling": "热销商品",
+      "az": "字母顺序：A－Z",
+      "za": "字母顺序：Z－A",
+      "price_ascending": "价格顺序：由低到高",
+      "price_descending": "价格顺序：由高到低",
+      "date_descending": "上架顺序：最新到最旧",
+      "date_ascending": "上架顺序：最旧到最新"
     }
   },
   "products": {
@@ -225,27 +167,14 @@
       "items_left_count": {
         "one": "库存剩下",
         "other": "库存剩下"
-      },
-      "view_in_your_space": "在您的空间中查看"
+      }
     },
     "notify_form": {
       "email": "请输入您的电邮地址",
       "send": "寄出",
       "message_content": "如{{ product }} 有货时请通知我 - {{ url }}",
-      "message_content_first": "如",
-      "message_content_last": " 有货时请通知我 - ",
       "post_success": "谢谢，有货时我们即将通知您！",
-      "post_error": "请提供一个有效的电子邮件信箱",
-      "notify_me_richtext": "当此产品可用时通知我："
-    },
-    "item": {
-      "price": {
-        "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} \/ {{ unit_measure }}"
-      }
-    },
-    "onboarding": {
-      "tab_title": "描述",
-      "tab_content": "添加产品描述以共享有关您产品的信息。"
+      "post_error": "请提供一个有效的电子邮件信箱"
     }
   },
   "contact": {
@@ -291,12 +220,12 @@
       "add_new": "新增地址",
       "edit_address": "编辑地址",
       "company": "公司",
-      "address1": "地址 1",
-      "address2": "地址 2",
+      "address1": "地址1",
+      "address2": "地址2",
       "city": "城市",
       "country": "国家",
-      "province": "省\/州",
-      "zip": "郵政編碼\/郵編",
+      "province": "省",
+      "zip": "邮递区号",
       "phone": "电话号码",
       "set_default": "设成常用地址",
       "add": "新增地址",
@@ -344,8 +273,6 @@
     "order": {
       "title": "订单{{ name }}",
       "date": "下单日期{{ date }}",
-      "note": "订购须知",
-      "note_placeholder": "没有提供订购单。",
       "cancelled": "订单取消日期{{ date }}",
       "cancelled_reason": "取消原因：{{ reason }}",
       "billing_address": "账单地址",
@@ -391,9 +318,7 @@
       "blogpost_title": "Your post's title",
       "blog_excerpt": "Your store hasn’t published any blog posts yet. A blog can be used to talk about new product launches, tips, or other news you want to share with your customers. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and blog.",
       "blog_author": "Author name",
-      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar.",
-      "product_vendor": "供应商名称",
-      "hotspot_identifier": "产品 {{ identifier }}"
+      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar."
     }
   },
   "gift_cards": {
@@ -422,12 +347,8 @@
       "item": "商品",
       "uploaded_file": "已上传的档案",
       "continue_browsing_html": "您的购物车内没有任何商品 。",
-      "continue_shopping": "继续购物！",
+      "continue_shopping_link_html": "继续购物！",
       "excluding_tax_shipping": "不包含税金和邮资",
-      "tax_and_shipping": "结账时计算的税金和运费",
-      "taxes_and_shipping_policy_at_checkout_html": "结账时计算的税金和<a href=\"{{ link }}\">运费<\/a>",
-      "taxes_included_but_shipping_at_checkout": "结账时计算的税金（包含）和运费",
-      "taxes_included_and_shipping_policy_html": "税金（包含）。结账时计算的<a href=\"{{ link }}\">运费<\/a>。",
       "orders_processed_in_currency_html": "订单将以{{ currency }}计算。",
       "note": "订单备注",
       "agree_to_terms_html": "我同意所有交易条款",
@@ -435,16 +356,13 @@
       "agree_to_terms_warning": "您必须同意交易条款后才能结账。",
       "or": "或",
       "subtotal": "小计",
-      "discount": "折扣",
       "update": "更新金额",
-      "checkout": "结账",
-      "maximum_quantity": "最大数量",
-      "free": "自由"
+      "checkout": "结账"
     },
     "shipping_calculator": {
       "estimated_shipping": "预估邮资",
       "country": "国家",
-      "province": "省 \/ 州",
+      "province": "省",
       "zip_code": "邮递区号",
       "heading": "邮资计算机",
       "submit_button_label": "计算邮资",
