@@ -1,157 +1,405 @@
-<script
-  type="application/json"
-  data-section-type="product-template"
-  data-section-id="{{ section.id }}"
->
-</script>
-<div class="section">
-  <div class="container">
-    {% if section.settings.product_breadcrumb %}
-      <div class="breadcrumb-wrapper one-whole column">
-        <div class="breadcrumb-collection breadcrumb-collection--product">
-          {% if collection.previous_product or collection.next_product %}
-            <div class="nav_arrows breadcrumb_text">
-              {% if collection.previous_product %}
-                <a href="{{ collection.previous_product }}" title="{{ 'products.general.previous_product_html' | t }}" class="breadcrumb_link"><span class="icon-left-arrow"> {{ 'products.general.previous_product_html' | t }}</span></a>
-              {% endif %}
-              {% if collection.previous_product and collection.next_product %}<span class="breadcrumb-divider"> | </span>{% endif %}
+{% comment %}
+** Product - default view **
+- Product template
+{% endcomment %}
 
-              {% if collection.next_product %}
-                <a href="{{collection.next_product}}" title="{{ 'products.general.next_product_html' | t }}" class="breadcrumb_link">{{ 'products.general.next_product_html' | t }} <span class="icon-right-arrow"></span></a>
+<a name="pagecontent" id="pagecontent"></a>
+
+<div class="container main content product-name--{{ product.handle }}">
+  <div class="sixteen columns">
+    {% if collection.previous_product or collection.next_product or section.settings.product_breadcrumb %}
+      <div class="clearfix breadcrumb-collection">
+        {% if collection.previous_product or collection.next_product %}
+          <div class="nav_arrows breadcrumb_text">
+            {% if collection.previous_product %}
+              <a href="{{ collection.previous_product }}" title="{{ 'products.general.previous_product_html' | t }}" class="breadcrumb_link"><span class="icon-left-arrow"> {{ 'products.general.previous_product_html' | t }}</span></a>
+            {% endif %}
+            {% if collection.previous_product and collection.next_product %}<span class="breadcrumb-divider"> | </span>{% endif %}
+
+            {% if collection.next_product %}
+              <a href="{{collection.next_product}}" title="{{ 'products.general.next_product_html' | t }}" class="breadcrumb_link">{{ 'products.general.next_product_html' | t }} <span class="icon-right-arrow"></span></a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if section.settings.product_breadcrumb %}
+          <div class="breadcrumb_text" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a href="{{ shop.url }}" title="{{ shop.name | escape }}" itemprop="item" class="breadcrumb_link">
+                <span itemprop="name">{{ 'general.breadcrumbs.home' | t }}</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </span>
+            <span class="breadcrumb-divider">/</span>
+            <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              {% if collection %}
+                <a href="{{ collection.url }}" title="{{ collection.title | escape }}" itemprop="item" class="breadcrumb_link">
+                  <span itemprop="name">{{ collection.title }}</span>
+                  <meta itemprop="position" content="2" />
+                  </a>
+              {% else %}
+                <a href="/collections/all" title="{{ collections.all.title }}" itemprop="item" class="breadcrumb_link">
+                  <span itemprop="name">{{ collections.all.title }}</span>
+                  <meta itemprop="position" content="2" />
+                  </a>
+              {% endif %}
+            </span>
+            <span class="breadcrumb-divider">/</span>
+            <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a href="{{ product.url }}" itemprop="item" class="breadcrumb_link">
+                <span itemprop="name">{{ product.title }}</span>
+                <meta itemprop="position" content="3" />
+              </a>
+            </span>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+  {% comment %}Check to see if sidebar should be enabled{% endcomment %}
+  {% if section.blocks.size > 0 %}
+    {% assign sidebar = true %}
+  {% else %}
+    {% assign sidebar = false %}
+  {% endif %}
+
+  <div class="product clearfix">
+    {% if sidebar %}
+      {% include 'sidebar' %}
+      <div class="twelve columns">
+    {% else %}
+      <div class="sixteen columns">
+    {% endif %}
+ 
+    <div  class="product-{{ product.id }}"
+          data-free-text="{{ settings.free_price_text }}"
+          >
+      <div class="section product_section clearfix js-product_section {% if section.settings.product_images_position == 'right' %}align_right--images{% endif %}" itemscope itemtype="http://schema.org/Product" data-rv-handle="{{ product.handle }}">
+
+        <div class="nine columns medium-down--one-whole {% if section.settings.product_images_position == 'left' %}alpha{% else %}omega{% endif %}">
+          {% include 'product-images' %}
+        </div>
+
+        <div class="seven columns medium-down--one-whole  {% if section.settings.product_images_position == 'left' %}omega{% else %}alpha{% endif %}">
+
+          {% assign collection_handles = product.collections | map: 'handle' %}
+          {% assign variant = product.selected_or_first_available_variant %}
+
+          {% if product.available %}
+            {% if settings.sale_banner_enabled and product.compare_at_price_max > product.price %}
+              <div class="sale_banner_product">{{ 'collections.general.sale' | t }}</div>
+            {% endif %}
+          {% endif %}
+          {% if collection_handles contains 'new' %}
+            <div class="new_banner_product">{{ 'collections.general.new' | t }}</div>
+          {% endif %}
+          {% if collection_handles contains 'pre-order' %}
+            <div class="preorder_banner_product">{{ 'collections.general.pre_order' | t }}</div>
+          {% endif %}
+
+            <p class="vendor">
+              <span itemprop="brand" class="vendor">{{ product.vendor | link_to_vendor }}</span>
+            </p>
+
+          {% if variant.sku != blank and section.settings.display_sku %}
+            <p class="sku">
+              <span itemprop="sku">{{ variant.sku }}</span>
+            </p>
+          {% endif %}
+          <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
+          {% if section.settings.enable_shopify_product_badges and settings.enable_shopify_review_comments %}
+            <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+          {% endif %}
+          <div class="feature_divider"></div>
+
+          {% assign product_tags = product.tags | join: ' ' %}
+          {% if product_tags contains 'meta-size-chart-' %}
+            {% for tag in product.tags %}
+              {% if tag contains 'meta-size-chart-' %}
+                <a href="#size-chart{{product.id}}" class="size_chart" data-remodal-target="size-chart{{product.id}}" data-no-instant>{{ 'products.product.size_chart' | t }} <span class="icon-right-arrow"></span></a>
+                {% include 'popup-size-chart', product_id: product.id %}
+              {% endif %}
+            {% endfor %}
+          {% elsif settings.size_chart != blank %}
+            <a href="#size-chart" class="size_chart" data-remodal-target="size-chart" data-no-instant>{{ 'products.product.size_chart' | t }} <span class="icon-right-arrow"></span></a>
+          {% endif %}
+
+
+          {% if collection_handles contains 'coming-soon' %}
+            <p class="modal_price">{{ 'collections.general.coming_soon' | t }}</p>
+          {% else %}
+                {% if product.type == 'Lighting' or  product.type == 'Furniture'%}
+          <p class="nplo"><a href="/account/login">Log in</a> for pricing</p>
+          {% else %}
+          <p class="nplo"><a href="/account/login">Log in</a> for pricing and samples</p>
+          {% endif %}
+            <p class="modal_price hidiein" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+              <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+              <meta itemprop="seller" content="{{ shop.name | escape }}" />
+              <link itemprop="availability" href="http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}">
+              <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition"/>
+
+              <span class="sold_out">{% if variant.available == false %}{{ 'products.product.sold_out' | t }}{% endif %}</span>
+              <span itemprop="price" content="{{ variant.price | money_without_currency | remove: "," }}" class="{% if variant.compare_at_price > variant.price %}sale{% endif %}">
+                <span class="current_price {% if product.available == false %}hidden{% endif %}">
+                  {% if variant.price > 0 %}
+                    <span class="money">{{ variant.price | money }}</span>
+                  {% else %}
+                    {{ settings.free_price_text }}
+                  {% endif %}
+                </span>
+              </span>
+              <span class="was_price">
+                {% if variant.price < variant.compare_at_price and variant.available %}
+                  <span class="money">{{ variant.compare_at_price | money }}</span>
+                {% endif %}
+              </span>
+
+              {% if section.settings.display_savings %}
+                <span class="sale savings">
+                  {% if variant.price < variant.compare_at_price and variant.available %}
+                    {{ 'products.product.savings' | t }}  {{ variant.compare_at_price | minus: variant.price | times: 100 | divided_by: variant.compare_at_price }}% (<span class="money">{{ variant.compare_at_price | minus: variant.price | money }}</span>)
+                  {% endif %}
+                </span>
+              {% endif %}
+            </p>
+
+            {% include 'product-notify-me' %}
+          {% endif %}
+
+          {% unless collection_handles contains 'coming-soon' %}
+            {% include 'product-form' with 'product' %}
+          {% endunless %}
+          
+          
+         
+          
+          {% if customer %}
+          {% if product.type == 'Lighting' or  product.type == 'Furniture'%}
+           <button data-fancybox data-src="#hidden-content1" class="action_button " href="javascript:;">
+          Purchase Inquiry
+          </button>
+          {% else %}
+           <button data-fancybox data-src="#hidden-content" class="action_button purchase_inquiry" href="javascript:;">
+          Purchase Inquiry
+          </button>
+          {% endif %}
+           {%  endif  %}
+          <div style="display: none;" id="hidden-content">
+            <div style="margin:0 auto;" class="pxFormGenerator" id="8xeNwpElaji2XPJYtGUe1Q"></div>
+          </div>
+           <div style="display: none;" id="hidden-content1">
+            <div style="margin:0 auto;" class="pxFormGenerator" id="G1OZXqA4hDSbqi-Zo_HghA"></div>
+          </div>
+
+            {% if product.description != blank %}
+             <div class="description bottom" itemprop="description">
+              <h2>Details</h2>
+              {{ product.description | split: '<!-- split -->' | first }}
+             </div>
+            {% endif %}
+          
+           <a class="product_print" onclick="window.print()">Download Tearsheet</a>
+
+          {% if section.settings.review_position == "next_to_gallery" %}
+            <div class="shopify-reviews reviewsVisibility--{{settings.enable_shopify_review_comments}}">
+              <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+            </div>
+          {% endif %}
+
+          {% if section.settings.display_collections or section.settings.display_tags or section.settings.display_type %}
+            <div class="product_links">
+              {% if section.settings.display_collections %}
+                <p>
+                  <span class="label">{{ 'products.product.collections' | t }}:</span>
+                  <span>
+                   {% for col in product.collections %}
+                     <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>{% unless forloop.last %},{% endunless %}
+                   {% endfor %}
+                  </span>
+                </p>
+              {% endif %}
+
+              {% if section.settings.display_type %}
+                <p>
+                  <span class="label">{{ 'products.product.product_types' | t }}:</span>
+                  <span>{{ product.type | link_to_type }}</span>
+                </p>
+              {% endif %}
+
+              {% if section.settings.display_tags %}
+                <p>
+                 {% for tag in product.tags %}
+                   {% if forloop.first %}
+                     <span class="label">{{ 'products.product.tags' | t }}:</span>
+                   {% endif %}
+
+                   {% unless tag contains 'meta-' %}
+                     <span>
+                       <a href="/collections/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}" title="{{ 'products.product.products_tagged' | t: tag: tag }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
+                       </span>
+                   {% endunless %}
+                 {% endfor %}
+                </p>
               {% endif %}
             </div>
           {% endif %}
 
-          {% render 'product__breadcrumb' %}
+          <div class="meta">
+            {% if section.settings.display_social_buttons %}
+              {% include "social-buttons" with "product" %}
+            {% endif %}
+          </div>
         </div>
       </div>
+
+      {% if product.description contains "<!-- split -->"  %}
+        <br class="clear" />
+        <div class="section clearfix">
+          <div class="description">
+            {{ product.description | split: '<!-- split -->' | last }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if section.settings.review_position == "below_gallery" %}
+        <div class="shopify-reviews reviewsVisibility--{{settings.enable_shopify_review_comments}}">
+          <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if sidebar %}
+
+            {% if section.settings.display_related_products %}
+              {% include 'include-related-products' %}
+            {% endif %}
+            {% if section.settings.display_recently_viewed %}
+              {% include 'recently-viewed' %}
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+
+    {% else %}
+
+          </div>
+        </div>
+      </div>
+
+
+    <div class="productPrintTemplate text-center">
+      <div class="Cotainer customContainer">
+      <div class="productPrintTemplate--logo">
+        <img src="//cdn.shopify.com/s/files/1/0079/4142/3185/files/James_Rec_Logo_NOBKGR_410x.png?v=1553647251">
+      </div>
+      {% if product.type == 'Furniture'%}
+         <div class="productPrintTemplate--productImage">
+        <img  id="image-url" src="{{ product.featured_image.src | img_url: 'master' }}">
+      </div>
+        {% else %}
+      <div class="productPrintTemplate--productImage">
+        <img  id="image-url" src="{{ variant.image | img_url: 'master' }}">
+      </div>
+       {% endif %}
+      <div class="productPrintTemplate--productContent">
+        <div class="leftSide">
+           <p class="vendor">
+              <span itemprop="brand" class="vendor">{{ product.vendor | link_to_vendor }}</span>
+            </p>
+          <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
+          <ul class="ac2q">
+      
+           
+            
+             {% for option_title in product.options %}
+                         {% if option_title contains 'Color'%}
+           <li><span class="label">{{ option_title }}: <span class="swatch-color-display colorone" ></span></span></li> <span class="dana jj{{forloop.index}}">|</span>
+{% else %} 
+<li><span class="label">{{ option_title }}: <span   class="swatch-color-display normone"></span></span></li> <span class="dana jj{{forloop.index}}">|</span>
+             {% endif %}         
+{% endfor %}
+          </ul>
+        
+        <div class="des">
+          {{ product.description }}
+        </div>
+      </div>
+        </div>
+      <hr class="productPrintTemplate--separator">
+       
+      <div class="productPrintTemplate--productFooter">
+        <span>1025 N. STEMMONS FWY, #250, DALLAS, TX75207 | (214) 295-7500 | DALLAS@JAMESSHOWROOM.COM</span>
+      </div>
+        
+        
+      </div>
+    </div>
+
+
+      {% if section.settings.display_related_products %}
+        {% include 'include-related-products' %}
+      {% endif %}
+
+      <div class="contact-section">
+        <h2>If you have questions about one of our lines, <br>
+          <a href="">contact us</a></h2>
+      </div>
+
+
+
+
+      {% if section.settings.display_recently_viewed %}
+        {% include 'recently-viewed' %}
+      {% endif %}
+
     {% endif %}
 
-    <section
-      class="
-        product-container
-        is-flex
-        is-flex-wrap
-      "
-    >
-      {%
-        render 'product',
-        context: 'product',
-        product: product,
-        variant: product.selected_or_first_available_variant,
-        gallery_thumbnails: section.settings.product_thumbs,
-        gallery_click_to_zoom: section.settings.enable_product_lightbox,
-        gallery_hover_zoom: section.settings.activate_zoom,
-        gallery_arrows: section.settings.gallery_arrows,
-        gallery_thumbnail_position: section.settings.thumbnail_position,
-        gallery_thumbnail_slider: section.settings.enable_thumbnail_slider,
-        gallery_slideshow_speed: section.settings.slideshow_speed,
-        gallery_slideshow_transition: section.settings.slideshow_animation,
-        media_position: section.settings.media_position,
-        set_product_height: section.settings.set_product_height,
-        product_height: section.settings.product_height,
-        video_looping: section.settings.video_looping,
-        show_dynamic_checkout_button: settings.show_dynamic_checkout_button
-      %}
-    </section>
-  </div>
-</div>
+<style>
+ul.ac2q li {
+    display: inline;
+}
+span.dana.jj2{display: none}
+</style>
 
 {% schema %}
+
 {
-  "name": "Product information",
-  "class": "shopify-section--product-template is-product-main content",
+  "name": "Product",
+  "class": "product-template",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "product_breadcrumb",
-      "label": "Show breadcrumb links"
-    },
-    {
-      "type": "header",
-      "content": "Media",
-      "info": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)"
-    },
-    {
-      "type": "radio",
-      "id": "media_position",
-      "label": "Product media position",
-      "options": [
-        {
-          "value": "is-flex-row",
-          "label": "Left"
-        },
-        {
-          "value": "is-flex-row-reverse",
-          "label": "Right"
-        }
-      ]
-    },
-    {
-      "type": "checkbox",
-      "id": "set_product_height",
-      "label": "Set height of product media",
-      "default": false
-    },
-    {
-      "type": "range",
-      "id": "product_height",
-      "label": "Product media height",
-      "min": 200,
-      "max": 800,
-      "step": 10,
-      "default": 500,
-      "unit": "px"
-    },
-    {
-      "type": "checkbox",
-      "id": "video_looping",
-      "label": "Enable video looping",
-      "default": false
-    },
     {
       "type": "header",
       "content": "Product gallery"
     },
     {
       "type": "checkbox",
-      "id": "product_thumbs",
-      "label": "Show thumbnails",
-      "default": true
-    },
-    {
-      "type": "checkbox",
       "id": "gallery_arrows",
-      "label": "Show arrows",
-      "info": "Only applies to desktop",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_product_lightbox",
-      "label": "Enable lightbox",
+      "label": "Show arrows on product gallery",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "activate_zoom",
-      "label": "Magnify product images on hover",
+      "label": "Magnify product images on hover"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_product_lightbox",
+      "label": "Enable product gallery popup",
       "default": true
     },
     {
-      "type": "range",
-      "id": "slideshow_speed",
-      "label": "Gallery speed",
-      "min": 0,
-      "max": 6,
-      "unit": "sec",
-      "default": 0,
-      "info": "Set to 0 to disable autoplay."
+      "type": "checkbox",
+      "id": "activate_autoplay",
+      "label": "Enable product gallery slideshow"
     },
     {
       "type": "select",
       "id": "slideshow_animation",
-      "label": "Transition",
+      "label": "Gallery transition",
       "options": [
         {
           "value": "slide",
@@ -165,303 +413,334 @@
       "default": "slide"
     },
     {
-      "type": "select",
-      "id": "thumbnail_position",
-      "label": "Thumbnails position",
-      "default": "bottom",
+      "type": "radio",
+      "id": "product_images_position",
+      "label": "Gallery position",
       "options": [
         {
-          "value": "bottom",
-          "label": "Below main image"
-        },
-        {
           "value": "left",
-          "label": "Left of main image"
+          "label": "Left"
         },
         {
           "value": "right",
-          "label": "Right of main image"
+          "label": "Right"
         }
       ]
     },
     {
       "type": "checkbox",
-      "id": "enable_thumbnail_slider",
-      "label": "Enable thumbnail slider",
+      "id": "product_thumbs",
+      "label": "Show product gallery thumbnails",
       "default": true
+    },
+    {
+      "type": "select",
+      "id": "thumbnail_position",
+      "label": "Thumbnail position",
+      "default": "bottom-slider",
+      "options": [
+        {
+          "value": "bottom-thumbnails",
+          "label": "Bottom (grid)"
+        },
+        {
+          "value": "bottom-slider",
+          "label": "Bottom (slider)"
+        },
+        {
+          "value": "left-thumbnails",
+          "label": "Left"
+        },
+        {
+          "value": "right-thumbnails",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Product info"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_breadcrumb",
+      "label": "Show breadcrumb links"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_sku",
+      "label": "Show SKU"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_savings",
+      "label": "Show price savings",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_button",
+      "label": "Show dynamic checkout button",
+      "default": false,
+      "info": "Lets customers check out directly using a familiar payment method. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_collections",
+      "label": "Show collections"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_type",
+      "label": "Show type"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_tags",
+      "label": "Show tags"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_social_buttons",
+      "label": "Show social media share icons",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Product reviews"
+    },
+    {
+      "type": "paragraph",
+      "content": "Reviews app must be enabled [(?)](https://help.outofthesandbox.com/hc/en-us/articles/360008549274#section2)"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_shopify_product_badges",
+      "label": "Display star rating on product",
+      "default": false
+    },
+    {
+      "type": "radio",
+      "id": "review_position",
+      "label": "Reviews position",
+      "default": "next_to_gallery",
+      "options": [
+        {
+          "value": "next_to_gallery",
+          "label": "In product description area"
+        },
+        {
+          "value": "below_gallery",
+          "label": "Below image\/description"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Related products"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_related_products",
+      "label": "Show related products ([?](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006909487-Related-Products))",
+      "default": true
+    },
+    {
+      "type": "radio",
+      "id": "related_products_style",
+      "label": "Layout",
+      "default": "grid",
+      "options": [
+        {
+          "value": "slider",
+          "label": "Slider"
+        },
+        {
+          "value": "grid",
+          "label": "Grid"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "related_products_limit",
+      "label": "Limit products",
+      "min": 2,
+      "max": 50,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "products_per",
+      "label": "Products per row",
+      "min": 3,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Recently viewed products"
+    },
+    {
+      "type": "paragraph",
+      "content": "To test the recently viewed products, view your online store outside of the Editor and visit multiple product pages ([?](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115008765228))"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_recently_viewed",
+      "label": "Show recently viewed products",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "rv_title",
+      "label": "Title",
+      "default": "Recently Viewed Items"
+    },
+    {
+      "type": "radio",
+      "id": "rv_products_style",
+      "label": "Layout",
+      "default": "grid",
+      "options": [
+        {
+          "value": "slider",
+          "label": "Slider"
+        },
+        {
+          "value": "grid",
+          "label": "Grid"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "rv_max_display",
+      "label": "Products limit",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "rv_per",
+      "label": "Products per row",
+      "min": 3,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Create a sidebar by adding content blocks."
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle",
+      "label": "Toggle sidebar content",
+      "default": false
     }
   ],
   "blocks": [
     {
-      "type": "@app"
-    },
-    {
-      "type": "collapsible-tab",
-      "name": "Collapsible tab",
-      "settings": [
-        {
-          "type": "text",
-          "id": "collapsible_tab_heading",
-          "label": "Heading",
-          "default": "Collapsible tab"
-        },
-        {
-          "type": "richtext",
-          "id": "collapsible_tab_text",
-          "label": "Text",
-          "default": "<p>Use this text to share information about your product.</p>"
-        }
-      ]
-    },
-    {
-      "type": "custom-liquid",
-      "name": "Custom liquid",
-      "settings": [
-        {
-          "type": "liquid",
-          "id": "custom_liquid",
-          "label": "Custom liquid"
-        }
-      ]
-    },
-    {
-      "type": "description",
-      "name": "Description",
+      "type": "filter_by_collection",
+      "name": "Collection list",
       "limit": 1
     },
     {
-      "type": "form",
-      "name": "Form",
-      "limit": 1,
+      "type": "menu",
+      "name": "Menu",
       "settings": [
         {
-          "type": "paragraph",
-          "content": "Customize form features for the product in the products portion of the theme settings."
+          "type": "link_list",
+          "id": "custom_menu_linklist",
+          "label": "Menu"
         }
       ]
     },
     {
-      "type": "popup",
-      "name": "Pop-up",
-      "limit": 1,
+      "type": "page",
+      "name": "Page",
       "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Text",
-          "default": "Pop-up link text"
-        },
-        {
-          "type": "select",
-          "id": "text_alignment",
-          "label": "Text alignment",
-          "default": "left",
-          "options": [
-            {
-              "value": "left",
-              "label": "Left"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            }
-          ]
-        },
         {
           "type": "page",
-          "id": "page",
-          "label": "Page",
-          "info": "[Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006910707-Using-the-Size-Chart-Sections-themes-)"
+          "id": "content_page",
+          "label": "Page"
         }
       ]
     },
     {
-      "type": "price",
-      "name": "Price",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "display_savings",
-          "label": "Show price savings",
-          "default": true
-        }
-      ]
-    },
-    {
-      "type": "product-links",
-      "name": "Product links",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "show_collections",
-          "label": "Show collections",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "show_types",
-          "label": "Show types",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "show_tags",
-          "label": "Show tags",
-          "default": true
-        }
-      ]
-    },
-    {
-      "type": "rating",
-      "name": "Product rating",
+      "type": "recently_viewed",
+      "name": "Recently viewed products",
       "limit": 1,
       "settings": [
         {
           "type": "paragraph",
-          "content": "To display a rating, add a product rating app. [Learn more](https://apps.shopify.com/product-reviews)"
+          "content": "To test the recently viewed products, view your online store outside of the Editor and visit multiple product pages ([?](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115008765228))"
+        },
+        {
+          "type": "text",
+          "id": "sidebar_rv_title",
+          "label": "Title",
+          "default": "Recently Viewed"
+        },
+        {
+          "type": "range",
+          "id": "sidebar_rv_per",
+          "label": "Products limit",
+          "min": 1,
+          "max": 4,
+          "step": 1,
+          "default": 3
         }
       ]
     },
     {
-      "type": "sku",
-      "name": "SKU",
+      "type": "filter_by_tag",
+      "name": "Tag list",
       "limit": 1
-    },
-    {
-      "type": "share",
-      "name": "Share",
-      "limit": 1
-    },
-    {
-      "type": "tabs",
-      "name": "Tabs",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "show_product_description",
-          "label": "Show product description",
-          "default": false
-        },
-        {
-          "type": "checkbox",
-          "id": "show_tabs_below_product_gallery",
-          "label": "Show tabs below product gallery",
-          "info": "Desktop only",
-          "default": false
-        },
-        {
-          "type": "header",
-          "content": "Tab"
-        },
-        {
-          "type": "text",
-          "id": "tab_heading_1",
-          "label": "Heading",
-          "default": "Tab 1"
-        },
-        {
-          "type": "richtext",
-          "id": "tab_text_1",
-          "label": "Text",
-          "default": "<p>Use this text to share information about your product.</p>"
-        },
-        {
-          "type": "header",
-          "content": "Tab"
-        },
-        {
-          "type": "text",
-          "id": "tab_heading_2",
-          "label": "Heading",
-          "default": "Tab 2"
-        },
-        {
-          "type": "richtext",
-          "id": "tab_text_2",
-          "label": "Text",
-          "default": "<p>Use this text to share information about your product.</p>"
-        },
-        {
-          "type": "header",
-          "content": "Tab"
-        },
-        {
-          "type": "text",
-          "id": "tab_heading_3",
-          "label": "Heading",
-          "default": "Tab 3"
-        },
-        {
-          "type": "richtext",
-          "id": "tab_text_3",
-          "label": "Text",
-          "default": "<p>Use this text to share information about your product.</p>"
-        }
-      ]
     },
     {
       "type": "text",
       "name": "Text",
       "settings": [
         {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Heading"
+        },
+        {
           "type": "richtext",
           "id": "text",
           "label": "Text",
-          "default": "<p>Text block</p>"
+          "default": "<p>Text area can be used for special announcements or general information.</p>"
         }
       ]
     },
     {
-      "type": "title",
-      "name": "Title",
+      "type": "filter_by_type",
+      "name": "Type list",
       "limit": 1
     },
     {
-      "type": "vendor",
-      "name": "Vendor",
+      "type": "filter_by_vendor",
+      "name": "Vendor list",
       "limit": 1
-    },
-    {
-      "type": "complementary_products",
-      "name": "Complementary products",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "paragraph",
-          "content": "To select complementary products, add the Search & Discovery app. [Learn more](https:\/\/shopify.dev\/themes\/product-merchandising\/recommendations)"
-        },
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading",
-          "default": "Pairs well with"
-        },
-        {
-          "type": "range",
-          "id": "product_recommendation_limit",
-          "label": "Maximum products to show",
-          "min": 1,
-          "max": 10,
-          "default": 5
-        },
-        {
-          "type": "range",
-          "id": "products_per_slide",
-          "label": "Number of products per page",
-          "min": 1,
-          "max": 3,
-          "default": 2
-        }
-      ]
     }
-  ]
+  ],
+  "default": {
+    "settings": {
+
+    }
+  }
 }
 
 {% endschema %}

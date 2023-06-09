@@ -1,0 +1,1230 @@
+{
+  "form": {
+    "id": "kntL8M",
+    "name": "Trade Registration",
+    "handle": "trade-registration-10",
+    "theme_id": "120311251025",
+    "settings": {
+      "locales": {
+        "back": "Back",
+        "next": "Next",
+        "cancel": "Cancel",
+        "edit_link": "Edit account",
+        "fix_errors": "Please fix errors before continuing",
+        "is_invalid": "{{label}} is invalid",
+        "email_taken": "Email has already been taken",
+        "phone_taken": "Phone number has already been taken",
+        "server_error": "Could not save form, please try again later",
+        "step_counter": "Step {{current}} of {{total}}",
+        "verify_email": "Check your email for a verification link to activate your account.",
+        "not_available": "An error occurred while saving your account, please try again in a few minutes.",
+        "create_account": "Create account",
+        "update_account": "Update account",
+        "recaptcha_error": "Challenge verification failed, please try again",
+        "creating_account": "Creating account...",
+        "updating_account": "Updating account...",
+        "invalid_email_domain": "Email contains an invalid domain name"
+      },
+      "enableRecaptcha": false,
+      "whitelistedTags": "",
+      "recaptchaSiteKey": "",
+      "markRequiredFields": false,
+      "displayCancelButton": true,
+      "goBackAfterSubmission": false,
+      "cancelButtonRedirectUrl": "\/account\/login",
+      "postSubmissionRedirectUrl": "\/account",
+      "goBackAfterCancelButtonClick": false
+    },
+    "install_locations": [
+      "register"
+    ],
+    "created_at": "2021-04-01T20:15:55Z",
+    "updated_at": "2021-08-05T17:25:27Z",
+    "revision_ids": [
+      "orTY4ay",
+      "kdT5Nap",
+      "K0Tg1or",
+      "B5TAp8g",
+      "GYT5dp3",
+      "znTxD2",
+      "qYTgOZ",
+      "akT4q5",
+      "Y9T79m9",
+      "akTzdv1",
+      "mLTMk2",
+      "3qTgRL",
+      "xMTxD5A",
+      "B5ToVX",
+      "NMTr1k",
+      "OzT194",
+      "PnT382",
+      "nRTEbx",
+      "X1TOB4",
+      "8oTaMo"
+    ]
+  },
+  "revision": {
+    "id": "orTY4ay",
+    "created_at": "2021-08-19T13:57:37Z",
+    "updated_at": "2021-08-19T13:57:37Z",
+    "embed_version": "4.5.9",
+    "published_at": null,
+    "fields": [
+      {
+        "id": 900615,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 0,
+        "type": "heading",
+        "stepId": 228625,
+        "default": "",
+        "label": "New heading field",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12,
+          "alignment": "left"
+        },
+        "settings": {
+          "size": 1,
+          "content": "Trade Application",
+          "hideLabel": true,
+          "fontWeight": "bold"
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 410255,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 1,
+        "type": "paragraph",
+        "stepId": 228625,
+        "default": "",
+        "label": "New paragraph field",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "content": "<p>JAMES Showroom offers designer net pricing for members of the interior design trade with a current resale license and\/or an EIN. We also require (2) trade references, plus a website and\/or social media account featuring your design business.&nbsp;<\/p>\n<p>&nbsp;<\/p>",
+          "fontSize": 14,
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 298220,
+        "dataColumn": {
+          "key": "website",
+          "label": "Website",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 10,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Website",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 761201,
+        "dataColumn": {
+          "key": "resale_",
+          "label": "Resale #",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 11,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Resale #",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 668935,
+        "dataColumn": {
+          "key": "resale_form",
+          "label": "Resale Form",
+          "dataType": "file"
+        },
+        "parentId": null,
+        "position": 12,
+        "type": "file",
+        "stepId": 228625,
+        "default": "",
+        "label": "Resale Form",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "less_than",
+            "comparand": 25600,
+            "errorMessage": "Please upload a file less than 25MB in size",
+            "metadata": {
+              "mandatory": true,
+              "staticOperator": true,
+              "staticComparand": true
+            }
+          },
+          {
+            "operator": "file_extension_not_blank",
+            "comparand": null,
+            "errorMessage": "Please upload a file with a valid file extension",
+            "metadata": {
+              "mandatory": true,
+              "staticOperator": true
+            }
+          },
+          {
+            "operator": "file_extension_not_equals",
+            "comparand": ".exe,.dmg,.pkg,.sh,.bat,.cmd,.dll,.vbs,.vbe,.vb,.js,.jse,.jar,.py,.hta,.html,.htm,.tmp,.msi,.msp,.com,.ps1,.ps1xml,.ps2,.ps2xml,.psc1,.psc2,.lnk,.inf,.scf",
+            "errorMessage": "Please upload a non-executable file"
+          }
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 146334,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 13,
+        "type": "paragraph",
+        "stepId": 228625,
+        "default": "",
+        "label": "New paragraph field",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "content": "<p><span class=\"help-block\">Please click and download <a style=\"color: blue; font-weight: bolder !Important;\" href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0079\/4142\/3185\/files\/JAMES_TX_Resale_Form_3d8812f9-6825-4b4f-be42-e05877a71e00.pdf?v=1595362960\" target=\"_blank\" rel=\"noopener\">THE RESALE FORM<\/a>. Please fill it out, and upload above.<\/span><\/p>",
+          "fontSize": 14,
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 176490,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 14,
+        "type": "paragraph",
+        "stepId": 228625,
+        "default": "",
+        "label": "New paragraph field",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "content": "<p><span class=\"help-block\">Please upload your resale or tax certificate to complete your trade account registration. If we do not receive a resale or trade certificate, we cannot set up a trade account for you.<\/span><\/p>",
+          "fontSize": 14,
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 514526,
+        "dataColumn": {
+          "key": "resale_or_tax_certificate",
+          "label": "Resale or Tax Certificate",
+          "dataType": "file"
+        },
+        "parentId": null,
+        "position": 15,
+        "type": "file",
+        "stepId": 228625,
+        "default": "",
+        "label": "Resale or Tax Certificate",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "less_than",
+            "comparand": 25600,
+            "errorMessage": "Please upload a file less than 25MB in size",
+            "metadata": {
+              "mandatory": true,
+              "staticOperator": true,
+              "staticComparand": true
+            }
+          },
+          {
+            "operator": "file_extension_not_blank",
+            "comparand": null,
+            "errorMessage": "Please upload a file with a valid file extension",
+            "metadata": {
+              "mandatory": true,
+              "staticOperator": true
+            }
+          },
+          {
+            "operator": "file_extension_not_equals",
+            "comparand": ".exe,.dmg,.pkg,.sh,.bat,.cmd,.dll,.vbs,.vbe,.vb,.js,.jse,.jar,.py,.hta,.html,.htm,.tmp,.msi,.msp,.com,.ps1,.ps1xml,.ps2,.ps2xml,.psc1,.psc2,.lnk,.inf,.scf",
+            "errorMessage": "Please upload a non-executable file"
+          }
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 895152,
+        "dataColumn": {
+          "key": "trade_reference_1_",
+          "label": "Trade Reference #1 ",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 16,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Trade Reference #1 ",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 138746,
+        "dataColumn": {
+          "key": "trade_reference_1_website",
+          "label": "Trade Reference #1 Website",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 17,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Trade Reference #1 Website",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 774577,
+        "dataColumn": {
+          "key": "trade_reference_1_phone",
+          "label": "Trade Reference #1 Phone",
+          "dataType": "phone"
+        },
+        "parentId": null,
+        "position": 18,
+        "type": "phone",
+        "stepId": 228625,
+        "default": "",
+        "label": "Trade Reference #1 Phone",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "defaultCountryCode": "US"
+        },
+        "validations": [
+          {
+            "operator": "is_valid",
+            "comparand": null,
+            "errorMessage": "Please provide a valid phone number"
+          }
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 173496,
+        "dataColumn": {
+          "key": "trade_reference_1__1",
+          "label": "Trade Reference #2  ",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 19,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Trade Reference #2  ",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 105435,
+        "dataColumn": {
+          "key": "default_address.company",
+          "label": "Company",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 2,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Firm Name",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "company",
+        "autotag": null
+      },
+      {
+        "id": 180140,
+        "dataColumn": {
+          "key": "trade_reference_1__1_1",
+          "label": "Trade Reference #2 Website",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 20,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Trade Reference #2 Website",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 181900,
+        "dataColumn": {
+          "key": "trade_reference_1_phone_1",
+          "label": "Trade Reference #2 Phone ",
+          "dataType": "phone"
+        },
+        "parentId": null,
+        "position": 21,
+        "type": "phone",
+        "stepId": 228625,
+        "default": "",
+        "label": "Trade Reference #2 Phone ",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "defaultCountryCode": "US"
+        },
+        "validations": [
+          {
+            "operator": "is_valid",
+            "comparand": null,
+            "errorMessage": "Please provide a valid phone number"
+          }
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 549449,
+        "dataColumn": {
+          "key": "default_address.address1",
+          "label": "Address line 1",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 3,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Address line 1",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "address1",
+        "autotag": null
+      },
+      {
+        "id": 166013,
+        "dataColumn": {
+          "key": "default_address.address2",
+          "label": "Address line 2",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 4,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Address line 2",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "address2",
+        "autotag": null
+      },
+      {
+        "id": 115461,
+        "dataColumn": {
+          "key": "default_address.city",
+          "label": "City",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 5,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "City",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "city",
+        "autotag": null
+      },
+      {
+        "id": 361859,
+        "dataColumn": {
+          "key": "default_address.province",
+          "label": "State\/Province",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 6,
+        "type": "dropdown",
+        "stepId": 228625,
+        "default": "",
+        "label": "State\/Province",
+        "placeholder": "Select a state\/province...",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "defaultCountry": "Canada",
+          "isProvinceField": true
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "province",
+        "autotag": null
+      },
+      {
+        "id": 649081,
+        "dataColumn": {
+          "key": "default_address.zip",
+          "label": "Zip\/Postal code",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 7,
+        "type": "text",
+        "stepId": 228625,
+        "default": "",
+        "label": "Zip\/Postal code",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "zip",
+        "autotag": null
+      },
+      {
+        "id": 143607,
+        "dataColumn": {
+          "key": "default_address.country",
+          "label": "Country",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 8,
+        "type": "dropdown",
+        "stepId": 228625,
+        "default": "",
+        "label": "Country",
+        "placeholder": "Select a country...",
+        "description": "",
+        "enum": [
+          {
+            "value": "",
+            "label": ""
+          }
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "isCountryField": true
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "country",
+        "autotag": null
+      },
+      {
+        "id": 416591,
+        "dataColumn": {
+          "key": "default_address.phone",
+          "label": "Address phone number",
+          "dataType": "phone"
+        },
+        "parentId": null,
+        "position": 9,
+        "type": "phone",
+        "stepId": 228625,
+        "default": "",
+        "label": "Phone \n",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "defaultCountryCode": "US"
+        },
+        "validations": [
+          {
+            "operator": "is_valid",
+            "comparand": null,
+            "errorMessage": "Please provide a valid phone number"
+          }
+        ],
+        "sensitive": null,
+        "preset": "phone_number",
+        "autotag": null
+      },
+      {
+        "id": 124149,
+        "dataColumn": null,
+        "parentId": null,
+        "position": 0,
+        "type": "paragraph",
+        "stepId": 529971,
+        "default": "",
+        "label": "New paragraph field",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "content": "<h4>JAMES&nbsp;SHOWROOM OFFERS DESIGNER NET PRICING FOR MEMBERS OF THE INTERIOR DESIGN TRADE WITH A CURRENT RESALE LICENSE AND\/OR AN EIN. WE ALSO REQUIRE (2) TRADE REFERENCES, PLUS A WEBSITE AND\/OR SOCIAL MEDIA ACCOUNT FEATURING&nbsp;YOUR DESIGN BUSINESS.<\/h4>",
+          "fontSize": 14,
+          "hideLabel": true
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      },
+      {
+        "id": 554233,
+        "dataColumn": {
+          "key": "first_name",
+          "label": "First name",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 1,
+        "type": "text",
+        "stepId": 529971,
+        "default": "",
+        "label": "First name",
+        "placeholder": "",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 6
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "first_name",
+        "autotag": null
+      },
+      {
+        "id": 105979,
+        "dataColumn": {
+          "key": "last_name",
+          "label": "Last name",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 2,
+        "type": "text",
+        "stepId": 529971,
+        "default": "",
+        "label": "Last name",
+        "placeholder": "",
+        "description": null,
+        "enum": null,
+        "appearance": {
+          "width": 6
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "last_name",
+        "autotag": null
+      },
+      {
+        "id": 156535,
+        "dataColumn": {
+          "key": "email",
+          "label": "Email address",
+          "dataType": "email"
+        },
+        "parentId": null,
+        "position": 3,
+        "type": "email",
+        "stepId": 529971,
+        "default": "",
+        "label": "Email address",
+        "placeholder": "",
+        "description": "Used for account login and order notifications",
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "is_valid_email",
+            "comparand": null,
+            "errorMessage": "Please provide a valid email address"
+          },
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "email_address",
+        "autotag": null
+      },
+      {
+        "id": 207090,
+        "dataColumn": {
+          "key": "accepts_marketing",
+          "label": "Accepts marketing",
+          "dataType": "boolean"
+        },
+        "parentId": null,
+        "position": 4,
+        "type": "checkbox",
+        "stepId": 529971,
+        "default": true,
+        "label": "Subscribe to our email newsletter",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": "accepts_marketing",
+        "autotag": null
+      },
+      {
+        "id": 171849,
+        "dataColumn": {
+          "key": "phone",
+          "label": "Phone number",
+          "dataType": "phone"
+        },
+        "parentId": null,
+        "position": 5,
+        "type": "phone",
+        "stepId": 529971,
+        "default": "",
+        "label": "Phone number ",
+        "placeholder": "",
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "defaultCountryCode": "US"
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          }
+        ],
+        "sensitive": null,
+        "preset": "phone_number",
+        "autotag": null
+      },
+      {
+        "id": 121294,
+        "dataColumn": {
+          "key": "password",
+          "label": "Password",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 6,
+        "type": "text",
+        "stepId": 529971,
+        "default": "",
+        "label": "Password",
+        "placeholder": "",
+        "description": "",
+        "enum": null,
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+          {
+            "operator": "not_blank",
+            "comparand": "",
+            "errorMessage": "Must not be blank",
+            "metadata": {
+              "hiddenInApp": true
+            }
+          },
+          {
+            "operator": "longer_than",
+            "comparand": 5,
+            "errorMessage": "Password is too short",
+            "metadata": {
+              "mandatory": true,
+              "staticOperator": true,
+              "comparandFieldProps": {
+                "min": 5
+              }
+            }
+          }
+        ],
+        "sensitive": true,
+        "preset": "password",
+        "autotag": null
+      },
+      {
+        "id": 707382,
+        "dataColumn": {
+          "key": "password_confirmation",
+          "label": "Password confirmation",
+          "dataType": "text"
+        },
+        "parentId": null,
+        "position": 7,
+        "type": "password_confirmation",
+        "stepId": 529971,
+        "default": "",
+        "label": "Password confirmation",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+          "passwordMatchErrorMessage": "Must match password"
+        },
+        "validations": [
+
+        ],
+        "sensitive": true,
+        "preset": "password_confirmation",
+        "autotag": null
+      },
+      {
+        "id": 170139,
+        "dataColumn": {
+          "key": "wholesale_partner",
+          "label": "I am signing up as a wholesale partner",
+          "dataType": "boolean"
+        },
+        "parentId": null,
+        "position": 8,
+        "type": "checkbox",
+        "stepId": 529971,
+        "default": true,
+        "label": "I am applying as a trade partner",
+        "placeholder": null,
+        "description": "",
+        "enum": [
+
+        ],
+        "appearance": {
+          "width": 12
+        },
+        "settings": {
+        },
+        "validations": [
+
+        ],
+        "sensitive": null,
+        "preset": null,
+        "autotag": null
+      }
+    ],
+    "steps": [
+      {
+        "id": 529971,
+        "title": "Register",
+        "description": ""
+      },
+      {
+        "id": 228625,
+        "title": "Trade Application",
+        "description": ""
+      }
+    ],
+    "rules": [
+      {
+        "id": 271398,
+        "title": "Show \"Wholesale\" step and tag customer",
+        "conditionChaining": "all",
+        "conditions": [
+          {
+            "operand": null,
+            "operator": "is_true",
+            "metadata": {
+              "comparand": "Wholesale",
+              "column": {
+                "key": "wholesale_partner",
+                "label": "I am signing up as a wholesale partner",
+                "dataType": "boolean"
+              }
+            }
+          }
+        ],
+        "actions": [
+          {
+            "effect": "show_step",
+            "metadata": {
+              "stepId": 228625
+            }
+          },
+          {
+            "effect": "tag_customer",
+            "metadata": {
+              "value": "wholesale"
+            }
+          }
+        ]
+      },
+      {
+        "id": 195628,
+        "title": "Show tax exempt upload field",
+        "conditionChaining": "all",
+        "conditions": [
+          {
+            "operand": null,
+            "operator": "is_true",
+            "metadata": {
+              "column": {
+                "key": "tax_exempt",
+                "label": "Tax exempt",
+                "dataType": "boolean"
+              }
+            }
+          }
+        ],
+        "actions": [
+          {
+            "effect": "show_field",
+            "metadata": {
+              "fieldId": 134858
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

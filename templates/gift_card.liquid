@@ -2,7 +2,9 @@
 {% assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros: gift_card.currency %}
 {% assign formatted_initial_value_stripped = formatted_initial_value | strip_html %}
 <!doctype html>
-<html class="template-giftcard no-js">
+<!--[if IE 8]><html class="template-giftcard no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 template-giftcard no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="template-giftcard no-js"> <!--<![endif]-->
 <head>
   <!-- Basic page needs ================================================== -->
   <meta charset="utf-8">
@@ -10,34 +12,32 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="{{ settings.favicon | img_url: '32x32' }}">
 
+  <!-- Custom Fonts -->
+  {% if settings.logo_font contains 'Google' or settings.headline_font contains 'Google' or settings.nav_font contains 'Google' or settings.slideshow_subtitle_font contains 'Google' or settings.regular_font contains 'Google' %}
+      <link href="//fonts.googleapis.com/css?family=.|{% if settings.logo_font contains 'Google' %}{{ settings.logo_font | replace: 'Google_', '' | replace: "'", "" }}:light,normal,bold|{% endif %}{% if settings.headline_font contains 'Google' %}{{ settings.headline_font | replace: 'Google_', '' | replace: "'", "" }}:light,normal,bold|{% endif %}{% if settings.nav_font contains 'Google' %}{{ settings.nav_font | replace: 'Google_', '' | replace: "'", "" }}:light,normal,bold|{% endif %}{% if settings.slideshow_subtitle_font contains 'Google' %}{{ settings.slideshow_subtitle_font | replace: 'Google_', '' | replace: "'", "" }}:light,normal,bold|{% endif %}{% if settings.regular_font contains 'Google' %}{{ settings.regular_font | replace: 'Google_', '' | replace: "'", "" }}:light,normal,bold{% endif %}" rel="stylesheet" type="text/css" />
+  {% endif %}
+
   <!-- Title and description ================================================== -->
   <title>{{ 'gift_cards.issued.title' | t: value: formatted_initial_value_stripped, shop: shop.name }}</title>
-  <meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">
+  {%- comment %}<locksmith:4952>{% endcomment -%}
+    {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">{% endif -%}
+    {%- comment %}original: <meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">{%- endcomment %}
+  {%- comment %}</locksmith:4952>{% endcomment -%}
 
   <!-- Helpers ================================================== -->
   <link rel="canonical" href="{{ canonical_url }}">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
 
-  <!-- Preconnect Domains -->
-  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
-  <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
-
-  <!-- Preload Assets -->
-  <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
-  <link rel="preload" href="{{ 'gift-card.css' | asset_url }}" as="style">
-
-  {{ 'styles.css' | asset_url | stylesheet_tag }}
-  {{ 'gift-card.css' | asset_url | stylesheet_tag }}
-
-  <script src="{{ 'modernizr.gift-card.js' | shopify_asset_url }}" defer></script>
-  <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer></script>
+  {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'gift-card.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'modernizr.gift-card.js' | shopify_asset_url | script_tag }}
+  {{ 'vendor/qrcode.js' | shopify_asset_url | script_tag }}
 </head>
 <body>
   <div class="wrapper">
     <header class="giftcard-header" role="banner">
-      <div class="giftcard-header__logo">
+      <div class="h1 header-logo logo" itemscope itemtype="http://schema.org/Organization">
         <a href="{{ shop.url }}" itemprop="url">{{ shop.name }}</a>
       </div>
       <div class="shop-url">{{ shop.url }}</div>
@@ -54,7 +54,7 @@
             {% endunless %}
             {% assign gift_card_expiry_date = gift_card.expires_on | date: "%d/%m/%y" %}
             {% if gift_card.expired and gift_card.enabled %}
-              <span class="giftcard__tag">{{ 'gift_cards.issued.expired' | t: expiry: gift_card_expiry_date }}</span>
+               <span class="giftcard__tag">{{ 'gift_cards.issued.expired' | t: expiry: gift_card_expiry_date }}</span>
             {% endif %}
             {% if gift_card.expired != true and gift_card.expires_on and gift_card.enabled %}
               <span class="giftcard__tag giftcard__tag--active">{{ 'gift_cards.issued.active' | t: expiry: gift_card_expiry_date }}</span>
@@ -68,7 +68,7 @@
             <div class="h1 giftcard__amount{% if initial_value_size > 6 %} giftcard__amount--medium{% endif %}">
               {% if gift_card.balance != gift_card.initial_value %}
                 <span class="tooltip">
-                  <span class="tooltip__label">{% render 'price-element', price: gift_card.balance %} <small>left</small></span>
+                  <span class="tooltip__label">{{ gift_card.balance | money }} <small>left</small></span>
                 </span>
               {% endif %}
               <strong>{{ formatted_initial_value }}</strong>
@@ -88,17 +88,15 @@
 
           <div id="QrCode"></div>
           <script>
-            window.addEventListener('DOMContentLoaded', function() {
-              new QRCode(document.getElementById('QrCode'), {
-                text: "{{ gift_card.qr_identifier }}",
-                width: 120,
-                height: 120
-              });
+            new QRCode(document.getElementById('QrCode'), {
+              text: "{{ gift_card.qr_identifier }}",
+              width: 120,
+              height: 120
             });
           </script>
 
           <div class="giftcard__actions">
-            <a href="{{ shop.url }}" class="global-button global-button--primary" target="_blank">{{ 'gift_cards.issued.shop_link' | t }}</a>
+            <a href="{{ shop.url }}" class="action_button" target="_blank">{{ 'gift_cards.issued.shop_link' | t }}</a>
             <a href="#" class="action-link" onclick="window.print();">
               <i class="action-link__print"></i>{{ 'gift_cards.issued.print' | t }}
             </a>

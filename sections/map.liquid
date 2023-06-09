@@ -1,34 +1,16 @@
-<script
-  type="application/json"
-  data-section-type="map"
-  data-section-id="{{ section.id }}"
->
-</script>
-
 {% include 'include-map' %}
 
 {% schema %}
+
 {
   "name": "Map",
-  "class": "shopify-section--map",
+  "class": "map-section",
   "settings": [
     {
       "type": "checkbox",
-      "id": "map_wide_display",
+      "id": "wide_display",
       "label": "Wide display",
       "default": true
-    },
-    {
-      "type": "image_picker",
-      "id": "map_image",
-      "label": "Image",
-      "info": "Displayed when map isn't loaded"
-    },
-    {
-      "type": "image_picker",
-      "id": "map_mobile_image",
-      "label": "Mobile Image",
-      "info": "900 x 1800px recommended"
     },
     {
       "type": "text",
@@ -57,6 +39,12 @@
       "default": 16
     },
     {
+      "type": "image_picker",
+      "id": "map_image",
+      "label": "Image",
+      "info": "Displayed when map isn't loaded"
+    },
+    {
       "type": "header",
       "content": "API key"
     },
@@ -77,16 +65,14 @@
       "type": "select",
       "id": "map_style",
       "label": "Map color scheme",
-      "info": "Requires use of API key",
-      "default": "default",
       "options": [
-        {
-          "value": "aubergine",
-          "label": "Aubergine"
-        },
         {
           "value": "default",
           "label": "Default"
+        },
+        {
+          "value": "aubergine",
+          "label": "Aubergine"
         },
         {
           "value": "night",
@@ -100,25 +86,9 @@
           "value": "silver",
           "label": "Silver"
         }
-      ]
-    },
-    {
-      "type": "header",
-      "content": "Advanced"
-    },
-    {
-      "type": "paragraph",
-      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
-    },
-    {
-      "type": "text",
-      "id": "css_class",
-      "label": "CSS Class"
-    },
-    {
-      "type": "textarea",
-      "id": "custom_css",
-      "label": "Custom CSS"
+      ],
+      "default": "default",
+      "info": "Requires use of API key"
     }
   ],
   "presets": [
@@ -126,10 +96,7 @@
       "name": "Map",
       "category": "Store information"
     }
-  ],
-  "disabled_on": {
-    "groups": [ "*" ]
-  }
+  ]
 }
 
 {% endschema %}
