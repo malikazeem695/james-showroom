@@ -3,9 +3,45 @@
     "name": "theme_info",
     "theme_name": "Turbo",
     "theme_author": "Out of the Sandbox",
-    "theme_version": "4.0.0",
+    "theme_version": "9.0.0",
     "theme_documentation_url": "https:\/\/help.outofthesandbox.com\/",
     "theme_support_url": "https:\/\/help.outofthesandbox.com\/hc\/en-us\/requests\/new"
+  },
+  {
+    "name": "t:settings_schema.age_gate.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_age_gate_site_wide",
+        "label": "t:settings_schema.age_gate.enable_site_wide.label",
+        "default": false
+      },
+      {
+        "type": "number",
+        "id": "age_gate_site_wide_min_age",
+        "label": "t:settings_schema.age_gate.minimum_age.label",
+        "default": 18
+      },
+      {
+        "type": "text",
+        "id": "age_gate_heading",
+        "label": "t:settings_schema.age_gate.heading.label",
+        "default": "Age Verification"
+      },
+      {
+        "type": "text",
+        "id": "age_gate_description",
+        "label": "t:settings_schema.age_gate.description.label",
+        "default": "Please enter your date of birth for full access."
+      },
+      {
+        "type": "checkbox",
+        "id": "show_age_gate_logo",
+        "label": "t:settings_schema.age_gate.show_logo.label",
+        "default": true,
+        "info": "t:settings_schema.age_gate.show_logo.info"
+      }
+    ]
   },
   {
     "name": "Performance",
@@ -56,8 +92,8 @@
             "label": "Fade"
           },
           {
-            "value": "none",
-            "label": "None"
+            "value": "color",
+            "label": "Dominant color"
           }
         ],
         "default": "blur-up"
@@ -91,12 +127,6 @@
         "id": "regular_color",
         "label": "Regular text",
         "default": "#333333"
-      },
-      {
-        "type": "color",
-        "id": "banner_color",
-        "label": "Banner headings",
-        "default": "#ffffff"
       },
       {
         "type": "color",
@@ -247,12 +277,6 @@
       },
       {
         "type": "color",
-        "id": "banner_button_color",
-        "label": "Banner buttons",
-        "default": "#ffffff"
-      },
-      {
-        "type": "color",
         "id": "btn_hover_color",
         "label": "Buttons hover",
         "default": "#AE3333"
@@ -298,6 +322,36 @@
           }
         ],
         "default": "button"
+      },
+      {
+        "type": "header",
+        "content": "Banners",
+        "info": "A banner is any component that uses full-width background images and has content overtop."
+      },
+      {
+        "type": "color",
+        "id": "banner_button_color",
+        "label": "Banner buttons",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "banner_color",
+        "label": "Banner text",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "banner_background_color",
+        "label": "Banner text box",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "banner_placeholder_background_color",
+        "label": "Banner placeholder background",
+        "info": "Shows while banner images are loading",
+        "default": "#666666"
       },
       {
         "type": "header",
@@ -426,21 +480,31 @@
         "default": "#000000"
       },
       {
+        "type": "header",
+        "content": "Stickers"
+      },
+      {
         "type": "color",
         "id": "sale_banner_color",
-        "label": "Sale banner",
+        "label": "Sale",
         "default": "#AE3333"
+      },
+      {
+        "type": "color",
+        "id": "sold_out_banner_color",
+        "label": "Sold out",
+        "default": "#363636"
       },
       {
         "type": "color",
         "id": "new_banner_color",
-        "label": "New and pre-order banners",
+        "label": "New, pre-order, and coming soon",
         "default": "#AE3333"
       },
       {
         "type": "select",
-        "id": "banner_style",
-        "label": "Banner style",
+        "id": "sticker_style",
+        "label": "Sticker style",
         "options": [
           {
             "value": "square",
@@ -512,6 +576,16 @@
         "id": "featured_promotions_mobile_background",
         "label": "Enable mobile background",
         "default": true
+      },
+      {
+        "type": "header",
+        "content": "Shoppable image"
+      },
+      {
+        "type": "color",
+        "id": "shoppable_image_background",
+        "label": "Background",
+        "default": "#ffffff"
       },
       {
         "type": "header",
@@ -599,18 +673,6 @@
       },
       {
         "type": "color",
-        "id": "banner_placeholder_background_color",
-        "label": "Banner placeholder background",
-        "default": "#666666"
-      },
-      {
-        "type": "color",
-        "id": "banner_background_color",
-        "label": "Banner text background",
-        "default": "#000000"
-      },
-      {
-        "type": "color",
         "id": "header_bg_color",
         "label": "Menu background",
         "default": "#888888"
@@ -689,13 +751,13 @@
         "type": "color",
         "id": "password_page_text_color",
         "label": "Text",
-        "default": "#ffffff"
+        "default": "#333333"
       },
       {
         "type": "color",
         "id": "password_page_background_color",
         "label": "Background",
-        "default": "#000000"
+        "default": "#FFFFFF"
       }
     ]
   },
@@ -1116,208 +1178,60 @@
     ]
   },
   {
-    "name": "Mega menus",
+    "name": "Search behavior",
     "settings": [
-      {
-        "type": "paragraph",
-        "content": "Select the number of custom mega menus to enable ([?](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115008690607))"
-      },
-      {
-        "type": "checkbox",
-        "id": "mega_menu_1",
-        "label": "Enable mega menu 1"
-      },
-      {
-        "type": "checkbox",
-        "id": "mega_menu_2",
-        "label": "Enable mega menu 2"
-      },
-      {
-        "type": "checkbox",
-        "id": "mega_menu_3",
-        "label": "Enable mega menu 3"
-      },
-      {
-        "type": "checkbox",
-        "id": "mega_menu_4",
-        "label": "Enable mega menu 4"
-      },
-      {
-        "type": "checkbox",
-        "id": "mega_menu_5",
-        "label": "Enable mega menu 5"
-      }
-    ]
-  },
-  {
-    "name": "Search",
-    "settings": [
-      {
-        "type": "select",
-        "id": "search_option",
-        "label": "Search results",
-        "options": [
-          {
-            "value": "products",
-            "label": "Products"
-          },
-          {
-            "value": "everything",
-            "label": "Everything"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "search_pagination_type",
-        "label": "Pagination type",
-        "options": [
-          {
-            "value": "basic_pagination",
-            "label": "Page links"
-          },
-          {
-            "value": "load_more",
-            "label": "Load more results button"
-          },
-          {
-            "value": "infinite_scroll",
-            "label": "Infinite scroll"
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "content": "Predictive search"
-      },
       {
         "type": "checkbox",
         "id": "enable_autocomplete",
-        "label": "Enable",
+        "label": "Enable predictive search",
         "default": true
       },
       {
-        "type": "range",
-        "id": "search_to_display",
-        "label": "Items to display",
-        "min": 2,
-        "max": 10,
-        "default": 5
+        "type": "checkbox",
+        "id": "show_product_images",
+        "label": "Show product images",
+        "info": "Visible when predictive search enabled.",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_blog_images",
+        "label": "Show blog images",
+        "info": "Visible when predictive search enabled.",
+        "default": true
       }
     ]
   },
   {
-    "name": "Product grid",
+    "name": "Products",
     "settings": [
-      {
-        "type": "select",
-        "id": "mobile_products_per_row",
-        "label": "Products per row on mobile",
-        "options": [
-          {
-            "value": "1",
-            "label": "1"
-          },
-          {
-            "value": "2",
-            "label": "2"
-          }
-        ],
-        "default": "2"
-      },
-      {
-        "type": "select",
-        "id": "pagination_type",
-        "label": "Pagination type",
-        "options": [
-          {
-            "value": "basic_pagination",
-            "label": "Page links"
-          },
-          {
-            "value": "load_more",
-            "label": "Load more products button"
-          },
-          {
-            "value": "infinite_scroll",
-            "label": "Infinite scroll"
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "content": "Images"
-      },
-      {
-        "type": "checkbox",
-        "id": "align_height",
-        "label": "Align height of product images"
-      },
-      {
-        "type": "range",
-        "id": "collection_height",
-        "label": "Product image height",
-        "min": 150,
-        "max": 400,
-        "step": 10,
-        "default": 200,
-        "unit": "px"
-      },
-      {
-        "type": "checkbox",
-        "id": "thumbnail_hover_enabled",
-        "label": "Show product information on hover"
-      },
-      {
-        "type": "checkbox",
-        "id": "display_vendor",
-        "label": "Show vendor"
-      },
-      {
-        "type": "checkbox",
-        "id": "collection_secondary_image",
-        "label": "Show secondary product image"
-      },
-      {
-        "type": "checkbox",
-        "id": "sale_banner_enabled",
-        "label": "Show sale banners"
-      },
-      {
-        "type": "checkbox",
-        "id": "collection_swatches",
-        "label": "Show color swatches ([?](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006911447-Enabling-Color-Swatches-for-Products))"
-      },
       {
         "type": "header",
         "content": "Product form"
       },
       {
-        "type": "checkbox",
-        "id": "notify_me_form",
-        "label": "Enable \"back in stock request\" form"
-      },
-      {
-        "type": "richtext",
-        "id": "notify_me_richtext",
-        "label": "\"back in stock request\" form text",
-        "default": "<p>Notify me when this product is available:<\/p>"
-      },
-      {
-        "type": "radio",
+        "type": "select",
         "id": "product_form_style",
-        "label": "Options style ([?](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006911447-Enabling-Color-Swatches-for-Products))",
+        "label": "Option style",
+        "info": "[Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006911447-Enabling-Color-Swatches-for-Products)",
         "options": [
           {
-            "value": "dropdown",
-            "label": "Select drop-down list"
+            "value": "select",
+            "label": "Dropdown"
           },
           {
-            "value": "swatches",
-            "label": "Color swatches"
+            "value": "radio",
+            "label": "Selectable boxes"
           }
         ],
-        "default": "dropdown"
+        "default": "select"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_dynamic_checkout_button",
+        "label": "Show dynamic checkout button",
+        "default": true,
+        "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
       },
       {
         "type": "checkbox",
@@ -1341,7 +1255,76 @@
         "min": 1,
         "max": 100,
         "default": 10,
-        "info": "Inventory remaining text will be displayed below this value"
+        "info": "Inventory remaining text will be displayed below or equal to this value"
+      },
+      {
+        "type": "header",
+        "content": "Back in stock form"
+      },
+      {
+        "type": "checkbox",
+        "id": "notify_me_form",
+        "label": "Enable \"Back in stock request\" form",
+        "info": "[Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115013035567-How-does-the-back-in-stock-notification-form-work-)"
+      }
+    ]
+  },
+  {
+    "name": "Product grid",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Product cards"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_vendor",
+        "label": "Show vendor"
+      },
+      {
+        "type": "checkbox",
+        "id": "collection_swatches",
+        "label": "Show color swatches",
+        "info": "[Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006911447-Enabling-Color-Swatches-for-Products)"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_star_ratings",
+        "label": "Show star ratings",
+        "info": "To display a rating, add a product rating app. [Learn more](https:\/\/apps.shopify.com\/product-reviews)",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "sale_banner_enabled",
+        "label": "Show product stickers"
+      },
+      {
+        "type": "checkbox",
+        "id": "thumbnail_hover_enabled",
+        "label": "Show product information on hover"
+      },
+      {
+        "type": "select",
+        "id": "mobile_products_per_row",
+        "label": "Products per row on mobile",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          }
+        ],
+        "default": "2"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_price",
+        "label": "Show price for sold out items",
+        "default": false
       },
       {
         "type": "text",
@@ -1350,151 +1333,80 @@
         "default": "Free"
       },
       {
-        "type": "page",
-        "id": "size_chart",
-        "label": "Size chart ([?](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006910707-Using-the-Size-Chart-Sections-themes-))"
+        "type": "header",
+        "content": "Pagination"
+      },
+      {
+        "type": "select",
+        "id": "pagination_type",
+        "label": "Pagination type",
+        "options": [
+          {
+            "value": "basic_pagination",
+            "label": "Page links"
+          },
+          {
+            "value": "load_more_button",
+            "label": "Load more button"
+          },
+          {
+            "value": "load_more",
+            "label": "Infinite load more button"
+          },
+          {
+            "value": "infinite_scroll",
+            "label": "Infinite scroll"
+          }
+        ]
       },
       {
         "type": "header",
-        "content": "Reviews"
+        "content": "Product images"
       },
       {
         "type": "checkbox",
-        "id": "enable_shopify_review_comments",
-        "label": "Enable reviews",
-        "default": false
-      },
-      {
-        "type": "paragraph",
-        "content": "After enabling reviews you will need to install the free [Shopify Product Reviews](https:\/\/apps.shopify.com\/product-reviews) app."
+        "id": "collection_secondary_image",
+        "label": "Show secondary media on hover",
+        "info": "Desktop only"
       },
       {
         "type": "checkbox",
-        "id": "enable_shopify_collection_badges",
-        "label": "Display star rating on product thumbnails",
-        "default": false
-      }
-    ]
-  },
-  {
-    "name": "Quick shop",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "quick_shop_enabled",
-        "label": "Enable quick shop"
-      },
-      {
-        "type": "checkbox",
-        "id": "quick_shop_display_vendor",
-        "label": "Show vendor"
-      },
-      {
-        "type": "checkbox",
-        "id": "quick_shop_display_savings",
-        "label": "Show price savings",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "show_payment_button",
-        "label": "Show dynamic checkout button",
-        "default": false,
-        "info": "Lets customers check out directly using a familiar payment method. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
-      },
-      {
-        "type": "checkbox",
-        "id": "quick_shop_zoom",
-        "label": "Magnify product images on hover"
-      },
-      {
-        "type": "checkbox",
-        "id": "quick_shop_full_description",
-        "label": "Show full product description"
+        "id": "align_height",
+        "label": "Align height of product media"
       },
       {
         "type": "range",
-        "id": "description_words",
-        "label": "Quick shop description truncated words",
-        "min": 1,
-        "max": 50,
-        "default": 30
+        "id": "collection_height",
+        "label": "Product media height",
+        "min": 150,
+        "max": 400,
+        "step": 10,
+        "default": 200,
+        "unit": "px"
       },
       {
-        "type": "radio",
-        "id": "quick_shop_product_description_position",
-        "label": "Description position",
-        "options": [
-          {
-            "value": "top",
-            "label": "Above product form"
-          },
-          {
-            "value": "bottom",
-            "label": "Below product form"
-          }
-        ]
+        "type": "header",
+        "content": "Quick shop"
       },
       {
         "type": "checkbox",
-        "id": "quick_shop_gallery_arrows",
-        "label": "Show arrows on product gallery",
+        "id": "quick_shop_enabled",
+        "label": "Enable quick shop",
         "default": true
       },
       {
         "type": "select",
-        "id": "quick_shop_slideshow_animation",
-        "label": "Gallery transition",
+        "id": "quick_shop_style",
+        "label": "Style",
+        "default": "popup",
         "options": [
           {
-            "value": "slide",
-            "label": "Slide"
+            "value": "popup",
+            "label": "Popup"
           },
           {
-            "value": "fade",
-            "label": "Fade"
-          }
-        ],
-        "default": "slide"
-      },
-      {
-        "type": "radio",
-        "id": "quick_shop_product_images_position",
-        "label": "Gallery position",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          }
-        ]
-      },
-      {
-        "type": "checkbox",
-        "id": "quick_shop_product_thumbs",
-        "label": "Show product gallery thumbnails",
-        "default": true
-      },
-      {
-        "type": "select",
-        "id": "quick_shop_thumbnail_position",
-        "label": "Thumbnail position",
-        "default": "bottom-thumbnails",
-        "options": [
-          {
-            "value": "left-thumbnails",
-            "label": "Left"
-          },
-          {
-            "value": "bottom-thumbnails",
-            "label": "Bottom"
-          },
-          {
-            "value": "right-thumbnails",
-            "label": "Right"
+            "value": "inline",
+            "label": "Inline"
           }
         ]
       }
@@ -1534,7 +1446,13 @@
         "default": true
       },
       {
-        "type": "page",
+        "type": "checkbox",
+        "id": "display_tos_checkbox",
+        "label": "Show \"agree to terms\" checkbox",
+        "info": "If the dynamic payment button is enabled, customers will be able to bypass these terms. [Learn more](https:\/\/help.shopify.com\/en\/manual\/sell-online\/online-store\/dynamic-checkout)"
+      },
+      {
+        "type": "url",
         "id": "tos_page",
         "label": "\"Agree to terms\" page"
       },
@@ -1553,11 +1471,6 @@
         "type": "checkbox",
         "id": "display_special_instructions",
         "label": "Show \"note\" text box"
-      },
-      {
-        "type": "checkbox",
-        "id": "display_tos_checkbox",
-        "label": "Show \"agree to terms\" checkbox"
       },
       {
         "type": "checkbox",
@@ -1595,13 +1508,6 @@
     "name": "Currency",
     "settings": [
       {
-        "type": "checkbox",
-        "id": "show_multiple_currencies",
-        "label": "Enable currency conversion",
-        "default": false,
-        "info": "Even though prices are displayed in different currencies, orders will still be processed in your store's currency."
-      },
-      {
         "type": "select",
         "id": "currency_format",
         "label": "Format",
@@ -1615,7 +1521,20 @@
             "label": "With currency ($10.00 CAD)"
           }
         ],
-        "default": "money_with_currency_format"
+        "default": "money_with_currency_format",
+        "info": "Applies to all currency conversion"
+      },
+      {
+        "type": "header",
+        "content": "Custom theme currency converter",
+        "info": "If custom converter is enabled, the native multi-country selector will be disabled. [Learn more](https:\/\/help.shopify.com\/en\/manual\/payments\/shopify-payments\/multi-currency\/setup)"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_multiple_currencies",
+        "label": "Enable custom theme currency converter",
+        "info": "Orders will be processed in store currency",
+        "default": false
       },
       {
         "type": "text",
@@ -1638,15 +1557,8 @@
       {
         "type": "text",
         "id": "mailchimp_link",
-        "label": "MailChimp form action URL",
-        "info": "[Find your MailChimp form action URL](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006912487-Setting-Up-MailChimp-Turbo-)"
-      },
-      {
-        "type": "checkbox",
-        "id": "secondary_newsletter_banner",
-        "label": "Show newsletter form above footer",
-        "info": "Home page newsletter can be added as a section.",
-        "default": true
+        "label": "Newsletter form action URL",
+        "info": "[Find your form action URL](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006912487-Setting-Up-MailChimp-Turbo-)"
       }
     ]
   },
@@ -1700,31 +1612,6 @@
         "id": "newsletter_bg",
         "label": "Image",
         "info": "600 x 875px recommended"
-      },
-      {
-        "type": "select",
-        "id": "image_crop",
-        "label": "Image cropping",
-        "default": "none",
-        "info": "Only applied when image is larger\/wider than recommended",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          },
-          {
-            "value": "right",
-            "label": "Right"
-          },
-          {
-            "value": "center",
-            "label": "Center"
-          },
-          {
-            "value": "none",
-            "label": "None"
-          }
-        ]
       },
       {
         "type": "select",
@@ -1858,91 +1745,169 @@
     "settings": [
       {
         "type": "text",
-        "id": "twitter_link",
-        "label": "Twitter link",
-        "info": "https:\/\/twitter.com\/shopify"
+        "id": "behance_link",
+        "label": "Behance",
+        "info": "https:\/\/behance.net\/"
       },
       {
         "type": "text",
-        "id": "facebook_link",
-        "label": "Facebook link",
-        "info": "https:\/\/facebook.com\/shopify"
+        "id": "clubhouse_link",
+        "label": "Clubhouse",
+        "info": "https:\/\/www.clubhouse.com\/"
       },
       {
         "type": "text",
-        "id": "google_link",
-        "label": "Google+ link",
-        "info": "https:\/\/plus.google.com\/+shopify"
+        "id": "discord_link",
+        "label": "Discord",
+        "info": "https:\/\/discord.com\/"
       },
       {
         "type": "text",
-        "id": "youtube_link",
-        "label": "YouTube link",
-        "info": "https:\/\/youtube.com\/user\/shopify"
-      },
-      {
-        "type": "text",
-        "id": "vimeo_link",
-        "label": "Vimeo link",
-        "info": "https:\/\/vimeo.com\/shopify"
-      },
-      {
-        "type": "text",
-        "id": "pinterest_link",
-        "label": "Pinterest link",
-        "info": "https:\/\/pinterest.com\/shopify"
-      },
-      {
-        "type": "text",
-        "id": "tumblr_link",
-        "label": "Tumblr link",
-        "info": "https:\/\/shopify.tumblr.com\/"
-      },
-      {
-        "type": "text",
-        "id": "instagram_link",
-        "label": "Instagram link",
-        "info": "https:\/\/instagram.com\/shopify"
-      },
-      {
-        "type": "text",
-        "id": "snapchat_link",
-        "label": "Snapchat link",
-        "info": "https:\/\/www.snapchat.com\/add\/shopify"
-      },
-      {
-        "type": "text",
-        "id": "houzz_link",
-        "label": "Houzz link",
-        "info": "https:\/\/www.houzz.com\/shopify"
-      },
-      {
-        "type": "text",
-        "id": "linkedin_link",
-        "label": "LinkedIn link",
-        "info": "https:\/\/linkedin.com\/company\/shopify"
+        "id": "dribbble_link",
+        "label": "Dribbble",
+        "info": "https:\/\/dribbble.com\/shopify"
       },
       {
         "type": "text",
         "id": "email_link",
         "label": "Email address"
+      },
+      {
+        "type": "text",
+        "id": "facebook_link",
+        "label": "Facebook",
+        "info": "https:\/\/www.facebook.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "flickr_link",
+        "label": "Flickr",
+        "info": "https:\/\/flickr.com\/"
+      },
+      {
+        "type": "text",
+        "id": "houzz_link",
+        "label": "Houzz",
+        "info": "https:\/\/www.houzz.com\/"
+      },
+      {
+        "type": "text",
+        "id": "instagram_link",
+        "label": "Instagram",
+        "info": "https:\/\/instagram.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "kickstarter_link",
+        "label": "Kickstarter",
+        "info": "https:\/\/www.kickstarter.com\/"
+      },
+      {
+        "type": "text",
+        "id": "linkedin_link",
+        "label": "LinkedIn",
+        "info": "https:\/\/www.linkedin.com\/company\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "medium_link",
+        "label": "Medium",
+        "info": "https:\/\/medium.com\/"
+      },
+      {
+        "type": "text",
+        "id": "messenger_link",
+        "label": "Messenger",
+        "info": "https:\/\/www.messenger.com\/"
+      },
+      {
+        "type": "text",
+        "id": "opensea_link",
+        "label": "OpenSea",
+        "info": "https:\/\/opensea.io\/"
+      },
+      {
+        "type": "text",
+        "id": "pinterest_link",
+        "label": "Pinterest",
+        "info": "https:\/\/www.pinterest.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "reddit_link",
+        "label": "Reddit",
+        "info": "https:\/\/www.reddit.com\/r\/shopify\/"
+      },
+      {
+        "type": "text",
+        "id": "rss_link",
+        "label": "RSS",
+        "info": "https:\/\/www.shopify.com\/content-services\/feeds\/ecommerce.atom"
+      },
+      {
+        "type": "text",
+        "id": "snapchat_link",
+        "label": "Snapchat",
+        "info": "https:\/\/www.snapchat.com\/"
+      },
+      {
+        "type": "text",
+        "id": "spotify_link",
+        "label": "Spotify",
+        "info": "https:\/\/www.spotify.com\/"
+      },
+      {
+        "type": "text",
+        "id": "tiktok_link",
+        "label": "TikTok",
+        "info": "https:\/\/tiktok.com\/@shopify"
+      },
+      {
+        "type": "text",
+        "id": "tumblr_link",
+        "label": "Tumblr",
+        "info": "https:\/\/shopify.tumblr.com"
+      },
+      {
+        "type": "text",
+        "id": "twitch_link",
+        "label": "Twitch",
+        "info": "https:\/\/www.twitch.tv\/"
+      },
+      {
+        "type": "text",
+        "id": "twitter_link",
+        "label": "Twitter",
+        "info": "https:\/\/twitter.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "vimeo_link",
+        "label": "Vimeo",
+        "info": "https:\/\/vimeo.com\/"
+      },
+      {
+        "type": "text",
+        "id": "whatsapp_link",
+        "label": "WhatsApp",
+        "info": "https:\/\/www.whatsapp.com\/"
+      },
+      {
+        "type": "text",
+        "id": "youtube_link",
+        "label": "YouTube",
+        "info": "https:\/\/www.youtube.com\/user\/shopify"
       }
     ]
   },
   {
-    "name": "Meta info",
+    "name": "Favicon",
     "settings": [
       {
         "type": "image_picker",
         "id": "favicon",
         "label": "Favicon",
         "info": "32 x 32px required"
-      },
-      {
-        "type": "image_picker",
-        "id": "og_image_fallback",
-        "label": "Social sharing image",
-        "info": "Used when an image cannot be found"
       }
     ]
   },
@@ -1958,7 +1923,7 @@
       {
         "type": "text",
         "id": "disqus_shortname",
-        "label": "[DISQUS](http:\/\/disqus.com\/) shortname"
+        "label": "[DISQUS](http:\/\/help.disqus.com\/en\/articles\/1717111-what-s-a-shortname\/) shortname"
       }
     ]
   }
