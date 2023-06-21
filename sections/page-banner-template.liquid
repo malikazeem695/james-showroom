@@ -1,139 +1,116 @@
-{% comment %}
-** Banner page - custom view **
-- Page template
-{% endcomment %}
+<script
+  type="application/json"
+  data-section-type="page-banner-template"
+  data-section-id="{{ section.id }}"
+>
+</script>
 
-{% if section.settings.show_banner %}
+{% liquid
+  if section.settings.title != blank
+    assign banner_title = section.settings.title
+  else
+    assign banner_title = page.title
+  endif
+%}
 
-  {% assign default = '1400x' %}
-  {% assign size1 = '480x' %}
-  {% assign size2 = '765x' %}
-  {% assign size3 = '900x' %}
-  {% assign size4 = '1000x' %}
-  {% assign size5 = '1100x' %}
-  {% assign size6 = '1300x' %}
-  {% assign size7 = '1500x' %}
-  {% assign size8 = '1700x' %}
-  {% assign size9 = '1900x' %}
-  {% assign size10 = '2000x' %}
+{%
+  render 'template-banner',
+  image: section.settings.image,
+  mobile_image: section.settings.mobile_image,
+  background_style: section.settings.caption_content_background,
+  wide_display: section.settings.wide_display,
+  banner_pretext: section.settings.pretext,
+  banner_title: banner_title,
+  banner_subheading: section.settings.subtitle,
+  banner_button1: section.settings.button1,
+  banner_button1_link: section.settings.button1_link,
+  banner_button1_style: section.settings.button1_style,
+  banner_button2: section.settings.button2,
+  banner_button2_link: section.settings.button2_link,
+  banner_button2_style: section.settings.button2_style,
+  banner_text_align: section.settings.text_align,
+  banner_text_position: section.settings.text_position,
+  show_caption: true,
+%}
 
-  <section id="banner-{{section.id}}" class="banner page_banner">
-    {% if section.settings.image != nil %}
-      <img  src="{{ section.settings.image | img_url: '100x', format: 'pjpg' }}"
-            alt="{{ section.settings.image.alt | escape }}"
-            class="lazyload {{ settings.image_loading_style }}"
-            sizes="100vw"
-            data-src="{{ section.settings.image | img_url: default, format: 'pjpg' }}"
-            srcset="
-            {{ section.settings.image | img_url: default, format: 'pjpg' }} {{default | replace: 'x', 'w'}},
-            {{ section.settings.image | img_url: size1, format: 'pjpg' }} {{size1 | replace: 'x', 'w'}},
-            {{ section.settings.image | img_url: size2, format: 'pjpg' }} {{size2 | replace: 'x', 'w'}},
-            {{ section.settings.image | img_url: size3, format: 'pjpg' }} {{size3 | replace: 'x', 'w'}},
-            {{ section.settings.image | img_url: size4, format: 'pjpg' }} {{size4 | replace: 'x', 'w'}},
-            {{ section.settings.image | img_url: size5, format: 'pjpg' }} {{size5 | replace: 'x', 'w'}},
-            {{ section.settings.image | img_url: size6, format: 'pjpg' }} {{size6 | replace: 'x', 'w'}},
-            {{ section.settings.image | img_url: size7, format: 'pjpg' }} {{size7 | replace: 'x', 'w'}},
-            {{ section.settings.image | img_url: size8, format: 'pjpg' }} {{size8 | replace: 'x', 'w'}},
-            {{ section.settings.image | img_url: size9, format: 'pjpg' }} {{size9 | replace: 'x', 'w'}},
-            {{ section.settings.image | img_url: size10, format: 'pjpg' }} {{size10 | replace: 'x', 'w'}}"
-
-             />
-    {% else %}
-      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--banner' }}
-    {% endif %}
-    {% unless section.settings.button1_link != blank and section.settings.button2_link != blank %}
-      {% if section.settings.button1_link != blank %}
-        <a href="{{ section.settings.button1_link }}" class="banner-full-link">
-          {{ section.settings.button1 }}
-        </a>
-      {% endif %}
-      {% if section.settings.button2_link != blank %}
-        <a href="{{ section.settings.button2_link }}" class="banner-full-link">
-          {{ section.settings.button2 }}
-        </a>
-      {% endif %}
-    {% endunless %}
-    {% unless section.settings.pretext == blank and section.settings.title == blank and section.settings.subtitle == blank and section.settings.button1 == blank and section.settings.button2 == blank %}
-      <div class="position-{{ section.settings.text_position }} caption js-caption">
-        <div class="caption-content caption-background-{{ section.settings.caption_background }} caption-transparency-{{ section.settings.caption_background_transparency }} align-{{ section.settings.text_align }}">
-          {% if section.settings.pretext != blank %}
-            <div class="pretext">
-              {{ section.settings.pretext }}
-            </div>
-          {% endif %}
-          {% if section.settings.title != blank %}
-            <h1 class="headline">
-              {{ section.settings.title }}
-            </h1>
-          {% endif %}
-          {% if section.settings.subtitle != blank %}
-            <div class="subtitle">
-              {{ section.settings.subtitle }}
-            </div>
-          {% endif %}
-          {% if section.settings.button1 != blank %}
-            <a {% if section.settings.button1_link != blank %}href="{{ section.settings.button1_link }}"{% endif %} class="action_button first_button highlight-{{ section.settings.button1_highlight }}">
-              {{ section.settings.button1 }}
-            </a>
-          {% endif %}
-          {% if section.settings.button2 != blank %}
-            <a {% if section.settings.button2_link != blank %}href="{{ section.settings.button2_link }}"{% endif %} class="action_button second_button highlight-{{ section.settings.button2_highlight }}">
-              {{ section.settings.button2 }}
-            </a>
-          {% endif %}
-        </div>
-      </div>
-    {% endunless %}
-  </section>
-
-{% endif %}
-
-<a name="pagecontent" id="pagecontent"></a>
-
-<div class="container main content">
-  <div class="sixteen columns page clearfix">
-    {% unless section.settings.show_banner %}
-      <h1>
-        {{ page.title }}
-      </h1>
-      <div class="feature_divider"></div>
-    {% endunless %}
-    <div>
-      {% include 'page-multi-column', content: page.content %}
+<section class="section">
+  <div
+    class="
+      container
+      main
+      content
+    "
+  >
+    <div
+      class="
+        one-whole
+        column
+        page
+      "
+    >
+      {%
+        render 'page-multi-column',
+        content: page.content,
+      %}
     </div>
   </div>
-</div>
-
-<style>
-  {% if section.settings.show_banner %}
-    .mobile_nav-fixed--true #pagecontent, .mobile_nav-fixed--false #pagecontent {
-      padding: 0;
-    }
-    @media only screen and (max-width: 479px) {
-      div.content {
-        padding-top: 0;
-      }
-    }
-  {% endif %}
-</style>
+</section>
 
 {% schema %}
-
 {
-  "name": "Banner",
-  "class": "banner-template-section",
+  "name": "Page | banner",
+  "class": "shopify-section--page-banner-template under-menu",
   "settings": [
     {
       "type": "checkbox",
-      "id": "show_banner",
-      "label": "Show banner",
+      "id": "wide_display",
+      "label": "Wide display",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Banner"
     },
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image",
-      "info": "1800 x 1000px recommended"
+      "label": "Banner image",
+      "info": "1800 x 800px recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile banner image",
+      "info": "Display a different image on mobile screens. This only appears when the desktop image is set."
+    },
+    {
+      "type": "header",
+      "content": "Text contrast",
+      "info": "Improve legibility by applying a contrast technique to your banner’s text."
+    },
+    {
+      "type": "select",
+      "id": "caption_content_background",
+      "label": "Contrast technique",
+      "default": "original",
+      "options": [
+        {
+          "value": "original",
+          "label": "None"
+        },
+        {
+          "value": "darken_bg",
+          "label": "Darken banner image"
+        },
+        {
+          "value": "text_box",
+          "label": "Solid box"
+        },
+        {
+          "value": "translucent_text_box",
+          "label": "Translucent box"
+        }
+      ]
     },
     {
       "type": "richtext",
@@ -143,23 +120,13 @@
     {
       "type": "text",
       "id": "title",
-      "label": "Heading"
+      "label": "Heading",
+      "info": "Leave this field blank to use the page title."
     },
     {
       "type": "richtext",
       "id": "subtitle",
       "label": "Subheading"
-    },
-    {
-      "type": "checkbox",
-      "id": "caption_background",
-      "label": "Display solid text background",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "caption_background_transparency",
-      "label": "Enable background transparency"
     },
     {
       "type": "select",
@@ -210,9 +177,32 @@
       "label": "First button link"
     },
     {
-      "type": "checkbox",
-      "id": "button1_highlight",
-      "label": "Highlight first button"
+      "type": "select",
+      "id": "button1_style",
+      "label": "First button color",
+      "options": [
+        {
+          "value": "global-button--primary",
+          "label": "Primary button"
+        },
+        {
+          "value": "global-button--banner",
+          "label": "Banner button (outline)"
+        },
+        {
+          "value": "global-button--banner-highlighted",
+          "label": "Banner button (solid)"
+        },
+        {
+          "value": "global-button--banner-text",
+          "label": "Banner text button (outline)"
+        },
+        {
+          "value": "global-button--banner-text-highlighted",
+          "label": "Banner text button (solid)"
+        }
+      ],
+      "default": "global-button--banner"
     },
     {
       "type": "text",
@@ -225,9 +215,32 @@
       "label": "Second button link"
     },
     {
-      "type": "checkbox",
-      "id": "button2_highlight",
-      "label": "Highlight second button"
+      "type": "select",
+      "id": "button2_style",
+      "label": "Second button color",
+      "options": [
+        {
+          "value": "global-button--primary",
+          "label": "Primary button"
+        },
+        {
+          "value": "global-button--banner",
+          "label": "Banner button (outline)"
+        },
+        {
+          "value": "global-button--banner-highlighted",
+          "label": "Banner button (solid)"
+        },
+        {
+          "value": "global-button--banner-text",
+          "label": "Banner text button (outline)"
+        },
+        {
+          "value": "global-button--banner-text-highlighted",
+          "label": "Banner text button (solid)"
+        }
+      ],
+      "default": "global-button--banner"
     }
   ],
   "default": {

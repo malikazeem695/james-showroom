@@ -1,0 +1,58 @@
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+      }
+    },
+    "mega_menu_1": {
+      "type": "mega-menu-1",
+      "blocks": {
+        "column_0": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "<p>Add description, images, menus and links to your mega menu<\/p>"
+          }
+        },
+        "column_1": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "<p>A column with no settings can be used as a spacer<\/p>"
+          }
+        },
+        "column_2": {
+          "type": "column",
+          "settings": {
+          }
+        },
+        "column_3": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "<p>Link to your collections, sales and even external links<\/p>"
+          }
+        },
+        "column_4": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "<p>Add up to five columns<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_0",
+        "column_1",
+        "column_2",
+        "column_3",
+        "column_4"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "header",
+    "mega_menu_1"
+  ]
+}

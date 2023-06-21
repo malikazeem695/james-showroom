@@ -1,13 +1,21 @@
-<div class="container" data-block-id="{{block.id}}">
-  <div class="sixteen columns">
-    <h4 class="quote">
-      {% if block.settings.quote_link != blank %}
-        <a href="{{ block.settings.quote_link }}">
-          {{ block.settings.quote_text }}
-        </a>
-      {% else %}
-        {{ block.settings.quote_text }}
-      {% endif %}
-    </h4>
+{% comment %}
+** Quote - dynamic **
+- Draggable section
+{% endcomment %}
+
+{% comment %} Assign object as block or section {% endcomment %}
+{% if type == 'block' %}
+  {%- assign object = block -%}
+{% else %}
+  {%- assign object = section -%}
+{% endif %}
+
+<div class="section">
+  <div class="container">
+    <div class="one-whole column">
+      <div class="quote__text">
+        {{ object.settings.page_quote }}
+      </div>
+    </div>
   </div>
 </div>

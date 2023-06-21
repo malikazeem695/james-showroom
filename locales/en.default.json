@@ -1,16 +1,78 @@
 {
+  "store_availability": {
+    "general": {
+      "in_stock": "In stock",
+      "out_of_stock": "Out of stock",
+      "view_store_info": "View store information",
+      "check_other_stores": "Check availability at other stores",
+      "available_for_pick_up_at_html": "Pickup available at <b>{{ location_name }}<\/b>",
+      "unavailable_for_pick_up_at_html": "Pickup currently unavailable at <b>{{ location_name }}<\/b>",
+      "available_for_pick_up_at_time_html": "Pickup available, {{ pick_up_time }}",
+      "unavailable_for_pick_up_at_time_html": "Pickup currently unavailable",
+      "kilometers": "km",
+      "miles": "mi"
+    }
+  },
+  "product": {
+    "price": {
+      "range_html": "{{ price_min }} - {{ price_max }}",
+      "unit_pricing_html": "{{ unit_quantity }} | {{ unit_price }} \/ {{ unit_measurement}}"
+    },
+    "badge": {
+      "sale_percentage_range_html": "Save up to {{ price_percent }}%",
+      "sale_percentage_single_html": "Save {{ price_percent }}%",
+      "sale_money_range_html": "Save up to {{ price }}",
+      "sale_money_single_html": "Save {{ price }}",
+      "sold_out": "Sold out",
+      "sale": "Sale",
+      "in_stock": "In stock"
+    }
+  },
+  "sections": {
+    "complementary_product_block": {
+      "from": "from",
+      "now": "now",
+      "view_details": "View product",
+      "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} \/ {{ unit_measure }}"
+    }
+  },
+  "age_gate": {
+    "form": {
+      "confirm": "Confirm age and proceed to {{ shop }}",
+      "error": "Shop access is limited to adults age {{ age }} and older.",
+      "day": "Day",
+      "month": "Month",
+      "year": "Year",
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    }
+  },
   "date_formats": {
     "month_day_year": "%B %d, %Y"
   },
   "general": {
-    "meta": {
-      "tagged_html": "Tagged \"{{ tags }}\"",
-      "page": "Page {{ page_number }}"
-    },
     "404": {
       "title": "Page Not Found",
       "subtext": "We're sorry, but the page you requested could not be found.",
       "continue_shopping_html": "Try searching or <a href=\"\/collections\/all\">continue shopping &rarr;<\/a>"
+    },
+    "accessibility": {
+      "total_reviews": "total reviews",
+      "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars"
+    },
+    "meta": {
+      "tagged_html": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page_number }}"
     },
     "password_page": {
       "opening_soon": "Opening Soon",
@@ -21,12 +83,11 @@
       "login_form_password_label": "Password",
       "login_form_password_placeholder": "Your password",
       "login_form_submit": "Enter",
-      "signup_form_heading": "Find out when we open",
       "signup_form_submit": "Submit",
       "signup_form_success": "We will send you an email right before we open!",
       "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>",
       "password_link": "Enter using password",
-      "powered_by_shopify_html": "This shop will be powered by <a href=\"https:\/\/www.shopify.com\/?ref=out-of-the-sandbox\" target=\"_blank\">Shopify<\/a>"
+      "powered_by_shopify_html": "This shop will be powered by <a href=\"https:\/\/www.shopify.com\/&ref=out-of-the-sandbox\" target=\"_blank\" rel=\"nofollow\">Shopify<\/a>"
     },
     "forms": {
       "post_error": "Not all the fields have been filled out correctly",
@@ -60,9 +121,28 @@
         "one": "{{ count }} result",
         "other": "{{ count }} results"
       },
+      "results_text": "{{ results }} found for \"{{ search_terms }}\"",
+      "no_results_text": "{{ results }} for \"{{ search_terms }}\"",
       "placeholder": "Search...",
+      "placeholder_with_blog_name": "Search {{ blog_title }}...",
       "placeholder_with_shop_name": "Search {{ shop_name }}...",
-      "submit": "Search"
+      "submit": "Search",
+      "close": "Close"
+    },
+    "predictive_search": {
+      "no_results_text": "No matching results found.",
+      "query_suggestions_heading": "Suggestions",
+      "product_suggestions_heading": "Products",
+      "posts_suggestions_heading": "Posts",
+      "pages_suggestions_heading": "Pages",
+      "pages_and_posts_suggestions_heading": "Posts & Pages",
+      "search_button_label": "Search for \"{{ search_terms }}\""
+    },
+    "currency": {
+      "dropdown_label": "Currency"
+    },
+    "language": {
+      "dropdown_label": "Language"
     }
   },
   "blogs": {
@@ -119,8 +199,9 @@
       "all_collection_title": "All {{ title }}",
       "quick_shop": "Quick View",
       "load_more": "Load More Products",
+      "load_more_collections": "Load More Collections",
       "new": "New",
-      "coming_soon": "Trade Only. Please login to buy.",
+      "coming_soon": "Coming Soon",
       "pre_order": "Pre-Order",
       "sale": "Sale",
       "view_all": "View All",
@@ -131,21 +212,17 @@
       "product_types": "Types",
       "vendors": "Vendors",
       "tags": "Tags",
-      "clear": "Clear"
+      "clear": "Clear",
+      "apply_filter": "Apply",
+      "clear_all": "Clear all",
+      "from": "From",
+      "to": "To"
     },
     "sorting": {
       "title": "Sort by",
       "sort_collection": "Sort {{ title }}",
       "filter": "Filter by",
-      "filter_collection": "Filter {{ title }}",
-      "featured": "Featured",
-      "best_selling": "Best Selling",
-      "az": "Alphabetically: A-Z",
-      "za": "Alphabetically: Z-A",
-      "price_ascending": "Price: Low to High",
-      "price_descending": "Price: High to Low",
-      "date_descending": "Date: New to Old",
-      "date_ascending": "Date: Old to New"
+      "filter_collection": "Filter {{ title }}"
     }
   },
   "products": {
@@ -155,13 +232,13 @@
       "from": "from"
     },
     "product": {
-      "sold_out": "PLEASE CONTACT SHOWROOM FOR SAMPLES AND PRICING",
+      "sold_out": "Sold Out",
       "unavailable": "Unavailable",
       "quantity": "Qty",
       "add_to_cart": "Add to Cart",
       "add_to_cart_success": "Added",
       "vendor": "Vendor",
-      "related_items": "You might also like",
+      "related_items": "Related Items",
       "collections": "Collections",
       "product_types": "Type",
       "tags": "Category",
@@ -171,14 +248,27 @@
       "items_left_count": {
         "one": "item left",
         "other": "items left"
+      },
+      "view_in_your_space": "View in your space"
+    },
+    "item": {
+      "price": {
+        "price_per_unit_html": "{{ total_quantity }} | {{ unit_price }} \/ {{ unit_measure }}"
       }
     },
     "notify_form": {
       "email": "Enter your email address...",
       "send": "Send",
-      "message_content": "Are you a registered member of the trade? Order up to 10 fabric and wallpaper memos and we’ll mail them to you!",
+      "message_content": "Please notify me when {{ product }} becomes available - {{ url }}",
+      "message_content_first": "Please notify me when ",
+      "message_content_last": " becomes available - ",
       "post_success": "Thanks! We will notify you when this product becomes available!",
-      "post_error": "Please provide a valid email address."
+      "post_error": "Please provide a valid email address.",
+      "notify_me_richtext": "Notify me when this product is available:"
+    },
+    "onboarding": {
+      "tab_title": "Description",
+      "tab_content": "Add a product description to share information about your product."
     }
   },
   "contact": {
@@ -224,12 +314,12 @@
       "add_new": "Add a New Address",
       "edit_address": "Edit address",
       "company": "Company",
-      "address1": "Address1",
-      "address2": "Address2",
+      "address1": "Address 1",
+      "address2": "Address 2",
       "city": "City",
       "country": "Country",
-      "province": "Province",
-      "zip": "Postal\/Zip Code",
+      "province": "Province \/ State",
+      "zip": "Postal Code \/ Zip",
       "phone": "Phone",
       "set_default": "Set as default address",
       "add": "Add Address",
@@ -277,6 +367,8 @@
     "order": {
       "title": "Order {{ name }}",
       "date": "Placed on {{ date }}",
+      "note": "Order notes",
+      "note_placeholder": "No order notes were provided.",
       "cancelled": "Order Cancelled on {{ date }}",
       "cancelled_reason": "Reason: {{ reason }}",
       "billing_address": "Billing Address",
@@ -311,6 +403,7 @@
   "homepage": {
     "onboarding": {
       "product_title": "Your product's name",
+      "product_vendor": "Vendor name",
       "product_description": "This area is used to describe your product’s details. Tell customers about the look, feel, and style of your product. Add details on color, materials used, sizing, and where it was made.",
       "caption_headline": "Your headline",
       "caption_subtitle": "Subtitle",
@@ -322,7 +415,8 @@
       "blogpost_title": "Your post's title",
       "blog_excerpt": "Your store hasn’t published any blog posts yet. A blog can be used to talk about new product launches, tips, or other news you want to share with your customers. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and blog.",
       "blog_author": "Author name",
-      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar."
+      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar.",
+      "hotspot_identifier": "Product {{ identifier }}"
     }
   },
   "gift_cards": {
@@ -350,10 +444,15 @@
       "maximum_quantity": "Maximum Quantity",
       "total": "Total",
       "item": "Item",
+      "free": "Free",
       "uploaded_file": "uploaded file",
       "continue_browsing_html": "There are no items in your cart.",
-      "continue_shopping_link_html": "Continue Shopping",
+      "continue_shopping": "Continue Shopping",
       "excluding_tax_shipping": "Excluding tax & shipping",
+      "tax_and_shipping": "Taxes and shipping calculated at checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
+      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
       "orders_processed_in_currency_html": "Orders will be processed in {{ currency }}.",
       "note": "Order Notes",
       "agree_to_terms_html": "I Agree with the Terms & Conditions",
@@ -361,14 +460,15 @@
       "agree_to_terms_warning": "You must agree with the terms and conditions to checkout.",
       "or": "or",
       "subtotal": "Subtotal",
+      "discount": "Discount",
       "update": "Update Subtotal",
       "checkout": "Checkout"
     },
     "shipping_calculator": {
       "estimated_shipping": "estimated shipping",
       "country": "Country",
-      "province": "Province",
-      "zip_code": "Zip\/Postal Code",
+      "province": "Province \/ State",
+      "zip_code": "Zip \/ Postal Code",
       "heading": "Shipping rates calculator",
       "submit_button_label": "Calculate shipping rates",
       "submit_button_label_disabled": "Calculating...",
@@ -403,7 +503,6 @@
       "twitter_title": "Share this on Twitter",
       "facebook_title": "Share this on Facebook",
       "pinterest_title": "Share this on Pinterest",
-      "google_plus_title": "Share this on Google+",
       "pinterest_share": "{{ title }} from {{ name }}",
       "email_title": "Email this to a friend",
       "email_subject": "Thought you might like {{ title }}",
@@ -424,22 +523,6 @@
       "items_with_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"
-      }
-    }
-  },
-  "shopify": {
-    "checkout": {
-      "stock": {
-        "sold_out_label": "PLEASE CONTACT SHOWROOM FOR SAMPLES AND PRICING"
-      },
-      "order_summary": {
-        "free_total_label": "Free Samples to Trade"
-      },
-      "shipping": {
-        "free_rate_label": "Free Samples to Trade"
-      },
-      "payment_summary": {
-        "free_label": "Free Samples to Trade"
       }
     }
   }

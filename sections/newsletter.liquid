@@ -1,16 +1,37 @@
-{% comment %}
-** Newsletter - homepage partial **
-- Draggable section
-{% endcomment %}
+<script
+  type="application/json"
+  data-section-type="newsletter"
+  data-section-id="{{ section.id }}"
+>
+</script>
 
-{% include 'include-newsletter' %}
+<div class="section-wrapper--{{ template.name }} {% if section.settings.wide_display %}is-width-wide{% endif %}">
+  {% include 'include-newsletter' %}
+</div>
 
 {% schema %}
-
 {
   "name": "Newsletter",
-  "class": "newsletter-section",
+  "class": "shopify-section--newsletter",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "wide_display",
+      "label": "Wide display",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "display_first_name",
+      "label": "Show first name",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "display_last_name",
+      "label": "Show last name",
+      "default": false
+    },
     {
       "type": "text",
       "id": "newsletter_title",
@@ -24,21 +45,12 @@
       "default": "<p>Sign up to get the latest on sales, new releases and more …</p>"
     },
     {
-      "type": "checkbox",
-      "id": "display_first_name",
-      "label": "Show first name"
-    },
-    {
-      "type": "checkbox",
-      "id": "display_last_name",
-      "label": "Show last name"
-    },
-    {
       "type": "select",
       "id": "newsletter_section_text_align",
       "label": "Text alignment",
+      "default": "center",
       "options": [
-         {
+          {
           "value": "left",
           "label": "Left"
         },
@@ -50,22 +62,52 @@
           "value": "right",
           "label": "Right"
         }
-     ],
-      "default": "center"
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Banner"
     },
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Upload banner background image",
-      "info":"1600 x 300px recommended"
+      "label": "Banner image",
+      "info": "1600 x 300px recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile banner image",
+      "info": "Display a different image on mobile screens. This only appears when the desktop image is set."
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "paragraph",
+      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
     }
   ],
-  "presets": [{
-    "name": "Newsletter",
-    "category": "Promotional",
-    "settings": {
+  "presets": [
+    {
+      "name": "Newsletter",
+      "category": "Promotional"
     }
-  }]
+  ],
+  "disabled_on": {
+    "groups": [ "*" ]
+  }
 }
 
 {% endschema %}
