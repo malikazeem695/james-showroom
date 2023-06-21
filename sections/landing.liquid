@@ -1,0 +1,102 @@
+<div class="james-landing-wrap">
+  <div class="container">
+     <div class="james-landing-row">
+        <div class="col-6">
+          <div class="james-landing-single">
+            <img src="{{ section.settings.image1 | img_url: 'master'}}">
+            <div class="overlay">
+              <div class="box">
+                <div>
+                {{ section.settings.title1 }}
+                </div>
+                <div class="hide-text">
+                    <P><a href="{{ section.settings.buttonlink1 }}">{{ section.settings.buttontext1 }}</a></P>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       <div class="col-6">
+          <div class="james-landing-single">
+            <img src="{{ section.settings.image2 | img_url: 'master'}}">
+            <div class="overlay">
+              <div class="box">
+                 <div>
+                      {{ section.settings.title2 }}
+                 </div>
+                <div class="hide-text">
+                    <P><a href="{{ section.settings.buttonlink2 }}">{{ section.settings.buttontext2 }}</a></P>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Landing Banner",
+ 
+ 
+
+"settings": [
+    {
+        "type": "image_picker",
+        "id": "image1",
+        "label": "Image 1"
+      },
+      {
+        "type": "html",
+        "id": "title1",
+        "label": "Heading 1" 
+      },
+     {
+        "type": "url",
+        "id": "buttonlink1",
+        "label": "Button link 1"
+      },
+      {
+        "type": "text",
+        "id": "buttontext1",
+        "label": "Button Text 1"
+      },
+       {
+        "type": "image_picker",
+        "id": "image2",
+        "label": "Image 2"
+      },
+      {
+        "type": "html",
+        "id": "title2",
+        "label": "Heading 2" 
+      },
+     {
+        "type": "url",
+        "id": "buttonlink2",
+        "label": "Button link 2"
+      },
+      {
+        "type": "text",
+        "id": "buttontext2",
+        "label": "Button Text 2"
+      }
+  
+ 
+ 
+ 
+ 
+ 
+],
+
+ 
+"presets": [{
+"name": "Landing Banner",
+"category": "Image"
+
+ 
+}]
+}
+{% endschema %}
+     
