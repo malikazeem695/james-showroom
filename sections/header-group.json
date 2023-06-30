@@ -5,6 +5,26 @@
     "header": {
       "type": "header",
       "settings": {
+        "promo_text": "<p>JAMES IS PROUD TO ANNOUNCE THE LAUNCH OF MEREDITH ELLIS TEXTILES!  <a href=\"https:\/\/jamesshowroom.com\/collections\/meredith-ellis-textiles\/?sort_by=title-ascending\" target=\"_blank\" title=\"https:\/\/jamesshowroom.com\/collections\/meredith-ellis-textiles\/?sort_by=title-ascending\">EXPLORE THE COLLECTION HERE!<\/a><\/p>",
+        "social_icons_header": true,
+        "phone_number": "",
+        "top_bar_menu": "",
+        "show_cart": true,
+        "cart_icon": "cart",
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "logo_display_width": 120,
+        "logo": "shopify:\/\/shop_images\/James_Rec_Logo_NOBKGR.png",
+        "main_linklist": "main-menu",
+        "main_linklist2": "",
+        "vertical_menu": true,
+        "dropdown_click": false,
+        "search_enabled": true,
+        "fixed_header": true,
+        "logo_position": "left",
+        "logo_alignment": "center",
+        "menu_position": "inline",
+        "menu_alignment": "align_left"
       }
     },
     "mega_menu_1": {
@@ -13,30 +33,77 @@
         "column_0": {
           "type": "column",
           "settings": {
-            "richtext_top": "<p>Add description, images, menus and links to your mega menu<\/p>"
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "textiles",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
           }
         },
         "column_1": {
           "type": "column",
           "settings": {
-            "richtext_top": "<p>A column with no settings can be used as a spacer<\/p>"
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "textiles2",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
           }
         },
         "column_2": {
           "type": "column",
           "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "textiles3",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
           }
         },
         "column_3": {
           "type": "column",
           "settings": {
-            "richtext_top": "<p>Link to your collections, sales and even external links<\/p>"
-          }
-        },
-        "column_4": {
-          "type": "column",
-          "settings": {
-            "richtext_top": "<p>Add up to five columns<\/p>"
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "textiles4",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
           }
         }
       },
@@ -44,15 +111,339 @@
         "column_0",
         "column_1",
         "column_2",
-        "column_3",
-        "column_4"
+        "column_3"
       ],
       "settings": {
+        "parent": "SHOP"
+      }
+    },
+    "cdac89e8-5dd0-45f0-b7c9-f3a1dd65101f": {
+      "type": "mega-menu-2",
+      "blocks": {
+        "sections--19529970712872__cdac89e8-5dd0-45f0-b7c9-f3a1dd65101f-16875171075d1d8783-0": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "wallpaper",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        },
+        "sections--19529970712872__cdac89e8-5dd0-45f0-b7c9-f3a1dd65101f-16875171075d1d8783-1": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "wallpaper2",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        },
+        "sections--19529970712872__cdac89e8-5dd0-45f0-b7c9-f3a1dd65101f-16875171075d1d8783-2": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "wallpaper3",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        },
+        "sections--19529970712872__cdac89e8-5dd0-45f0-b7c9-f3a1dd65101f-16875171075d1d8783-3": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "wallpaper4",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        }
+      },
+      "block_order": [
+        "sections--19529970712872__cdac89e8-5dd0-45f0-b7c9-f3a1dd65101f-16875171075d1d8783-0",
+        "sections--19529970712872__cdac89e8-5dd0-45f0-b7c9-f3a1dd65101f-16875171075d1d8783-1",
+        "sections--19529970712872__cdac89e8-5dd0-45f0-b7c9-f3a1dd65101f-16875171075d1d8783-2",
+        "sections--19529970712872__cdac89e8-5dd0-45f0-b7c9-f3a1dd65101f-16875171075d1d8783-3"
+      ],
+      "settings": {
+        "parent": "VISIT"
+      }
+    },
+    "82c79790-2bca-4629-be73-fb32f68e7b1f": {
+      "type": "mega-menu-3",
+      "blocks": {
+        "sections--19529970712872__82c79790-2bca-4629-be73-fb32f68e7b1f-168751736886c7d0a6-0": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "lighting",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        },
+        "sections--19529970712872__82c79790-2bca-4629-be73-fb32f68e7b1f-168751736886c7d0a6-1": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "lighting2",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        },
+        "sections--19529970712872__82c79790-2bca-4629-be73-fb32f68e7b1f-168751736886c7d0a6-2": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "lighting3",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        },
+        "sections--19529970712872__82c79790-2bca-4629-be73-fb32f68e7b1f-168751736886c7d0a6-3": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "lighting4",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        }
+      },
+      "block_order": [
+        "sections--19529970712872__82c79790-2bca-4629-be73-fb32f68e7b1f-168751736886c7d0a6-0",
+        "sections--19529970712872__82c79790-2bca-4629-be73-fb32f68e7b1f-168751736886c7d0a6-1",
+        "sections--19529970712872__82c79790-2bca-4629-be73-fb32f68e7b1f-168751736886c7d0a6-2",
+        "sections--19529970712872__82c79790-2bca-4629-be73-fb32f68e7b1f-168751736886c7d0a6-3"
+      ],
+      "settings": {
+        "parent": "SCHEDULE"
+      }
+    },
+    "16f3a26e-2d1e-4917-a74d-972e1a3f5b81": {
+      "type": "mega-menu-4",
+      "blocks": {
+        "sections--19529970712872__16f3a26e-2d1e-4917-a74d-972e1a3f5b81-168751751737a82f5f-0": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "carpets",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        },
+        "sections--19529970712872__16f3a26e-2d1e-4917-a74d-972e1a3f5b81-168751751737a82f5f-1": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "carpets2",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        },
+        "sections--19529970712872__16f3a26e-2d1e-4917-a74d-972e1a3f5b81-168751751737a82f5f-2": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "carpets3",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        },
+        "sections--19529970712872__16f3a26e-2d1e-4917-a74d-972e1a3f5b81-168751751737a82f5f-3": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "carpets4",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        }
+      },
+      "block_order": [
+        "sections--19529970712872__16f3a26e-2d1e-4917-a74d-972e1a3f5b81-168751751737a82f5f-0",
+        "sections--19529970712872__16f3a26e-2d1e-4917-a74d-972e1a3f5b81-168751751737a82f5f-1",
+        "sections--19529970712872__16f3a26e-2d1e-4917-a74d-972e1a3f5b81-168751751737a82f5f-2",
+        "sections--19529970712872__16f3a26e-2d1e-4917-a74d-972e1a3f5b81-168751751737a82f5f-3"
+      ],
+      "settings": {
+        "parent": "TRADE REGISTRATION"
+      }
+    },
+    "b41d08b9-7de6-4d5c-aea0-1c4c132df8f3": {
+      "type": "mega-menu-5",
+      "blocks": {
+        "sections--19529970712872__b41d08b9-7de6-4d5c-aea0-1c4c132df8f3-168751760039a44bd6-0": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "furniture2",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        },
+        "sections--19529970712872__b41d08b9-7de6-4d5c-aea0-1c4c132df8f3-168751760039a44bd6-1": {
+          "type": "column",
+          "settings": {
+            "richtext_top": "",
+            "image_caption_top": "",
+            "image_link_top": "",
+            "menu_1": "furniture3",
+            "menu_1_link": "",
+            "menu_2": "",
+            "menu_2_link": "",
+            "menu_3": "",
+            "menu_3_link": "",
+            "menu_4": "",
+            "menu_4_link": "",
+            "image_caption_bottom": "",
+            "image_link_bottom": "",
+            "richtext_bottom": ""
+          }
+        }
+      },
+      "block_order": [
+        "sections--19529970712872__b41d08b9-7de6-4d5c-aea0-1c4c132df8f3-168751760039a44bd6-0",
+        "sections--19529970712872__b41d08b9-7de6-4d5c-aea0-1c4c132df8f3-168751760039a44bd6-1"
+      ],
+      "settings": {
+        "parent": "FAQ"
       }
     }
   },
   "order": [
     "header",
-    "mega_menu_1"
+    "mega_menu_1",
+    "cdac89e8-5dd0-45f0-b7c9-f3a1dd65101f",
+    "82c79790-2bca-4629-be73-fb32f68e7b1f",
+    "16f3a26e-2d1e-4917-a74d-972e1a3f5b81",
+    "b41d08b9-7de6-4d5c-aea0-1c4c132df8f3"
   ]
 }

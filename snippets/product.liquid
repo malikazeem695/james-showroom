@@ -51,10 +51,7 @@
 {% comment %} HTML markup {% endcomment %}
 
 {% if product != blank and context == 'product' %}
-  {%
-    render 'product__structured-data',
-    product: product
-  %}
+  {% render 'product__structured-data', product: product %}
 {% endif %}
 
 <div class="product-main product-{{ product.id }}">
@@ -74,7 +71,6 @@
       data-rv-handle="{{ product.handle }}"
     {% endif %}
   >
-
     <div
       class="
         product__images
@@ -196,89 +192,63 @@
                 {% if collection_handles contains 'coming-soon' %}
                   <p class="modal_price">{{ 'collections.general.coming_soon' | t }}</p>
                 {% else %}
-                  <div class="modal_price" data-display-savings="{{ block.settings.display_savings }}">
-                    {% comment %}Inject @pixelunion/shopify-price-ui/price-ui begin{% endcomment %}
-                    <div class="price-ui price-ui--loading" data-price-ui>
-                      <noscript>
-                        <style>
-                          .price-ui--loading {
-                            display: block !important;
-                            opacity: 1 !important;
-                          }
-                        </style>
-                      </noscript>
-                      {% assign compare_at_price = false %}
-                    
-                      {% if product.compare_at_price and product.compare_at_price != product.price %}
-                        {% if product.compare_at_price_varies %}
-                          {%- capture price_min -%}
-                            {%-
-                              render 'price-ui-templates',
-                              template: 'price-min',
-                              value: product.compare_at_price_min,
-                            -%}
-                          {%- endcapture -%}
-                    
-                          {%- capture price_max -%}
-                            {%-
-                              render 'price-ui-templates',
-                              template: 'price-max',
-                              value: product.compare_at_price_max,
-                            -%}
-                          {%- endcapture -%}
-                    
-                          {%- assign compare_at_price = 'product.price.range_html' | t: price_min: price_min, price_max: price_max -%}
-                        {% else %}
-                          {%- capture compare_at_price -%}
-                            {%-
-                              render 'price-ui-templates',
-                              template: 'price',
-                              value: product.compare_at_price,
-                            -%}
-                          {%- endcapture -%}
-                        {% endif %}
-                      {% endif %}
-                    
-                      {% if product.price_varies %}
-                        {%- capture price_min -%}
-                          {%-
-                            render 'price-ui-templates',
-                            template: 'price-min',
-                            value: product.price_min,
-                          -%}
-                        {%- endcapture -%}
-                    
-                        {%- capture price_max -%}
-                          {%-
-                            render 'price-ui-templates',
-                            template: 'price-max',
-                            value: product.price_max,
-                          -%}
-                        {%- endcapture -%}
-                    
-                        {%- assign price = 'product.price.range_html' | t: price_min: price_min, price_max: price_max -%}
-                      {% else %}
-                        {%- capture price -%}
-                          {%-
-                            render 'price-ui-templates',
-                            template: 'price',
-                            value: product.price,
-                          -%}
-                        {%- endcapture -%}
-                      {% endif %}
-                    
-                      {%-
-                        render 'price-ui-templates',
-                        template: 'price-ui',
-                        compare_at_price: compare_at_price,
-                        price: price,
-                        unit_pricing: false,
-                      -%}
-                    </div>
-                    {% comment %}Inject @pixelunion/shopify-price-ui/price-ui end{% endcomment %}
+                  {% if product.type == 'Lighting' or product.type == 'Furniture' %}
+                    <p class="nplo"><a href="/account/login">Log in</a> for pricing</p>
+                  {% else %}
+                    <p class="nplo"><a href="/account/login">Log in</a> for pricing and samples</p>
+                  {% endif %}
+                  <p class="modal_price hidiein" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+                    <meta itemprop="seller" content="{{ shop.name | escape }}">
+                    <link
+                      itemprop="availability"
+                      href="http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}"
+                    >
+                    <meta
+                      itemprop="itemCondition"
+                      itemtype="http://schema.org/OfferItemCondition"
+                      content="http://schema.org/NewCondition"
+                    >
 
-                    <form class="payment-terms-container" data-payment-terms-target style="display: none;"></form>
-                  </div>
+                    <span class="sold_out">
+                      {%- if variant.available == false %}{{ 'products.product.sold_out' | t }}{% endif -%}
+                    </span>
+                    <span
+                      itemprop="price"
+                      content="{{ variant.price | money_without_currency | remove: "," }}"
+                      class="{% if variant.compare_at_price > variant.price %}sale{% endif %}"
+                    >
+                      <span class="current_price {% if product.available == false %}hidden{% endif %}">
+                        {% if variant.price > 0 %}
+                          <span class="money">{{ variant.price | money }}</span>
+                        {% else %}
+                          {{ settings.free_price_text }}
+                        {% endif %}
+                      </span>
+                    </span>
+                    <span class="was_price">
+                      {% if variant.price < variant.compare_at_price and variant.available %}
+                        <span class="money">{{ variant.compare_at_price | money }}</span>
+                      {% endif %}
+                    </span>
+
+                    {% if section.settings.display_savings %}
+                      <span class="sale savings">
+                        {% if variant.price < variant.compare_at_price and variant.available %}
+                          {{ 'products.product.savings' | t }}
+                          {{
+                            variant.compare_at_price
+                            | minus: variant.price
+                            | times: 100
+                            | divided_by: variant.compare_at_price
+                          -}}
+                          % (<span class="money">{{ variant.compare_at_price | minus: variant.price | money }}</span>)
+                        {% endif %}
+                      </span>
+                    {% endif %}
+                  </p>
+
+                  {% render 'product-notify-me' %}
                 {% endif %}
               {% endif %}
             {% when 'custom-liquid' %}
@@ -290,6 +260,7 @@
                 {% else %}
                   {% if context == 'quickshop' %}
                     {% if product.description != blank %}
+                      <h2>Details</h2>
                       <div class="rte">
                         {% if block.settings.truncate_description %}
                           {{ product.description | truncatewords: block.settings.truncated_words }}
@@ -308,13 +279,15 @@
                     </a>
                   {% else %}
                     {% if product.description != blank %}
-                      <div class="rte">
+                      <h2>Details</h2>
+                      <div class="rte description bottom" itemprop="description">
                         {{ product.description | split: '<!-- split -->' | first }}
                       </div>
                     {% endif %}
                   {% endif %}
                 {% endif %}
               </div>
+              <a class="product_print" onclick="window.print()">Download Tearsheet</a>
             {% when 'form' %}
               {% if onboarding %}
                 <form>
@@ -326,24 +299,19 @@
                     "
                     name="add"
                     type="submit"
-                    data-label={{ add_to_cart_label | json }}
+                    data-label="{{ add_to_cart_label | json }}"
                   >
                     <span class="text">{{ 'products.product.add_to_cart' | t }}</span>
                   </button>
                 </form>
               {% else %}
-
                 {% unless collection_handles contains 'coming-soon' %}
-                  {%
-                    render 'product-form',
+                  {% render 'product-form',
                     product: product,
                     show_payment_button: show_dynamic_checkout_button,
                     collection_handles: collection_handles
                   %}
-                  {%
-                    render 'product-notify-me',
-                    product: product
-                  %}
+                  {% render 'product-notify-me', product: product %}
                 {% endunless %}
               {% endif %}
             {% when 'text' %}
@@ -358,7 +326,8 @@
                       <span class="label">{{ 'products.product.collections' | t }}:</span>
                       <span>
                         {% for col in product.collections %}
-                          <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>{% unless forloop.last %},{% endunless %}
+                          <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>
+                          {%- unless forloop.last %},{% endunless %}
                         {% endfor %}
                       </span>
                     </p>
@@ -382,8 +351,14 @@
 
                         {% unless tag contains 'meta-' %}
                           <span>
-                            <a href="{{ routes.collections_url }}/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}" title="{{ 'products.product.products_tagged' | t: tag: tag }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
-                            </span>
+                            <a
+                              href="{{ routes.collections_url }}/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}"
+                              title="{{ 'products.product.products_tagged' | t: tag: tag }}"
+                            >
+                              {{- tag -}}
+                            </a>
+                            {%- unless forloop.last %},{% endunless %}
+                          </span>
                         {% endunless %}
                       {% endfor %}
                     </p>
@@ -392,10 +367,7 @@
               {% endif %}
             {% when 'share' %}
               <div class="meta">
-                {%
-                  render 'social-buttons',
-                  context: 'product'
-                %}
+                {% render 'social-buttons', context: 'product' %}
               </div>
             {% when 'collapsible-tab' %}
               {% if block.settings.collapsible_tab_heading != blank %}
@@ -497,11 +469,17 @@
                     scale_max: product.metafields.reviews.rating.value.scale_max,
                   %}
                   <p class="rating__text">
-                    <span aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
+                    <span aria-hidden="true">
+                      {{- product.metafields.reviews.rating.value }} /
+                      {{ product.metafields.reviews.rating.value.scale_max -}}
+                    </span>
                   </p>
                   <p class="rating__count">
                     <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
-                    <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "general.accessibility.total_reviews" | t }}</span>
+                    <span class="visually-hidden">
+                      {{- product.metafields.reviews.rating_count }}
+                      {{ 'general.accessibility.total_reviews' | t -}}
+                    </span>
                   </p>
                 </div>
               {% endif %}
@@ -552,7 +530,7 @@
       {% endfor %}
     </div>
 
-    {% if product.description != blank and product.description contains "<!-- split -->" %}
+    {% if product.description != blank and product.description contains '<!-- split -->' %}
       <div class="sixteen columns rte">
         {{ product.description | split: '<!-- split -->' | last }}
       </div>

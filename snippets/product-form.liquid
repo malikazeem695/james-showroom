@@ -93,7 +93,7 @@
     {% endif %}
   {% endif %}
 
-  <div class="purchase-details">
+  {% comment %} <div class="purchase-details">
     {% if settings.display_product_quantity %}
       <div class="purchase-details__quantity product-quantity-box">
         <label for="quantity">{{ 'products.product.quantity' | t }}</label>
@@ -145,9 +145,9 @@
         {{ form | payment_terms }}
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
 {% endform %}
 
-  <div class="surface-pick-up surface-pick-up--loading" data-surface-pick-up></div>
-  <div class="surface-pick-up__modal" data-surface-pick-up-modal></div>
+  {% comment %} <div class="surface-pick-up surface-pick-up--loading" data-surface-pick-up></div>
+  <div class="surface-pick-up__modal" data-surface-pick-up-modal></div> {% endcomment %}
 </div>

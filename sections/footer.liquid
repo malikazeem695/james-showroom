@@ -188,7 +188,7 @@
           </div>
         {% endif %}
 
-        <p class="credits">
+        {% comment %} <p class="credits">
           &copy; {{ "now" | date: "%Y" }} {{ shop.name | link_to: routes.root_url }}.
 
           {{ section.settings.copyright_text }}
@@ -198,7 +198,7 @@
           {% endif %}
 
           {{ powered_by_link }}
-        </p>
+        </p> {% endcomment %}
 
         {% if section.settings.display_payment_methods %}
           <div class="payment_methods">

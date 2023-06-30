@@ -5,35 +5,51 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer_0": {
-          "type": "logo",
-          "settings": {
-          }
-        },
-        "footer_1": {
-          "type": "link_list",
-          "settings": {
-            "menu": "footer"
-          }
-        },
-        "footer_2": {
-          "type": "link_list",
-          "settings": {
-          }
-        },
-        "footer_3": {
+        "f45091ec-0fce-4f24-8679-b433085126b4": {
           "type": "text",
           "settings": {
+            "title": "",
+            "content": "<p><a href=\"\/pages\/submissions\" title=\"Submissions\"><strong>SUBMISSIONS<\/strong><\/a><\/p><p><a href=\"\/pages\/accessibility-statement\" target=\"_blank\" title=\"Accessibility Statement\">Accessibility <\/a><\/p>",
+            "social_icons_footer": false
+          }
+        },
+        "36bf1f2c-ded4-4cfc-a5cb-53f9510dfda3": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "content": "<p><a href=\"tel:+(214)2957500\">☎ (214) 295-7500<\/a> - Dallas<\/p><p><a href=\"tel:+(713)9551053\" title=\"tel:+(713)9551053\">☎ (713) 955-1053<\/a> - Houston<\/p>",
+            "social_icons_footer": false
+          }
+        },
+        "7a75c9c8-2f9a-4f5b-866a-cfb8cbc243e3": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "content": "<p><a href=\"mailto:dallas@jamesshowroom.com\" title=\"mailto:dallas@jamesshowroom.com\">dallas@jamesshowroom.com<\/a><\/p><p><a href=\"mailto:houston@jamesshowroom.com\" title=\"mailto:houston@jamesshowroom.com\">houston@jamesshowroom.com<\/a><\/p>",
+            "social_icons_footer": false
+          }
+        },
+        "f2feb725-c46f-4390-a003-b4100c6365ec": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "content": "",
+            "social_icons_footer": true
           }
         }
       },
       "block_order": [
-        "footer_0",
-        "footer_1",
-        "footer_2",
-        "footer_3"
+        "f45091ec-0fce-4f24-8679-b433085126b4",
+        "36bf1f2c-ded4-4cfc-a5cb-53f9510dfda3",
+        "7a75c9c8-2f9a-4f5b-866a-cfb8cbc243e3",
+        "f2feb725-c46f-4390-a003-b4100c6365ec"
       ],
       "settings": {
+        "copyright_text": "",
+        "display_designed_by": false,
+        "display_payment_methods": false,
+        "show_locale_selector": false,
+        "show_currency_selector": false
       }
     }
   },

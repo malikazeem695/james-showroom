@@ -1,0 +1,16 @@
+{
+  "name": "james-showroom",
+  "//comment": "Make sure to use the myshopify name for the object name above",
+  "version": "1.0.0",
+  "description": "Your Shopify theme",
+  "scripts": {
+    "start": "shopify theme dev -s $npm_package_name --theme-editor-sync --live-reload full-page",
+    "pull": "shopify theme pull -s $npm_package_name",
+    "pull-live": "shopify theme pull -s $npm_package_name --live",
+    "push": "shopify theme push -s $npm_package_name",
+    "pull-start": "npm run pull-live && npm start"
+  },
+  "devDependencies": {
+    "shopify-cli": "^2.7.1"
+  }
+}

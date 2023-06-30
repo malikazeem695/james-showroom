@@ -223,6 +223,20 @@
       "sort_collection": "Sort {{ title }}",
       "filter": "Filter by",
       "filter_collection": "Filter {{ title }}"
+    },
+    "sorting": {
+      "title": "Sort by",
+      "sort_collection": "Sort {{ title }}",
+      "filter": "Filter by",
+      "filter_collection": "Filter {{ title }}",
+      "featured": "Featured",
+      "best_selling": "Best Selling",
+      "az": "Alphabetically: A-Z",
+      "za": "Alphabetically: Z-A",
+      "price_ascending": "Price: Low to High",
+      "price_descending": "Price: High to Low",
+      "date_descending": "Date: New to Old",
+      "date_ascending": "Date: Old to New"
     }
   },
   "products": {

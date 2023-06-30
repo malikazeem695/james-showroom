@@ -138,25 +138,19 @@
         {% endif %}
 
         {% if section.settings.collection_sort %}
-          <select
-            class="sort_by"
-            id="sort-by"
-            data-sort-by
-          >
-            {%- for option in collection.sort_options -%}
-              {% assign sort_active = false %}
-              {% if collection.sort_by == blank and collection.default_sort_by == option.value %}
-                {% assign sort_active = true %}
-              {% elsif collection.sort_by == option.value %}
-                {% assign sort_active = true %}
-              {% endif %}
-              <option value="{{ option.value }}" {% if sort_active %}selected="selected"{% endif %}>
-                {{ option.name }}
-              </option>
-            {%- endfor -%}
+          <select class="sort_by" id="sort-by" data-default-sort="{{ collection.sort_by | default: collection.default_sort_by  }}">
+            <option value="manual">{{ 'collections.sorting.featured' | t }}</option>
+            <option value="best-selling">{{ 'collections.sorting.best_selling' | t }}</option>
+            <option value="title-ascending">{{ 'collections.sorting.az' | t }}</option>
+            <option value="title-descending">{{ 'collections.sorting.za' | t }}</option>
+            <option value="price-ascending">{{ 'collections.sorting.price_ascending' | t }}</option>
+            <option value="price-descending">{{ 'collections.sorting.price_descending' | t }}</option>
+            <option value="created-descending">{{ 'collections.sorting.date_descending' | t }}</option>
+            <option value="created-ascending">{{ 'collections.sorting.date_ascending' | t }}</option>
           </select>
         {% endif %}
       {% endif %}
+      <a href="javascript:;" class="mobile-filter">Filters</a>
     </div>
 
     <div class="one-whole column">
@@ -201,6 +195,7 @@
                 <p class="quote">{{ 'collections.general.no_matches' | t }}</p>
               </div>
             {% else %}
+            <div id="AjaxinateLoop" class="collection-grid__products" data-products-count="{{ collection.products_count }}">
               {%- assign products_per_row = section.settings.products_per_row -%}
               {%
                 render 'product-loop',
@@ -210,6 +205,7 @@
                 products_per_row: products_per_row,
                 sidebar: sidebar,
               %}
+            </div>
             {% endif %}
           </div>
         </div>
@@ -234,6 +230,175 @@
     ShopifyXR('addModels', {{ models }});
   </script>
 {% endif %}
+
+<script>
+  const cssClasses = {
+    collectionSidebar: '.collection-sidebar',
+   
+    filterItem: '.collection-sidebar__filter-item',
+    filter: '.collection-sidebar__filter-items',
+};
+
+// Accordion
+ 
+
+var endlessScroll = new Ajaxinate({
+    container: '#AjaxinateLoop',
+    pagination: '#AjaxinatePagination',
+    method: 'click',
+    offset: 150,
+    beforeLoad: function () {
+        $('.collection__main').addClass('ajax-loading');
+    },
+    callback: function () {
+        $('.collection__main').removeClass('ajax-loading');
+    }
+});
+
+ 
+
+// Tag filter
+const url = window.location.origin + window.location.pathname;
+const filterItem = $(cssClasses.filterItem);
+let collectionUrl = $(cssClasses.collectionSidebar).data('collection-url');
+
+var productsContainer = $('.collection-grid__products');
+
+filterItem.each(function () {
+    const tag = $(this).data('tag');
+
+    if (url.indexOf(tag) !== -1) {
+        $(this).addClass('active');
+
+        console.log($(this), 'add class active');
+
+         
+    }
+});
+
+filterItem.on('click', function () {
+    let search = window.location.search;
+
+    if (search.indexOf('page') !== -1) {
+        const pageParam = search.split("&")[0];
+        search = search.replace(pageParam, '').replace('&', '?');
+    }
+
+    const filter = $(this).parents('[data-filter]');
+    const filterItems = filter.find(cssClasses.filterItem);
+   /* var addActiveClass = true;
+
+    if ($(this).hasClass('active')) {
+        addActiveClass = false
+    }
+
+    filterItems.removeClass('active');
+
+    if (addActiveClass) {
+        $(this).addClass('active');
+    }*/
+
+    $(this).toggleClass('active');
+
+    var activeItems = $('.collection-sidebar').find(cssClasses.filterItem + '.active');
+    var activeTags = [];
+
+    activeItems.each(function (index, el) {
+        var tag = $(el).attr('data-tag');
+
+        if (tag) {
+            activeTags.push(tag);
+        }
+    });
+
+    var tagsUrl = activeTags.join('+');
+
+    var newUrl = collectionUrl;
+
+    if (tagsUrl) {
+        newUrl += '/' + tagsUrl;
+    }
+
+    newUrl += search;
+
+    $('.collection__main').addClass('ajax-loading');
+
+    console.log(newUrl);
+    console.log('---');
+
+    $.get({
+        url: newUrl,
+        success: function (data) {
+          
+            var newProductsWrapper = $(data).find(".collection-grid__products");
+            var newProductsHtml = newProductsWrapper.html();
+          if( newProductsHtml == null)
+          {
+            alert('no products in this selection');
+            productsContainer.html('<p class="quote">No products found in this selection</p>');
+          }
+            productsContainer.html(newProductsHtml);
+
+            var newItemCount = newProductsWrapper.attr('data-products-count');
+            $('.js-product-grid__count').text(newItemCount);
+
+            var newPaginationHtml = $(data).find("#AjaxinatePagination").html();
+            $('#AjaxinatePagination').html(newPaginationHtml);
+            var pagination = $("#AjaxinatePagination");
+
+            if (pagination.length) {
+                pagination.html(newPaginationHtml);
+
+                new Ajaxinate({
+                    container: '#AjaxinateLoop',
+                    pagination: '#AjaxinatePagination',
+                    method: 'click',
+                    offset: 150,
+                    beforeLoad: function () {
+                        $('.collection__main').addClass('ajax-loading');
+                    },
+                    callback: function () {
+                        $('.collection__main').removeClass('ajax-loading');
+                    }
+                });
+            }
+
+            history.pushState({
+                page: newUrl
+            }, null, newUrl);
+
+            $('.collection__main').removeClass('ajax-loading');
+        }
+    })
+});
+
+if($(window).width() < 767)
+{
+   $('.sidebar-wrap  .sidebar-block:first-of-type  .toggle').addClass('active');
+  // $('.sidebar-wrap  .sidebar-block .toggle_list').css("display", "block");
+  $(document).ready(function(){ 
+    $('.sidebar-wrap .sidebar-block:first-of-type .toggle').trigger('click');
+  // $('.sidebar-wrap .sidebar-block .toggle').trigger('click');
+    });
+} else {
+   // change functionality for larger screens
+}
+  
+  // $(' a.mobile-filter').click(function(){
+  //   $('.collection-sidebar').toggleClass('active')
+  // })
+  // $('.mobile-filter-close').click(function(){
+  //   $('.collection-sidebar').removeClass('active')
+  // })
+</script>
+<style>
+  li.collection-sidebar__filter-item {
+    cursor: pointer;
+}
+li.collection-sidebar__filter-item.active {
+    font-weight: bold!important;
+}
+</style>
 
 <script defer src="https://cdn.shopify.com/shopifycloud/shopify-xr-js/assets/v1.0/shopify-xr.en.js"></script>
 <script defer src="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.en.js"></script>
@@ -357,6 +522,27 @@
     }
   ],
   "blocks": [
+    {
+      "type": "image",
+      "name": "Collection filter",
+      "settings": [
+        {
+      "type": "checkbox",
+      "id": "sort-dropdown-a-check",
+      "label": "enable"
+    }, {
+      "type": "text",
+      "id": "filter1heading",
+      "label": "Filter heading"
+    },
+    {
+      "type": "textarea",
+      "id": "sort_a",
+      "label": "tags"
+    }
+        
+      ]
+    },
     {
       "type": "filter_by_collection",
       "name": "Collection list",

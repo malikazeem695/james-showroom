@@ -2,12 +2,79 @@
   "sections": {
     "main": {
       "type": "collection-template",
+      "blocks": {
+        "7ab4c5b7-4dc5-401c-ae2a-a342cf78fef5": {
+          "type": "image",
+          "settings": {
+            "sort-dropdown-a-check": true,
+            "filter1heading": "Designers",
+            "sort_a": "Alamwar, Anna Spiro, Botanica Trading, Caitlin McGauley, Carolina Irving, Casa Branca, Ferrick Mason, Heather Chadduck, Jennifer Shorto, John Robshaw, Kathryn Ireland, Lake August, Leah O'Connell, Lisa Fine, Mally Skok, Martyn Lawrence Bullard,  McLaurin & Piercy, Nile And York, Otis Textiles, Penny Morrison, Peter Dunham, Pintura Studio, Rebecca Atwood, Rule of Three, Sarah & Ruby, Schuyler Samperton, Serena Dugan, Sister Parish, Studio Four NYC, Tulu Textiles, Walter G"
+          }
+        },
+        "581067ef-3d09-459a-adaa-fdbd9711b309": {
+          "type": "image",
+          "settings": {
+            "sort-dropdown-a-check": true,
+            "filter1heading": "Color",
+            "sort_a": "Black, Blue, Green, Gray, Lavender, Multi, Pink, Purple, Red, White, Yellow, Taupe"
+          }
+        },
+        "17dbe406-e74d-49a4-9853-c0e1bbb96018": {
+          "type": "image",
+          "settings": {
+            "sort-dropdown-a-check": true,
+            "filter1heading": "Content",
+            "sort_a": "Cotton, Leather, Linen, Linen\/Cotton, Outdoor, Performance, Silk, Woven, Clay Coated Paper, Grasscloth, Paperweave"
+          }
+        },
+        "b180c2eb-3e51-4b12-b8bb-2f047e113d16": {
+          "type": "image",
+          "settings": {
+            "sort-dropdown-a-check": true,
+            "filter1heading": "Style",
+            "sort_a": "Floral, Geometric, Marbleized, Solid, Ikat, Animal Print, Abstract, Small Print, Large Repeat, Border, Woven, Block Print, Stripe, Check, Plaid, Paisley"
+          }
+        },
+        "f49e7528-df98-49a4-9571-8dc0e010e931": {
+          "type": "image",
+          "settings": {
+            "sort-dropdown-a-check": true,
+            "filter1heading": "Lighting Type",
+            "sort_a": "Chandelier, Flush Mount , Semi-Flush Mount, Pendant, Lantern, Wall Light, Sconce, Picture Light, Standing Lamp, Table Lamp, Cordless"
+          }
+        }
+      },
+      "block_order": [
+        "7ab4c5b7-4dc5-401c-ae2a-a342cf78fef5",
+        "581067ef-3d09-459a-adaa-fdbd9711b309",
+        "17dbe406-e74d-49a4-9853-c0e1bbb96018",
+        "b180c2eb-3e51-4b12-b8bb-2f047e113d16",
+        "f49e7528-df98-49a4-9571-8dc0e010e931"
+      ],
       "settings": {
+        "featured_collection_image": false,
+        "wide_display": true,
+        "caption_content_background": "original",
+        "display_collection_title": false,
+        "collection_breadcrumb": true,
+        "collection_tags": false,
+        "collection_sort": true,
+        "products_per_row": 3,
+        "pagination_limit": 48,
+        "toggle": false
       }
     },
     "newsletter": {
       "type": "newsletter",
       "settings": {
+        "wide_display": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Subscribe",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
       }
     }
   },

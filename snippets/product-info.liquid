@@ -116,7 +116,7 @@
         {% unless product.available == false and settings.display_price == false %}
           <span class="current_price">
             {% if product.price_varies %}
-              <small class="from"><em>{{ 'products.general.from' | t }}</em></small>
+              {% comment %} <small class="from"><em>{{ 'products.general.from' | t }}</em></small> {% endcomment %}
             {% endif %}
             {% if product.price_min > 0 %}
               <span class="money">{% render 'price-element', price: product.price_min %}</span>
@@ -124,7 +124,7 @@
               {% if settings.free_price_text != blank %}
                 <span class="free">{{ settings.free_price_text }}</span>
               {% else %}
-                <span class="money">{% render 'price-element', price: product.price_min %}</span>
+                <span class="money"></span>
               {% endif %}
             {% endif %}
           </span>
