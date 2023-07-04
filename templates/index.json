@@ -17,8 +17,8 @@
         "text_position": "center",
         "text_align": "center",
         "caption_content_background": "translucent_text_box",
-        "mobile_text_below_image": true,
-        "mobile_text_color": "",
+        "mobile_text_below_image": false,
+        "mobile_text_color": "#c7a55d",
         "css_class": "",
         "custom_css": ""
       }
@@ -101,7 +101,7 @@
     "4f8334c0-eb81-44f4-b3da-cf37170e43d3": {
       "type": "featured-collection",
       "custom_css": [
-        ".price{display: none !important;}"
+        ".price {display: none !important;}"
       ],
       "settings": {
         "title": "NEW ARRIVALS!",

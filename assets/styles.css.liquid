@@ -4343,8 +4343,17 @@ p.cart-message a {
   display: flex;
   flex-wrap: nowrap;
   flex: 0 0 auto;
+  align-items: center;
 }
-
+a.trade-account__link span {
+  font-size: 12px;
+}
+.top-bar--right-menu:hover li  {
+  color: #c7a55d;
+}
+ul.top-bar__menu:hover li .trade-account__link span {
+  color: #c7a55d;
+}
 .main-nav,
 .dropdown {
   clear: both;
@@ -5228,6 +5237,9 @@ input[type=button].guest_button:hover {
   input[type=button].guest_button {
     text-align: center;
   }
+  .header__logo.logo--image {
+    max-width: 16%;
+  }
 }
 
 .menu ul li .mini_cart span {
@@ -5348,11 +5360,21 @@ input[type=button].guest_button:hover {
 }
 
 .mega-menu {
-  display: grid;
+  /* display: grid; */
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  padding: 25px 0 35px;
+  max-width: 1230px;
+  position: relative;
 }
-
+.nav-desktop__tier-2{
+  border-top: 1px solid #c7a55d;
+}
 .dropdown_column li {
   display: block;
 }
@@ -11923,7 +11945,13 @@ h4 span,
 }
 @media only screen and (max-width: 480px) {
   .top-bar {
-    padding-top: 0;
+    height: 70px;
+    padding: 20px 0px;
+  }
+  .banner {
+    max-height: inherit;
+    background-color: transparent;
+    padding-top: 50px;
   }
 }
 
@@ -14720,8 +14748,8 @@ html.remodal-is-locked {
   }
   #header a.mobile_logo img {
     width: auto;
-    max-width: 150px;
-    max-height: 30px;
+    max-width: 200px;
+    max-height: 50px;
   }
   .payment_methods {
     text-align: center;
@@ -16374,15 +16402,7 @@ footer .social_icons a:hover {
   background-color: {{ settings.banner_background_color }}; /* Fallback */
 }
 
-@media only screen and (max-width: 480px) {
-  .caption--below-true .caption {
-    margin: 20px auto !important; /* Force caption margin */
-    font-size: 3vw;
-    position: static;
-    transform: none;
-    width: 100%;
-  }
-}
+
 @media only screen and (max-width: 480px) {
   .caption--below-true .pretext {
     color: {{ settings.regular_color }};
@@ -18630,7 +18650,6 @@ content: '';
     position: relative;
     overflow: hidden;
     background-color: #fff;
-    padding-top: 100%;
 }
 .banner >img {
     position: absolute;
