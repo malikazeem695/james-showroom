@@ -31,8 +31,20 @@
   {% else %}
     {{ page_image }}
   {% endif %}
-  <meta property="product:price:amount" content="{{ product.price | money_without_currency | strip_html | escape }}">
-  <meta property="product:price:currency" content="{{ shop.currency }}">
+  {%comment%} pricelock_start_eb3ddd32 {% endcomment %}
+    {% comment %} This is login to view price code. To remove it safely and quickly, run the uninstallation within the app itself. {% endcomment %}
+    {% capture pricelock_logic_eb3ddd32 %} {% render 'talon_pricelock_logic', product: product %} {% endcapture %}
+    {% assign show_prices = pricelock_logic_eb3ddd32 | strip %}
+    {% capture pricelock_show_eb3ddd32 %}{%comment%} pricelock_start_e42793f8 {% endcomment %}
+    {% comment %} This is login to view price code. To remove it safely and quickly, run the uninstallation within the app itself. {% endcomment %}
+    {% capture pricelock_logic_e42793f8 %} {% render 'talon_pricelock_logic', product: product %} {% endcapture %}
+    {% assign show_prices = pricelock_logic_e42793f8 | strip %}
+    {% capture pricelock_show_e42793f8 %}<meta property="product:price:amount" content="{{ product.price | money_without_currency | strip_html | escape }}">{% endcapture %} 
+    {% if show_prices == 'true' or  shop.metafields.pricelock.published == false or shop.metafields.pricelock.published == nil %} {{ pricelock_show_e42793f8 }} {% else %}  {% endif %}
+{%comment%} pricelock_end_e42793f8 {% endcomment %}
+  <meta property="product:price:currency" content="{{ shop.currency }}">{% endcapture %} 
+    {% if show_prices == 'true' or  shop.metafields.pricelock.published == false or shop.metafields.pricelock.published == nil %} {{ pricelock_show_eb3ddd32 }} {% else %}  {% endif %}
+{%comment%} pricelock_end_eb3ddd32 {% endcomment %}
 {% elsif template contains 'collection' %}
   <meta property="og:type" content="product.group">
   <meta property="og:title" content="{{ collection.title | strip_html | escape }}">
