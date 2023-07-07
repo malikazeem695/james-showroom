@@ -102,49 +102,66 @@
         <span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>
       </div>
     {% endif %}
-    <div class="purchase-details__buttons purchase-details__spb--{{ show_payment_button }} {% if product.available == false %}product-is-unavailable{% endif %}">
-      {% if settings.cart_action == 'reload_page' %}
-        <input type="hidden" name="return_to" value="back" />
-      {% elsif settings.cart_action == 'redirect_checkout' %}
-        <input type="hidden" name="return_to" value="{{ checkout_url }}" />
-      {% endif %}
-
-      {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
-      <button
-        type="{% if settings.cart_action == 'ajax' %}button{% else %}submit{% endif %}"
-        name="add"
-        class="
-          add_to_cart
-          global-button
+    {% if customer %}
+      {% if product.type == 'Lighting' or  product.type == 'Furniture'%}
+        <button data-fancybox data-src="#hidden-content1" class="action_button " href="javascript:;">
+        Purchase Inquiry
+        </button>
+      {% else %}
+        <button data-fancybox data-src="#hidden-content" class="action_button purchase_inquiry" href="javascript:;">
+        Purchase Inquiry
+        </button>
+        <div class="purchase-details__buttons purchase-details__spb--{{ show_payment_button }} {% if product.available == false %}product-is-unavailable{% endif %}">
+          {% if settings.cart_action == 'reload_page' %}
+            <input type="hidden" name="return_to" value="back" />
+          {% elsif settings.cart_action == 'redirect_checkout' %}
+            <input type="hidden" name="return_to" value="{{ checkout_url }}" />
+          {% endif %}
+    
+          {% capture add_to_cart_label %}{% if collection_handles contains 'pre-order' %}{{ 'collections.general.pre_order' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}{% endcapture %}
+          <button
+            type="{% if settings.cart_action == 'ajax' %}button{% else %}submit{% endif %}"
+            name="add"
+            class="
+              add_to_cart
+              global-button
+              {% if show_payment_button %}
+                global-button--secondary
+              {% else %}
+                global-button--primary
+              {% endif %}
+              {% if settings.cart_action == 'ajax' %}
+                ajax-submit
+              {% endif %}
+              {% if product.available == false %}
+                disabled
+              {% endif %}
+            "
+            data-label={{ add_to_cart_label | json }}
+          >
+            <span class="text">
+              {% if product.available %}{{ add_to_cart_label }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}
+            </span>
+            <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
+              <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
+            </svg>
+          </button>
           {% if show_payment_button %}
-            global-button--secondary
-          {% else %}
-            global-button--primary
+            {{ form | payment_button }}
           {% endif %}
-          {% if settings.cart_action == 'ajax' %}
-            ajax-submit
-          {% endif %}
-          {% if product.available == false %}
-            disabled
-          {% endif %}
-        "
-        data-label={{ add_to_cart_label | json }}
-      >
-        <span class="text">
-          {% if product.available %}{{ add_to_cart_label }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}
-        </span>
-        <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" class="checkmark">
-          <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"/>
-        </svg>
-      </button>
-      {% if show_payment_button %}
-        {{ form | payment_button }}
+    
+          <div data-payment-terms-reference style="display: none;">
+            {{ form | payment_terms }}
+          </div>
+        </div>
       {% endif %}
-
-      <div data-payment-terms-reference style="display: none;">
-        {{ form | payment_terms }}
+    {%  endif  %}
+      <div style="display: none;" id="hidden-content">
+        <div style="margin:0 auto;" class="pxFormGenerator" id="8xeNwpElaji2XPJYtGUe1Q"></div>
       </div>
-    </div>
+       <div style="display: none;" id="hidden-content1">
+        <div style="margin:0 auto;" class="pxFormGenerator" id="G1OZXqA4hDSbqi-Zo_HghA"></div>
+      </div>
   </div> 
 {% endform %}
 

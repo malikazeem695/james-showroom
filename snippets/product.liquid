@@ -67,6 +67,12 @@
     background: #C7A45C;
     color: #FFF;
 }
+button.action_button {
+  background-color: #c7a55d;
+  border: 1px solid #c7a55d;
+  color: white;
+  margin-bottom: 10px;
+}
   .swatch label {
     float: left;
     min-width: 40px;
@@ -405,6 +411,7 @@
                   %}
                 {% endunless %}
               {% endif %}
+
             {% when 'text' %}
               <div class="product-text">
                 {{ block.settings.text }}
