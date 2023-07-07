@@ -729,6 +729,31 @@ window.selectCallback = function (variant, selector, $element) {
     }
 
     $('.sku span', $product).text(variant.sku);
+    if (variant.title.indexOf("/") === -1) {
+  document.querySelector('.colorone').innerHTML = variant.title;
+} else {
+  var radioSelectedd = document.querySelector('input[name="option-0"]:checked').value;
+  document.querySelector('.swatch-color-display.normone').textContent = radioSelectedd;
+
+  var radioInputs = document.getElementsByName('option-0');
+  radioInputs.forEach(function (input) {
+    input.addEventListener('click', function () {
+      var radioValuee = this.value;
+      document.querySelector('.swatch-color-display.normone').textContent = radioValuee;
+    });
+  });
+}
+var radioSelected = document.querySelector('input[name="option-1"]:checked').value;
+document.querySelector('.swatch-color-display.colorone').textContent = radioSelected;
+
+var radioInputs = document.getElementsByName('option-1');
+radioInputs.forEach(function(input) {
+  input.addEventListener('click', function() {
+    var radioValue = this.value;
+    document.querySelector('.swatch-color-display.colorone').textContent = radioValue;
+  });
+});
+
 
     if (window.PXUTheme.theme_settings.product_form_style === 'radio') {
       const { length } = variant.options;
