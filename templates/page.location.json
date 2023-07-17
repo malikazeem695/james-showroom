@@ -1,0 +1,208 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "15e2b36b-2440-45ec-b265-2d67dd2f8fe9": {
+      "type": "featured-text",
+      "settings": {
+        "title": "OUR LOCATIONS",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "a0c0aa41-e30e-4d9b-be8d-36b84e08330f": {
+      "type": "image-text",
+      "blocks": {
+        "template--19950639743272__a0c0aa41-e30e-4d9b-be8d-36b84e08330f-16896018418bd7206d-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2018-11-09-MeredithEllis-62_800x_020b18ca-8427-4847-a640-3359ee894173.webp",
+            "title": "Our Locations",
+            "text": "<p><strong>Dallas Design Center<\/strong><\/p><p><strong>1025 N. Stemmons Fwy. #250 <\/strong><\/p><p><strong>Dallas, TX 75207<br\/><\/strong><\/p><p><a href=\"tel:2142957500\" title=\"tel:2142957500\"><strong>(214) 295-7500<\/strong><\/a><\/p><p><a href=\"mailto:dallas@jamesshowroom.com\" title=\"mailto:dallas@jamesshowroom.com\"><strong>dallas@jamesshowroom.com<\/strong><\/a><\/p>",
+            "button_label": "Contact Dallas",
+            "link": "mailto:dallas@jamesshowroom.com",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "template--19950639743272__a0c0aa41-e30e-4d9b-be8d-36b84e08330f-16896018418bd7206d-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JAMES_HOUSTON_800x_b137f629-0296-4d00-9386-d2ac97010981.webp",
+            "title": "Contact Dallas",
+            "text": "<p><strong>Decorative Center of Houston<\/strong><\/p><p><strong>5120 Woodway Drive #3029<\/strong><\/p><p><strong>Houston, TX 77056<\/strong><\/p><p><a href=\"tel:7139551053\" title=\"tel:7139551053\"><strong>(713) 955-1053<\/strong><\/a><\/p><p><a href=\"mailto:houston@jamesshowroom.com\" title=\"mailto:houston@jamesshowroom.com\"><strong>houston@jamesshowroom.com<\/strong><\/a><\/p>",
+            "button_label": "Contact Houston",
+            "link": "mailto:houston@jamesshowroom.com",
+            "bg_color": "",
+            "text_color": ""
+          }
+        },
+        "6f6c4e40-cabb-4b18-a7eb-76916f9dfd98": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JAMES_Gold_Border_800x_3c47f18d-7d06-4b84-ac85-acf9e44b223f.webp",
+            "title": "Austin",
+            "text": "<p>Our Austin rep is available for designer appointments only. We invite our retail clients to visit or contact our Dallas or Houston showrooms.  Designers who would like to schedule an appointment can do so <a href=\"https:\/\/jamesshowroom.com\/pages\/schedule-an-appointment\" target=\"_blank\" title=\"https:\/\/jamesshowroom.com\/pages\/schedule-an-appointment\"><strong>HERE.<\/strong><\/a><\/p>",
+            "button_label": "Contact Austin",
+            "link": "mailto:austinrep@jamesshowroom.com",
+            "bg_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19950639743272__a0c0aa41-e30e-4d9b-be8d-36b84e08330f-16896018418bd7206d-0",
+        "template--19950639743272__a0c0aa41-e30e-4d9b-be8d-36b84e08330f-16896018418bd7206d-1",
+        "6f6c4e40-cabb-4b18-a7eb-76916f9dfd98"
+      ],
+      "settings": {
+        "wide_display": true,
+        "featured_links_per_row": "1",
+        "frontpage_text_align": "left",
+        "frontpage_image_position": "row-reverse",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "d3021e66-3986-4bff-b3f0-e9542655b3f6": {
+      "type": "featured-text",
+      "settings": {
+        "title": "DALLAS LOCATION",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "8cd0b0f8-85a0-41d0-b88b-475e869455ea": {
+      "type": "map",
+      "settings": {
+        "map_wide_display": true,
+        "map_address": "1025 N. Stemmons F",
+        "map_height": 300,
+        "zoom_level": 12,
+        "api_key": "",
+        "show_pin": false,
+        "map_style": "default",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "c7069223-3ff0-4a3c-a0f8-c8a7c5eb64bb": {
+      "type": "featured-text",
+      "settings": {
+        "title": "HOUSTON LOCATION",
+        "content": "",
+        "button_label": "",
+        "button_link": "",
+        "text_size": "featured_text",
+        "text_alignment": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "d1cc837f-77c4-42ee-bf6a-465b139f2f15": {
+      "type": "map",
+      "settings": {
+        "map_wide_display": true,
+        "map_address": "5120 Woodway Drive 77056",
+        "map_height": 300,
+        "zoom_level": 12,
+        "api_key": "",
+        "show_pin": true,
+        "map_style": "default",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "a4a40377-e92c-497d-a37f-7a5c46edbb55": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 30,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "dddd264b-c431-4afa-aa57-22d746dd5740": {
+      "type": "contact-form",
+      "blocks": {
+        "template--19950639743272__dddd264b-c431-4afa-aa57-22d746dd5740-1689602191fa6e3506-0": {
+          "type": "richtext",
+          "settings": {
+            "label": "",
+            "placeholder": "Name",
+            "required": true,
+            "field_type": "text"
+          }
+        },
+        "template--19950639743272__dddd264b-c431-4afa-aa57-22d746dd5740-1689602191fa6e3506-1": {
+          "type": "richtext",
+          "settings": {
+            "label": "",
+            "placeholder": "Email",
+            "required": true,
+            "field_type": "email"
+          }
+        },
+        "template--19950639743272__dddd264b-c431-4afa-aa57-22d746dd5740-1689602191fa6e3506-2": {
+          "type": "richtext",
+          "settings": {
+            "label": "",
+            "placeholder": "Message",
+            "required": true,
+            "field_type": "textarea"
+          }
+        }
+      },
+      "block_order": [
+        "template--19950639743272__dddd264b-c431-4afa-aa57-22d746dd5740-1689602191fa6e3506-0",
+        "template--19950639743272__dddd264b-c431-4afa-aa57-22d746dd5740-1689602191fa6e3506-1",
+        "template--19950639743272__dddd264b-c431-4afa-aa57-22d746dd5740-1689602191fa6e3506-2"
+      ],
+      "settings": {
+        "contact_heading": "CONTACT US",
+        "contact_subheading": "EMAIL",
+        "contact_content": "<p><a href=\"mailto:dallas@jamesshowroom.com\" title=\"mailto:dallas@jamesshowroom.com\">dallas@jamesshowroom.com<\/a><\/p>",
+        "contact_text_position": "center",
+        "contact_text_alignment": "left",
+        "contact_social_buttons": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "9eb3e8c7-b8a8-40fa-8432-0662048bfae0": {
+      "type": "divider",
+      "settings": {
+        "divider_spacing": 30,
+        "divider_border": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "15e2b36b-2440-45ec-b265-2d67dd2f8fe9",
+    "a0c0aa41-e30e-4d9b-be8d-36b84e08330f",
+    "d3021e66-3986-4bff-b3f0-e9542655b3f6",
+    "8cd0b0f8-85a0-41d0-b88b-475e869455ea",
+    "c7069223-3ff0-4a3c-a0f8-c8a7c5eb64bb",
+    "d1cc837f-77c4-42ee-bf6a-465b139f2f15",
+    "a4a40377-e92c-497d-a37f-7a5c46edbb55",
+    "dddd264b-c431-4afa-aa57-22d746dd5740",
+    "9eb3e8c7-b8a8-40fa-8432-0662048bfae0"
+  ]
+}
