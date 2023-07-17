@@ -1,5 +1,16 @@
 {% assign variant = product.selected_or_first_available_variant %}
-
+<style>
+  .product-info__caption .price {
+      display: none;
+  }
+  {% if customer %}
+    {% if customer.tags contains 'wholesale' or customer.tags contains 'Wholesale'%}
+      a.product-info__caption .price {
+          display: block;
+      }
+    {% endif %}
+  {% endif %}
+</style>
 <div class="product-details">
   <span class="title" itemprop="name">
     {{- product.title | escape -}}
@@ -18,11 +29,16 @@
         scale_max: product.metafields.reviews.rating.value.scale_max,
       %}
       <p class="rating__text">
-        <span aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
+        <span aria-hidden="true">
+          {{- product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max -}}
+        </span>
       </p>
       <p class="rating__count">
         <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
-        <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "general.accessibility.total_reviews" | t }}</span>
+        <span class="visually-hidden">
+          {{- product.metafields.reviews.rating_count }}
+          {{ 'general.accessibility.total_reviews' | t -}}
+        </span>
       </p>
     </div>
   {% endif %}
@@ -42,7 +58,7 @@
           </style>
         </noscript>
         {% assign compare_at_price = false %}
-      
+
         {% if product.compare_at_price and product.compare_at_price != product.price %}
           {% if product.compare_at_price_varies %}
             {%- capture price_min -%}
@@ -52,7 +68,7 @@
                 value: product.compare_at_price_min,
               -%}
             {%- endcapture -%}
-      
+
             {%- capture price_max -%}
               {%-
                 render 'price-ui-templates',
@@ -60,7 +76,7 @@
                 value: product.compare_at_price_max,
               -%}
             {%- endcapture -%}
-      
+
             {%- assign compare_at_price = 'product.price.range_html' | t: price_min: price_min, price_max: price_max -%}
           {% else %}
             {%- capture compare_at_price -%}
@@ -72,7 +88,7 @@
             {%- endcapture -%}
           {% endif %}
         {% endif %}
-      
+
         {% if product.price_varies %}
           {%- capture price_min -%}
             {%-
@@ -81,7 +97,7 @@
               value: product.price_min,
             -%}
           {%- endcapture -%}
-      
+
           {%- capture price_max -%}
             {%-
               render 'price-ui-templates',
@@ -89,7 +105,7 @@
               value: product.price_max,
             -%}
           {%- endcapture -%}
-      
+
           {%- assign price = 'product.price.range_html' | t: price_min: price_min, price_max: price_max -%}
         {% else %}
           {%- capture price -%}
@@ -100,7 +116,7 @@
             -%}
           {%- endcapture -%}
         {% endif %}
-      
+
         {%-
           render 'price-ui-templates',
           template: 'price-ui',
@@ -143,12 +159,6 @@
     {% endif %}
   {% endif %}
   {% if settings.quick_shop_enabled and settings.quick_shop_style == 'popup' %}
-    {%
-      render 'unit-price',
-      item: variant,
-      variant: product,
-      product: product,
-      class: 'product-details__unit-price'
-    %}
+    {% render 'unit-price', item: variant, variant: product, product: product, class: 'product-details__unit-price' %}
   {% endif %}
 </div>

@@ -89,6 +89,9 @@ button.action_button {
   .price-ui span {
     font-size: 28px;
   }
+  a.product-info__caption .price {
+    display: none;
+}
   {% if customer %}
     {% if customer.tags contains 'wholesale' or customer.tags contains 'Wholesale'%}
       .swatch.clearfix.whacad, .hidiein {
@@ -97,6 +100,9 @@ button.action_button {
        .nplo{
         display: none;
     }
+    a.product-info__caption .price {
+      display: block;
+  }
      .add_to_cart.action_butto {
       display: block;
     }
