@@ -181,6 +181,14 @@
     "dribble_link": "",
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "33781e43-7d2c-4226-8ec9-8ec728a43538": {
+        "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/boost-sd\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   }
 }
