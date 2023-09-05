@@ -294,7 +294,7 @@
         "sections--19529970712872__82c79790-2bca-4629-be73-fb32f68e7b1f-168751736886c7d0a6-3"
       ],
       "settings": {
-        "parent": "SCHEDULE"
+        "parent": "Lighting"
       }
     },
     "16f3a26e-2d1e-4917-a74d-972e1a3f5b81": {
@@ -384,7 +384,7 @@
         "sections--19529970712872__16f3a26e-2d1e-4917-a74d-972e1a3f5b81-168751751737a82f5f-3"
       ],
       "settings": {
-        "parent": "TRADE REGISTRATION"
+        "parent": "Carpets"
       }
     },
     "b41d08b9-7de6-4d5c-aea0-1c4c132df8f3": {
