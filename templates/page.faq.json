@@ -90,8 +90,8 @@
         "76ffaf54-a13f-425c-b748-53a210805b2e": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "Do you offer design services?",
+            "content": "<p>Unfortunately we do not offer design services, but we are always happy to offer suggestions when time allows!  We love to dream up new schemes!<\/p>"
           }
         }
       },
