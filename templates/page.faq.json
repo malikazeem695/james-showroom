@@ -20,8 +20,8 @@
         "block-3": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "Where are you located?",
+            "content": "<p>Our Dallas Showroom is located in the Dallas Design Center at <a href=\"http:\/\/www.jamesshowroom.com\/james-dallas\/\">1025 N. Stemmons Fwy #210<\/a>, adjacent to CODARUS.  <br\/><br\/><\/p><p>Our new Houston Showroom is located on the Third Floor of the Decorative Center of Houston at 5120 Woodway, Suite #3029<\/p><p><\/p><p>The Austin location is a  By-Appointment Trade Resource Library for interior designers located at  <a href=\"http:\/\/www.jamesshowroom.com\/contact-us\/\">1411 West 6th Street<\/a> Unit B.   Parking is available on Oakland Ave. (turn left on Oakland just before you reach the showroom),<\/p>"
           }
         },
         "block-4": {
