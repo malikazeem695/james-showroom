@@ -68,7 +68,7 @@
       ],
       "disabled": true,
       "settings": {
-        "featured_collection_image": false,
+        "featured_collection_image": true,
         "wide_display": true,
         "image": "shopify:\/\/shop_images\/banner_43406ffa-e2bf-49b7-a7b7-3dc62a55b89f.jpg",
         "caption_content_background": "original",
