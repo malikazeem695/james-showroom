@@ -13,8 +13,8 @@
         "block-2": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "Can anyone visit your showroom?",
+            "content": "<p>Absolutely!  We hope everyone will have a chance to visit and be inspired by our amazing collection of vendors.  The Dallas and Houston showrooms are open 9am – 5pm, Monday through Friday.  The Austin location is a by appointment only Trade Resource Library for designers to schedule meetings.  <\/p>"
           }
         },
         "block-3": {
