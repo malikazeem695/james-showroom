@@ -59,13 +59,6 @@
             "content": "<p>We offer a wide variety of curated fabrics, wallpapers, lighting, furniture, carpets, art, and accessories for our retail clients.  Custom options and online sample ordering are reserved for trade clients only.<\/p>"
           }
         },
-        "b4c3613c-07a7-45bc-98d1-0209daf55e2c": {
-          "type": "question",
-          "settings": {
-            "title": "HOW DO I SUBMIT MY LINE FOR REPRESENTATION?",
-            "content": "<p>If you you would like to submit your line for representation, please visit the <a href=\"\/pages\/submissions\" title=\"Submissions\"><strong>Vendor Application<\/strong><\/a><strong> <\/strong>page for more information and the application.<\/p>"
-          }
-        },
         "18da7dd7-93d5-4e7c-8b08-74310c7f96fa": {
           "type": "question",
           "settings": {
@@ -93,6 +86,13 @@
             "title": "Do you offer design services?",
             "content": "<p>Unfortunately we do not offer design services, but we are always happy to offer suggestions when time allows!  We love to dream up new schemes!<\/p>"
           }
+        },
+        "b4c3613c-07a7-45bc-98d1-0209daf55e2c": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I SUBMIT MY LINE FOR REPRESENTATION?",
+            "content": "<p>If you you would like to submit your line for representation, please visit the <a href=\"\/pages\/submissions\" title=\"Submissions\"><strong>Vendor Application<\/strong><\/a><strong> <\/strong>page for more information and the application.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -104,11 +104,11 @@
         "block-7",
         "block-8",
         "a8c9724e-345e-4f75-baa9-58c46f795a3d",
-        "b4c3613c-07a7-45bc-98d1-0209daf55e2c",
         "18da7dd7-93d5-4e7c-8b08-74310c7f96fa",
         "70453f1c-6798-49d9-8ee6-9e0ffb1ce7b3",
         "057b90a9-a05d-41ac-b32c-7729744bfd5f",
-        "76ffaf54-a13f-425c-b748-53a210805b2e"
+        "76ffaf54-a13f-425c-b748-53a210805b2e",
+        "b4c3613c-07a7-45bc-98d1-0209daf55e2c"
       ],
       "settings": {
         "wide_display": true,
