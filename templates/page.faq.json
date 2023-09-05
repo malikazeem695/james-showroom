@@ -5,6 +5,7 @@
       "blocks": {
         "block-1": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Orders"
           }
@@ -12,16 +13,22 @@
         "block-2": {
           "type": "question",
           "settings": {
+            "title": "Frequently asked question",
+            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         },
         "block-3": {
           "type": "question",
           "settings": {
+            "title": "Frequently asked question",
+            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         },
         "block-4": {
           "type": "question",
           "settings": {
+            "title": "Frequently asked question",
+            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         },
         "block-5": {
@@ -33,16 +40,22 @@
         "block-6": {
           "type": "question",
           "settings": {
+            "title": "Frequently asked question",
+            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         },
         "block-7": {
           "type": "question",
           "settings": {
+            "title": "Frequently asked question",
+            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         },
         "block-8": {
           "type": "question",
           "settings": {
+            "title": "Frequently asked question",
+            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
           }
         }
       },
@@ -57,15 +70,33 @@
         "block-8"
       ],
       "settings": {
-        "title": "Page FAQ Template",
-        "subtitle": "<p>Create an amazing FAQ page with a full-width banner<\/p>",
+        "wide_display": true,
+        "show_banner": true,
+        "caption_content_background": "original",
+        "pretext": "",
+        "title": "Frequently Asked Questions",
+        "subtitle": "",
         "text_position": "center",
-        "text_align": "center"
+        "text_align": "center",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner"
       }
     },
     "newsletter": {
       "type": "newsletter",
       "settings": {
+        "wide_display": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Subscribe",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
       }
     }
   },
