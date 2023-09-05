@@ -27,12 +27,13 @@
         "block-4": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "How do I open a trade account?",
+            "content": "<p>Simple!  Please fill out the trade application on our website or email  the showroom and we. will send you the appropriate form to fill out and return to us.  You will need to include a copy of your tax permit, a business card, or other identifying business information.  If you require immediate assistance, please reach out to us at either houston@jamesshowroom.com or <a href=\"mailto:dallas@jamesshowroom.com\" title=\"mailto:dallas@jamesshowroom.com\">dallas@jamesshowroom.com<\/a> and we will be happy to help!<strong><br\/><\/strong><\/p>"
           }
         },
         "block-5": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Shipping & Returns"
           }
