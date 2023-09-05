@@ -31,18 +31,11 @@
             "content": "<p>Simple!  Please fill out the trade application on our website or email  the showroom and we. will send you the appropriate form to fill out and return to us.  You will need to include a copy of your tax permit, a business card, or other identifying business information.  If you require immediate assistance, please reach out to us at either houston@jamesshowroom.com or <a href=\"mailto:dallas@jamesshowroom.com\" title=\"mailto:dallas@jamesshowroom.com\">dallas@jamesshowroom.com<\/a> and we will be happy to help!<strong><br\/><\/strong><\/p>"
           }
         },
-        "block-5": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Shipping & Returns"
-          }
-        },
         "block-6": {
           "type": "question",
           "settings": {
-            "title": "Frequently asked question",
-            "content": "<p>Include a helpful and informative answer to the frequently asked question here.<\/p>"
+            "title": "How can I get a price quote?",
+            "content": "<p>We ask that designers contact the showroom directly for any fabric, wallpaper, lighting, furniture, or carpet quotes before submitting a proposal to their clients.  For our trade clients with a verified login, we now offer online pricing for reference only.   We are not liable for any prices presented to clients that were not part of a formal quote from our showroom sales team. Prices are subject to change and the website may not reflect accurate pricing.<\/p>"
           }
         },
         "block-7": {
@@ -65,7 +58,6 @@
         "block-2",
         "block-3",
         "block-4",
-        "block-5",
         "block-6",
         "block-7",
         "block-8"
