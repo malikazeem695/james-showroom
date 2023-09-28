@@ -1,28 +1,5 @@
 {
   "sections": {
-    "8d4a1289-e664-432e-afe3-fc4b6862d922": {
-      "type": "image-with-text-overlay",
-      "settings": {
-        "wide_display": true,
-        "image": "shopify:\/\/shop_images\/Anna_Spiro.jpg",
-        "pretext": "",
-        "title": "Anna Spiro Textiles | Fabric",
-        "subtitle": "",
-        "button1": "",
-        "button1_link": "",
-        "button1_style": "global-button--banner",
-        "button2": "",
-        "button2_link": "",
-        "button2_style": "global-button--banner",
-        "text_position": "center",
-        "text_align": "center",
-        "caption_content_background": "original",
-        "mobile_text_below_image": true,
-        "mobile_text_color": "",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
     "935023ac-3651-4a40-940e-5427582c6dd0": {
       "type": "apps",
       "blocks": {
@@ -120,7 +97,6 @@
     }
   },
   "order": [
-    "8d4a1289-e664-432e-afe3-fc4b6862d922",
     "935023ac-3651-4a40-940e-5427582c6dd0",
     "main",
     "newsletter"
