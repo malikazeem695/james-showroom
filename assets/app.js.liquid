@@ -541,7 +541,7 @@ $(() => {
 
     $cartBtn.text(value.replace(/[0-9]+/, cart.item_count));
         if(cart.item_count > 14){
-          
+          console.log("- reahded");
          $("[data-minicart-checkout-button]").hide();
       } else {
                  $("[data-minicart-checkout-button]").show();
