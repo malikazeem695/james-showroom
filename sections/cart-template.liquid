@@ -310,11 +310,11 @@
                         You have reached the limit of 15 samples per order
                       </div>
             <p class="tos_warning checkout_button">
-              <button type="submit" class="global-button global-button--primary add_to_cart" id="checkout" name="checkout" data-cart-checkout-button>{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'cart.general.checkout' | t }}</button>
+              <button type="submit" {% if cart.item_count >15%} style="display:none" {% endif %} class="global-button global-button--primary add_to_cart" id="checkout" name="checkout" data-cart-checkout-button>{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'cart.general.checkout' | t }}</button>
             </p>
 
             {% if content_for_additional_checkout_buttons %}
-              <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
+              <div class="additional-checkout-buttons additional-checkout-buttons--vertical " {% if cart.item_count >15%} style="display:none" {% endif %}>
                 {{ content_for_additional_checkout_buttons }}
               </div>
             {% endif %}
