@@ -54,7 +54,10 @@
     <script src="{{ 'jquery.limit.min.js' | asset_url }}" defer></script>
 
  <script>
+   document.addEventListener("DOMContentLoaded", function() {
+
 Shopify.Cart.limit({ limitQuantity: 10, limitPer: 'product' });
+   }
 </script>
 
     <!-- Stylesheet for Fancybox library -->
