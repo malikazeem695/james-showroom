@@ -418,6 +418,12 @@
                     {% endfor %}
                   </ul>
 
+               {% if settings.cart_message != blank %}
+                      <div class="cart_text red" {{cart.item_count}} {% if cart.item_count >15%} style="display:block" {% else %} style="display:none" {% endif %}>
+                        You have reached the limit of 15 samples per order
+                      </div>
+                    {% endif %}
+               
                   <ul>
                     <li class="cart_discounts js-cart_discounts sale">
                       {% if cart.cart_level_discount_applications != blank %}
@@ -436,6 +442,7 @@
                       {% endif %}
                     </li>
 
+              
                     <li class="cart_subtotal js-cart_subtotal">
                       <span class="right">
                         <span class="money">
