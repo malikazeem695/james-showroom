@@ -514,9 +514,9 @@
                       {% endif %}
 
                       {% if settings.go_to_checkout %}
-                        <button type="submit" name="checkout" class="global-button global-button--primary add_to_cart" {% if cart.item_count >15%} style="display:block" {% else %} style="display:none" {% endif %} data-minicart-checkout-button>{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
+                        <button type="submit" name="checkout" class="global-button global-button--primary add_to_cart" {% if cart.item_count >15%} style="display:none" {% else %} style="display:block" {% endif %} data-minicart-checkout-button>{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'layout.general.checkout' | t }}</button>
                       {% else %}
-                        <button type="submit" class="global-button global-button--primary add_to_cart" {% if cart.item_count >15%} style="display:block" {% else %} style="display:none" {% endif %} data-minicart-checkout-button>{% if settings.show_lock_icon and settings.go_to_checkout %}<span class="icon-lock"></span>{% endif %}{{ 'layout.general.go_to_cart' | t }} </button>
+                        <button type="submit" class="global-button global-button--primary add_to_cart" {% if cart.item_count >15%} style="display:none" {% else %} style="display:block" {% endif %} data-minicart-checkout-button>{% if settings.show_lock_icon and settings.go_to_checkout %}<span class="icon-lock"></span>{% endif %}{{ 'layout.general.go_to_cart' | t }} </button>
                       {% endif %}
                     </li>
                   </ul>
