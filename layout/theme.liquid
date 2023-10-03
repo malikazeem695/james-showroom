@@ -107,9 +107,12 @@ document.addEventListener("DOMContentLoaded", function() {
     $(document).on("click", ".product-plus", function() {
         console.log("Dynamic button clicked!");
       let totalValue = 0;
-      $(`[name='updates[]']`).each(function(){
-        console.log($(this).val)
-      })
+      if(Number($(".cart_count")) > 15) {
+         $("[data-minicart-checkout-button]").hide();
+      } else {
+                 $("[data-minicart-checkout-button]").show();
+
+      }
 
     });
 
