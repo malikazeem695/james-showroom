@@ -53,36 +53,47 @@
 
  
  <script>
- document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const MAX_PRODUCTS = 15;
 
-    function checkCartItems() {
-        // Fetch current cart data
-        fetch("/cart.js")
+    function getCartData() {
+        return fetch("/cart.js")
             .then(response => response.json())
-            .then(cartData => {
-              console.log(cartData);
-                if (cartData.item_count >= MAX_PRODUCTS) {
-                    alert('You cannot add more than ' + MAX_PRODUCTS + ' products to your cart.');
-                }
-            })
             .catch(error => {
                 console.error("Error fetching cart data:", error);
+                throw error;
             });
+    }
+
+    function handleAddToCart() {
+        getCartData().then(cartData => {
+            if (cartData.item_count >= MAX_PRODUCTS) {
+                alert('You cannot add more than ' + MAX_PRODUCTS + ' products to your cart.');
+            }
+        });
+    }
+
+    function handleQuantityChange(event) {
+        getCartData().then(cartData => {
+            if (cartData.item_count > MAX_PRODUCTS) {
+                // Reset to a quantity that respects the MAX_PRODUCTS limit
+                event.target.value = parseInt(event.target.value) - (cartData.item_count - MAX_PRODUCTS);
+                alert('You cannot have more than ' + MAX_PRODUCTS + ' products in your cart.');
+            }
+        });
     }
 
     // Check cart items whenever an "add to cart" button is clicked
     document.addEventListener("click", function(event) {
         if (event.target.matches("[name='add'], .product-plus")) {
-            event.preventDefault();  // Prevent the default action (adding to cart)
-            checkCartItems();
+            handleAddToCart();
         }
     });
 
     // Listen for changes in quantity and updates input fields
     document.addEventListener("change", function(event) {
         if (event.target.matches("[name='quantity'], [name='updates[]']")) {
-            checkCartItems();
+            handleQuantityChange(event);
         }
     });
 });
