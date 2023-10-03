@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Listen for changes in quantity and updates input fields
     document.addEventListener("change", function(event) {
         if (event.target.matches("[name='quantity'], [name='updates[]']")) {
+            console.log(event.target);
             handleQuantityChange(event);
         }
     });
