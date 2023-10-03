@@ -540,7 +540,7 @@ $(() => {
     $cartForm.data('total-discount', cart.total_discount);
 
     $cartBtn.text(value.replace(/[0-9]+/, cart.item_count));
-        if(cart.item_count > 14){
+        if(cart.item_count > 15){
           console.log("- reahded");
          $("[data-minicart-checkout-button]").attr("style","display:none!important");
       } else {
