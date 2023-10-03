@@ -88,6 +88,11 @@
 });
 </script>
 
+     {{ 'jquery.limit.min.js' | asset_url | script_tag }}
+<script>
+Shopify.Cart.limit({ limitQuantity: 10, limitPer: 'product' });
+</script>
+
     <!-- Stylesheet for Fancybox library -->
     {{ 'fancybox.css' | asset_url | stylesheet_tag }}
 
