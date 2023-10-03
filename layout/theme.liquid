@@ -69,6 +69,11 @@ document.addEventListener("DOMContentLoaded", function() {
         getCartData().then(cartData => {
             if (cartData.item_count >= MAX_PRODUCTS) {
                 alert('You cannot add more than ' + MAX_PRODUCTS + ' products to your cart.');
+                            $("[data-minicart-checkout-button]").hide();
+
+            } else {
+                            $("[data-minicart-checkout-button]").show();
+
             }
         });
     }
@@ -79,6 +84,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Reset to a quantity that respects the MAX_PRODUCTS limit
                 event.target.value = parseInt(event.target.value) - (cartData.item_count - MAX_PRODUCTS);
                 alert('You cannot have more than ' + MAX_PRODUCTS + ' products in your cart.');
+                if (cartData.item_count >= MAX_PRODUCTS) {
+                alert('You cannot add more than ' + MAX_PRODUCTS + ' products to your cart.');
+                            $("[data-minicart-checkout-button]").hide();
+
+            } else {
+                            $("[data-minicart-checkout-button]").show();
+
+            }
             }
         });
     }
@@ -101,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
      {{ 'jquery.limit.min.js' | asset_url | script_tag }}
 <script>
-Shopify.Cart.limit({ limitQuantity: 10, limitPer: 'product' });
+Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
 </script>
 
     <!-- Stylesheet for Fancybox library -->
