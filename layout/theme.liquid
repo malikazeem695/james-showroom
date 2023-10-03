@@ -61,6 +61,7 @@
         fetch("/cart.js")
             .then(response => response.json())
             .then(cartData => {
+              console.log(cartData);
                 if (cartData.item_count >= MAX_PRODUCTS) {
                     alert('You cannot add more than ' + MAX_PRODUCTS + ' products to your cart.');
                 }
