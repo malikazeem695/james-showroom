@@ -146,7 +146,7 @@
 
        {{ 'jquery.limit.min.js' | asset_url | script_tag }}
 <script>
-Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
+Shopify.Cart.limit({ limitQuantity: 10, limitPer: 'product' });
 </script>
 
     {% if settings.disqus_enabled %}
