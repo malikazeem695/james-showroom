@@ -540,7 +540,13 @@ $(() => {
     $cartForm.data('total-discount', cart.total_discount);
 
     $cartBtn.text(value.replace(/[0-9]+/, cart.item_count));
+        if(cart.item_count > 14){
+          
+         $("[data-minicart-checkout-button]").hide();
+      } else {
+                 $("[data-minicart-checkout-button]").show();
 
+      }
     if (cart.item_count === 0) {
       $('.js-empty-cart__message').removeClass('hidden');
       $cartForm.addClass('hidden');
