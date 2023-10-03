@@ -306,7 +306,9 @@
             {% if section.settings.cart_message != blank %}
               {{ section.settings.cart_message }}
             {% endif %}
-
+ <div class="cart_text red" {{cart.item_count}} {% if cart.item_count >15%} style="display:block;     max-width: 100%;" {% else %} style="display:none" {% endif %}>
+                        You have reached the limit of 15 samples per order
+                      </div>
             <p class="tos_warning checkout_button">
               <button type="submit" class="global-button global-button--primary add_to_cart" id="checkout" name="checkout" data-cart-checkout-button>{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'cart.general.checkout' | t }}</button>
             </p>
