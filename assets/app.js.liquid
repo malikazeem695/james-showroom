@@ -542,9 +542,9 @@ $(() => {
     $cartBtn.text(value.replace(/[0-9]+/, cart.item_count));
         if(cart.item_count > 14){
           console.log("- reahded");
-         $("[data-minicart-checkout-button]").attr("style","display!important");
+         $("[data-minicart-checkout-button]").attr("style","display:none!important");
       } else {
-                 $("[data-minicart-checkout-button]").attr("style","block!important");
+                 $("[data-minicart-checkout-button]").attr("style","display:block!important");
 
       }
     if (cart.item_count === 0) {
