@@ -53,8 +53,8 @@
 
  
  <script>
-   document.addEventListener("DOMContentLoaded", function() {
-   const MAX_PRODUCTS = 15;
+ document.addEventListener("DOMContentLoaded", function() {
+    const MAX_PRODUCTS = 15;
 
     function checkCartItems() {
         // Fetch current cart data
@@ -78,13 +78,13 @@
         }
     });
 
-    // If you have input fields for quantities that can be changed, you can intercept those as well
+    // Listen for changes in quantity and updates input fields
     document.addEventListener("change", function(event) {
-        if (event.target.matches("[name='quantity']")) { // Assuming the quantity input has a name attribute "quantity". Adjust if needed.
+        if (event.target.matches("[name='quantity'], [name='updates[]']")) {
             checkCartItems();
         }
     });
-    })
+});
 </script>
 
     <!-- Stylesheet for Fancybox library -->
