@@ -615,6 +615,30 @@ window.selectCallback = function (variant, selector, $element) {
   const $productForm = $('.product_form, .shopify-product-form', $product);
   const variantInventory = $productForm.data('variant-inventory');
 
+   console.log(variant.title);
+  
+  var str1 = variant.title;
+var str2 = "Yard";
+var str4 = "Meter";
+  var str3 = "Roll";
+if(str1.indexOf(str2) != -1 || str1.indexOf(str3) != -1 || str1.indexOf(str4) != -1 ){
+ 
+ 
+  $('.add_to_cart.action_button').addClass('hide');
+        $('.purchase_inquiry.action_button').addClass('show');
+        $('.add_to_cart.action_button').removeClass('show');
+        $('.purchase_inquiry.action_button').removeClass('hide'); 
+  
+}
+  else {
+  
+      $('.add_to_cart.action_button').addClass('show');
+        $('.add_to_cart.action_button').removeClass('hide');
+        $('.purchase_inquiry.action_button').addClass('hide');
+        $('.purchase_inquiry.action_button').removeClass('show');
+  }
+  
+
   // Manually trigger change event so
   // pure JS listeners can receive it
   evt.initEvent('change', false, true);
