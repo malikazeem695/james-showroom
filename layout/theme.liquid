@@ -107,8 +107,8 @@ document.addEventListener("DOMContentLoaded", function() {
     $(document).on("click", ".product-plus", function() {
         console.log("Dynamic button clicked!");
       let totalValue = 0;
-      console.log(Number($(".cart_count")));
-      if(Number($(".cart_count")) > 15) {
+      console.log(Number($(".cart_count").text()));
+      if(Number($(".cart_count").text()) > 15) {
          $("[data-minicart-checkout-button]").hide();
       } else {
                  $("[data-minicart-checkout-button]").show();
