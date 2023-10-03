@@ -111,8 +111,9 @@
         "b4c3613c-07a7-45bc-98d1-0209daf55e2c"
       ],
       "settings": {
-        "wide_display": true,
+        "wide_display": false,
         "show_banner": true,
+        "image": "shopify:\/\/shop_images\/banner_75b9bc60-fef7-4816-acfe-c8d1486d3505.jpg",
         "caption_content_background": "original",
         "pretext": "",
         "title": "Frequently Asked Questions",
