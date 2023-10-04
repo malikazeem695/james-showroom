@@ -69,7 +69,6 @@
       "settings": {
         "featured_collection_image": true,
         "wide_display": true,
-        "image": "shopify:\/\/shop_images\/banner_43406ffa-e2bf-49b7-a7b7-3dc62a55b89f.jpg",
         "caption_content_background": "original",
         "display_collection_title": false,
         "collection_breadcrumb": true,
@@ -77,7 +76,7 @@
         "collection_sort": true,
         "products_per_row": 3,
         "pagination_limit": 48,
-        "toggle": false
+        "toggle": true
       }
     },
     "newsletter": {
