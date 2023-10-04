@@ -5,19 +5,12 @@
       "blocks": {
         "31c1539d-9449-4408-b486-a20269afcbda": {
           "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/product-filter\/7fc998ae-a150-4367-bab8-505d8a4503f7",
-          "disabled": true,
-          "settings": {
-          }
-        },
-        "12668118-175e-4341-a513-2c0938ae8f76": {
-          "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/product-filter\/7fc998ae-a150-4367-bab8-505d8a4503f7",
           "settings": {
           }
         }
       },
       "block_order": [
-        "31c1539d-9449-4408-b486-a20269afcbda",
-        "12668118-175e-4341-a513-2c0938ae8f76"
+        "31c1539d-9449-4408-b486-a20269afcbda"
       ],
       "settings": {
       }
