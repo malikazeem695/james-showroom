@@ -66,6 +66,7 @@
         "b180c2eb-3e51-4b12-b8bb-2f047e113d16",
         "f49e7528-df98-49a4-9571-8dc0e010e931"
       ],
+      "disabled": true,
       "settings": {
         "featured_collection_image": true,
         "wide_display": true,
