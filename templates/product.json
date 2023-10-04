@@ -46,7 +46,7 @@
         "share"
       ],
       "settings": {
-        "product_breadcrumb": false,
+        "product_breadcrumb": true,
         "media_position": "is-flex-row",
         "set_product_height": false,
         "product_height": 500,
