@@ -116,7 +116,7 @@
         "image": "shopify:\/\/shop_images\/banner_75b9bc60-fef7-4816-acfe-c8d1486d3505.jpg",
         "caption_content_background": "original",
         "pretext": "",
-        "title": "Frequently Asked Questions",
+        "title": "Submissions",
         "subtitle": "",
         "text_position": "center",
         "text_align": "center",
@@ -126,6 +126,53 @@
         "button2": "",
         "button2_link": "",
         "button2_style": "global-button--banner"
+      }
+    },
+    "49af1e98-b9a1-4c27-891a-34bb2720d9de": {
+      "type": "contact-form",
+      "blocks": {
+        "template--21292850020648__49af1e98-b9a1-4c27-891a-34bb2720d9de-richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "label": "",
+            "placeholder": "Name",
+            "required": true,
+            "field_type": "text"
+          }
+        },
+        "template--21292850020648__49af1e98-b9a1-4c27-891a-34bb2720d9de-richtext-2": {
+          "type": "richtext",
+          "settings": {
+            "label": "",
+            "placeholder": "Email",
+            "required": true,
+            "field_type": "email"
+          }
+        },
+        "template--21292850020648__49af1e98-b9a1-4c27-891a-34bb2720d9de-richtext-3": {
+          "type": "richtext",
+          "settings": {
+            "label": "",
+            "placeholder": "Message",
+            "required": true,
+            "field_type": "textarea"
+          }
+        }
+      },
+      "block_order": [
+        "template--21292850020648__49af1e98-b9a1-4c27-891a-34bb2720d9de-richtext-1",
+        "template--21292850020648__49af1e98-b9a1-4c27-891a-34bb2720d9de-richtext-2",
+        "template--21292850020648__49af1e98-b9a1-4c27-891a-34bb2720d9de-richtext-3"
+      ],
+      "settings": {
+        "contact_heading": "SUBMITTING YOUR LINE FOR CONSIDERATION",
+        "contact_subheading": "Contact Us Today!",
+        "contact_content": "<p>Thank you for your interest in being represented by JAMES!  As a boutique showroom, space is a huge consideration.  If you would like to submit samples for review, please send to:<\/p><p><\/p><p>JAMES Showroom<\/p><p>Attn: New Submission<\/p><p>1025 N. Stemmons Fwy #250<\/p><p>Dallas, TX 75207<\/p><p><\/p><p><\/p><p>Please do not expect an immediate response as this is a lengthy process with the goal of identifying the right lines for our curated collection.  We request you also include any information on your process, pricing, stocking, etc that will help us make our decision.  If you would like the samples returned, please include a return shipping label.  Please do not call the showroom to inquire about representation.  We ask that you use the contact form on this page if you have any questions. Thank you!<\/p>",
+        "contact_text_position": "center",
+        "contact_text_alignment": "center",
+        "contact_social_buttons": false,
+        "css_class": "",
+        "custom_css": ""
       }
     },
     "newsletter": {
@@ -144,6 +191,7 @@
   },
   "order": [
     "main",
+    "49af1e98-b9a1-4c27-891a-34bb2720d9de",
     "newsletter"
   ]
 }
