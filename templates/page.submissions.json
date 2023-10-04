@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-faq-template",
+      "blocks": {
+        "block-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Orders"
+          }
+        },
+        "block-2": {
+          "type": "question",
+          "settings": {
+            "title": "Can anyone visit your showroom?",
+            "content": "<p>Absolutely!  We hope everyone will have a chance to visit and be inspired by our amazing collection of vendors.  The Dallas and Houston showrooms are open 9am – 5pm, Monday through Friday.  The Austin location is a by appointment only Trade Resource Library for designers to schedule meetings.  <\/p>"
+          }
+        },
+        "block-3": {
+          "type": "question",
+          "settings": {
+            "title": "Where are you located?",
+            "content": "<p>Our Dallas Showroom is located in the Dallas Design Center at <a href=\"http:\/\/www.jamesshowroom.com\/james-dallas\/\">1025 N. Stemmons Fwy #210<\/a>, adjacent to CODARUS.  <br\/><br\/><\/p><p>Our new Houston Showroom is located on the Third Floor of the Decorative Center of Houston at 5120 Woodway, Suite #3029<\/p><p><\/p><p>The Austin location is a  By-Appointment Trade Resource Library for interior designers located at  <a href=\"http:\/\/www.jamesshowroom.com\/contact-us\/\">1411 West 6th Street<\/a> Unit B.   Parking is available on Oakland Ave. (turn left on Oakland just before you reach the showroom),<\/p>"
+          }
+        },
+        "block-4": {
+          "type": "question",
+          "settings": {
+            "title": "How do I open a trade account?",
+            "content": "<p>Simple!  Please fill out the trade application on our website or email  the showroom and we. will send you the appropriate form to fill out and return to us.  You will need to include a copy of your tax permit, a business card, or other identifying business information.  If you require immediate assistance, please reach out to us at either houston@jamesshowroom.com or <a href=\"mailto:dallas@jamesshowroom.com\" title=\"mailto:dallas@jamesshowroom.com\">dallas@jamesshowroom.com<\/a> and we will be happy to help!<strong><br\/><\/strong><\/p>"
+          }
+        },
+        "block-6": {
+          "type": "question",
+          "settings": {
+            "title": "How can I get a price quote?",
+            "content": "<p>We ask that designers contact the showroom directly for any fabric, wallpaper, lighting, furniture, or carpet quotes before submitting a proposal to their clients.  For our trade clients with a verified login, we now offer online pricing for reference only.   We are not liable for any prices presented to clients that were not part of a formal quote from our showroom sales team. Prices are subject to change and the website may not reflect accurate pricing.<\/p>"
+          }
+        },
+        "block-7": {
+          "type": "question",
+          "settings": {
+            "title": "Do you meet with designers outside of Dallas or Houston?",
+            "content": "<p>Yes! We regularly meet with designers all over Texas and beyond.  If you are unable to visit our showrooms in Dallas or Houston and would like to view the lines we represent, please email or call the showroom to set up your trade account.  We will add your name to our roster and notify you of upcoming dates when JAMES Showroom will be in your area.<\/p>"
+          }
+        },
+        "block-8": {
+          "type": "question",
+          "settings": {
+            "title": "How can I get samples?",
+            "content": "<p>If you have established your trade account with JAMES, we now offer online sample ordering for 15 memos or less.  You must have a verified login for your wholesale account to access this feature. All orders will be matched to the correct account before shipping.  If the design you require is not available online, simply contact our showroom nearest you for all your fabric, wallpaper and carpet sample needs.  If you have not yet set up an account, we ask that you fill out the necessary paperwork when you submit your first request.  If you are not a designer, please email us at <a href=\"mailto:houston@jamesshowroom.com\" title=\"mailto:houston@jamesshowroom.com\">houston@jamesshowroom.com<\/a> with your request.  You will be asked to fill out a Credit Card Authorization form in the event the samples are not returned within the specified time. ($10 per sample).<\/p>"
+          }
+        },
+        "a8c9724e-345e-4f75-baa9-58c46f795a3d": {
+          "type": "question",
+          "settings": {
+            "title": "Can I purchase your products if I’m not a designer?",
+            "content": "<p>We offer a wide variety of curated fabrics, wallpapers, lighting, furniture, carpets, art, and accessories for our retail clients.  Custom options and online sample ordering are reserved for trade clients only.<\/p>"
+          }
+        },
+        "18da7dd7-93d5-4e7c-8b08-74310c7f96fa": {
+          "type": "question",
+          "settings": {
+            "title": "Do you stock your fabrics and wallpaper?",
+            "content": "<p>We do not stock yardage of any fabrics or wallpaper in our showroom. Some of the lines we represent stock some of their goods while others are made to order, meaning the vendor does not print or weave the product until payment has been received and the order has been placed. If you have a tight deadline we can make recommendations, and check with our vendors to see if they have anything available that fits your needs.  Express shipping is available for most of our vendors.<\/p>"
+          }
+        },
+        "70453f1c-6798-49d9-8ee6-9e0ffb1ce7b3": {
+          "type": "question",
+          "settings": {
+            "title": "What is the minimum order for fabrics and wallpaper?",
+            "content": "<p>The minimum order requirements for fabric and wallpaper vary depending on the vendor.<\/p>"
+          }
+        },
+        "057b90a9-a05d-41ac-b32c-7729744bfd5f": {
+          "type": "question",
+          "settings": {
+            "title": "Will you let me know how much fabric or wallpaper I need?",
+            "content": "<p>Unfortunately we cannot offer wallpaper and fabric quantity estimates. It is the client’s responsibility to contact a professional wallpaper hanger or upholsterer for your quantity estimate.<\/p>"
+          }
+        },
+        "76ffaf54-a13f-425c-b748-53a210805b2e": {
+          "type": "question",
+          "settings": {
+            "title": "Do you offer design services?",
+            "content": "<p>Unfortunately we do not offer design services, but we are always happy to offer suggestions when time allows!  We love to dream up new schemes!<\/p>"
+          }
+        },
+        "b4c3613c-07a7-45bc-98d1-0209daf55e2c": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I SUBMIT MY LINE FOR REPRESENTATION?",
+            "content": "<p>If you you would like to submit your line for representation, please visit the <a href=\"\/pages\/submissions\" title=\"Submissions\"><strong>Vendor Application<\/strong><\/a><strong> <\/strong>page for more information and the application.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3",
+        "block-4",
+        "block-6",
+        "block-7",
+        "block-8",
+        "a8c9724e-345e-4f75-baa9-58c46f795a3d",
+        "18da7dd7-93d5-4e7c-8b08-74310c7f96fa",
+        "70453f1c-6798-49d9-8ee6-9e0ffb1ce7b3",
+        "057b90a9-a05d-41ac-b32c-7729744bfd5f",
+        "76ffaf54-a13f-425c-b748-53a210805b2e",
+        "b4c3613c-07a7-45bc-98d1-0209daf55e2c"
+      ],
+      "settings": {
+        "wide_display": false,
+        "show_banner": true,
+        "image": "shopify:\/\/shop_images\/banner_75b9bc60-fef7-4816-acfe-c8d1486d3505.jpg",
+        "caption_content_background": "original",
+        "pretext": "",
+        "title": "Frequently Asked Questions",
+        "subtitle": "",
+        "text_position": "center",
+        "text_align": "center",
+        "button1": "",
+        "button1_link": "",
+        "button1_style": "global-button--banner",
+        "button2": "",
+        "button2_link": "",
+        "button2_style": "global-button--banner"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": true,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Subscribe",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter"
+  ]
+}
