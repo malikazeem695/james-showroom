@@ -179,6 +179,27 @@
     "enable_shopify_collection_badges": false,
     "tikok_link": "",
     "dribble_link": "",
+    "sections": {
+      "registration-form": {
+        "type": "registration-form",
+        "settings": {
+          "text": ""
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "wide_display": true,
+          "display_first_name": false,
+          "display_last_name": false,
+          "newsletter_title": "Subscribe",
+          "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
+          "newsletter_section_text_align": "center",
+          "css_class": "",
+          "custom_css": ""
+        }
+      }
+    },
     "content_for_index": [
 
     ],
@@ -187,6 +208,19 @@
         "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/boost-sd\/7fc998ae-a150-4367-bab8-505d8a4503f7",
         "disabled": false,
         "settings": {
+        }
+      },
+      "9776720720251544092": {
+        "type": "shopify:\/\/apps\/helium-customer-fields\/blocks\/app-embed\/bab58598-3e6a-4377-aaaa-97189b15f131",
+        "disabled": false,
+        "settings": {
+          "registration_form_id": "kntL8M",
+          "edit_account_form_id": "",
+          "edit_account_link_text": "Edit account",
+          "edit_account_heading": "Edit account",
+          "edit_account_back_link_text": "Back to account",
+          "enable_js_api": false,
+          "js_api_version": ""
         }
       }
     }
