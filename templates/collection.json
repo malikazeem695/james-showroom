@@ -71,7 +71,7 @@
         "featured_collection_image": true,
         "wide_display": true,
         "caption_content_background": "original",
-        "display_collection_title": true,
+        "display_collection_title": false,
         "collection_breadcrumb": true,
         "collection_tags": false,
         "collection_sort": true,
