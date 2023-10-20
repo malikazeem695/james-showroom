@@ -88,7 +88,14 @@
           <em class="note">{{ 'customer.recover_password.success' | t }}</em>
         </p>
       {% endif %}
-
+{% unless shop.checkout.guest_login %}
+          <p class="right" style="padding-top: 10px;">
+            {{ 'customer.login.new_customer_label' | t }}
+            <a href="{{ routes.account_register_url }}" id="customer_register_link">
+              {{ 'customer.login.sign_up_html' | t }}
+            </a>
+          </p>
+        {% endunless %}
       {% form 'customer_login' %}
         {{ recover_password_error }}
         {{ form.errors | default_errors }}
@@ -143,14 +150,7 @@
           tabindex="3"
         >
 
-        {% unless shop.checkout.guest_login %}
-          <p class="right" style="padding-top: 10px;">
-            {{ 'customer.login.new_customer_label' | t }}
-            <a href="{{ routes.account_register_url }}" id="customer_register_link">
-              {{ 'customer.login.sign_up_html' | t }}
-            </a>
-          </p>
-        {% endunless %}
+        
       {% endform %}
 
       <div class="large--right">
