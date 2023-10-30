@@ -663,7 +663,7 @@ $(() => {
 
         cartItemsHTML += '<div class="product-quantity-box">';
         cartItemsHTML += '<span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>';
-        cartItemsHTML += `<input type="number" min="0" class="quantity" name="updates[]" id="updates_${item.id}" value="${item.quantity}" data-cart-quantity-input="mini-cart" />`;
+        cartItemsHTML += `<input type="number" min="0" class="quantity" name="updates[]" id="updates_${item.id}" value="${item.quantity}" old-val="${item.quantity}" data-cart-quantity-input="mini-cart" />`;
         cartItemsHTML += '<span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>';
         cartItemsHTML += '</div></div></div>';
         cartItemsHTML += `<a href="/cart/change?line=${lineID}&amp;quantity=0" class="js-cart-remove-btn cart__remove-btn" data-line-id="${lineID}" data-remove-item="mini-cart"><span class="remove-icon"></span></a>`;
@@ -719,6 +719,24 @@ $(() => {
     // Disable button after click to prevent multiple clicks
     $(this).parents('.product-quantity-box').find('.js-change-quantity').addClass('is-disabled');
     updateCartItemQuantity(cartItem);
+    // var enteredValue = $(this).val();   
+    // $.ajax({
+    //   type: 'GET',
+    //   url: '/cart.js',
+    //   dataType: 'json',
+    //   success: function(cart) {
+    //     var itemCount = cart.item_count;
+    //     if(enteredValue > oldValAttribute){
+    //       var getdifference = enteredValue - oldValAttribute;
+    //     var gettotal = itemCount + getdifference;
+    //     if(gettotal > 15){
+    //       inputField.value = oldValAttribute;
+    //     }
+    //   }
+    //   },
+    //   error: function(err) {
+    //   }
+    // });
   });
 
   $('body').on('click', '[data-remove-item]', function (e) {
