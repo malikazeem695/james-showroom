@@ -735,6 +735,7 @@ var enteredValue = $(this).val();
           getthis.attr('old-val', oldValAttribute);
         }
           else{
+            getthis.attr('old-val', enteredValue);
             updateCartItemQuantity(cartItem); 
           }
       }
