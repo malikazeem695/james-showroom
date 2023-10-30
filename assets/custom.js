@@ -368,7 +368,6 @@ $('.boost-sd__quantity-input').attr('disabled', 'true');
     });
 });
     $('.boost-sd__button--as-quantity').on('click', function() {
-      var thisbtn = this;
       setTimeout(function() {
         $.ajax({
       type: 'GET',
@@ -378,15 +377,15 @@ $('.boost-sd__quantity-input').attr('disabled', 'true');
         var itemCount = cart.item_count;
         console.log(itemCount);
         if(itemCount>14){
-          thisbtn.attr('disabled', 'true');
 $('.boost-sd__quantity-input').attr('disabled', 'true');
-
+$('.boost-sd__quantity:has(.boost-sd__button--as-quantity:nth-child(2))')
+  .find('.boost-sd__button--as-quantity:nth-child(2)').attr('disabled', 'true');
         }
       },
       error: function(err) {
       }
     });
-        }, 1000);
+        }, 6000);
     });
     
 //       setTimeout(function() {
