@@ -265,6 +265,7 @@ if (inputField) {
           success: function(cart) {
             var itemCount = cart.item_count;
             if(itemCount >= 15){
+              console.log("yes here");
               var quantityInput = document.querySelector('button.add_to_cart.global-button.global-button--primary.show);
                 quantityInputplus.disabled = true;
             }
