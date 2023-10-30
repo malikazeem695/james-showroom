@@ -43,7 +43,7 @@
     <!-- Preload Assets -->
     <link rel="preload" href="{{ 'fancybox.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
-
+    <link rel="preload" href="{{ 'custom.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'jquery.min.js' | asset_url }}" as="script">
     <link rel="preload" href="{{ 'vendors.js' | asset_url }}" as="script">
     <link rel="preload" href="{{ 'sections.js' | asset_url }}" as="script">
@@ -127,7 +127,7 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
 
     <!-- Stylesheets for Turbo -->
     {{ 'styles.css' | asset_url | stylesheet_tag }}
-
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
     <script>
       window.lazySizesConfig = window.lazySizesConfig || {};
 
@@ -255,6 +255,7 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
             });
           }
         });
+        
       </script>
     {% endunless %}
 
@@ -270,6 +271,7 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
     {% if collection.previous_product %}<link rel="prev" href="{{ collection.previous_product }}">{% endif %}
     {% if collection.next_product %}<link rel="next" href="{{ collection.next_product }}">{% endif %}
     {{ "ajaxinate.js" | asset_url | script_tag }}
+    {{ "custom.js" | asset_url | script_tag }}
   </head>
 
   {% if template contains "index" %}
@@ -316,7 +318,7 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
     </style>
   </noscript>
 
-  <body class="{% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
+  <body id="detect_if" class="{% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
         data-money-format="
           {%- if settings.currency_format == 'money_with_currency_format' -%}
             {{- shop.money_with_currency_format | strip_html -}}
@@ -372,6 +374,21 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
     {% if settings.quick_shop_enabled %}
       {% render 'quick-shop' %}
     {% endif %}
+
+    <div id="myModal_for_quantity" class="modal_for_quantity">
+
+  <div class="modal-content_for_quantity">
+    <div class="modal-header_for_quantity">
+      <span class="close_for_quantity">&times;</span>
+    </div>
+    <div class="modal-body_for_quantity">
+      <p style="text-align:center;">You have reached the limit of 15 samples per order</p>
+    </div>
+    <div class="modal-footer_for_quantity">
+    </div>
+  </div>
+
+</div>
 
     {% if settings.newsletter_popup %}
       {% render 'popup-newsletter' %}
