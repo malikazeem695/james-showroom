@@ -367,61 +367,23 @@ $('.boost-sd__quantity-input').attr('disabled', 'true');
       }
     });
 });
-//     $('.boost-sd__button--as-quantity').on('click', function() {
-//         $.ajax({
-//       type: 'GET',
-//       url: '/cart.js',
-//       dataType: 'json',
-//       success: function(cart) {
-//         var itemCount = cart.item_count;
-//         if(itemCount>14){
-// $('.boost-sd__quantity-input').attr('disabled', 'true');
+    $('.boost-sd__button--as-quantity').on('click', function() {
+        $.ajax({
+      type: 'GET',
+      url: '/cart.js',
+      dataType: 'json',
+      success: function(cart) {
+        var itemCount = cart.item_count;
+        console.log(itemCount);
+        if(itemCount>14){
+$('.boost-sd__quantity-input').attr('disabled', 'true');
 
-//         }
-//       },
-//       error: function(err) {
-//       }
-//     });
-//     });
-
-          setTimeout(function() {
-      var changeInputsplusminus = document.querySelectorAll('.boost-sd__button--as-quantity');
-changeInputsplusminus.forEach(function(changeInputsminusplus) {
-  changeInputsminusplus.addEventListener('input', function() {
-    setTimeout(function() {
-    var enteredValue = parseInt(changeInputsminusplus.closest('.boost-sd__quantity').querySelector('.boost-sd__quantity-input').value);
-    var oldValAttribute = parseInt(changeInputsminusplus.closest('.boost-sd__quantity').querySelector('.boost-sd__quantity-input').getAttribute('value'));    
-      console.log("enteredValue  "+enteredValue+" oldValAttribute "+oldValAttribute)
-    // $.ajax({
-    //   type: 'GET',
-    //   url: '/cart.js',
-    //   dataType: 'json',
-    //   success: function(cart) {
-    //     var itemCount = cart.item_count;
-    //     if(enteredValue > oldValAttribute){
-    //       var getdifference = enteredValue - oldValAttribute;
-    //     var gettotal = itemCount + getdifference;
-    //     if(gettotal > 15){
-    //       changeInputsminusplus.value = oldValAttribute;
-    //       changeInputsminusplus.setAttribute('value', oldValAttribute);
-    //     }
-    //   }
-    //     else{
-    //       var getdifference = oldValAttribute - enteredValue;
-    //     var gettotal = itemCount + getdifference;
-    //     if(gettotal > 15){
-    //       changeInputsminusplus.value = enteredValue;
-    //       changeInputsminusplus.setAttribute('value', enteredValue);
-    //     }
-    //     }
-    //   },
-    //   error: function(err) {
-    //   }
-    // });
-  }, 500);
-  });
-});
-}, 500);
+        }
+      },
+      error: function(err) {
+      }
+    });
+    });
     
 //       setTimeout(function() {
 //       var changeInputs = document.querySelectorAll('.boost-sd__quantity-input');
