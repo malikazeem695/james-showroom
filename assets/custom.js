@@ -284,6 +284,17 @@ quantityInputs.forEach(function(inputField) {
   }, 500);
   });
 });
+var quantityplusInputs = document.querySelectorAll('.js-change-quantity');
+quantityplusInputs.forEach(function(quantityInputplus) {
+  quantityInputplus.addEventListener('click', function() {
+    const siblingQuantityElement = quantityInputplus.nextElementSibling;
+
+    if (siblingQuantityElement && siblingQuantityElement.classList.contains('quantity')) {
+      // Do something with the 'quantity' element
+      console.log('Found sibling with class "quantity":', siblingQuantityElement);
+    }
+  });
+});
 }, 500);
   });
 
