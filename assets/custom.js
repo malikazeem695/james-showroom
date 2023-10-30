@@ -257,22 +257,6 @@ if (inputField) {
           }
         });
       }
-  if ($('.shopify-section--product-template').length > 0) {
-        $.ajax({
-          type: 'GET',
-          url: '/cart.js',
-          dataType: 'json',
-          success: function(cart) {
-            var itemCount = cart.item_count;
-            if(itemCount >= 15){
-              var quantityInput = document.querySelector('button.add_to_cart.global-button.global-button--primary.show);
-                quantityInputplus.disabled = true;
-            }
-          },
-          error: function(err) {
-          }
-        });
-      }
       setTimeout(function() {
       var quantityInputs = document.querySelectorAll('.quantity');
 quantityInputs.forEach(function(inputField) {
