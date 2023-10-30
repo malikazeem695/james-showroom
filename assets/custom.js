@@ -331,7 +331,8 @@ quantityInputs.forEach(function(inputField) {
       success: function(cart) {
         var itemCount = cart.item_count;
         if(itemCount>14){
-          $('.boost-sd__quantity-input').prop('disabled', true);
+$('.boost-sd__quantity-input').attr('disabled', 'true');
+
         }
       },
       error: function(err) {
