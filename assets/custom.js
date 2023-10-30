@@ -389,7 +389,7 @@ $('.boost-sd__quantity').find('.boost-sd__quantity-btn-wrapper:eq(1)').find('.bo
       error: function(err) {
       }
     });
-        }, 6000);
+        }, 600);
     });
     
 //       setTimeout(function() {
