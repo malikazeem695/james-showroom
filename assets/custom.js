@@ -380,6 +380,10 @@ $('.boost-sd__quantity-input').attr('disabled', 'true');
 $('.boost-sd__quantity-input').attr('disabled', 'true');
 $('.boost-sd__quantity').find('.boost-sd__quantity-btn-wrapper:eq(1)').find('.boost-sd__button--as-quantity').prop('disabled', true);
         }
+        else{
+          $('.boost-sd__quantity-input').attr('disabled', 'false');
+$('.boost-sd__quantity').find('.boost-sd__quantity-btn-wrapper:eq(1)').find('.boost-sd__button--as-quantity').prop('disabled', false);
+        }
       },
       error: function(err) {
       }
