@@ -357,8 +357,8 @@ quantityInputs.forEach(function(inputField) {
 changeInputs.forEach(function(inputField) {
   inputField.addEventListener('input', function() {
     setTimeout(function() {
-    var enteredValue = inputField.value;
-    var oldValAttribute = inputField.getAttribute('value');    
+    var enteredValue = parseInt(inputField.value);
+    var oldValAttribute = parseInt(inputField.getAttribute('value'));    
     $.ajax({
       type: 'GET',
       url: '/cart.js',
