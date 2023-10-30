@@ -268,8 +268,7 @@ if (inputField) {
             
             if(itemCount >= 15){
               console.log(itemCount);
-              var quantityInput = document.querySelector('button.add_to_cart');
-                quantityInput.addClass('disabled');
+                $('button.add_to_cart').addClass('disabled');
             }
           },
           error: function(err) {
