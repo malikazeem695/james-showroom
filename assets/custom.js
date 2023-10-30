@@ -333,10 +333,11 @@ quantityInputs.forEach(function(inputField) {
       success: function(cart) {
         var itemCount = cart.item_count;
         if(enteredValue > oldValAttribute){
+          console.log("old value "+oldValAttribute);
           var getdifference = enteredValue - oldValAttribute;
         var gettotal = itemCount + getdifference;
         if(gettotal > 15){
-          console.log("old value "+oldValAttribute);
+          
           $(this).val(oldValAttribute);
         }
       }
