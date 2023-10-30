@@ -292,27 +292,6 @@ if (inputField) {
         });
   }, 2000);
   });
-     $('.mini-cart__item-content .js-change-quantity').click(function() {
-    setTimeout(function() {
-       $.ajax({
-          type: 'GET',
-          url: '/cart.js',
-          dataType: 'json',
-          success: function(cart) {
-            var itemCount = cart.item_count;
-            if(itemCount >= 15){
-              console.log(itemCount);
-                $('button.add_to_cart').addClass('disabled');
-            }
-            else{
-              $('button.add_to_cart').removeClass('disabled');
-                }
-          },
-          error: function(err) {
-          }
-        });
-  }, 2000);
-  });
       }
   
       setTimeout(function() {
