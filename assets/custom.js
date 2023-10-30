@@ -323,34 +323,6 @@ quantityInputs.forEach(function(inputField) {
 });
 }, 500);
   $('a.icon-cart.mini_cart.dropdown_link').click(function(){
-   $('.boost-sd__quantity-input').on('input', function() {
-     var thisinput = $(this);
-  var enteredValue = parseInt(thisinput.val()); 
-    var oldValAttribute = parseInt(thisinput.attr('value'));  
-      
-    $.ajax({
-      type: 'GET',
-      url: '/cart.js',
-      dataType: 'json',
-      success: function(cart) {
-        var itemCount = cart.item_count;
-        if(enteredValue > oldValAttribute){
-          
-          var getdifference = enteredValue - oldValAttribute;
-         
-        var gettotal = itemCount + getdifference;
-          
-        if(gettotal > 15){  
-          $(this).val(oldValAttribute);
-          var enteredValue = thisinput.val(); 
-            console.log("old value "+enteredValue);
-        }
-      }
-      },
-      error: function(err) {
-      }
-    });
-});
 
       setTimeout(function() {
       var changeInputs = document.querySelectorAll('.boost-sd__quantity-input');
