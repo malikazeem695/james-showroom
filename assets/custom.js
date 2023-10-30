@@ -324,8 +324,26 @@ quantityInputs.forEach(function(inputField) {
 }, 500);
   $('a.icon-cart.mini_cart.dropdown_link').click(function(){
    $('.boost-sd__quantity-input').on('input', function() {
-  var newValue = $(this).val(); 
-     console.log(newValue);
+  var enteredValue = $(this).val(); 
+    var oldValAttribute = $(this).attr('value');    
+    $.ajax({
+      type: 'GET',
+      url: '/cart.js',
+      dataType: 'json',
+      success: function(cart) {
+        var itemCount = cart.item_count;
+        if(enteredValue > oldValAttribute){
+          var getdifference = enteredValue - oldValAttribute;
+        var gettotal = itemCount + getdifference;
+        if(gettotal > 15){
+          console.log(gettotal);
+          $(this).val(oldValAttribute);
+        }
+      }
+      },
+      error: function(err) {
+      }
+    });
 });
   });
   });
