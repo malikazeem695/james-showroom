@@ -304,9 +304,11 @@ if (inputField) {
               console.log(itemCount);
                 $('button.add_to_cart').addClass('disabled');
             }
-            else if ($('.add_to_cart').hasClass('disabled')){
+            else{
+              if($('.add_to_cart').hasClass('disabled')){
               $('button.add_to_cart').removeClass('disabled');
             }
+                }
           },
           error: function(err) {
           }
