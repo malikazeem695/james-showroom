@@ -721,6 +721,7 @@ $(() => {
      
 var enteredValue = $(this).val();
     var oldValAttribute = $(this).attr('old-val');    
+    var getthis = $(this);
     $.ajax({
       type: 'GET',
       url: '/cart.js',
@@ -731,7 +732,7 @@ var enteredValue = $(this).val();
           var getdifference = enteredValue - oldValAttribute;
         var gettotal = itemCount + getdifference;
         if(gettotal > 15){
-          $(this).attr('old-val', oldValAttribute);
+          getthis.attr('old-val', oldValAttribute);
         }
           else{
             updateCartItemQuantity(cartItem); 
