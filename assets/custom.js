@@ -258,13 +258,14 @@ if (inputField) {
         });
       }
   if ($('.shopify-section--product-template').length > 0) {
-    console.log("yes here");
+    
         $.ajax({
           type: 'GET',
           url: '/cart.js',
           dataType: 'json',
           success: function(cart) {
             var itemCount = cart.item_count;
+            console.log("yes here");
             if(itemCount >= 15){
               
               var quantityInput = document.querySelector('button.add_to_cart.global-button.global-button--primary.show');
