@@ -699,6 +699,12 @@ $(() => {
     if (window.PXUTheme.currency.show_multiple_currencies) {
       window.currencyConverter.convertCurrencies();
     }
+    if(cart.item_count >= 15){
+      $('.product-plus').removeClass('js-change-quantity');
+    }
+    else{
+       $('.product-plus').addClass('js-change-quantity');
+    }
   }
 
   $('body').on('change', '[data-cart-quantity-input]', function () {
