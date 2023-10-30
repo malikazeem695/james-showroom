@@ -274,7 +274,7 @@ if (inputField) {
           error: function(err) {
           }
         });
-      var addcartbtn = document.querySelectorAll('button.add_to_cart');
+      var addcartbtn = document.querySelector('button.add_to_cart');
   addcartbtn.addEventListener('click', function() {
     setTimeout(function() {
        $.ajax({
