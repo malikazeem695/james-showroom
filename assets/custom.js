@@ -324,6 +324,7 @@ quantityInputs.forEach(function(inputField) {
 }, 500);
   $('a.icon-cart.mini_cart.dropdown_link').click(function(){
    $('.boost-sd__quantity-input').on('input', function() {
+     setTimeout(function() {
   var enteredValue = $(this).val(); 
     var oldValAttribute = $(this).attr('value');    
     $.ajax({
@@ -347,6 +348,7 @@ quantityInputs.forEach(function(inputField) {
       error: function(err) {
       }
     });
+       }, 500);
 });
   });
   });
