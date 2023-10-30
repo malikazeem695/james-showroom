@@ -324,13 +324,25 @@ quantityInputs.forEach(function(inputField) {
 }, 500);
   $('a.icon-cart.mini_cart.dropdown_link').click(function(){
 
-      setTimeout(function() {
-      var changeInputs = document.querySelectorAll('.boost-sd__quantity-input');
-changeInputs.forEach(function(inputField) {
-  inputField.addEventListener('input', function() {
-    setTimeout(function() {
-    var enteredValue = parseInt(inputField.value);
-    var oldValAttribute = parseInt(inputField.getAttribute('value'));    
+      $.ajax({
+      type: 'GET',
+      url: '/cart.js',
+      dataType: 'json',
+      success: function(cart) {
+        var itemCount = cart.item_count;
+        if(itemCount>14){
+          $('.boost-sd__quantity-input').prop('disabled', true);
+        }
+      },
+      error: function(err) {
+      }
+    });
+    
+   $('.boost-sd__quantity-input').on('input', function() {
+     var thisinput = $(this);
+  var enteredValue = parseInt(thisinput.val()); 
+    var oldValAttribute = parseInt(thisinput.attr('value'));  
+      
     $.ajax({
       type: 'GET',
       url: '/cart.js',
@@ -338,29 +350,60 @@ changeInputs.forEach(function(inputField) {
       success: function(cart) {
         var itemCount = cart.item_count;
         if(enteredValue > oldValAttribute){
+          
           var getdifference = enteredValue - oldValAttribute;
+         
         var gettotal = itemCount + getdifference;
-        if(gettotal > 15){
-          inputField.value = oldValAttribute;
-          inputField.setAttribute('value', oldValAttribute);
+          
+        if(gettotal > 15){  
+          $(this).val(oldValAttribute);
+          var enteredValue = thisinput.val(); 
+            console.log("old value "+enteredValue);
         }
       }
-        else{
-          var getdifference = oldValAttribute - enteredValue;
-        var gettotal = itemCount + getdifference;
-        if(gettotal > 15){
-          inputField.value = enteredValue;
-          inputField.setAttribute('value', enteredValue);
-        }
-        }
       },
       error: function(err) {
       }
     });
-  }, 500);
-  });
 });
-}, 500);
+
+//       setTimeout(function() {
+//       var changeInputs = document.querySelectorAll('.boost-sd__quantity-input');
+// changeInputs.forEach(function(inputField) {
+//   inputField.addEventListener('input', function() {
+//     setTimeout(function() {
+//     var enteredValue = parseInt(inputField.value);
+//     var oldValAttribute = parseInt(inputField.getAttribute('value'));    
+//     $.ajax({
+//       type: 'GET',
+//       url: '/cart.js',
+//       dataType: 'json',
+//       success: function(cart) {
+//         var itemCount = cart.item_count;
+//         if(enteredValue > oldValAttribute){
+//           var getdifference = enteredValue - oldValAttribute;
+//         var gettotal = itemCount + getdifference;
+//         if(gettotal > 15){
+//           inputField.value = oldValAttribute;
+//           inputField.setAttribute('value', oldValAttribute);
+//         }
+//       }
+//         else{
+//           var getdifference = oldValAttribute - enteredValue;
+//         var gettotal = itemCount + getdifference;
+//         if(gettotal > 15){
+//           inputField.value = enteredValue;
+//           inputField.setAttribute('value', enteredValue);
+//         }
+//         }
+//       },
+//       error: function(err) {
+//       }
+//     });
+//   }, 500);
+//   });
+// });
+// }, 500);
     
   });
   });
