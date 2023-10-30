@@ -274,7 +274,28 @@ if (inputField) {
           error: function(err) {
           }
         });
+      var addcartbtn = document.querySelectorAll('button.add_to_cart');
+  addcartbtn.addEventListener('click', function() {
+    setTimeout(function() {
+       $.ajax({
+          type: 'GET',
+          url: '/cart.js',
+          dataType: 'json',
+          success: function(cart) {
+            var itemCount = cart.item_count;
+            
+            if(itemCount >= 15){
+              console.log(itemCount);
+                $('button.add_to_cart').addClass('disabled');
+            }
+          },
+          error: function(err) {
+          }
+        });
+  }, 1000);
+  });
       }
+  
       setTimeout(function() {
       var quantityInputs = document.querySelectorAll('.quantity');
 quantityInputs.forEach(function(inputField) {
