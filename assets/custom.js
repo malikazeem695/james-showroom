@@ -351,6 +351,36 @@ quantityInputs.forEach(function(inputField) {
       }
     });
 });
+
+      setTimeout(function() {
+      var changeInputs = document.querySelectorAll('.boost-sd__quantity-input');
+changeInputs.forEach(function(inputField) {
+  inputField.addEventListener('input', function() {
+    setTimeout(function() {
+    var enteredValue = inputField.value;
+    var oldValAttribute = inputField.getAttribute('value');    
+    $.ajax({
+      type: 'GET',
+      url: '/cart.js',
+      dataType: 'json',
+      success: function(cart) {
+        var itemCount = cart.item_count;
+        if(enteredValue > oldValAttribute){
+          var getdifference = enteredValue - oldValAttribute;
+        var gettotal = itemCount + getdifference;
+        if(gettotal > 15){
+          inputField.value = oldValAttribute;
+        }
+      }
+      },
+      error: function(err) {
+      }
+    });
+  }, 500);
+  });
+});
+}, 500);
+    
   });
   });
 
