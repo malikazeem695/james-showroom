@@ -326,8 +326,9 @@ quantityInputs.forEach(function(inputField) {
    $('.boost-sd__quantity-input').on('input', function() {
      var thisinput = $(this);
      setTimeout(function() {
-  var enteredValue = thisinput.val(); 
-    var oldValAttribute = thisinput.attr('value');    
+  var enteredValue = parseInt(thisinput.val()); 
+    var oldValAttribute = parseInt(thisinput.attr('value'));  
+       console.log("old value "+enteredValue);
     $.ajax({
       type: 'GET',
       url: '/cart.js',
@@ -336,13 +337,14 @@ quantityInputs.forEach(function(inputField) {
         var itemCount = cart.item_count;
         if(enteredValue > oldValAttribute){
           
-          var getdifference = parseInt(enteredValue) - parseInt(oldValAttribute);
+          var getdifference = enteredValue - oldValAttribute;
          
         var gettotal = itemCount + getdifference;
+          
         if(gettotal > 15){  
           $(this).val(oldValAttribute);
           var enteredValue = thisinput.val(); 
-           console.log("old value "+enteredValue);
+           
         }
       }
       },
