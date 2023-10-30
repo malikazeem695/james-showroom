@@ -10,6 +10,9 @@
     height: -moz-fit-content;
     height: fit-content;
 }
+.boost-sd__cart-item-quantity .boost-sd__quantity .boost-sd__button[disabled] {
+    border: unset !important;
+    background-color: transparent !important;}
 .boost-sd__quick-view-quantity .boost-sd__quantity .boost-sd__button[disabled] {
   background-color: transparent !important;
   border: unset !important;}
