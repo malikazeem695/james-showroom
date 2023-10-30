@@ -386,7 +386,7 @@ $('.boost-sd__quantity-input').attr('disabled', 'true');
       error: function(err) {
       }
     });
-        }, 500);
+        }, 1000);
     });
     
 //       setTimeout(function() {
