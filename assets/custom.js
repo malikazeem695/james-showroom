@@ -339,7 +339,8 @@ quantityInputs.forEach(function(inputField) {
         var gettotal = itemCount + getdifference;
         if(gettotal > 15){  
           $(this).val(oldValAttribute);
-           console.log("old value "+$(this).val());
+          var enteredValue = $(this).val(); 
+           console.log("old value "+enteredValue);
         }
       }
       },
