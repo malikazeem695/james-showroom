@@ -269,7 +269,7 @@ if (inputField) {
             if(itemCount >= 15){
               console.log(itemCount);
               var quantityInput = document.querySelector('button.add_to_cart.global-button.global-button--primary.show');
-                quantityInput.disabled = true;
+                quantityInput.addClass('disabled');
             }
           },
           error: function(err) {
