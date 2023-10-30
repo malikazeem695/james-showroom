@@ -305,9 +305,7 @@ if (inputField) {
                 $('button.add_to_cart').addClass('disabled');
             }
             else{
-              if($('.add_to_cart').hasClass('disabled')){
               $('button.add_to_cart').removeClass('disabled');
-            }
                 }
           },
           error: function(err) {
