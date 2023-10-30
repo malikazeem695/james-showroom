@@ -439,6 +439,7 @@ $(() => {
   }
 
   function updateCartItemQuantity(cartItem) {
+    console.log(cartItem.quantity);
     $.ajax({
       url: '/cart/change.js',
       dataType: 'json',
