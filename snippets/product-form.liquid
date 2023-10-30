@@ -133,7 +133,7 @@
               {% if settings.cart_action == 'ajax' %}
                 ajax-submit
               {% endif %}
-              {% if product.available == false %}
+              {% if product.available == false or cart.item_count >= 15 %}
                 disabled
               {% endif %}
             "
