@@ -373,6 +373,14 @@ changeInputs.forEach(function(inputField) {
           inputField.setAttribute('value', oldValAttribute);
         }
       }
+        else{
+          var getdifference = oldValAttribute - enteredValue;
+        var gettotal = itemCount + getdifference;
+        if(gettotal > 15){
+          inputField.value = enteredValue;
+          inputField.setAttribute('value', enteredValue);
+        }
+        }
       },
       error: function(err) {
       }
