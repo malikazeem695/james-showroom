@@ -290,7 +290,7 @@ if (inputField) {
           error: function(err) {
           }
         });
-  }, 1000);
+  }, 2000);
   });
       }
   
