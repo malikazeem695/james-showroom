@@ -331,7 +331,7 @@ quantityInputsdrawer.forEach(function(inputField) {
     console.log("yes changed");
   });
 });
-         }, 1000);   
+         }, 2000);   
           });
   });
 
