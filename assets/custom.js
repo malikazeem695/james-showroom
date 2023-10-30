@@ -367,7 +367,9 @@ $('.boost-sd__quantity-input').attr('disabled', 'true');
       }
     });
 });
-
+    $('.boost-sd__button--as-quantity').on('click', function() {
+      console.log("yes just clicked");
+    });
 //       setTimeout(function() {
 //       var changeInputs = document.querySelectorAll('.boost-sd__quantity-input');
 // changeInputs.forEach(function(inputField) {
