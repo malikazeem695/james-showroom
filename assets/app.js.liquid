@@ -732,7 +732,8 @@ var enteredValue = $(this).val();
           var getdifference = enteredValue - oldValAttribute;
         var gettotal = itemCount + getdifference;
         if(gettotal > 15){
-          getthis.attr('value', oldValAttribute);
+          console.log(getthis.val());
+          // getthis.attr('value', oldValAttribute).change();
         }
           else{
             getthis.attr('old-val', enteredValue);
