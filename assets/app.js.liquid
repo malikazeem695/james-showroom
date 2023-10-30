@@ -709,6 +709,7 @@ $(() => {
   }
 
   $('body').on('change', '[data-cart-quantity-input]', function () {
+    
     const cartItem = {
       lineID: $(this).parents('[data-cart-item]').data('line-id'),
       variantID: $(this).parents('[data-cart-item]').data('variant-id'),
@@ -717,6 +718,7 @@ $(() => {
       totalDiscount: $(this).parents('[data-cart-form]').data('total-discount'),
       $element: $(this).parents('[data-cart-item]'),
     };
+    console.log(cartItem.quantity);
     // Disable button after click to prevent multiple clicks
     $(this).parents('.product-quantity-box').find('.js-change-quantity').addClass('is-disabled');
      
