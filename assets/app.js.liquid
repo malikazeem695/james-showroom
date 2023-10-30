@@ -718,7 +718,7 @@ $(() => {
       totalDiscount: $(this).parents('[data-cart-form]').data('total-discount'),
       $element: $(this).parents('[data-cart-item]'),
     };
-    console.log(cartItem.quantity);
+    
     // Disable button after click to prevent multiple clicks
     $(this).parents('.product-quantity-box').find('.js-change-quantity').addClass('is-disabled');
      
@@ -741,7 +741,8 @@ var enteredValue = $(this).val();
         }
           else{
             getthis.attr('old-val', enteredValue);
-            updateCartItemQuantity(cartItem); 
+            console.log(cartItem.quantity);
+            // updateCartItemQuantity(cartItem); 
           }
       }
       },
