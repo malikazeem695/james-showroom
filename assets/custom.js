@@ -282,7 +282,6 @@ if (inputField) {
           dataType: 'json',
           success: function(cart) {
             var itemCount = cart.item_count;
-            console.log(itemCount);
             if(itemCount >= 15){
               console.log(itemCount);
                 $('button.add_to_cart').addClass('disabled');
