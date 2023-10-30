@@ -324,6 +324,7 @@ quantityInputs.forEach(function(inputField) {
 }, 500);
   var cart_toggle_icon = document.querySelector('.icon-cart');
           cart_toggle_icon.addEventListener('click', function() {
+            setTimeout(function() {
 var quantityInputsdrawer = document.querySelectorAll('.boost-sd__quantity-input');
 quantityInputsdrawer.forEach(function(inputField) {
   inputField.addEventListener('input', function() {
@@ -350,7 +351,7 @@ quantityInputsdrawer.forEach(function(inputField) {
   // }, 500);
   });
 });
-            
+         }, 500);   
           });
   });
 
