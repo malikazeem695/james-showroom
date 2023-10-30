@@ -328,11 +328,14 @@ quantityInputs.forEach(function(inputField) {
 var quantityInputsdrawer = document.querySelectorAll('.boost-sd__quantity-input');
 quantityInputsdrawer.forEach(function(inputField) {
   inputField.addEventListener('input', function() {
-    console.log("yes changed");
+    
   });
 });
          }, 2000);   
           });
+  $('a.icon-cart.mini_cart.dropdown_link').click(function(){
+    console.log("yes changed");
+  });
   });
 
  
