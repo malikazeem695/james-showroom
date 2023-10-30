@@ -732,11 +732,10 @@ var enteredValue = $(this).val();
           var getdifference = enteredValue - oldValAttribute;
         var gettotal = itemCount + getdifference;
         if(gettotal > 15){
-          getthis.attr('old-val', oldValAttribute);
+          getthis.attr('value', oldValAttribute);
         }
           else{
             getthis.attr('old-val', enteredValue);
-            getthis.attr('value', enteredValue);
             updateCartItemQuantity(cartItem); 
           }
       }
