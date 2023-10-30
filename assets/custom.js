@@ -369,6 +369,7 @@ changeInputs.forEach(function(inputField) {
           var getdifference = enteredValue - oldValAttribute;
         var gettotal = itemCount + getdifference;
         if(gettotal > 15){
+          console.log(typeof oldValAttribute);
           inputField.value = oldValAttribute;
         }
       }
