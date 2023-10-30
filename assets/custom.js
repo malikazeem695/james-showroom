@@ -368,6 +368,7 @@ $('.boost-sd__quantity-input').attr('disabled', 'true');
     });
 });
     $('.boost-sd__button--as-quantity').on('click', function() {
+      var thisbtn = this;
       setTimeout(function() {
         $.ajax({
       type: 'GET',
@@ -377,7 +378,7 @@ $('.boost-sd__quantity-input').attr('disabled', 'true');
         var itemCount = cart.item_count;
         console.log(itemCount);
         if(itemCount>14){
-          $(this).attr('disabled', 'true');
+          thisbtn.attr('disabled', 'true');
 $('.boost-sd__quantity-input').attr('disabled', 'true');
 
         }
