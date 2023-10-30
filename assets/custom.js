@@ -367,22 +367,22 @@ $('.boost-sd__quantity-input').attr('disabled', 'true');
       }
     });
 });
-    $('.boost-sd__button--as-quantity').on('click', function() {
-        $.ajax({
-      type: 'GET',
-      url: '/cart.js',
-      dataType: 'json',
-      success: function(cart) {
-        var itemCount = cart.item_count;
-        if(itemCount>14){
-$('.boost-sd__quantity-input').attr('disabled', 'true');
+//     $('.boost-sd__button--as-quantity').on('click', function() {
+//         $.ajax({
+//       type: 'GET',
+//       url: '/cart.js',
+//       dataType: 'json',
+//       success: function(cart) {
+//         var itemCount = cart.item_count;
+//         if(itemCount>14){
+// $('.boost-sd__quantity-input').attr('disabled', 'true');
 
-        }
-      },
-      error: function(err) {
-      }
-    });
-    });
+//         }
+//       },
+//       error: function(err) {
+//       }
+//     });
+//     });
 
           setTimeout(function() {
       var changeInputsplusminus = document.querySelectorAll('.boost-sd__button--as-quantity');
