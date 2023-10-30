@@ -335,11 +335,11 @@ quantityInputs.forEach(function(inputField) {
         if(enteredValue > oldValAttribute){
           
           var getdifference = parseInt(enteredValue) - parseInt(oldValAttribute);
-          console.log("old value "+getdifference);
+         
         var gettotal = itemCount + getdifference;
-        if(gettotal > 15){
-          
+        if(gettotal > 15){  
           $(this).val(oldValAttribute);
+           console.log("old value "+$(this).val());
         }
       }
       },
