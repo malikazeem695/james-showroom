@@ -375,8 +375,9 @@ $('.boost-sd__quantity-input').attr('disabled', 'true');
       dataType: 'json',
       success: function(cart) {
         var itemCount = cart.item_count;
-        console.log(itemCount);
+        
         if(itemCount>14){
+          console.log(itemCount);
 $('.boost-sd__quantity-input').attr('disabled', 'true');
 $('.boost-sd__quantity').find('.boost-sd__quantity-btn-wrapper:eq(1)').find('.boost-sd__button--as-quantity').prop('disabled', true);
         }
