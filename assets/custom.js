@@ -335,7 +335,7 @@ quantityInputs.forEach(function(inputField) {
         if(enteredValue > oldValAttribute){
           
           var getdifference = enteredValue - oldValAttribute;
-          console.log("old value "+getdifference);
+          console.log("old value "+enteredValue);
         var gettotal = itemCount + getdifference;
         if(gettotal > 15){
           
