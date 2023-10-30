@@ -327,7 +327,7 @@ quantityInputs.forEach(function(inputField) {
      var thisinput = $(this);
   var enteredValue = parseInt(thisinput.val()); 
     var oldValAttribute = parseInt(thisinput.attr('value'));  
-       console.log("old value "+enteredValue);
+      
     $.ajax({
       type: 'GET',
       url: '/cart.js',
@@ -343,7 +343,7 @@ quantityInputs.forEach(function(inputField) {
         if(gettotal > 15){  
           $(this).val(oldValAttribute);
           var enteredValue = thisinput.val(); 
-           
+            console.log("old value "+enteredValue);
         }
       }
       },
