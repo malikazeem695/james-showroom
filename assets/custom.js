@@ -324,9 +324,10 @@ quantityInputs.forEach(function(inputField) {
 }, 500);
   $('a.icon-cart.mini_cart.dropdown_link').click(function(){
    $('.boost-sd__quantity-input').on('input', function() {
+     var thisinput = $(this);
      setTimeout(function() {
-  var enteredValue = $(this).val(); 
-    var oldValAttribute = $(this).attr('value');    
+  var enteredValue = thisinput.val(); 
+    var oldValAttribute = thisinput.attr('value');    
     $.ajax({
       type: 'GET',
       url: '/cart.js',
@@ -340,7 +341,7 @@ quantityInputs.forEach(function(inputField) {
         var gettotal = itemCount + getdifference;
         if(gettotal > 15){  
           $(this).val(oldValAttribute);
-          var enteredValue = $(this).val(); 
+          var enteredValue = thisinput.val(); 
            console.log("old value "+enteredValue);
         }
       }
