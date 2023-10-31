@@ -337,6 +337,10 @@ if(itemCount>15){
   $('.boost-sd__cart-btn-group').prepend(showmsg);
   $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', true);
 }
+     else if(itemCount<16){
+            $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', false);
+            $('.overquantity_msg').remove();
+          }     
         }
       },
       error: function(err) {
@@ -368,6 +372,10 @@ if(itemCount>15){
           var enteredValue = thisinput.val(); 
             console.log("old value "+enteredValue);
         }
+           else if(gettotal<16){
+            $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', false);
+            $('.overquantity_msg').remove();
+          }
       }
       },
       error: function(err) {
@@ -388,10 +396,14 @@ if(itemCount>15){
 $('.boost-sd__quantity-input').attr('disabled', 'true');
 $('.boost-sd__quantity').find('.boost-sd__quantity-btn-wrapper:eq(1)').find('.boost-sd__button--as-quantity').prop('disabled', true);
           if(itemCount>15){
-  var showmsg = '<p style="font-size: 11px;color: red;text-align: center;">You have reached the limit of 15 samples per order</p>';
+  var showmsg = '<p class="overquantity_msg" style="font-size: 11px;color: red;text-align: center;">You have reached the limit of 15 samples per order</p>';
   $('.boost-sd__cart-btn-group').prepend(showmsg);
   $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', true);
 }
+          else if(itemCount<16){
+            $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', false);
+            $('.overquantity_msg').remove();
+          }
         }
         else{
           $('.boost-sd__quantity-input').attr('disabled', 'false');
