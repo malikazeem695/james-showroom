@@ -336,10 +336,12 @@ if(itemCount>15){
   var showmsg = '<p style="font-size: 11px;color: red;text-align: center;">You have reached the limit of 15 samples per order</p>';
   $('.boost-sd__cart-btn-group').prepend(showmsg);
   $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', true);
+  $('button[name="checkout"]').prop('disabled', true);
 }
      else if(itemCount<16){
             $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', false);
             $('.overquantity_msg').remove();
+       $('button[name="checkout"]').prop('disabled', false);
           }     
         }
       },
@@ -368,6 +370,7 @@ if(itemCount>15){
             var showmsg = '<p style="font-size: 11px;color: red;text-align: center;">You have reached the limit of 15 samples per order</p>';
   $('.boost-sd__cart-btn-group').prepend(showmsg);
   $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', true);
+          $('button[name="checkout"]').prop('disabled', true);
           $(this).val(oldValAttribute);
           var enteredValue = thisinput.val(); 
             console.log("old value "+enteredValue);
@@ -375,6 +378,7 @@ if(itemCount>15){
            else if(gettotal<16){
             $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', false);
             $('.overquantity_msg').remove();
+             $('button[name="checkout"]').prop('disabled', false);
           }
       }
       },
@@ -399,10 +403,12 @@ $('.boost-sd__quantity').find('.boost-sd__quantity-btn-wrapper:eq(1)').find('.bo
   var showmsg = '<p class="overquantity_msg" style="font-size: 11px;color: red;text-align: center;">You have reached the limit of 15 samples per order</p>';
   $('.boost-sd__cart-btn-group').prepend(showmsg);
   $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', true);
+            $('button[name="checkout"]').prop('disabled', true);
 }
           else if(itemCount<16){
             $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', false);
             $('.overquantity_msg').remove();
+            $('button[name="checkout"]').prop('disabled', false);
           }
         }
         else{
