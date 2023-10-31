@@ -333,6 +333,8 @@ quantityInputs.forEach(function(inputField) {
         if(itemCount>14){
 $('.boost-sd__quantity-input').attr('disabled', 'true');
 if(itemCount>15){
+  var showmsg = '<p>You have reached the limit of 15 samples per order</p>';
+  $('.boost-sd__cart-btn-group').prepend(showmsg);
   $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(0)').prop('disabled', true);
 }
         }
