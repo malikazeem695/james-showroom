@@ -332,7 +332,9 @@ quantityInputs.forEach(function(inputField) {
         var itemCount = cart.item_count;
         if(itemCount>14){
 $('.boost-sd__quantity-input').attr('disabled', 'true');
-
+if(itemCount>15){
+  $('.boost-sd__cart-btn-group').find('.boost-sd__button:eq(1)').prop('disabled', true);
+}
         }
       },
       error: function(err) {
