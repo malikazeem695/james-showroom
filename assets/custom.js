@@ -283,7 +283,8 @@ if (inputField) {
           success: function(cart) {
             var itemCount = cart.item_count;
             if(itemCount >= 15){
-              console.log(itemCount);
+              if(itemCount > 15){
+              $('button[name="checkout"]').prop('disabled', true);}
                 $('button.add_to_cart').addClass('disabled');
             }
           },
@@ -311,6 +312,7 @@ quantityInputs.forEach(function(inputField) {
           var getdifference = enteredValue - oldValAttribute;
         var gettotal = itemCount + getdifference;
         if(gettotal > 15){
+          $('button[name="checkout"]').prop('disabled', true);
           inputField.value = oldValAttribute;
         }
       }
