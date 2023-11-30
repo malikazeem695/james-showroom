@@ -62,7 +62,8 @@
                   <p class="predictive-search__list-item-title">
                     {{- product.title | escape -}}
                   </p>
-
+{% if product.type == 'Lighting' or  product.type == 'Furniture'%}
+  {% else %}
                   <p
                     class="yeshere 
                       predictive-search__list-item-price
@@ -128,6 +129,7 @@
                     product: product,
                     class: 'predictive-search__list-item-unit-price',
                   %}
+  {% endif %}
                 </div>
               </a>
             </li>
