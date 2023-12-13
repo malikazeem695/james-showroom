@@ -272,6 +272,26 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
     {% if collection.next_product %}<link rel="next" href="{{ collection.next_product }}">{% endif %}
     {{ "ajaxinate.js" | asset_url | script_tag }}
     {{ "custom.js" | asset_url | script_tag }}
+    {% if template contains 'product' %}
+    <script>
+fetch('https://ipinfo.io/json?token=d7f69d83681305')
+  .then(response => response.json())
+  .then(data => {
+    console.log('User City:', data.city);
+  })
+  .catch(() => {
+    // Fallback to FreeGeoIP
+    fetch('https://freegeoip.app/json/')
+      .then(response => response.json())
+      .then(data => {
+        console.log('User City (Fallback):', data.city);
+      })
+      .catch(error => {
+        console.error('Error fetching location:', error);
+      });
+  });
+    </script>
+    {% endif %}
   </head>
 
   {% if template contains "index" %}
