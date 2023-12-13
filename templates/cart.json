@@ -13,10 +13,27 @@
         "products_per": 6,
         "products_limit": 6
       }
+    },
+    "941076e4-76da-4d06-9dc9-1971fd249b48": {
+      "type": "apps",
+      "blocks": {
+        "164de799-efb4-4675-ad93-4f30db26dda5": {
+          "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/recommendation\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {
+            "widgetId": "cartpage-082862"
+          }
+        }
+      },
+      "block_order": [
+        "164de799-efb4-4675-ad93-4f30db26dda5"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "featured-collection"
+    "featured-collection",
+    "941076e4-76da-4d06-9dc9-1971fd249b48"
   ]
 }
