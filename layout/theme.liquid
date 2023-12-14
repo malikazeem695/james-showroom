@@ -281,10 +281,11 @@ fetch('https://ipinfo.io/json?token=d7f69d83681305')
 var productTagsElement = document.querySelector('.product_tags');
 if (productTagsElement) {
   var productTagsText = productTagsElement.textContent.toLowerCase();
+  console.log(productTagsText);
   if (user_city.includes('New York') && productTagsText.includes('nyc')) {
     console.log('The text contains "tx" or "nyc".');
   } else {
-    document.querySelector('.product_tags').style.display = 'none';
+    document.querySelector('.purchase-details').style.display = 'none';
     console.log('The text does not contain "tx" or "nyc".');
   }
 } 
