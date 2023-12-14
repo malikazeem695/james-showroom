@@ -277,6 +277,17 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
 fetch('https://ipinfo.io/json?token=d7f69d83681305')
   .then(response => response.json())
   .then(data => {
+    var user_city = data.city;
+var productTagsElement = document.querySelector('.product_tags');
+if (productTagsElement) {
+  var productTagsText = productTagsElement.textContent.toLowerCase();
+  if (user_city.includes('New York') && productTagsText.includes('nyc')) {
+    console.log('The text contains "tx" or "nyc".');
+  } else {
+    document.querySelector('.product_tags').style.display = 'none';
+    console.log('The text does not contain "tx" or "nyc".');
+  }
+} 
     console.log('User City:', data.city);
   })
   .catch(() => {
