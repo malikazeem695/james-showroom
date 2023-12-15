@@ -301,7 +301,13 @@ if (productTagsElement) {
     }
   }
   else{
+    if(productTagsText.includes('tx'))
+    {
     document.querySelector('.purchase-details').style.display = 'block';
+    }
+    else{
+      document.querySelector('.purchase-details').style.display = 'none';
+    }
   }
 } 
     console.log('User City:', data.city);
@@ -336,7 +342,13 @@ if (productTagsElement) {
     }
   }
   else{
+   if(productTagsText.includes('tx'))
+    {
     document.querySelector('.purchase-details').style.display = 'block';
+    }
+    else{
+      document.querySelector('.purchase-details').style.display = 'none';
+    }
   }
 } 
     console.log('User City:', data.city);
