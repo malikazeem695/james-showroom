@@ -283,10 +283,11 @@ if (productTagsElement) {
   var productTagsText = productTagsElement.textContent.toLowerCase();
   console.log(productTagsText);
   if (user_city.includes('New York') && productTagsText.includes('nyc')) {
-    console.log('The text contains "tx" or "nyc".');
+    document.querySelector('.purchase-details').style.display = 'block';
   } 
   else if(user_city.includes('Texas') && productTagsText.includes('tx'))
   {  
+    document.querySelector('.purchase-details').style.display = 'block';
   }
   else{
     document.querySelector('.purchase-details').style.display = 'none';
@@ -305,10 +306,11 @@ if (productTagsElement) {
   var productTagsText = productTagsElement.textContent.toLowerCase();
   console.log(productTagsText);
   if (user_city.includes('New York') && productTagsText.includes('nyc')) {
-    console.log('The text contains "tx" or "nyc".');
+    document.querySelector('.purchase-details').style.display = 'block';
   } 
   else if(user_city.includes('Texas') && productTagsText.includes('tx'))
   {  
+    document.querySelector('.purchase-details').style.display = 'block';
   }
   else{
     document.querySelector('.purchase-details').style.display = 'none';
