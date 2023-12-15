@@ -284,9 +284,12 @@ if (productTagsElement) {
   console.log(productTagsText);
   if (user_city.includes('New York') && productTagsText.includes('nyc')) {
     console.log('The text contains "tx" or "nyc".');
-  } else {
+  } 
+  else if(user_city.includes('Texas') && productTagsText.includes('tx'))
+  {  
+  }
+  else{
     document.querySelector('.purchase-details').style.display = 'none';
-    console.log('The text does not contain "tx" or "nyc".');
   }
 } 
     console.log('User City:', data.city);
@@ -296,7 +299,22 @@ if (productTagsElement) {
     fetch('https://freegeoip.app/json/')
       .then(response => response.json())
       .then(data => {
-        console.log('User City (Fallback):', data.city);
+        var user_city = data.city;
+var productTagsElement = document.querySelector('.product_tags');
+if (productTagsElement) {
+  var productTagsText = productTagsElement.textContent.toLowerCase();
+  console.log(productTagsText);
+  if (user_city.includes('New York') && productTagsText.includes('nyc')) {
+    console.log('The text contains "tx" or "nyc".');
+  } 
+  else if(user_city.includes('Texas') && productTagsText.includes('tx'))
+  {  
+  }
+  else{
+    document.querySelector('.purchase-details').style.display = 'none';
+  }
+} 
+    console.log('User City:', data.city);
       })
       .catch(error => {
         console.error('Error fetching location:', error);
