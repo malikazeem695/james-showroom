@@ -385,7 +385,7 @@ button.action_button {
                   {% endif %}
                 {% endif %}
               </div>
-              <a class="product_print" onclick="window.print()">Download Tearsheet</a>
+              <a class="product_print" onclick="printPageArea('printableArea')">Download Tearsheet</a>
             {% when 'form' %}
               {% if onboarding %}
                 <form>
@@ -637,7 +637,137 @@ button.action_button {
     {% endif %}
   </div>
 </div>
+<div class="productPrintTemplate text-center" id="printableArea">
+  <div class="Cotainer customContainer">
+  <div class="productPrintTemplate--logo" style="text-align: center;">
+    <img src="//cdn.shopify.com/s/files/1/0079/4142/3185/files/James_Rec_Logo_NOBKGR_410x.png?v=1553647251">
+  </div>
+  {% if product.type == 'Furniture'%}
+     <div class="productPrintTemplate--productImage" style="text-align: center;">
+    <img  id="image-url" src="{{ product.featured_image.src | img_url: 'master' }}">
+  </div>
+    {% else %}
+  <div class="productPrintTemplate--productImage" style="text-align: center;">
+    <img  id="image-url" src="{{ variant.image | img_url: 'master' }}">
+  </div>
+   {% endif %}
+  <div class="productPrintTemplate--productContent">
+    <div class="leftSide">
+       <p class="vendor">
+          <span itemprop="brand" class="vendor">{{ product.vendor | link_to_vendor }}</span>
+        </p>
+      <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
+      <ul class="ac2q">
+  
+       
+        
+         {% for option_title in product.options %}
+                     {% if option_title contains 'Color'%}
+       <li><span class="label">{{ option_title }}: <span class="swatch-color-display colorone" ></span></span></li> <span class="dana jj{{forloop.index}}">|</span>
+{% else %} 
+<li><span class="label">{{ option_title }}: <span   class="swatch-color-display normone"></span></span></li> <span class="dana jj{{forloop.index}}">|</span>
+         {% endif %}         
+{% endfor %}
+      </ul>
+    
+    <div class="des">
+      {{ product.description }}
+    </div>
+  </div>
+    </div>
+  <hr class="productPrintTemplate--separator">
+   
+  <div class="productPrintTemplate--productFooter">
+    <span>1025 N. STEMMONS FWY, #250, DALLAS, TX75207 | (214) 295-7500 | DALLAS@JAMESSHOWROOM.COM</span>
+  </div>
+    
+    
+  </div>
+  <style>
+    .productPrintTemplate {
+   display: none;
+}
+.productPrintTemplate .customContainer {
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.productPrintTemplate--logo img {
+  display: inline-block;
+  max-width: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.productPrintTemplate--productImage img {
+  width: 68%;
+}
+.productPrintTemplate--productContent {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-top: 20px;
+  width: calc(73% - 40px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.productPrintTemplate--productContent .leftSide, .productPrintTemplate--productContent .rightSide {
+  text-align: center;
+}
+.productPrintTemplate--productContent .leftSide p, .productPrintTemplate--productContent .rightSide p {
+  text-transform: none!important;
+}
+.productPrintTemplate--productContent .vendor {
+  margin-bottom: 6px;
+}
+.productPrintTemplate--productContent .leftSide h1.product_name {
+  font-size: 30px!important;
+  letter-spacing: normal!important;
+  color: #000!important;
+  border: none;
+  padding: 0;
+  margin-bottom: 2px!important;
+}
+.productPrintTemplate--productContent .leftSide ul, .productPrintTemplate--productContent .rightSide ul {
+  padding: 0;
+  list-style: none;
+  margin-top: 0;
+}
+.productPrintTemplate--productContent .leftSide ul li, .productPrintTemplate--productContent .rightSide ul li {
+  text-transform: none!important;
+  margin-bottom: 0;
+  color: #000!important;
+  display: inline;
+}
+span.dana.jj2 {
+  display: none;
+}
+.productPrintTemplate--productContent .leftSide .des {
+  margin-bottom: 20px;
+}
+.productPrintTemplate--productContent .leftSide .des p {
+  margin: 0;
+  color: #000;
+  font-size: 16px;
+}
+.productPrintTemplate--separator {
+  border-bottom: 2px solid #C7A45C!important;
+  border: none;
+}
+.productPrintTemplate--productFooter span {
+  font-size: 16px!important;
+}
+@media print {
+    @page {
+      margin: 0;
+    }
 
+    body {
+      margin: 0.8cm;
+    }
+  }
+  </style>
+</div>
 {% if set_product_height %}
   {% style %}
     .gallery-wrap model-viewer {
@@ -665,3 +795,12 @@ button.action_button {
   <script defer src="https://cdn.shopify.com/shopifycloud/shopify-xr-js/assets/v1.0/shopify-xr.en.js"></script>
   <script defer src="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.en.js"></script>
 {% endif %}
+<script>
+  function printPageArea(areaID){
+    var printContent = document.getElementById(areaID).innerHTML;
+    var originalContent = document.body.innerHTML;
+    document.body.innerHTML = printContent;
+    window.print();
+    document.body.innerHTML = originalContent;
+}
+</script>
