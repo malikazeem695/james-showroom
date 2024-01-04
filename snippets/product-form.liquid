@@ -184,6 +184,20 @@
   {% comment %} <div class="surface-pick-up surface-pick-up--loading" data-surface-pick-up></div>
   <div class="surface-pick-up__modal" data-surface-pick-up-modal></div> {% endcomment %}
 </div>
+                <script>
+    function handleShowroomChange() {
+      // Get the selected option value
+      const selectedOption = document.querySelector('input[name="showroom"]:checked').value;
+
+      // Hide all showroom sections
+      document.querySelectorAll('.showroom-section').forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Show the specific showroom section based on the selected option
+      document.getElementById(`${selectedOption}-section`).style.display = 'block';
+    }
+  </script>
 <style>
   #hidden-content1{
     display:none;
