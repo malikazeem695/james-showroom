@@ -168,13 +168,13 @@
     <input type="radio" name="showroom" value="nyc" id="nyc" onchange="handleShowroomChange()"> NYC
  
                   </div>
-       <div id="hidden-content1">
+       <div id="houston-section">
         <div style="margin:0 auto;" class="pxFormGenerator" id="G1OZXqA4hDSbqi-Zo_HghA"></div>
       </div>
-                  <div id="hidden-content2">
+                  <div id="dallas-section">
         <div style="margin:0 auto;" class="pxFormGenerator" id="WaBkAvCE6I-0-dasLCQ-tw"></div>
       </div>
-                  <div id="hidden-content3">
+                  <div id="nyc-section">
         <div style="margin:0 auto;" class="pxFormGenerator" id="GnDisUazdxtMrNhXczkpXQ"></div>
       </div>
                 </div>
@@ -195,17 +195,17 @@
       });
 
       // Show the specific showroom section based on the selected option
-      document.getElementById(`${selectedOption}-section`).style.display = 'block';
+      document.getElementById(`${selectedOption}-section`).style.display = 'inline-block';
     }
   </script>
 <style>
-  #hidden-content1{
+  #houston-section{
     display:none;
   }
-   #hidden-content2{
+   #dallas-section{
     display:none;
   }
-   #hidden-content3{
+   #nyc-section{
     display:none;
   }
 </style>
