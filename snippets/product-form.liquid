@@ -160,8 +160,22 @@
         <div style="margin:0 auto;" class="pxFormGenerator" id="8xeNwpElaji2XPJYtGUe1Q"></div>
       </div>
                 <div style="display: none;" id="purchasing_form">
+                  <div class="select_showroom">
+                    
+    <label for="showroom">SHOWROOM:</label>
+    <input type="radio" name="showroom" value="houston" id="houston" onchange="handleShowroomChange()"> Houston
+    <input type="radio" name="showroom" value="dallas" id="dallas" onchange="handleShowroomChange()"> Dallas
+    <input type="radio" name="showroom" value="nyc" id="nyc" onchange="handleShowroomChange()"> NYC
+ 
+                  </div>
        <div id="hidden-content1">
         <div style="margin:0 auto;" class="pxFormGenerator" id="G1OZXqA4hDSbqi-Zo_HghA"></div>
+      </div>
+                  <div id="hidden-content2">
+        <div style="margin:0 auto;" class="pxFormGenerator" id="WaBkAvCE6I-0-dasLCQ-tw"></div>
+      </div>
+                  <div id="hidden-content3">
+        <div style="margin:0 auto;" class="pxFormGenerator" id="GnDisUazdxtMrNhXczkpXQ"></div>
       </div>
                 </div>
   </div> 
@@ -170,3 +184,14 @@
   {% comment %} <div class="surface-pick-up surface-pick-up--loading" data-surface-pick-up></div>
   <div class="surface-pick-up__modal" data-surface-pick-up-modal></div> {% endcomment %}
 </div>
+<style>
+  #hidden-content1{
+    display:none;
+  }
+   #hidden-content2{
+    display:none;
+  }
+   #hidden-content3{
+    display:none;
+  }
+</style>
