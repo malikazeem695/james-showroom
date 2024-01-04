@@ -10,7 +10,9 @@
     height: -moz-fit-content;
     height: fit-content;
 }
-
+boost-sd__product-label--customLabelByTag{
+  background-color: #C7A45C !important;
+}
 .boost-sd__header-description {
     color: white;
 }
