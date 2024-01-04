@@ -163,10 +163,15 @@
                   <div class="select_showroom">
                     
     <label for="showroom">SHOWROOM:</label>
+                    <div class="showroom_option">
     <input type="radio" name="showroom" value="houston" id="houston" onchange="handleShowroomChange()"> Houston
+                      </div>
+                      <div class="showroom_option">
     <input type="radio" name="showroom" value="dallas" id="dallas" onchange="handleShowroomChange()"> Dallas
+                        </div>
+                        <div class="showroom_option">
     <input type="radio" name="showroom" value="nyc" id="nyc" onchange="handleShowroomChange()"> NYC
- 
+ </div>
                   </div>
        <div id="houston-section">
         <div style="margin:0 auto;" class="pxFormGenerator" id="G1OZXqA4hDSbqi-Zo_HghA"></div>
@@ -199,6 +204,9 @@
     }
   </script>
 <style>
+  .select_showroom {
+    padding: 35px;
+}
   #houston-section{
     display:none;
     width: 100%;
