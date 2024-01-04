@@ -104,7 +104,7 @@
     {% endif %}
     {% if customer %}
       {% if product.type == 'Lighting' or  product.type == 'Furniture'%}
-        <button data-fancybox data-src="#hidden-content1" class="action_button " href="javascript:;">
+        <button data-fancybox data-src="#purchasing_form" class="action_button " href="javascript:;">
         Purchase Inquiry
         </button>
       {% else %}
@@ -159,9 +159,11 @@
       <div style="display: none;" id="hidden-content">
         <div style="margin:0 auto;" class="pxFormGenerator" id="8xeNwpElaji2XPJYtGUe1Q"></div>
       </div>
-       <div style="display: none;" id="hidden-content1">
+                <div style="display: none;" id="purchasing_form">
+       <div id="hidden-content1">
         <div style="margin:0 auto;" class="pxFormGenerator" id="G1OZXqA4hDSbqi-Zo_HghA"></div>
       </div>
+                </div>
   </div> 
 {% endform %}
 
