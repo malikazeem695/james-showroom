@@ -26,7 +26,7 @@
     "10834207-96e5-48f3-b543-5839daf371c9": {
       "type": "featured-text",
       "settings": {
-        "title": "EXPLORE OUR SHOWROOM",
+        "title": "CONTACT OUR SHOWROOMS!",
         "content": "",
         "button_label": "",
         "button_link": "",
@@ -42,31 +42,31 @@
         "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PDH_Outdoors_1.jpg",
-            "link": "https:\/\/jamesshowroom.com\/collections\/peter-dunham-home-furniture",
-            "title": "OUTDOOR FURNITURE",
+            "image": "shopify:\/\/shop_images\/1025NStemmonsFwy.0218.jpg",
+            "link": "mailto:dallas@jamesshowroom.com",
+            "title": "JAMES - DALLAS",
             "text": "",
-            "button_label": "DISCOVER"
+            "button_label": "Dallas Design Center"
           }
         },
         "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Our-Story-small_1.jpg",
-            "link": "shopify:\/\/collections\/lighting",
-            "title": "LIGHTING",
+            "image": "shopify:\/\/shop_images\/james_lrg_a_004.jpg",
+            "link": "mailto:houston@jamesshowroom.com",
+            "title": "JAMES - HOUSTON",
             "text": "",
-            "button_label": "DISCOVER"
+            "button_label": "Decorative Center of Houston"
           }
         },
         "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ELSON-ODLR-Manisalez-Watercolor_f708acfe-fecd-4a12-a069-332455d30d4d.jpg",
-            "link": "shopify:\/\/collections\/carpet-collections",
-            "title": "CARPETS",
+            "image": "shopify:\/\/shop_images\/JS-0020.jpg",
+            "link": "mailto:nyc@jamesshowroom.com",
+            "title": "JAMES - NYC",
             "text": "",
-            "button_label": "DISCOVER"
+            "button_label": "Interior Arts Building"
           }
         }
       },
