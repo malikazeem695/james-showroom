@@ -62,7 +62,7 @@
                   <p class="predictive-search__list-item-title">
                     {{- product.title | escape -}}
                   </p>
-{% if product.type == 'Lighting' or  product.type == 'Furniture'%}
+{% if product.type == 'Lighting' or  product.type == 'Furniture' or product.type == 'Carpets' or product.tags contains 'carpets' or product.type == 'Carpet' %}
   {% else %}
                   <p
                     class="yeshere 
