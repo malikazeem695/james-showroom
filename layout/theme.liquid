@@ -273,6 +273,16 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
     {{ "ajaxinate.js" | asset_url | script_tag }}
     {{ "custom.js" | asset_url | script_tag }}
     {% if template contains 'product' %}
+       {% if customer and customer.tags contains 'nyc' %}
+        {% if product.tags contains 'NYC' %}
+          {% else %}
+      <style>
+        .purchase-details{
+          display: none !important;
+        }
+      </style>
+        {% endif %}
+        {% endif %}
     <script>
         {% if customer and customer.tags contains 'nyc' %}
         var nyc_user = true;
