@@ -103,7 +103,7 @@
       </div>
     {% endif %}
     {% if customer %}
-      {% if product.type == 'Lighting' or  product.type == 'Furniture'%}
+      {% if product.type == 'Lighting' or  product.type == 'Furniture' or product.type == 'Carpets' or product.tags contains 'carpets' or product.type == 'Carpet' %} 
         <button data-fancybox data-src="#purchasing_form" class="action_button " href="javascript:;">
         Purchase Inquiry
         </button>
@@ -156,7 +156,7 @@
         </div>
       {% endif %}
     {%  endif  %}
-      {% if product.type == 'Lighting' or  product.type == 'Furniture'%} 
+      {% if product.type == 'Lighting' or  product.type == 'Furniture' or product.type == 'Carpets' or product.tags contains 'carpets' or product.type == 'Carpet' %} 
                  <div style="display: none;" id="hidden-content">
         <div style="margin:0 auto;" class="pxFormGenerator" id="8xeNwpElaji2XPJYtGUe1Q"></div>
       </div>
