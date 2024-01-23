@@ -274,6 +274,11 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
     {{ "custom.js" | asset_url | script_tag }}
     {% if template contains 'product' %}
     <script>
+        {% if customer and customer.tags contains 'nyc' %}
+        var nyc_user = true;
+      {% else %}
+        var nyc_user = false;
+        {% endif %}
 fetch('https://ipinfo.io/json?token=d7f69d83681305')
   .then(response => response.json())
   .then(data => {
@@ -281,7 +286,7 @@ fetch('https://ipinfo.io/json?token=d7f69d83681305')
 var productTagsElement = document.querySelector('.product_tags');
 if (productTagsElement) {
   var productTagsText = productTagsElement.textContent.toLowerCase();
-  if (user_city.includes('New York')) {
+  if (user_city.includes('New York') && nyc_user === true) {
     if(productTagsText.includes('nyc'))
     {
     document.querySelector('.purchase-details').style.display = 'block';
@@ -322,7 +327,7 @@ var productTagsElement = document.querySelector('.product_tags');
 if (productTagsElement) {
   var productTagsText = productTagsElement.textContent.toLowerCase();
   console.log(productTagsText);
-  if (user_city.includes('New York')) {
+  if (user_city.includes('New York') && nyc_user === true) {
     if(productTagsText.includes('nyc'))
     {
     document.querySelector('.purchase-details').style.display = 'block';
