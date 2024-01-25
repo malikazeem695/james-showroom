@@ -44,9 +44,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/1025NStemmonsFwy.0218.jpg",
             "link": "mailto:dallas@jamesshowroom.com",
-            "title": "JAMES - DALLAS",
-            "text": "<p>CLICK IMAGE TO EMAIL DALLAS<\/p>",
-            "button_label": "Dallas Design Center 1025 N. Stemmons Fwy #250 Dallas, TX 75207 (214) 295-7500"
+            "title": "JAMES - DALLAS<p>1025 N. Stemmons Fwy #250<\/p><p>Dallas, TX 75207<\/p><p>(214) 295-7500<\/p>",
+            "text": "",
+            "button_label": "Dallas Design Center"
           }
         },
         "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-1": {
@@ -54,9 +54,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/james_lrg_a_004.jpg",
             "link": "mailto:houston@jamesshowroom.com",
-            "title": "JAMES - HOUSTON",
-            "text": "<p>CLICK IMAGE TO EMAIL HOUSTON<\/p>",
-            "button_label": "Decorative Center of Houston 5120 Woodway Drive #3029 Houston, TX 77056 (713) 955-1053"
+            "title": "JAMES - HOUSTON<p>5120 Woodway Drive #3029<\/p><p>Houston, TX 77056<\/p><p>(713) 955-1053<\/p>",
+            "text": "",
+            "button_label": "Decorative Center of Houston"
           }
         },
         "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-2": {
@@ -64,9 +64,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/JS-0020.jpg",
             "link": "mailto:nyc@jamesshowroom.com",
-            "title": "JAMES - NYC",
-            "text": "<p>CLICK IMAGE TO EMAIL NYC<\/p>",
-            "button_label": "Interior Arts Building 306 E. 61st Street, 4th Floor New York, NY 10065 (212) 731-0838"
+            "title": "JAMES - NYC<p>306 E. 61st Street, 4th Floor<\/p><p>New York, NY 10065<\/p><p>(212) 731-0838<\/p>",
+            "text": "",
+            "button_label": "Interior Arts Building"
           }
         }
       },
