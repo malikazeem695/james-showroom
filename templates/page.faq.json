@@ -51,6 +51,13 @@
             "title": "What if I want all colors for multiple designs?",
             "content": ""
           }
+        },
+        "question_QYiLCM": {
+          "type": "question",
+          "settings": {
+            "title": "How many samples can I order?",
+            "content": "<p>Due to the boutique, handmade nature of many of our lines, we have limited the number of samples per cart to 15.  If you place multiple orders back to back, our team may contact you to inquire about your needs.  <\/p><p>While we are thrilled you want so many of our samples, we unfortunately cannot stock libraries for every design firm.  However, we have worked with many of our lines to offer rings sets of the entire collection, or segments of the collection, for a reasonable fee.  JAMES will apply a credit for the cost of the ring set on your first order of 10 yards or more for that respective line.  Please contact the showrooms for pricing.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -60,7 +67,8 @@
         "question_WDFgyy",
         "question_QBignN",
         "question_rhcV9J",
-        "question_NA3Fib"
+        "question_NA3Fib",
+        "question_QYiLCM"
       ],
       "settings": {
         "wide_display": false,
