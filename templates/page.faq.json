@@ -35,7 +35,7 @@
           "type": "question",
           "settings": {
             "title": "How can I get a price quote?",
-            "content": "<p>We ask that designers contact the showroom directly for any fabric, wallpaper, lighting, furniture, or carpet quotes before submitting a proposal to their clients.  For our trade clients with a verified login, we now offer online pricing for reference only.   We are not liable for any prices presented to clients that were not part of a formal quote from our showroom sales team. Prices are subject to change and the website may not reflect accurate pricing.<\/p>"
+            "content": "<p>For our trade clients with a verified login, we now offer online pricing for reference only.  We ask that designers contact the showroom directly for any fabric, wallpaper, lighting, furniture, or carpet quotes before submitting a proposal to their clients to ensure there has not been a recent price increase not reflected on our website.    We are not liable for any prices presented to clients that were not part of a formal quote from our showroom sales team. Prices are subject to immediate change and the website may not reflect accurate pricing.<\/p>"
           }
         },
         "block-7": {
