@@ -16,11 +16,19 @@
             "title": "I created my Trade Account, what can I expect next?",
             "content": "<p>Welcome to JAMES Showroom!   Your account will usually be verified the same day.  Should our team need additional information, we will reach out directly. <\/p><p>As a trade client, you now have access to online sample ordering and trade pricing 24\/7.  We do ask that you verify pricing with your respective showroom before submitting proposals to your clients to ensure there has not been a recent price increase not yet reflected on our website.  We only honor pricing for 30 days that is provided by a formal quote from our sales team.<\/p>"
           }
+        },
+        "question_gPLxHx": {
+          "type": "question",
+          "settings": {
+            "title": "How do I open a trade account?",
+            "content": "<p>Please visit our <a href=\"https:\/\/jamesshowroom.com\/account\/register\" title=\"https:\/\/jamesshowroom.com\/account\/register\">trade account page<\/a>, fill out the required fields and submit the necessary forms.  You can download the required forms right from the application page.  Please ensure to upload a copy of your state resale certificate for our files. In the event you do not have a resale certificate, we will need appropriate documentation showing your company TIN\/EIN to verify your trade status.  We usually approve all trade applications the day they are submitted.  You will be contacted if our team needs additional information. For urgent requests, send an email to your respective showroom:<\/p><p>DAL <a href=\"mailto:dallas@jamesshowrooom.com\" target=\"_blank\" title=\"mailto:dallas@jamesshowrooom.com\">dallas@jamesshowroom.com<\/a><\/p><p>HOU <a href=\"mailto:houston@jamesshowroom.com\" target=\"_blank\" title=\"mailto:houston@jamesshowroom.com\">houston@jamesshowroom.com<\/a><\/p><p>NYC <a href=\"mailto:nyc@jamesshowroom.com\" target=\"_blank\" title=\"mailto:nyc@jamesshowroom.com\">nyc@jamesshowroom.com<\/a><\/p><p><\/p>"
+          }
         }
       },
       "block_order": [
         "block-1",
-        "block-2"
+        "block-2",
+        "question_gPLxHx"
       ],
       "settings": {
         "wide_display": false,
