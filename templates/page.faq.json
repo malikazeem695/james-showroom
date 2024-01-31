@@ -44,6 +44,13 @@
             "title": "Can I order carpet or finish samples online?",
             "content": "<p>We do have limited numbers of carpet and finish samples for furniture and lighting.  We ask that you contact the showroom for availability.  For verified trade clients, samples can be checked out   for short periods of time to be used for scheming and client presentations.  We usually like to have these back within 48 hours to to the limited availability.<\/p><p>In some cases, these samples can be mailed, but we do ask that the samples be returned in a reasonable amount of time.  <\/p><p>** JAMES RESERVES THE RIGHT TO CHARGE FOR ANY LOST OR DAMAGED SAMPLES.**<\/p>"
           }
+        },
+        "question_NA3Fib": {
+          "type": "question",
+          "settings": {
+            "title": "What if I want all colors for multiple designs?",
+            "content": ""
+          }
         }
       },
       "block_order": [
@@ -52,7 +59,8 @@
         "block-2",
         "question_WDFgyy",
         "question_QBignN",
-        "question_rhcV9J"
+        "question_rhcV9J",
+        "question_NA3Fib"
       ],
       "settings": {
         "wide_display": false,
