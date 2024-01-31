@@ -30,13 +30,21 @@
             "title": "Which showroom do I work with?",
             "content": "<p>Essentially this is up to you, but we do like our trade clients not living in the general vicinity of the showroom, to chose the showroom they are most likely to visit.  Working consistently with one showroom ensures clear communication and allows our team to better suit your needs.<\/p>"
           }
+        },
+        "question_QBignN": {
+          "type": "question",
+          "settings": {
+            "title": "I cannot add some samples to my cart?",
+            "content": "<p>Because our collection varies between Texas and New York, trade clients will be tagged with the respective showroom they work with.  You will be able to see pricing for everything, but New York clients will not be able to add samples to their cart for lines only represented in Texas.  Texas clients will not be able to add samples to their cart for lines only represented in New York.  Should you have a specific question regarding a line not represented in your area, please contact the showroom.<\/p>"
+          }
         }
       },
       "block_order": [
         "block-1",
         "question_gPLxHx",
         "block-2",
-        "question_WDFgyy"
+        "question_WDFgyy",
+        "question_QBignN"
       ],
       "settings": {
         "wide_display": false,
