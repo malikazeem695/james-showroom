@@ -52,18 +52,18 @@
             "content": "<p>We do have limited numbers of carpet and finish samples for furniture and lighting.  We ask that you contact the showroom for availability.  For verified trade clients, samples can be checked out   for short periods of time to be used for scheming and client presentations.  We usually like to have these back within 48 hours to to the limited availability.<\/p><p>In some cases, these samples can be mailed, but we do ask that the samples be returned in a reasonable amount of time.  <\/p><p>** JAMES RESERVES THE RIGHT TO CHARGE FOR ANY LOST OR DAMAGED SAMPLES.**<\/p>"
           }
         },
-        "question_NA3Fib": {
-          "type": "question",
-          "settings": {
-            "title": "What if I want all colors for multiple designs?",
-            "content": ""
-          }
-        },
         "question_YQfYCh": {
           "type": "question",
           "settings": {
             "title": "How will my samples be shipped?",
             "content": "<p>For our trade clients, JAMES is happy to provide free USPS shipping with tracking for all sample orders.  (PLEASE NOTE: Small sample orders may not have tracking).  Should you need Priority or Overnight Shipping, you can select and pay for that service on checkout and it will be flagged accordingly in our system.  If you wish to provide your FEDEX\/UPS account number, please contact your designated showroom.<\/p><p>Once samples are sent, you will receive an email with a link to tracking.  In the event, we are out of a specific sample, our team may contact you to give you an ETA for that design.<\/p><p><\/p><p><\/p>"
+          }
+        },
+        "question_NA3Fib": {
+          "type": "question",
+          "settings": {
+            "title": "What is the best way to get a quote or place an order with the showroom?",
+            "content": "<p>There are 2 ways to request a quote from the showroom.<\/p><p>First, you can submit a Purchase Inquiry directly from the product on our website by filling out all teh respective fields.  You will designate which showroom will receive this at the top of your form.<\/p><p><\/p><p>Second, you can email the showroom directly with all of the information we will need for your quote... Product, Quantity, Sidemark, Shipping Address, etc.<\/p><p>Once requests are received, our team will confirm stock\/availability and you should receive a link to your interactive quote the same day.  In some cases, it could take up to 24-48 hours due to time differences or customization requests.<\/p><p><\/p>"
           }
         }
       },
@@ -75,8 +75,8 @@
         "question_QYiLCM",
         "question_QBignN",
         "question_rhcV9J",
-        "question_NA3Fib",
-        "question_YQfYCh"
+        "question_YQfYCh",
+        "question_NA3Fib"
       ],
       "settings": {
         "wide_display": false,
