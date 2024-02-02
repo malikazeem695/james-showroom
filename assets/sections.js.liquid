@@ -776,13 +776,19 @@ if(str1.indexOf(str2) != -1 || str1.indexOf(str3) != -1 || str1.indexOf(str4) !=
     
       if (document.querySelector('input[name="option-1"]:checked')) {
         var radioSelected = document.querySelector('input[name="option-1"]:checked').value;
-        document.querySelector('.swatch-color-display.colorone').textContent = radioSelected;
+        var swatchElement = document.querySelector('.swatch-color-display.colorone');
+            if(swatchElement){
+              swatchElement.textContent = radioSelected;
+            }
     
         var radioInputs = document.getElementsByName('option-1');
         radioInputs.forEach(function(input) {
           input.addEventListener('click', function() {
+            var swatchElements = document.querySelector('.swatch-color-display.colorone');
             var radioValue = this.value;
-            document.querySelector('.swatch-color-display.colorone').textContent = radioValue;
+            if(swatchElements){
+              swatchElements.textContent = radioValue;
+            }
           });
         });
       }
