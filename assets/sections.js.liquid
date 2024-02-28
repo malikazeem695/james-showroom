@@ -1177,6 +1177,7 @@ window.productPage = {
               if (window.PXUTheme.theme_settings.free_text !== '') {
                 const span = document.createElement('span');
                 span.classList.add('free-price-text');
+                  console.log('free sample');
                 span.innerHTML = window.PXUTheme.theme_settings.free_text;
                 priceElement.innerHTML = '';
                 priceElement.appendChild(span);
