@@ -1130,6 +1130,7 @@ window.productPage = {
 
                       if (window.PXUTheme.theme_settings.free_text !== '') {
                         span.innerHTML = window.PXUTheme.theme_settings.free_text;
+                        console.log('free sample');
                       } else {
                         span.innerHTML = `<span class="money">${window.Shopify.formatMoney(v.price, $('body').data('money-format'))}</span>`;
                       }
