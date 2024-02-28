@@ -93,7 +93,7 @@
     {% endif %}
   {% endif %}
 
- <div class="purchase-details" style="display:none;">
+ <div class="purchase-details {% if customer %}{% if customer.tags contains 'wholesale' or customer.tags contains 'Wholesale'%}{% else %} customer_not_wholesale{% endif %}{% endif %}" style="display:none;">
     {% if settings.display_product_quantity %}
       <div class="purchase-details__quantity product-quantity-box">
         <label for="quantity">{{ 'products.product.quantity' | t }}</label>
@@ -265,5 +265,11 @@
    #nyc-section{
     display:none;
      width: 100%;
+  }
+     .purchase-details.customer_not_wholesale .purchase_inquiry.action_button{
+    display: block !important;
+  }
+  .purchase-details.customer_not_wholesale .purchase-details__buttons{
+    display: none !important;
   }
 </style>
