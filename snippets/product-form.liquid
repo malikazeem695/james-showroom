@@ -103,7 +103,7 @@
       </div>
     {% endif %}
     {% if customer %}
-      {% if product.type == 'Lighting' or  product.type == 'Furniture' or product.type == 'Carpets' or product.tags contains 'carpets' or product.type == 'Carpet' %} 
+      {% if product.type == 'Lighting' or  product.type == 'Furniture' or product.type == 'Carpets' or product.tags contains 'carpets' or product.type == 'Carpet' or product.vendor == 'Carolina Irving and Daughters' or product.vendor == 'carolina irving and daughters' %} 
         <button data-fancybox data-src="#purchasing_form" class="action_button " href="javascript:;">
         Purchase Inquiry
         </button>
