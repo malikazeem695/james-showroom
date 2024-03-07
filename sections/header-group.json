@@ -5,7 +5,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "promo_text": "<p>View the Carolina Irving & Daughters Colection!<\/p>",
+        "promo_text": "<p><a href=\"\/collections\/carolina-irving-daughters-1\" title=\"Carolina Irving & Daughters\">View the Carolina Irving & Daughters Colection!<\/a><\/p>",
         "social_icons_header": true,
         "phone_number": "",
         "top_bar_menu": "",
