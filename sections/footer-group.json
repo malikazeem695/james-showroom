@@ -17,7 +17,7 @@
           "type": "text",
           "settings": {
             "title": "",
-            "content": "<p><a href=\"tel:+(214)2957500\">☎ (214) 295-7500<\/a> - Dallas<\/p><p><a href=\"tel:+(713)9551053\" title=\"tel:+(713)9551053\">☎ (713) 955-1053<\/a> - Houston<\/p><p><a href=\"tel:(212) 731-0838\" title=\"(212) 731-0838\">(212) 731-0838<\/a> - NYC<\/p>",
+            "content": "<p><a href=\"tel:+1 (214)2957500\" title=\"tel:+1 (214)2957500\">☎ (214) 295-7500<\/a> - Dallas<\/p><p><a href=\"tel:+1 (713)9551053\" title=\"tel:+1 (713)9551053\">☎ (713) 955-1053<\/a> - Houston<\/p><p><a href=\"tel:+1 (713)9551053\" title=\"tel:+1 (713)9551053\">☎<\/a> <a href=\"tel:+1 (212) 731-0838\" title=\"tel:+1 (212) 731-0838\">(212) 731-0838<\/a> - NYC<\/p>",
             "social_icons_footer": false
           }
         },
