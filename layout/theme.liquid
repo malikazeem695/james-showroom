@@ -44,6 +44,7 @@
     <link rel="preload" href="{{ 'fancybox.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'custom.css' | asset_url }}" as="style">
+    <link rel="preload" href="{{ 'typography-setup.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'jquery.min.js' | asset_url }}" as="script">
     <link rel="preload" href="{{ 'vendors.js' | asset_url }}" as="script">
     <link rel="preload" href="{{ 'sections.js' | asset_url }}" as="script">
@@ -51,7 +52,6 @@
     <link rel="preload" href="{{ 'app.js' | asset_url }}" as="script">
     <script src="{{ 'jquery.fancybox.min.js' | asset_url }}"></script>
 
- 
  <script>
 document.addEventListener("DOMContentLoaded", function() {
     const MAX_PRODUCTS = 15;
@@ -128,6 +128,7 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
     <!-- Stylesheets for Turbo -->
     {{ 'styles.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {{ 'typography-setup.css' | asset_url | stylesheet_tag }}
     <script>
       window.lazySizesConfig = window.lazySizesConfig || {};
 
@@ -459,7 +460,12 @@ if (productTagsElement) {
 
 
     {% sections 'header-group' %}
-
+    {% style %}
+      @font-face {
+        font-family: 'Superior Title';
+        src: url("{{ "SuperiorTitle.otf" | asset_url }}") format("opentype");
+      }
+      {% endstyle %}
     <div style="--background-color: {{ settings.shop_bg_color }}">
       {%
         render 'age-gate',
