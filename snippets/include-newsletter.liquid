@@ -66,10 +66,9 @@
       data-sizes="100vw"
     {% endif %}
   >
-    <div class="container">
-      <div class="{% if object.settings.newsletter_section_text_align == "center" %}offset-by-three{% elsif object.settings.newsletter_section_text_align == "right" %}offset-by-six{% endif %} five-eighths columns medium-down--one-whole is-hidden-offset-mobile-only section_form">
+    
         {% if newsletter_title != blank %}
-          <h2 class="title">{{ newsletter_title }}</h2>
+          <h1>{{ newsletter_title }}</h1>
         {% endif %}
 
         {% if newsletter_text != blank %}
@@ -95,7 +94,11 @@
 
             <div class="input-row">
               <input type="email" value="" name="EMAIL" class="contact_email" placeholder="{{ 'general.newsletter_form.placeholder' | t }}">
-              <input type="submit" value="{{ 'general.newsletter_form.submit' | t }}" class="global-button global-button--primary newsletter-form__sign-up" name="subscribe" />
+              <button type="submit" class="global-button global-button--primary newsletter-form__sign-up" name="subscribe">
+                <span>
+                  Sign Me Up
+                </span>
+                </button>
             </div>
           </form>
         {% else %}
@@ -123,12 +126,17 @@
             <div class="input-row">
               <input type="hidden" name="challenge" value="false" />
               <input type="email" class="contact_email" name="contact[email]" required placeholder="{{ 'general.newsletter_form.placeholder' | t }}" />
-              <input type='submit' class="global-button global-button--primary newsletter-form__sign-up" value="{{ 'general.newsletter_form.submit' | t }}" />
+              <button type="submit" class="btn btn-primary newsletter-form__sign-up" name="subscribe">
+                <span>
+                  Sign Me Up
+                </span>
+                {% render 'right-brand-arrow' %} 
+                </button>
             </div>
           {% endform %}
         {% endif %}
        </div>
-      </div>
-    </div>
+
+
   </div>
 </section>

@@ -1,0 +1,184 @@
+{{ 'collection-tabs.css' | asset_url | stylesheet_tag }}
+<section id="{{ section.id }}" class="dual_collection_tabs">
+  <!-- Heading and description -->
+  <div class="dual_collection_tabs_header">
+  <h2 class="first_coll_heading">{{ section.settings.main_heading }}</h2>
+    <div class="collection_tabs">
+        
+        {% if section.settings.collection_2 %}
+            <a href="{{ section.settings.collection_2.url }}" class="btn desktop_only">
+                <span>
+                {% if section.settings.collection_2_title %}
+                    {{ section.settings.collection_2_title }}
+                    {% else %}
+                    {{ section.settings.collection_2.title }}
+                {% endif %}
+                </span>
+                {% render 'right-brand-arrow' %}
+            </a>
+            {% endif %}
+
+            {% if section.settings.collection_1 %}
+                <a href="{{ section.settings.collection_1.url }}" class="btn active desktop_only">
+                    <span>
+                    {% if section.settings.collection_1_title %}
+                        {{ section.settings.collection_1_title }}
+                        {% else %}
+                        {{ section.settings.collection_1.title }}
+                    {% endif %}
+                    </span>
+                    {% render 'right-brand-arrow' %}
+                </a>
+                {% endif %}
+    </div>
+    </div>
+    {% if section.settings.collection_1 %}
+        {% assign collection = collections[section.settings.collection_1] %}
+        {% unless template contains 'product' %}
+            {% assign coll_products = collection.products %}
+            <script type="application/ld+json">
+              {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "itemListElement": [
+                  {% for product in coll_products limit: limit %}
+                    {
+                      "@type": "ListItem",
+                      "position": "{{ forloop.index | json }}",
+                      "url": "{{ shop.url }}{{ product.url }}",
+                      "name": "{{ product.title | escape }}"
+                    } {%- unless forloop.last -%},{%- endunless -%}
+                  {% endfor %}
+                ]
+              }
+            </script>
+          {% endunless %}
+    <div class="collection_products">
+            {%
+              render 'rca-product-loop',
+              limit: section.settings.collection_1_product_limit | plus: 1,
+              products: collection.products,
+              collection: collection,
+            %}
+    </div>
+{% endif %}
+<div class="collection_tabs mobile_only">
+        
+{% if section.settings.collection_2 %}
+    <a href="{{ section.settings.collection_2.url }}" class="btn">
+        <span>
+        {% if section.settings.collection_2_title %}
+            {{ section.settings.collection_2_title }}
+            {% else %}
+            {{ section.settings.collection_2.title }}
+        {% endif %}
+        </span>
+        {% render 'right-brand-arrow' %}
+    </a>
+    {% endif %}
+
+    {% if section.settings.collection_1 %}
+        <a href="{{ section.settings.collection_1.url }}" class="btn active">
+            <span>
+            {% if section.settings.collection_1_title %}
+                {{ section.settings.collection_1_title }}
+                {% else %}
+                {{ section.settings.collection_1.title }}
+            {% endif %}
+            </span>
+            {% render 'right-brand-arrow' %}
+        </a>
+        {% endif %}
+</div>
+  </section>
+{% schema %}
+    {
+      "name": "Dual Collection Tabs",
+      "settings": [
+        {
+          "type": "header",
+          "content": "General Settings"
+        },
+        {
+          "type": "text",
+          "id": "main_heading",
+          "label": "Main Heading",
+          "default": "Wallpapers"
+        },
+        {
+          "type": "collection",
+          "id": "collection_1",
+          "label": "First Collection"
+        },
+        {
+          "type": "text",
+          "id": "collection_1_title",
+          "label": "First Collection Button Title"
+        },
+        {
+        "type": "range",
+        "id": "collection_1_product_limit",
+        "min": 5,
+        "max": 20,
+        "step": 1,
+        "unit": "lim",
+        "label": "Number of Products for Collection 1",
+        "default": 10
+      },
+        {
+          "type": "header",
+          "content": "Collection 2 Settings"
+        },
+        {
+          "type": "collection",
+          "id": "collection_2",
+          "label": "Secondry Collection"
+        },
+        {
+          "type": "text",
+          "id": "collection_2_title",
+          "label": "Secondry Button Title"
+        }
+      ],
+      "blocks": [],
+      "presets": [{
+        "name": "Dual Collection Tabs",
+        "category": "Custom"
+      }]
+    }
+    {% endschema %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var first_coll_Swiper = new Swiper('.collection_products', {
+  slidesPerView: 'auto', // Adjust 'auto' to the number of slides you want to see on the screen
+  spaceBetween: 16, // Space between slides
+  on: {
+    init: function () {
+      if (window.innerWidth < 769) {
+        this.params.spaceBetween = 8;
+        this.update();
+      }
+    },
+    resize: function () {
+      if (window.innerWidth < 769) {
+        this.params.spaceBetween = 8;
+      } else {
+        this.params.spaceBetween = 16;
+      }
+      this.update();
+    }
+  },
+  freeMode: true, // Enable free mode for smooth dragging
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    hide: false, // Set to true if you want the scrollbar to hide automatically
+    draggable: true, // Enable dragging the scrollbar
+  },
+  mousewheelControl: true, // Enable mouse wheel navigation
+  keyboardControl: true, // Enable keyboard navigation
+});
+
+});
+</script>
+    

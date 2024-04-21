@@ -20,7 +20,14 @@
       {{ product.vendor }}
     </span>
   {% endif %}
-
+  {% if customer %}
+    {% else %}
+      {% if product.type == 'Lighting' or  product.type == 'Furniture' or product.type == 'Carpets' or product.tags contains 'carpets' or product.type == 'Carpet' %}
+        <p class="login_for_pricing"><a class="login" href="/account/login">Log in</a> <span>for pricing</span></p>
+      {% else %}
+        <p class="login_for_pricing"><a class="login" href="/account/login">Log in</a> <span>for pricing and samples</span></p>
+      {% endif %}
+  {% endif %}
   {% if settings.show_star_ratings and product.metafields.reviews.rating.value != blank %}
     <div class="product-rating">
       {%

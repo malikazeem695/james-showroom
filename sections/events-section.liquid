@@ -1,0 +1,289 @@
+<section class="events-section">
+  <header class="events-header">
+    <h2>{{ section.settings.header_text }}</h2>
+    <a href="{{ section.settings.link_url }}" class="all-events-link btn btn-primary desktop_only">
+        <span>{{ section.settings.link_text }}</span>
+        {% render 'right-brand-arrow' %}    
+  </a>
+  </header>
+
+  <div class="event-blocks">
+    {% for block in section.blocks %}
+      <div class="event-block">
+        <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.event_heading }}" class="event-image">
+        <div class="event-content">
+            <div class="content_top_container">
+          <span class="badge sm-paragraph">{{ block.settings.badge_text }}</span>
+          <h2>{{ block.settings.event_heading }}</h2>
+          <p class="sm-paragraph">{{ block.settings.event_details }}</p>
+          </div>
+          <div class="date_time_loc">
+            <div class="date">
+          <p class="semi-bold">Date</p>
+          <p>{{ block.settings.event_date }}</p>
+          </div>
+          <div class="time">
+            <p class="semi-bold">Time</p>
+            <p>{{ block.settings.event_time }}</p>
+          </div>
+          <div class="location">
+            <p class="semi-bold">Location</p>
+            <p>{{ block.settings.event_location }}</p>
+          </div>
+          </div>
+          <a href="{{ block.settings.event_rsvp_url }}" class="rsvp-link btn btn-primary full-width">
+            <span>{{ block.settings.event_rsvp_text }}</span>
+            {% render 'right-brand-arrow' %}   
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+  <div class="mobile_only">
+    <a href="{{ section.settings.link_url }}" class="all-events-link btn btn-primary">
+        <span>{{ section.settings.link_text }}</span>
+        {% render 'right-brand-arrow' %}    
+  </a>
+  </div>
+</section>
+
+{% schema %}
+    {
+      "name": "Event Section",
+      "max_blocks": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "header_text",
+          "label": "Header Text",
+          "default": "Our Events"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text",
+          "default": "See All Events"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL",
+          "default": "/collections/all"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "feature_block",
+          "name": "Event Block",
+          "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Event Image"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge Text",
+          "default": "Pop Up"
+        },
+        {
+          "type": "text",
+          "id": "event_heading",
+          "label": "Event Heading",
+          "default": "Event Name"
+        },
+        {
+          "type": "textarea",
+          "id": "event_details",
+          "label": "Event Details",
+          "default": "Event description goes here."
+        },
+        {
+          "type": "text",
+          "id": "event_date",
+          "label": "Date",
+          "default": "February 13th-15th"
+        },
+        {
+          "type": "text",
+          "id": "event_time",
+          "label": "Time",
+          "default": "10AM - 5PM"
+        },
+        {
+          "type": "text",
+          "id": "event_location",
+          "label": "Location",
+          "default": "123 Event Street"
+        },
+        {
+          "type": "text",
+          "id": "event_rsvp_text",
+          "label": "RSVP Button Text",
+          "default": "RSVP"
+        },
+        {
+          "type": "url",
+          "id": "event_rsvp_url",
+          "label": "RSVP URL"
+        }
+      ]
+}],
+      "presets": [
+        {
+          "name": "Event Section",
+          "category": "Custom"
+        }
+      ]
+    }
+    {% endschema %}
+    <style>
+        section.events-section {
+    display: flex;
+    padding: var(--dimensions-spacing-3xlg, 80px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--dimensions-spacing-lg, 36px);
+    align-self: stretch;
+    background: var(--theme-surfaces-neutral-soft, #F8FAFC);
+}
+.events-header h2{
+    color: #353E44;
+}
+.date_time_loc {
+    display: flex;
+    padding: 0px var(--dimensions-spacing-3xs, 8px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+header.events-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+.event-blocks {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch;
+}
+.event-block {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex: 1 0 0;
+    align-items: stretch;
+    background-color: #648390;
+    border: 1px solid var(--theme-surfaces-primary-base, #C6A55D);
+    background: var(--theme-surfaces-secondary-base, #648390);
+    box-shadow: 0px 0px 0px 4px var(--theme-surfaces-neutral-mute, #E2E8F0);
+}
+.event-block p, .event-block h2{
+    color: #FFFFFF;
+}
+.event-block img{
+width: 50%;
+/* max-height: 556px; */
+    object-fit: cover;
+    border-bottom: 1px solid var(--theme-surfaces-primary-base, #C6A55D);
+}
+.event-block .event-content{
+width: 50%;
+display: flex;
+padding: var(--dimensions-spacing-md, 28px);
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: var(--dimensions-spacing-sm, 20px);
+flex: 1 0 0;
+}
+span.badge.sm-paragraph {
+    display: flex;
+    padding: 4px var(--dimensions-spacing-3xs, 8px);
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--theme-surfaces-primary-base, #C6A55D);
+    background: var(--theme-surfaces-primary-base, #C6A55D);
+    height: 27px;
+    display: inline-block;
+}
+.content_top_container {
+    display: flex;
+    padding: 0px var(--dimensions-spacing-3xs, 8px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #C6A55D;
+}
+@media screen and (max-width: 950px) {
+    .event-block .event-content {
+    padding: 28px 20px;
+}
+}
+@media screen and (max-width: 800px) {
+    section.events-section {
+    padding: 48px 16px;
+}
+.event-block {
+    width: 330px;
+    min-width: 330px;
+    flex-direction: column;
+}
+.event-block img {
+    width: 100%;
+    max-width: 330px;
+        max-height: 358px;
+}
+    .event-block .event-content {
+        width: 100%;}
+        section.events-section {
+        overflow: hidden;
+    padding: unset;
+    }
+    header.events-header {
+    padding: 48px 16px 0;}
+    .event-blocks {
+    margin-left: 16px;
+    padding-bottom: 36px;
+    overflow-x: auto;
+}
+/* Width */
+.event-blocks::-webkit-scrollbar {
+  height: 2px;
+}
+
+/* Track */
+.event-blocks::-webkit-scrollbar-track {
+  background: #E2E8F0;
+}
+
+/* Handle */
+.event-blocks::-webkit-scrollbar-thumb {
+  background: #C6A55D;
+}
+
+/* Handle on hover */
+.event-blocks::-webkit-scrollbar-thumb:hover {
+  background: #C6A55D;
+}
+a.all-events-link.btn.btn-primary.desktop_only {
+    display: none;
+}
+.events-section .mobile_only {
+    padding: 0px 16px 48px;
+    width: 100%;
+}
+.rca_newsletter_section .section {
+    padding: 48px 16px;
+}
+}
+    </style>

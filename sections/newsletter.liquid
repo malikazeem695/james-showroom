@@ -5,7 +5,7 @@
 >
 </script>
 
-<div class="section-wrapper--{{ template.name }} {% if section.settings.wide_display %}is-width-wide{% endif %}">
+<div class="section-wrapper--{{ template.name }} {% if section.settings.wide_display %}is-width-wide{% endif %} rca_newsletter_section">
   {% include 'include-newsletter' %}
 </div>
 
@@ -111,3 +111,86 @@
 }
 
 {% endschema %}
+<style>
+  .rca_newsletter_section .section{
+    padding: 80px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .newsletter_section{
+    display: flex;
+padding: var(--dimensions-spacing-xlg, 48px) var(--dimensions-spacing-3xlg, 80px);
+flex-direction: column;
+align-items: center;
+gap: var(--dimensions-spacing-lg, 36px);
+align-self: stretch;
+border: 1px solid var(--theme-surfaces-shade-base, #FFF);
+background: var(--theme-surfaces-secondary-base, #648390);
+  }
+  .newsletter_section .container{
+    width: 100%;
+  }
+  .newsletter_section h1{
+    color: #FFFFFF;
+    text-transform: capitalize;
+  }
+  .newsletter form .input-row {
+    display: flex;
+    width: 632px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--dimensions-spacing-4xs, 4px);
+    margin: unset;
+    max-width: 100%;
+}
+#contact_form .newsletter-form__sign-up{
+  border: 1px solid var(--theme-surfaces-secondary-base, #648390);
+    background: var(--theme-surfaces-primary-base, #C6A55D);
+    box-shadow: 0px 0px 0px 1px var(--theme-surfaces-primary-base, #C6A55D);
+    min-height: 54px;
+}
+.newsletter_section .newsletter{
+  max-width: 100%;
+}
+.newsletter form input.contact_email {
+  min-height: 54px;
+    height: 54px;
+    display: flex;
+    padding: var(--dimensions-spacing-3xs, 8px) var(--dimensions-spacing-sm, 20px);
+    align-items: center;
+    gap: 4px;
+    flex: 1 0 0;
+    align-self: stretch;
+    margin: 0;
+    color: var(--theme-text-neutral-dull, #94A3B8);
+    text-align: left;
+    font-family: "General Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    background: var(--theme-surfaces-neutral-soft, #F8FAFC);
+}
+  @media (max-width: 768px) {
+  .rca_newsletter_section .section{
+padding: 48px 16px;
+  }
+  .newsletter_section{
+    display: flex;
+padding: var(--dimensions-spacing-md, 28px) var(--dimensions-spacing-xs, 16px);
+flex-direction: column;
+align-items: center;
+gap: var(--dimensions-spacing-lg, 36px);
+align-self: stretch;
+border: 1px solid var(--theme-surfaces-shade-base, #FFF);
+background: var(--theme-surfaces-secondary-base, #648390);
+  }
+  #contact_form .newsletter-form__sign-up{
+    width: 100%;
+  }
+  .newsletter_section h1{
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+</style>

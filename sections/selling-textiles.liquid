@@ -1,0 +1,149 @@
+{{ 'selling-textiles.css' | asset_url | stylesheet_tag }}
+<section id="{{ section.id }}" class="best_selling_textile">
+  <!-- Heading and description -->
+  <div class="selling_textile_section_heading">
+  <h2>{{ section.settings.heading }}</h2>
+  {% if section.settings.btn_text != blank %}
+  <a class="btn btn-primary desktop_only" href="{{ section.settings.btn_link }}">
+    <span>{{ section.settings.btn_text }}</span>
+    {% render 'right-brand-arrow' %}
+    </a>
+  {% endif %}
+  </div>
+  <!-- Image blocks -->
+  <div class="selling_textile_image_blocks">
+    <div class="swiper-wrapper">
+    {% for block in section.blocks %}
+      <a href="{{ block.settings.link }}" class="image-block swiper-slide">
+        <img src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.title }}">
+        <p>
+            <span>{{ block.settings.title }}</span>
+            {% render 'right-arrow-yellow' %}
+            </p>
+            
+      </a>
+    {% endfor %}
+    </div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+  <div class="mobile_buttons">
+    {% if section.settings.btn_text_sec != blank %}
+        <a class="btn btn-secondry" href="{{ section.settings.btn_link_sec }}">
+          <span>{{ section.settings.btn_text_sec }}</span>
+          {% render 'right-brand-arrow' %}
+          </a>
+        {% endif %}
+    {% if section.settings.btn_text != blank %}
+        <a class="btn btn-primary" href="{{ section.settings.btn_link }}">
+          <span>{{ section.settings.btn_text }}</span>
+          {% render 'right-brand-arrow' %}
+          </a>
+        {% endif %}
+  </div>
+</section>
+{% schema %}
+    {
+      "name": "Best Selling Textiles",
+      "class": "best_selling_textiles",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Best Selling Textiles"
+        },
+        {
+        "type": "header",
+        "content": "Primary Button"
+      },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Label"
+        },
+        {
+          "type": "url",
+          "id": "btn_link",
+          "label": "Button Link"
+        },
+        {
+        "type": "header",
+        "content": "Secondry Button"
+      },
+      {
+          "type": "text",
+          "id": "btn_text_sec",
+          "label": "Button Label"
+        },
+        {
+          "type": "url",
+          "id": "btn_link_sec",
+          "label": "Button Link"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "image",
+          "name": "Image Block",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Title"
+            },
+            {
+              "type": "url",
+              "id": "link",
+              "label": "Link URL"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Best Selling Textiles",
+          "category": "Custom"
+        }
+      ]
+    }
+    {% endschema %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var selling_Swiper = new Swiper('.selling_textile_image_blocks', {
+  slidesPerView: 'auto', // Adjust 'auto' to the number of slides you want to see on the screen
+  spaceBetween: 16, // Space between slides
+  on: {
+    init: function () {
+      if (window.innerWidth < 769) {
+        this.params.spaceBetween = 8;
+        this.update();
+      }
+    },
+    resize: function () {
+      if (window.innerWidth < 769) {
+        this.params.spaceBetween = 8;
+      } else {
+        this.params.spaceBetween = 16;
+      }
+      this.update();
+    }
+  },
+  freeMode: true, // Enable free mode for smooth dragging
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    hide: false, // Set to true if you want the scrollbar to hide automatically
+    draggable: true, // Enable dragging the scrollbar
+  },
+  mousewheelControl: true, // Enable mouse wheel navigation
+  keyboardControl: true, // Enable keyboard navigation
+});
+
+});
+</script>
+    

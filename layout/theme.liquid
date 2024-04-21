@@ -44,11 +44,13 @@
     <link rel="preload" href="{{ 'fancybox.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'custom.css' | asset_url }}" as="style">
+    <link rel="preload" href="{{ 'swiper-bundle.min.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'typography-setup.css' | asset_url }}" as="style">
     <link rel="preload" href="{{ 'jquery.min.js' | asset_url }}" as="script">
     <link rel="preload" href="{{ 'vendors.js' | asset_url }}" as="script">
     <link rel="preload" href="{{ 'sections.js' | asset_url }}" as="script">
     <link rel="preload" href="{{ 'utilities.js' | asset_url }}" as="script">
+    <link rel="preload" href="{{ 'swiper-bundle.min.js' | asset_url }}" as="script">
     <link rel="preload" href="{{ 'app.js' | asset_url }}" as="script">
     <script src="{{ 'jquery.fancybox.min.js' | asset_url }}"></script>
 
@@ -128,6 +130,7 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
     <!-- Stylesheets for Turbo -->
     {{ 'styles.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
     {{ 'typography-setup.css' | asset_url | stylesheet_tag }}
     <script>
       window.lazySizesConfig = window.lazySizesConfig || {};
@@ -273,6 +276,7 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
     {% if collection.next_product %}<link rel="next" href="{{ collection.next_product }}">{% endif %}
     {{ "ajaxinate.js" | asset_url | script_tag }}
     {{ "custom.js" | asset_url | script_tag }}
+    {{ 'swiper-bundle.min.js' | asset_url | script_tag }}
     {% if template contains 'product' %}
        {% if customer and customer.tags contains 'nyc' %}
         {% if product.tags contains 'NYC' %}
@@ -464,6 +468,16 @@ if (productTagsElement) {
       @font-face {
         font-family: 'Superior Title';
         src: url("{{ "SuperiorTitle.otf" | asset_url }}") format("opentype");
+      }
+      @font-face {
+        font-family: 'Manrope';
+        src: url("{{ "Manrope-font.ttf" | asset_url }}") format("truetype");
+      }
+      @font-face {
+        font-family: 'General Sans';
+        src: url('{{ "GeneralSans-Regular.ttf" | asset_url }}') format('woff2'),
+         url('{{ "GeneralSans-Regular.ttf" | asset_url }}') format('woff'),
+         url('{{ "GeneralSans-Regular.ttf" | asset_url }}') format('truetype');
       }
       {% endstyle %}
     <div style="--background-color: {{ settings.shop_bg_color }}">

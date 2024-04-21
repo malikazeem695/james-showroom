@@ -6,207 +6,429 @@
         "image_tDkFLJ": {
           "type": "image",
           "settings": {
+            "layout_style": "text_left",
             "image": "shopify://shop_images/e8fdafe16ff432196e7b67adc941352c.png",
             "heading": "British Wallpaper Designer Mia Reay",
-            "subtext": "Visit JAMES-NYC February 28th! Contact Showroom to RSVP.",
+            "subtext": "Visit JAMES-NYC February 28th!<br> Contact Showroom to RSVP.",
+            "button_url": "shopify://collections",
+            "button_label": "View Recent Features"
+          }
+        },
+        "image_wyVXAc": {
+          "type": "image",
+          "settings": {
+            "layout_style": "text_right",
+            "image": "shopify://shop_images/e8fdafe16ff432196e7b67adc941352c.png",
+            "heading": "British Wallpaper Designer Mia Reay",
+            "subtext": "Visit JAMES-NYC February 28th!<br> Contact Showroom to RSVP.",
+            "button_url": "shopify://collections",
+            "button_label": "View Recent Features"
+          }
+        },
+        "image_fWxray": {
+          "type": "image",
+          "settings": {
+            "layout_style": "text_center",
+            "image": "shopify://shop_images/e8fdafe16ff432196e7b67adc941352c.png",
+            "heading": "British Wallpaper Designer Mia Reay",
+            "subtext": "Visit JAMES-NYC February 28th!<br> Contact Showroom to RSVP.",
             "button_url": "shopify://collections",
             "button_label": "View Recent Features"
           }
         }
       },
       "block_order": [
-        "image_tDkFLJ"
+        "image_tDkFLJ",
+        "image_wyVXAc",
+        "image_fWxray"
       ],
       "settings": {
-        "layout_style": "text_left",
         "background_color": "#648390"
       }
     },
-    "image-with-text-overlay-1": {
-      "type": "image-with-text-overlay",
-      "settings": {
-        "wide_display": true,
-        "image": "shopify://shop_images/ASH03128.jpg",
-        "pretext": "",
-        "title": "Introducing Sloane By Hand!",
-        "subtitle": "<p>Beautiful Hand Block Printed Linens</p><p>Now available through JAMES!</p>",
-        "button1": "View Collection",
-        "button1_link": "shopify://collections/sloane-by-hand-fabric",
-        "button1_style": "global-button--banner",
-        "button2": "",
-        "button2_link": "",
-        "button2_style": "global-button--banner",
-        "text_position": "center",
-        "text_align": "center",
-        "caption_content_background": "text_box",
-        "mobile_text_below_image": false,
-        "mobile_text_color": "#c7a55d",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "10834207-96e5-48f3-b543-5839daf371c9": {
-      "type": "featured-text",
-      "settings": {
-        "title": "CONTACT OUR SHOWROOMS!",
-        "content": "",
-        "button_label": "",
-        "button_link": "",
-        "text_size": "featured_text",
-        "text_alignment": "center",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "7e917f43-2c17-4755-8a74-5f4c5b8da591": {
-      "type": "featured-promotions",
+    "rca_logo_section_FHy6qh": {
+      "type": "rca_logo_section",
       "blocks": {
-        "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-0": {
-          "type": "image",
+        "custom_block_Mq4cGC": {
+          "type": "custom-block",
           "settings": {
-            "image": "shopify://shop_images/1025NStemmonsFwy.0218.jpg",
-            "link": "mailto:dallas@jamesshowroom.com",
-            "title": "JAMES - DALLAS<p>1025 N. Stemmons Fwy #250</p><p>Dallas, TX 75207</p><p>(214) 295-7500</p>",
-            "text": "",
-            "button_label": "Dallas Design Center"
+            "logo": "shopify://shop_images/f2895607159a50d5a6415356b2f71e34.png",
+            "link": "shopify://collections"
           }
         },
-        "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-1": {
-          "type": "image",
+        "custom_block_b4H6ih": {
+          "type": "custom-block",
           "settings": {
-            "image": "shopify://shop_images/james_lrg_a_004.jpg",
-            "link": "mailto:houston@jamesshowroom.com",
-            "title": "JAMES - HOUSTON<p>5120 Woodway Drive #3029</p><p>Houston, TX 77056</p><p>(713) 955-1053</p>",
-            "text": "",
-            "button_label": "Decorative Center of Houston"
+            "logo": "shopify://shop_images/f2895607159a50d5a6415356b2f71e34.png",
+            "link": "shopify://collections"
           }
         },
-        "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-2": {
-          "type": "image",
+        "custom_block_fK4FXX": {
+          "type": "custom-block",
           "settings": {
-            "image": "shopify://shop_images/JS-0020.jpg",
-            "link": "mailto:nyc@jamesshowroom.com",
-            "title": "JAMES - NYC<p>306 E. 61st Street, 4th Floor</p><p>New York, NY 10065</p><p>(212) 731-0838</p>",
-            "text": "",
-            "button_label": "Interior Arts Building"
+            "logo": "shopify://shop_images/f2895607159a50d5a6415356b2f71e34.png",
+            "link": "shopify://collections"
+          }
+        },
+        "custom_block_HYnkw7": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify://shop_images/f2895607159a50d5a6415356b2f71e34.png",
+            "link": "shopify://collections"
+          }
+        },
+        "custom_block_8icmXW": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify://shop_images/f2895607159a50d5a6415356b2f71e34.png",
+            "link": "shopify://collections"
+          }
+        },
+        "custom_block_txqhxY": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify://shop_images/f2895607159a50d5a6415356b2f71e34.png",
+            "link": "shopify://collections"
+          }
+        },
+        "custom_block_T8ij7Y": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify://shop_images/f2895607159a50d5a6415356b2f71e34.png",
+            "link": "shopify://collections"
+          }
+        },
+        "custom_block_nmDg9K": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify://shop_images/f2895607159a50d5a6415356b2f71e34.png",
+            "link": "shopify://collections"
+          }
+        },
+        "custom_block_Th4xc8": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify://shop_images/f2895607159a50d5a6415356b2f71e34.png",
+            "link": "shopify://collections"
           }
         }
       },
       "block_order": [
-        "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-0",
-        "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-1",
-        "template--19529970352424__7e917f43-2c17-4755-8a74-5f4c5b8da591-168776898451836429-2"
+        "custom_block_Mq4cGC",
+        "custom_block_b4H6ih",
+        "custom_block_fK4FXX",
+        "custom_block_HYnkw7",
+        "custom_block_8icmXW",
+        "custom_block_txqhxY",
+        "custom_block_T8ij7Y",
+        "custom_block_nmDg9K",
+        "custom_block_Th4xc8"
       ],
       "settings": {
-        "wide_display": true,
-        "promo_text_on_image_enabled": false,
-        "featured_promos_per_row": 3,
-        "featured_links_animation": "fadeIn",
-        "feature_style": "square",
-        "css_class": "",
-        "custom_css": ""
+        "speed": 15
       }
     },
-    "148f344d-4a2f-45c3-9323-bf161c4a42d9": {
-      "type": "featured-text",
-      "settings": {
-        "title": "",
-        "content": "",
-        "button_label": "GET OUTDOORS WITH JAMES!",
-        "button_link": "https://jamesshowroom.com/collections/outdoor",
-        "text_size": "featured_text",
-        "text_alignment": "center",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "4f8334c0-eb81-44f4-b3da-cf37170e43d3": {
-      "type": "featured-collection",
-      "custom_css": [
-        ".price {display: none !important;}"
-      ],
-      "settings": {
-        "title": "NEW ARRIVALS!",
-        "collection_description": false,
-        "collection": "new-arrivals",
-        "collection_style": "grid",
-        "products_per": 4,
-        "products_limit": 16,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "df99cbe1-285d-4619-98c0-59ce0454dfde": {
-      "type": "featured-text",
-      "settings": {
-        "title": "",
-        "content": "",
-        "button_label": "VIEW ALL OF OUR FABRIC LINES",
-        "button_link": "https://jamesshowroom.com/collections/fabrics",
-        "text_size": "featured_text",
-        "text_alignment": "center",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "5d8cb693-8d39-4845-8165-1e7b02cef637": {
-      "type": "image-text",
+    "rca_proudly_present_M66Hzy": {
+      "type": "rca-proudly-present",
       "blocks": {
-        "template--19529970352424__5d8cb693-8d39-4845-8165-1e7b02cef637-16877698600e5fbc76-1": {
+        "image_XRkUf9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/JS-0064.jpg",
-            "title": "Shop Furniture",
-            "text": "<p>JAMES proudly represents furniture from the following collections:</p><p><a href=\"https://justinvanbreda.com/new-categories/the-furniture/cape-weaver-rattan/\" target=\"_blank\" title=\"https://justinvanbreda.com/new-categories/the-furniture/cape-weaver-rattan/\">Justin Van Breda London</a></p><p><a href=\"https://www.madelinestuart.com/collection/\" target=\"_blank\" title=\"https://www.madelinestuart.com/collection/\">Madeline Stuart Collection</a></p><p><a href=\"https://www.paolomoschino.com/brand/paolo-moschino-collection/furnishings/\" target=\"_blank\" title=\"https://www.paolomoschino.com/brand/paolo-moschino-collection/furnishings/\">Paolo Moschino Collection</a></p><p><a href=\"/collections/peter-dunham-home-furniture\" title=\"Peter Dunham Home | Furniture\">Peter Dunham Home Outdoor Furniture</a></p><p><a href=\"https://www.bunnywilliamshome.com/\" target=\"_blank\" title=\"https://www.bunnywilliamshome.com/\">Bunny Williams Home</a></p><p>We also offer a small selection of <a href=\"https://jamesshowroom.com/products/taylor-drink-tray-ottoman?_pos=1&_sid=b79a393ea&_ss=r\" title=\"https://jamesshowroom.com/products/taylor-drink-tray-ottoman?_pos=1&_sid=b79a393ea&_ss=r\">custom pieces designed by Meredith Ellis.</a>  </p><p>PLEASE CONTACT YOUR NEAREST SHOWROOM FOR INFORMATION AND PRICING</p>",
-            "button_label": "Click name above to view website",
-            "link": "",
-            "bg_color": "",
-            "text_color": ""
+            "image": "shopify://shop_images/ec4701509ab4cf115d5a6a9d52bb225f.png",
+            "title": "Justin Van Breda London",
+            "link": "shopify://collections/justin-van-breda-london"
           }
         },
-        "template--19529970352424__5d8cb693-8d39-4845-8165-1e7b02cef637-16877698600e5fbc76-0": {
+        "image_XgFFaY": {
           "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/41121da3d06719dd5cfad806500d4be2.png",
+            "title": "Madeline Stuart Collection",
+            "link": "shopify://collections/madeline-stuart-collection"
+          }
+        },
+        "image_6bc8Ni": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/edf62173f28f11ff75e9472f1acd88a8.png",
+            "title": "Paolo Moschino Collection",
+            "link": "shopify://collections/paolo-moschino-furniture"
+          }
+        },
+        "image_JqcRxT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/12f353d56281aa8008dae737d8f9abef.png",
+            "title": "Peter Dunham Furniture",
+            "link": "shopify://collections/peter-dunham-home-furniture"
+          }
+        },
+        "image_G9BUnU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2681ada3b28f6e9b6d316bbf9c9d55f1.png",
+            "title": "Bunny Williams Home",
+            "link": "shopify://collections/bunny-williams-home-furniture"
+          }
+        },
+        "image_FRKamc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/73c9172948c622f2c33decdb3b99774b.png",
+            "title": "Meredith Ellis",
+            "link": "shopify://collections/meredith-ellis-textiles"
+          }
+        }
+      },
+      "block_order": [
+        "image_XRkUf9",
+        "image_XgFFaY",
+        "image_6bc8Ni",
+        "image_JqcRxT",
+        "image_G9BUnU",
+        "image_FRKamc"
+      ],
+      "settings": {
+        "heading": "JAMES Proudly Presents",
+        "description": "For information and pricing please contact<br>your nearest showroom."
+      }
+    },
+    "rca_image_text_CNHwqY": {
+      "type": "rca_image-text",
+      "settings": {
+        "bg_color": "#648390",
+        "image_alignment": "right",
+        "desktop_height": 488,
+        "image": "shopify://shop_images/9a8d200e55d1de99f74e6e38179d6691.png",
+        "heading": "Introducing Carolina Irving & Daughters",
+        "text": "We are thrilled to welcome carolina irving & daughters to our texas showroom collection. Founded by textile designer carolina irving , with her daughters olympia and ariadne irving, each piece is hand-made by local artisans in independent, family-run ateliers. Click the link below to explore their offerings and let us know what you need to set your table in style!",
+        "link_text": "Visit the Carolina Irving & Daughters website",
+        "link_url": "shopify://collections"
+      }
+    },
+    "selling_textiles_UNVikb": {
+      "type": "selling-textiles",
+      "blocks": {
+        "image_drBKeK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/47a1ae3e34ff8d28fc7bff38b32b32b3.png",
+            "title": "Anna Spiro",
+            "link": "shopify://collections/anna-spiro"
+          }
+        },
+        "image_A34ctx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/98dcda123a3f818fc8d5889515e04c4f.png",
+            "title": "Botanica Trading",
+            "link": "shopify://collections/botanica-trading-textiles-fabric"
+          }
+        },
+        "image_Q8JeAL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/18a84a414511ba7c77c78b099c4168d9.png",
+            "title": "Caitlain McGauley",
+            "link": "shopify://collections/botanica-trading-wallpaper"
+          }
+        },
+        "image_YacKzq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/f489a78b950844b3158652bfc23149f3.png",
+            "title": "Carolina Irving",
+            "link": "shopify://collections/carolina-irving-textiles-fabric"
+          }
+        },
+        "image_dEVJMX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/aa07a141f815c60cc52e13399df513cf.png",
+            "title": "Casa Branca",
+            "link": "shopify://collections/casa-branca-fabrics"
+          }
+        },
+        "image_DApxAE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/e3665e65b978e64520d0a43d96da48fa.png",
+            "title": "Casa Lopez",
+            "link": "shopify://collections/casa-lopez-fabric"
+          }
+        },
+        "image_R9XdiL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/18852248ddc31578bac62b57cbbbc382.png",
+            "title": "Casamota",
+            "link": "shopify://collections/casamota-new-fabric"
+          }
+        }
+      },
+      "block_order": [
+        "image_drBKeK",
+        "image_A34ctx",
+        "image_Q8JeAL",
+        "image_YacKzq",
+        "image_dEVJMX",
+        "image_DApxAE",
+        "image_R9XdiL"
+      ],
+      "settings": {
+        "heading": "Best Selling Textiles",
+        "btn_text": "Shop All Textiles",
+        "btn_link": "shopify://collections",
+        "btn_text_sec": "Secondary Button",
+        "btn_link_sec": "shopify://collections"
+      }
+    },
+    "rca_image_text_JbFnqY": {
+      "type": "rca_image-text",
+      "settings": {
+        "bg_color": "#648390",
+        "image_alignment": "left",
+        "desktop_height": 540,
+        "image": "shopify://shop_images/9a8d200e55d1de99f74e6e38179d6691.png",
+        "heading": "Penny Morrison Accessories",
+        "text": "JAMES is your home for all things Penny Morrison!\n<br><br>\n\nFrom her luxurious fabrics and wallpapers, to her beautiful bespoke lamps, lampshades and everything in between. <br><br>\n\nContact your nearest showroom to see what we have in stock or have us ship directly to you or your client.",
+        "link_text": "View all Penny Morrison accessories",
+        "link_url": "shopify://collections"
+      }
+    },
+    "collections_tab_Xf643N": {
+      "type": "collections-tab",
+      "settings": {
+        "main_heading": "Mia Reay Wallpapers",
+        "collection_1": "mia-reay-wallpaper",
+        "collection_1_title": "Shop All Mia Reay Wallpapers",
+        "collection_1_product_limit": 12,
+        "collection_2": "wallpapers",
+        "collection_2_title": "Browse All Wallpapers"
+      }
+    },
+    "showroom_locations_jQ7kW6": {
+      "type": "showroom-locations",
+      "blocks": {
+        "custom_block_WrJBQM": {
+          "type": "custom-block",
+          "settings": {
+            "image": "shopify://shop_images/3685bdddcb2848459f4dd7a2165d9b73.png",
+            "card_title": "Dallas Showroom",
+            "address": "1025 N. Stemmons Fwy #250\nDallas, TX 75207",
+            "phone": "(214)295-7500",
+            "email": "dallas@jamesshowroom.com"
+          }
+        },
+        "custom_block_UXPcew": {
+          "type": "custom-block",
+          "settings": {
+            "image": "shopify://shop_images/40d8861db3ffb7ded23bb2ab8b660b60.png",
+            "card_title": "Houston Showroom",
+            "address": "5120 Woodway Drive #3029\nHouston, TX 77056",
+            "phone": "(713)955-1053",
+            "email": "houston@jamesshowroom.com"
+          }
+        },
+        "custom_block_An6d8h": {
+          "type": "custom-block",
+          "settings": {
+            "image": "shopify://shop_images/da0136f7f14df851fa34cd4e658824c6.png",
+            "card_title": "NYC Showroom",
+            "address": "306 E. 61st Street, 4th Floor\nNew York, NY 10065",
+            "phone": "(212) 731-0838",
+            "email": "nyc@jamesshowroom.com"
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_WrJBQM",
+        "custom_block_UXPcew",
+        "custom_block_An6d8h"
+      ],
+      "settings": {
+        "main_heading": "Showroom Locations"
+      }
+    },
+    "image_text_with_overlay_wpmPY8": {
+      "type": "image-text-with-overlay",
+      "blocks": {
+        "feature_block_bgdKyt": {
+          "type": "feature_block",
           "settings": {
             "image": "shopify://shop_images/IMG_5255_Copy.jpg",
-            "title": "Introducing Carolina Irving & Daughters",
-            "text": "<p>We are thrilled to welcome Carolina Irving & Daughters to our Texas showroom collection.  Founded by textile designer Carolina Irving , with her daughters Olympia and Ariadne Irving, each piece is hand-made by local artisans in independent, family-run ateliers.  Click the link below to explore their offerings and let us know what you need to set your table in style!</p>",
-            "button_label": "View the Carolina Irving & Daughters Collection",
-            "link": "shopify://collections/carolina-irving-daughters-1",
-            "bg_color": "",
-            "text_color": ""
+            "overlay_color": "#648390",
+            "heading": "Introducing Carolina Irving & Daughters",
+            "text": "We are thrilled to welcome carolina irving & daughters to our texas showroom collection. Founded by textile designer carolina irving , with her daughters olympia and ariadne irving, each piece is hand-made by local artisans in independent, family-run ateliers. Click the link below to explore their offerings and let us know what you need to set your table in style!",
+            "link_text": "Visit the Carolina Irving & Daughters website",
+            "link_url": "shopify://collections"
           }
         },
-        "image_MwJKPw": {
-          "type": "image",
+        "feature_block_w4mY73": {
+          "type": "feature_block",
           "settings": {
             "image": "shopify://shop_images/PML_Web_2.jpg",
-            "title": "Penny Morrison Accessories",
-            "text": "<p>JAMES is your home for all things Penny Morrison!  </p><p>From her luxurious fabrics ansd wallpapers ... to her beautiful bespoke lamps and lampshades.... and everything in between ... contact your nearest showroom to see what we have in stock or have us ship directly to you or your client.</p>",
-            "button_label": "View All Penny Morrison Accessories",
-            "link": "https://www.pennymorrison.com/collections/accessories?p=5",
-            "bg_color": "",
-            "text_color": ""
+            "overlay_color": "#648390",
+            "heading": "Penny Morrison Accessories",
+            "text": "JAMES is your home for all things Penny Morrison!<br>\n<br>\n\nFrom her luxurious fabrics and wallpapers, to her beautiful bespoke lamps, lampshades and everything in between. <br>\n<br>\n\nContact your nearest showroom to see what we have in stock or have us ship directly to you or your client.",
+            "link_text": "View all Penny Morrison accessories",
+            "link_url": ""
           }
         }
       },
       "block_order": [
-        "template--19529970352424__5d8cb693-8d39-4845-8165-1e7b02cef637-16877698600e5fbc76-1",
-        "template--19529970352424__5d8cb693-8d39-4845-8165-1e7b02cef637-16877698600e5fbc76-0",
-        "image_MwJKPw"
+        "feature_block_bgdKyt",
+        "feature_block_w4mY73"
       ],
       "settings": {
-        "wide_display": true,
-        "featured_links_per_row": "1",
-        "frontpage_text_align": "left",
-        "frontpage_image_position": "row",
-        "css_class": "",
-        "custom_css": ""
+      }
+    },
+    "events_section_hhhFFL": {
+      "type": "events-section",
+      "blocks": {
+        "feature_block_HynJUj": {
+          "type": "feature_block",
+          "settings": {
+            "image": "shopify://shop_images/Frame_7642.png",
+            "badge_text": "Pop Up",
+            "event_heading": "Blumera",
+            "event_details": "Discover the elegance of Blumera's sustainable luxury at our exclusive pop-up event! Join us to explore Mehera Blum's stunning creations, influenced by global travels and her late mother's art, showcasing beautifully crafted pieces that embody sustainability and cultural richness.",
+            "event_date": "February 13th-15th",
+            "event_time": "10AM - 5PM",
+            "event_location": "344 Worth Ave, Palm Beach",
+            "event_rsvp_text": "RSVP",
+            "event_rsvp_url": "shopify://collections"
+          }
+        },
+        "feature_block_np3M64": {
+          "type": "feature_block",
+          "settings": {
+            "image": "shopify://shop_images/Frame_7642_1.png",
+            "badge_text": "Pop Up",
+            "event_heading": "Couplet",
+            "event_details": "Couplet is a fine jewelry company dedicated to doing more. Each Couplet piece is handmade to order by craftsmen and artisans in New York City. All of their gemstones are ethically sourced. Couplet partners directly with mines to ensure safe and humane practices throughout the gem discovery and cutting processes. ",
+            "event_date": "February 21st",
+            "event_time": "",
+            "event_location": "344 Worth Ave, Palm Beach",
+            "event_rsvp_text": "RSVP",
+            "event_rsvp_url": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "feature_block_HynJUj",
+        "feature_block_np3M64"
+      ],
+      "settings": {
+        "header_text": "Our Events",
+        "link_text": "See All Events",
+        "link_url": "shopify://collections/all"
       }
     },
     "770ffb1e-71a9-475d-b8d6-5f0fc4ad470d": {
       "type": "newsletter",
       "settings": {
-        "wide_display": true,
+        "wide_display": false,
         "display_first_name": false,
         "display_last_name": false,
         "newsletter_title": "BE INSPIRED & STAY INFORMED",
@@ -219,13 +441,15 @@
   },
   "order": [
     "rca_hero_section_QnfmXP",
-    "image-with-text-overlay-1",
-    "10834207-96e5-48f3-b543-5839daf371c9",
-    "7e917f43-2c17-4755-8a74-5f4c5b8da591",
-    "148f344d-4a2f-45c3-9323-bf161c4a42d9",
-    "4f8334c0-eb81-44f4-b3da-cf37170e43d3",
-    "df99cbe1-285d-4619-98c0-59ce0454dfde",
-    "5d8cb693-8d39-4845-8165-1e7b02cef637",
+    "rca_logo_section_FHy6qh",
+    "rca_proudly_present_M66Hzy",
+    "rca_image_text_CNHwqY",
+    "selling_textiles_UNVikb",
+    "rca_image_text_JbFnqY",
+    "collections_tab_Xf643N",
+    "showroom_locations_jQ7kW6",
+    "image_text_with_overlay_wpmPY8",
+    "events_section_hhhFFL",
     "770ffb1e-71a9-475d-b8d6-5f0fc4ad470d"
   ]
 }

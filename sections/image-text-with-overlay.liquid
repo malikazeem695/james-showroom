@@ -1,0 +1,146 @@
+<div class="feature-blocks dual-feature-blocks rca-custom-container">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'feature_block' %}
+        <div class="feature-block" style="background-image: url('{{ block.settings.image | img_url: '1024x1024' }}');">
+          <div class="overlay" style="background-color: {{ block.settings.overlay_color }};"></div>
+          <div class="block_content">
+            <div class="text-content">
+          <h2>{{ block.settings.heading }}</h2>
+          <p>{{ block.settings.text }}</p>
+          </div>
+          <div class="links-container">
+          <a href="{{ block.settings.link_url }}">
+          <span>  
+          {{ block.settings.link_text }}
+          </span>
+          {% render 'blended-arrow' %}
+          </a>
+          </div>
+          </div>
+        </div>
+      {% else %}
+        <!-- Add additional block types here if necessary -->
+    {% endcase %}
+  {% endfor %}
+</div>
+
+
+{% schema %}
+    {
+      "name": "Dual Feature Blocks",
+      "blocks": [
+        {
+          "type": "feature_block",
+          "name": "Feature Block",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Background Image"
+            },
+            {
+              "type": "color",
+              "id": "overlay_color",
+              "label": "Overlay Color"
+            },
+            {
+              "type": "text",
+              "id": "heading",
+              "label": "Heading",
+              "default": "Block Heading"
+            },
+            {
+              "type": "textarea",
+              "id": "text",
+              "label": "Text",
+              "default": "Details text here"
+            },
+            {
+              "type": "text",
+              "id": "link_text",
+              "label": "Link Text",
+              "default": "Click here"
+            },
+            {
+              "type": "url",
+              "id": "link_url",
+              "label": "Link URL"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Dual Feature Blocks",
+          "category": "Custom"
+        }
+      ]
+    }
+    {% endschema %}
+    
+
+    <style>
+        .feature-blocks.dual-feature-blocks {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.dual-feature-blocks .feature-block {
+  position: relative;
+  color: #fff;
+  padding: 120px 80px;
+  width: 50%;
+  display: flex;
+    place-items: center;
+}
+
+.dual-feature-blocks .feature-block .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.8; /* Adjust the opacity as needed */
+}
+.dual-feature-blocks .feature-block h2{
+    color: #fff;
+}
+.dual-feature-blocks .feature-block h2,
+.dual-feature-blocks .feature-block p,
+.dual-feature-blocks .feature-block a {
+  position: relative; /* To place them above the overlay */
+  z-index: 2;
+}
+
+.dual-feature-blocks .block_content {
+    display: flex;
+    width: 560px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--dimensions-spacing-lg, 36px);
+}
+
+.dual-feature-blocks .feature-block a {
+  color: #fff;
+  text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    .dual-feature-blocks .feature-block{
+        padding: 48px 16px;
+        width: 100%;
+        min-height: 323px;
+    }
+    .feature-blocks.dual-feature-blocks{
+        flex-direction: column;
+    }
+    .dual-feature-blocks .block_content{
+        gap: 28px;
+    }
+}
+
+    </style>
+    

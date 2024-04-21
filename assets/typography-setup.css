@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     padding: 0;
 }
@@ -9,4 +9,126 @@ font-style: normal;
 font-weight: 400;
 line-height: 54px;
 letter-spacing: -0.76px;
+}
+h2{
+font-family: "Superior Title";
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px;
+letter-spacing: -0.56px;
+}
+p{
+font-family: "General Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+}
+a{
+font-family: "General Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+}
+a span{
+    font-family: "General Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    }
+.body-regular{
+font-family: "General Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+}
+.btn{
+    display: flex;
+padding: 12px 8px 12px 12px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+place-content: start;
+}
+.semi-bold{
+    font-weight: 600;
+}
+.full-width{
+    width: 100%;
+}
+.sm-paragraph{
+    color: #000;
+font-family: "General Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 19px;
+}
+.btn-primary{
+    display: flex;
+padding: 7px 12px;
+justify-content: center;
+align-items: center;
+gap: 4px;
+border: 1px solid var(--theme-surfaces-shade-base, #FFF);
+background: var(--theme-surfaces-primary-base, #C6A55D);
+box-shadow: 0px 0px 0px 1px var(--theme-surfaces-primary-base, #C6A55D);
+height: 44px;
+}
+.btn-primary span{
+    color: #000;
+font-family: Manrope;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: -0.32px;
+padding: 0 4px;
+}
+.mobile_buttons {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--dimensions-spacing-3xs, 8px);
+    align-self: stretch;
+}
+.btn-secondry{
+    display: flex;
+padding: 7px 12px;
+justify-content: center;
+align-items: center;
+gap: 4px;
+border: 1px solid var(--theme-surfaces-shade-base, #FFF);
+background: transparent;
+box-shadow: 0px 0px 0px 1px var(--theme-surfaces-primary-base, #C6A55D);
+height: 44px;
+}
+.btn-secondry span{
+    color: #000;
+font-family: Manrope;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: -0.32px;
+padding: 0 4px;
+}
+
+@media screen and (max-width: 768px) {
+    h2{
+        font-size: 21px;
+        line-height: 34px;
+        letter-spacing: -0.42px;
+        }
+        a span {
+            font-size: 12px;
+            line-height: 19px;
+        }
+        .mobile_buttons {
+            display: flex;}
 }

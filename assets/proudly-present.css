@@ -1,0 +1,96 @@
+.proudly-present {
+    padding: 0 80px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    place-items: center;
+    width: 100%;
+}
+.proudly-present .section-heading {
+    max-width: 632px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+}
+.proudly-present .section-heading h1 {
+    color: #0F172A;
+    text-align: center;
+    font-family: "Superior Title";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: -0.76px;
+  }
+  .proudly-present .section-heading p {
+    color: #334155;
+    text-align: center;
+}
+  .proudly-present .image-blocks {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .proudly-present .image-blocks a.image-block{
+    display: flex;
+width: 200px;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+padding-top: 4px;
+place-content: center;
+place-items: center;
+  }
+  .proudly-present .image-block img{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 200px;
+border: 1px solid #C6A55D;
+box-shadow: 0px 0px 0px 4px #E2E8F0;
+  }
+  .proudly-present .image-block p{
+    color: #0F172A;
+text-align: center;
+font-family: "General Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+max-width: 168px;
+  }
+  .proudly-present .image-block img {
+
+  }
+  @media (max-width: 768px) {
+    .proudly-present{
+      padding: 48px 16px;
+    }
+    .proudly-present .image-blocks{
+      gap: 8px;
+    }
+    .proudly-present .image-blocks a.image-block {
+      width: 175px;
+    }
+    .proudly-present .image-block img {
+      width: 175px;
+      height: 175px;
+      box-shadow: 0px 0px 0px 2px #E2E8F0;
+    }
+    .proudly-present .section-heading h1 {
+      font-size: 28px;
+      line-height: 40px;
+      letter-spacing: -0.56px;
+  }
+
+  }

@@ -1,0 +1,92 @@
+.shopify-section.best_selling_textiles {
+    display: block;
+    width: 100%;
+    padding: 80px;
+    overflow: hidden;
+}
+.selling_textile_image_blocks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.selling_textile_image_blocks .swiper-scrollbar-drag{
+    background-color: #C6A55D;
+}
+.selling_textile_image_blocks .swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: unset;
+    width: 100%;
+    background-color: #E2E8F0;
+    height: 2px;
+}
+.selling_textile_image_blocks p span{
+    color: #000000;
+}
+.selling_textile_image_blocks p{
+    display: flex;
+padding: 0px var(--dimensions-spacing-3xs, 8px);
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+}
+.selling_textile_image_blocks span.swiper-notification {
+    display: none;
+}
+.best_selling_textile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 36px;
+    place-items: self-start;
+}
+.best_selling_textile .image-block{
+    width: 308px;
+}
+.best_selling_textile .image-block img{
+    width: 308px;
+    height: 308px;
+    object-fit: cover;
+}
+.selling_textile_section_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+.selling_textile_section_heading h2{
+    color: #353E44;
+}
+
+@media screen and (max-width: 768px) {
+    .shopify-section.best_selling_textiles{
+        padding: 48px 0;
+    }
+    .selling_textile_section_heading {
+        justify-content: center;
+    }
+    .best_selling_textiles h2 {
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: -0.56px;
+    }
+    .best_selling_textiles .desktop_only{
+        display: none;
+    }
+    .shopify-section.best_selling_textiles .best_selling_textile{
+        padding: 0 16px;
+        gap: 28px;
+    }
+    .selling_textile_image_blocks {
+        gap: 28px;
+    }
+    .best_selling_textile .image-block {
+        width: 175px;
+    }
+    .best_selling_textile .image-block img {
+        width: 175px;
+        height: 175px;}
+
+    .mobile_buttons .btn{
+        width: 100%;
+    }
+}

@@ -24,7 +24,7 @@
           "settings": {
             "sort-dropdown-a-check": true,
             "filter1heading": "Content",
-            "sort_a": "Cotton, Leather, Linen, Linen\/Cotton, Outdoor, Performance, Silk, Woven, Clay Coated Paper, Grasscloth, Paperweave"
+            "sort_a": "Cotton, Leather, Linen, Linen/Cotton, Outdoor, Performance, Silk, Woven, Clay Coated Paper, Grasscloth, Paperweave"
           }
         },
         "b180c2eb-3e51-4b12-b8bb-2f047e113d16": {
@@ -71,7 +71,7 @@
         "display_first_name": false,
         "display_last_name": false,
         "newsletter_title": "Subscribe",
-        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …</p>",
         "newsletter_section_text_align": "center",
         "css_class": "",
         "custom_css": ""

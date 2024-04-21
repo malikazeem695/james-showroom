@@ -1,0 +1,66 @@
+{{ 'proudly-present.css' | asset_url | stylesheet_tag }}
+<section id="{{ section.id }}" class="proudly-present">
+  <!-- Heading and description -->
+  <div class="section-heading">
+  <h1>{{ section.settings.heading }}</h1>
+  <p>{{ section.settings.description }}</p>
+  </div>
+  <!-- Image blocks -->
+  <div class="image-blocks">
+    {% for block in section.blocks %}
+      <a href="{{ block.settings.link }}" class="image-block">
+        <img src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.title }}">
+        <p>{{ block.settings.title }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+    {
+      "name": "Proudly Present",
+      "class": "proudly-presents",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "JAMES Proudly Presents"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "image",
+          "name": "Image Block",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Title"
+            },
+            {
+              "type": "url",
+              "id": "link",
+              "label": "Link URL"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Proudly Present",
+          "category": "Custom"
+        }
+      ]
+    }
+    {% endschema %}
+    

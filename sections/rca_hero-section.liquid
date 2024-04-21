@@ -1,29 +1,67 @@
 {{ 'hero-section.css' | asset_url | stylesheet_tag }}
 
-<div class="swiper-container hero-slider {{ section.settings.layout_style }}" style="background-color: {{ section.settings.background_color }};">
+<div class="swiper-container hero-slider">
   <!-- Additional wrapper for slides -->
   <div class="swiper-wrapper">
     {% for block in section.blocks %}
-    <div class="swiper-slide">
+    <div class="swiper-slide {{ block.settings.layout_style }}">
     <div class="slide-image">
         <img src="{{ block.settings.image |  image_url }}" >
     </div>
-      <div class="slide-content-container">
+      <div class="slide-content-container" style="background-color: {{ section.settings.background_color }};">
+        <div class="text_content">
         <h1>{{ block.settings.heading }}</h1>
-        <p>{{ block.settings.subtext }}</p>
-        <a href="{{ block.settings.button_url }}" class="btn">{{ block.settings.button_label }}</a>
+        <p class="body-regular">{{ block.settings.subtext }}</p>
+        </div>
+        <div class="slide_buttons">
+        <a href="{{ block.settings.button_url }}" class="btn">
+        <span class="btn-text">   
+        {{ block.settings.button_label }}
+        </span>
+            {% render 'right-arrow' %}
+        </a>
+        </div>
+        {% if section.blocks.size > 1 %}
+        <div class="custom-pagination">
+{% assign loopindex = forloop.index %}
+{% for index in section.blocks %}
+    {% if forloop.index == loopindex %}
+    <span class="active-slide-dot" index="{{ forloop.index0 }}">
+            {% render 'active-dot' %}
+    </span>
+    {% else %}
+    <span class="slide-dot hero_section_dot" index="{{ forloop.index0 }}">
+            {% render 'slider-dot' %}
+    </span>
+    {% endif %}
+{% endfor %}
+
+        </div>
+    {% endif %}
       </div>
     </div>
     {% endfor %}
   </div>
   <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
+  <div class="swiper-pagination" style="display: none;"></div>
 </div>
 {% schema %}
     {
         "name": "RCA Hero Slider",
         "settings": [
             {
+                        "type": "color",
+                        "id": "background_color",
+                        "label": "Background Color"
+                    }
+        ],
+        "blocks": [
+            {
+                "type": "image",
+                "name": "Slide",
+                "limit": 3,
+                "settings": [
+                    {
                 "type": "select",
                 "id": "layout_style",
                 "label": "Layout Style",
@@ -43,17 +81,6 @@
                 ],
                 "default": "text_left"
             },
-            {
-                        "type": "color",
-                        "id": "background_color",
-                        "label": "Background Color"
-                    }
-        ],
-        "blocks": [
-            {
-                "type": "image",
-                "name": "Slide",
-                "settings": [
                     {
                         "type": "image_picker",
                         "id": "image",
@@ -100,8 +127,20 @@
             clickable: true
         },
         loop: true,
+        autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
         autoHeight: true // You can set this to false if you want a fixed height
     });
+    document.querySelectorAll('.hero_section_dot').forEach(dot => {
+  dot.addEventListener('click', function() {
+    const index = this.getAttribute('index'); // Get the index attribute
+    const swiper = document.querySelector('.hero-slider').swiper; // Get the Swiper instance
+    swiper.slideTo(index); // Move to the slide with the retrieved index
+  });
+});
+
 });
     </script>
     

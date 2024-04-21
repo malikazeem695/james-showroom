@@ -1,16 +1,30 @@
 .hero-slider {
     position: relative;
+    width: 100%;
+    overflow: hidden;
   }
   .hero-slider .swiper-slide {
     width: 100%;
     height: 547px;
     display: flex;
   }
-  .hero-slider.text_center .slide-image {
+  .hero-slider .swiper-slide.text_center {
+display: block;
+position: relative;
+  }
+  .swiper-slide.text_center .slide-image {
     width: 100%;
 }
 .hero-slider h1{
     color:#FFF;
+}
+.text_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.text_content .body-regular{
+  color:#FFF;
 }
 .hero-slider .slide-image img{
     width: 100%;
@@ -18,24 +32,141 @@
     object-fit: cover;
     object-position: bottom;
 }
-  .hero-slider.text_left .slide-image, .hero-slider.text_right .slide-image {
+  .swiper-slide.text_left .slide-image, .swiper-slide.text_right .slide-image {
     width: calc(100% - 512px);
 }
-  .hero-slider.text_left .slide-image {
+.swiper-slide.text_center .slide-image {
+  width: 100%;
+}
+  .swiper-slide.text_left .slide-image {
     order: 1;
 }
   .hero-slider .slide-content-container {
-    width: 512px;
-    height: 547px;
+   display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding-top: 120px;
+    padding-bottom: 28px;
   }
-  .hero-slider.text_left .slide-content-container, .hero-slider.text_right .slide-content-container {
+  .custom-pagination {
+    margin-top: auto;
+    display: flex;
+    gap: 12px;
+    place-items: center;
+}
+.custom-pagination span{
+  display: flex;
+  align-items: center;
+  width: 9px;
+  height: 9px;
+  cursor: pointer;
+}
+.custom-pagination span.active-slide-dot{
+border-radius: 32px;
+border: 1px solid #C6A55D;
+padding: 2px;
+width: 13px;
+height: 13px;
+gap: 4px;
+}
+  .hero-slider .swiper-pagination{
+
+  }
+  .hero-slider .btn{
+    border: 1px solid #648390;
+    background: #43525B;
+    box-shadow: 0px 0px 0px 1px #43525B;
+    width: 206px;
+    height: 50px;
+  }
+  .btn-text{
+    color: var(--theme-text-shade-inverse, #FFF);
+    font-family: 'Manrope';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.32px;
+    padding: 0 4px;
+  }
+  .swiper-slide.text_left .slide-content-container, .swiper-slide.text_right .slide-content-container {
 padding-left: 80px;
 padding-right: 16px;
+width: 512px;
+height: 547px;
   }
-  .hero-slider.text_right .slide-content-container {
+  .swiper-slide.text_right .slide-content-container {
 
   }
-  .hero-slider.text_center .slide-content-container {
-
+  .swiper-slide.text_center .slide-content-container {
+    width: 448px;
+    padding: 48px;
+    width: 448px;
+    padding: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    place-items: center;
+  }
+  .hero-slider .swiper-slide.text_center .text_content{
+    text-align: center;
+  }
+  @media screen and (max-width: 800px) {
+    .swiper-slide.text_center .slide-content-container {
+      padding: 36px 16px;
+    }
+    .hero-slider .swiper-slide{
+      flex-direction: column;
+    height: auto;
+    }
+    .swiper-slide.text_left .slide-image, .swiper-slide.text_right .slide-image, .swiper-slide.text_center .slide-image {
+      width: 100%;
+      order: 0;
+      font-size: 0;
+        line-height: 0;
+  }
+  .hero-slider .swiper-slide.text_center{
+    display: flex;
+  }
+  .swiper-slide.text_center .slide-content-container{
+    position: unset;
+    transform: unset;
+    width: 100%;
+  }
+  .hero-slider h1 {
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.56px;
+  }
+  .hero-slider p.body-regular {
+    text-align: center;
+}
+.slide-content-container .custom-pagination {
+  place-content: center;
+}
+  .hero-slider .btn {
+    border: 1px solid #648390;
+    background: #C6A55D;
+    box-shadow: 0px 0px 0px 1px #C6A55D;
+    width: 100%;
+    place-content: center;
+}
+.hero-slider .slide-content-container {
+  gap: 28px;
+}
+.hero-slider .slide-content-container .slide_buttons {
+  width: 100%;
+}
+  .hero-slider .slide-image img {
+    height: auto;
+    font-size: 0
+  }
+  .swiper-slide.text_left .slide-content-container, .swiper-slide.text_right .slide-content-container {
+    padding: 36px 16px;
+    width: 100%;
+    height: unset;
+}
   }
   
