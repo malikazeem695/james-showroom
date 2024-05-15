@@ -11,10 +11,10 @@
     {% if predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 %}
       <div class="predictive-search__query-suggestions">
         <h2 class="predictive-search__heading">
-          {{- 'general.predictive_search.query_suggestions_heading' | t -}}
+          Suggestions
         </h2>
 
-        <ul class="predictive-search__results-list" role="list">
+        <ul class="predictive-search__results-list" role="list" resourceshere="{{ predictive_search.resources }}">
           {% for query in predictive_search.resources.queries %}
             <li class="predictive-search__list-item" role="listitem">
               <a class="predictive-search__list-item-anchor" href="{{ query.url }}">
@@ -37,7 +37,7 @@
     {% if predictive_search.resources.products.size > 0 %}
       <div class="predictive-search__product-suggestions">
         <h2 class="predictive-search__heading">
-          {{- 'general.predictive_search.product_suggestions_heading' | t -}}
+          Products
         </h2>
 
         <ul class="predictive-search__results-list" role="list">
@@ -62,10 +62,10 @@
                   <p class="predictive-search__list-item-title">
                     {{- product.title | escape -}}
                   </p>
-{% if product.type == 'Lighting' or  product.type == 'Furniture' or product.type == 'Carpets' or product.tags contains 'carpets' or product.type == 'Carpet' %}
-  {% else %}
+{% if customer %}
+ 
                   <p
-                    class="yeshere 
+                    class=" 
                       predictive-search__list-item-price
                       {% if product.compare_at_price_max > product.price %}
                         predictive-search__list-item-price--sale
@@ -129,6 +129,13 @@
                     product: product,
                     class: 'predictive-search__list-item-unit-price',
                   %}
+                  {% else %}
+                  <p class="predictive-search__list-item-price">
+                    <a href="/account">
+                    Log in
+                    </a>
+                    for pricing and samples
+                  </p>
   {% endif %}
                 </div>
               </a>
@@ -146,7 +153,7 @@
           {% elsif predictive_search.resources.articles.size > 0 %}
             {{- 'general.predictive_search.posts_suggestions_heading' | t -}}
           {% elsif predictive_search.resources.pages.size > 0 %}
-            {{- 'general.predictive_search.pages_suggestions_heading' | t -}}
+            Pages
           {% endif %}
         </h2>
 
@@ -176,7 +183,7 @@
           {% endfor %}
 
           {% for page in predictive_search.resources.pages %}
-            <li class="predictive-search__list-item" role="listitem">
+            <li class="predictive-search__list-item yeshereis" role="listitem">
               <a class="predictive-search__list-item-anchor" href="{{ page.url }}">
                 {{- page.title | escape -}}
               </a>
@@ -201,6 +208,6 @@
     type="submit"
     data-search-button
   >
-    {{- 'general.predictive_search.search_button_label' | t: search_terms: predictive_search.terms -}}
+  Search for “{{ predictive_search.terms }}” {% render 'towards-right' %}
   </button>
 {% endif %}

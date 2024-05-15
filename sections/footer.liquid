@@ -17,7 +17,7 @@
 {%- endif -%}
 
 <footer class="footer">
-  <section class="section">
+  <section class="section_spacing">
     <div class="container footer-menu-wrap">
       {% for block in section.blocks %}
         <div class="{% if forloop.length >= 5 %}one-fifth column{% elsif forloop.length == 4 %}one-fourth column{% elsif forloop.length == 3 %}one-third column{% elsif forloop.length == 2 %}one-half column{% endif %} medium-down--one-whole" {{ block.shopify_attributes }}>
@@ -167,14 +167,9 @@
           {% endif %}
         </div>
 
-        {% if forloop.last and social_icons %}
-          <div class="footer-social-icons--mobile sixteen columns">
-            {% render 'social-icons' %}
-          </div>
-        {% endif %}
       {% endfor %}
 
-      <div class="one-whole column footer_credits">
+      <div class="one-whole column footer_credits" style="display: none;">
         {% if locale_selector or currency_selector or settings.show_multiple_currencies == true %}
           <div class="localization-wrap">
             {%
@@ -209,14 +204,46 @@
         {% endif %}
       </div>
     </div>
-  </section>
+    </section>
+    <div class="footer_bottom section_spacing">
+      <div class="crdeit-goesto">
+<p>
+  © 2024 JAMES Showroom - All Rights Reserved
+</p>
+      </div>
+      {% for block in section.blocks %}
+        {% if block.type == 'payment' %}
+          <div class="payment_icons">
+            {% if block.settings.image1 %}
+            <img src="{{ block.settings.image1 |  image_url }}" />
+            {% endif %}
+            {% if block.settings.image2 %}
+              <img src="{{ block.settings.image2 |  image_url }}" />
+              {% endif %}
+              {% if block.settings.image3 %}
+                <img src="{{ block.settings.image3 |  image_url }}" />
+                {% endif %}
+                {% if block.settings.image4 %}
+                  <img src="{{ block.settings.image4 |  image_url }}" />
+                  {% endif %}
+                  {% if block.settings.image5 %}
+                    <img src="{{ block.settings.image5 |  image_url }}" />
+                    {% endif %}
+                    {% if block.settings.image6 %}
+                      <img src="{{ block.settings.image6 |  image_url }}" />
+                      {% endif %}
+          </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  
 </footer>
 
 {% schema %}
 {
   "name": "Footer",
   "class": "shopify-section--footer",
-  "max_blocks": 5,
+  "max_blocks": 7,
   "settings": [
     {
       "type": "header",
@@ -403,7 +430,42 @@
           "default": false
         }
       ]
-    }
+    },
+    {
+      "type": "payment",
+      "name": "Payment Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Logo 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Logo 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Logo 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Logo 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "image5",
+          "label": "Logo 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "image6",
+          "label": "Logo 6"
+        }
+]}
   ],
   "default": {
     "blocks": [

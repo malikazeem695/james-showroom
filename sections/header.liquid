@@ -78,11 +78,11 @@
 
 <header id="header" class="mobile_nav-fixed--{{ section.settings.fixed_header }}">
   {% if section.settings.promo_text != blank %}
-    <div class="promo-banner">
+    <div class="promo-banner section_spacing">
       <div class="promo-banner__content">
         {{ section.settings.promo_text }}
       </div>
-      <div class="promo-banner__close"></div>
+      {% comment %} <div class="promo-banner__close"></div> {% endcomment %}
     </div>
   {% endif %}
 
@@ -90,13 +90,10 @@
     <details data-mobile-menu>
       <summary class="mobile_nav dropdown_link" data-mobile-menu-trigger>
         <div data-mobile-menu-icon>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          {% render 'mobile-menu-icon' %}
         </div>
 
-        <span class="mobile-menu-title">{{ 'layout.general.menu' | t }}</span>
+        <span class="mobile-menu-title">Menu</span>
       </summary>
       <div class="mobile-menu-container dropdown" data-nav>
         <ul class="menu" id="mobile_menu">
@@ -170,12 +167,19 @@
 
     <div class="top-bar--right">
       {% if section.settings.search_enabled %}
-        <a href="{{ routes.search_url }}" class="icon-search dropdown_link" title="{{ 'general.search.title' | t | escape }}" data-dropdown-rel="search"></a>
+        <a href="{{ routes.search_url }}" class="icon-search dropdown_link" title="{{ 'general.search.title' | t | escape }}" data-dropdown-rel="search">
+          {% render 'mobile-search-icon' %}
+        </a>
       {% endif %}
 
       {% if section.settings.show_cart %}
         <div class="cart-container">
-          <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant> <span class="cart_count">{{ cart.item_count }}</span></a>
+          <a href="{{ routes.cart_url }}" class="yeshereis {% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" title="{{ 'layout.general.cart' | t | escape }}" data-no-instant>
+            {% render 'trolley' %}
+            {% if cart.item_count > 0 %}
+            <span class="cart_count">{{ cart.item_count }}</span>
+            {% endif %}
+            </a>
         </div>
       {% endif %}
     </div>
@@ -227,15 +231,15 @@
       data-header-is-absolute="{% if feature_image and settings.header_background == false %}false{% endif %}"
   >
     {% if section.settings.promo_text != blank %}
-      <div class="promo-banner">
+      <div class="promo-banner section_spacing">
         <div class="promo-banner__content">
           {{ section.settings.promo_text }}
         </div>
-        <div class="promo-banner__close"></div>
+        {% comment %} <div class="promo-banner__close"></div> {% endcomment %}
       </div>
     {% endif %}
 
-    <div class="top-bar">
+    <div class="top-bar section_spacing">
       {% if section.settings.social_icons_header %}
         {% render 'social-icons' %}
       {% endif %}
@@ -272,6 +276,13 @@
           {% endif %}
 
           {% if shop.customer_accounts_enabled %}
+            {% if customer.has_account != true %}
+              <li>
+                <a href="{{ routes.account_register_url }}" class="trade-account__link">
+                {% render 'trade-account' %}  
+                <span>Trade Account</span></a>      
+              </li>
+            {% endif %}
             <li>
               <a
                 href="{{ routes.account_url }}"
@@ -281,14 +292,11 @@
                 "
                 title="{{ 'layout.customer.my_account' | t }} {% if customer %}({{ customer.email }}){% endif %}"
               >
-                {% if customer %}{{ 'layout.customer.my_account' | t }}{% else %}{{ 'layout.customer.log_in' | t }}{% endif %}
+              {% render 'login-icon' %}
+                {% if customer %}{{ 'layout.customer.my_account' | t }}{% else %}Login{% endif %}
               </a>
             </li>
-            {% if customer.has_account != true %}
-              <li>
-                <a href="{{ routes.account_register_url }}" class="trade-account__link"><span>Trade Account</span></a>      
-              </li>
-            {% endif %}
+           
           {% endif %}
           
         </ul>
@@ -296,13 +304,15 @@
         {% if section.settings.show_cart %}
           <div class="cart-container">
             <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" data-no-instant>
-              <span class="cart_count">{{ cart.item_count }}</span>
+              {% render 'cart-icon' %}
+              <span>Cart</span>
+              {% comment %} <span class="cart_count">{{ cart.item_count }}</span> {% endcomment %}
             </a>
 
             {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
               <div class="tos_warning cart_content animated fadeIn">
                 <div class="js-empty-cart__message {% if cart.item_count > 0 %}hidden{% endif %}">
-                  <p class="empty_cart">{{ 'layout.general.empty_cart' | t }}</p>
+                  <p class="empty_cart">Cart is Empty</p>
                 </div>
 
                 <form action="{{ routes.cart_url }}"
@@ -529,7 +539,7 @@
     </div>
 
     <div class="main-nav__wrapper">
-      <div class="main-nav menu-position--{{ section.settings.menu_position }} logo-alignment--{{ section.settings.logo_alignment }} logo-position--{{ section.settings.logo_position }} search-enabled--{{ section.settings.search_enabled }}" {% if section.settings.dropdown_click == true %}data-show-dropdown-on-click{% endif %}>
+      <div class="main-nav section_spacing menu-position--{{ section.settings.menu_position }} logo-alignment--{{ section.settings.logo_alignment }} logo-position--{{ section.settings.logo_position }} search-enabled--{{ section.settings.search_enabled }}" {% if section.settings.dropdown_click == true %}data-show-dropdown-on-click{% endif %}>
         {% capture logo %}
           <div class="header__logo {% if section.settings.logo_home == blank and section.settings.logo == blank %}logo--text{% else %}logo--image{% endif %}">
             <a href="{{ routes.root_url }}" title="{{ shop.name }}">
@@ -780,10 +790,10 @@
       "type": "range",
       "id": "logo_display_width",
       "label": "Logo display width",
-      "step": 5,
-      "min": 105,
-      "max": 205,
-      "default": 205,
+      "step": 2,
+      "min": 90,
+      "max": 206,
+      "default": 136,
       "unit": "px"
     },
     {

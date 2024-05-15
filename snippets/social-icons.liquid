@@ -16,11 +16,15 @@
   {% endif %}
 
   {% if settings.email_link != '' %}
-    <li><a href="mailto:{{ settings.email_link }}" title="Email {{ shop.name }}" class="icon-email"></a></li>
+    <li><a href="mailto:{{ settings.email_link }}" title="Email {{ shop.name }}" class="icon-email">
+      {% render 'email-icon' %}
+    </a></li>
   {% endif %}
 
   {% if settings.facebook_link != '' %}
-    <li><a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank" class="icon-facebook"></a></li>
+    <li><a href="{{ settings.facebook_link }}" title="{{ shop.name }} on Facebook" rel="me" target="_blank" class="icon-facebook">
+      {% render 'fb-icon' %}
+    </a></li>
   {% endif %}
 
   {% if settings.flickr_link != '' %}
@@ -32,7 +36,9 @@
   {% endif %}
 
   {% if settings.instagram_link != '' %}
-    <li><a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank" class="icon-instagram"></a></li>
+    <li><a href="{{ settings.instagram_link }}" title="{{ shop.name }} on Instagram" rel="me" target="_blank" class="icon-instagram">
+      {% render 'insta-icon' %}
+    </a></li>
   {% endif %}
 
   {% if settings.kickstarter_link != '' %}
@@ -56,7 +62,9 @@
   {% endif %}
 
   {% if settings.pinterest_link != '' %}
-    <li><a href="{{ settings.pinterest_link }}" title="{{ shop.name }} on Pinterest" rel="me" target="_blank" class="icon-pinterest"></a></li>
+    <li><a href="{{ settings.pinterest_link }}" title="{{ shop.name }} on Pinterest" rel="me" target="_blank" class="icon-pinterest">
+      {% render 'pintrest-icon' %}
+    </a></li>
   {% endif %}
 
   {% if settings.reddit_link != '' %}

@@ -762,7 +762,6 @@ window.predictiveSearch = {
   },
   _open(form, resultsContainer, animation) {
     form.classList.add('search-form--active');
-
     if (!window.PXUTheme.media_queries.medium.matches) {
       document.body.classList.add('scroll-locked');
     }
@@ -780,10 +779,10 @@ window.predictiveSearch = {
     animation.animateTo('closed');
   },
   _fetchResults(term, form, results, resultsContainer) {
-    const resourceType = form.classList.contains('search-form--blog') ? '&resources[type]=article' : '';
+    const resourceType = '&type=product,page,article';
 
     resultsContainer.setAttribute('data-loading', 'true');
-
+console.log(resourceType);
     fetch(`${window.PXUTheme.routes.predictive_search_url}?q=${encodeURIComponent(term)}${resourceType}&section_id=predictive-search`)
       .then(response => {
         if (!response.ok) {

@@ -5,44 +5,74 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "logo_r8knhe": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/f2895607159a50d5a6415356b2f71e34_1.png",
+            "text_align": "left",
+            "social_icons_footer": false
+          }
+        },
         "f45091ec-0fce-4f24-8679-b433085126b4": {
           "type": "text",
           "settings": {
-            "title": "",
-            "content": "<p><a href=\"/pages/submissions\" title=\"Submissions\"><strong>SUBMISSIONS</strong></a></p><p><a href=\"/pages/accessibility-statement\" target=\"_blank\" title=\"Accessibility Statement\">Accessibility </a></p>",
+            "title": "Submissions",
+            "content": "<p><a href=\"\/pages\/accessibility-statement\" target=\"_blank\" title=\"Accessibility Statement\">Accessibility <\/a><\/p>",
             "social_icons_footer": false
           }
         },
         "36bf1f2c-ded4-4cfc-a5cb-53f9510dfda3": {
           "type": "text",
           "settings": {
-            "title": "",
-            "content": "<p><a href=\"tel:+1 (214)2957500\" title=\"tel:+1 (214)2957500\">☎ (214) 295-7500</a> - Dallas</p><p><a href=\"tel:+1 (713)9551053\" title=\"tel:+1 (713)9551053\">☎ (713) 955-1053</a> - Houston</p><p><a href=\"tel:+1 (713)9551053\" title=\"tel:+1 (713)9551053\">☎</a> <a href=\"tel:+1 (212) 731-0838\" title=\"tel:+1 (212) 731-0838\">(212) 731-0838</a> - NYC</p>",
+            "title": "Dallas Showroom",
+            "content": "<p><a href=\"tel:+1 (214)2957500\" title=\"tel:+1 (214)2957500\">☎ (214) 295-7500<\/a><\/p><p><a href=\"mailto:dallas@jamesshowroom.com\" title=\"mailto:dallas@jamesshowroom.com\">dallas@jamesshowroom.com<\/a><\/p>",
             "social_icons_footer": false
           }
         },
-        "7a75c9c8-2f9a-4f5b-866a-cfb8cbc243e3": {
+        "text_4z7EVT": {
           "type": "text",
           "settings": {
-            "title": "",
-            "content": "<p><a href=\"mailto:dallas@jamesshowroom.com\" title=\"mailto:dallas@jamesshowroom.com\">dallas@jamesshowroom.com</a></p><p><a href=\"mailto:houston@jamesshowroom.com\" title=\"mailto:houston@jamesshowroom.com\">houston@jamesshowroom.com</a></p><p><a href=\"mailto:nyc@jamesshowroom.com\" title=\"mailto:nyc@jamesshowroom.com\">nyc@jamesshowroom.com</a></p>",
+            "title": "Houston Showroom",
+            "content": "<p><a href=\"tel:(713) 955-1053\" title=\"tel:(713) 955-1053\">☎ (713) 955-1053<\/a><\/p><p><a href=\"mailto:houston@jamesshowroom.com\" title=\"mailto:houston@jamesshowroom.com\">houston@jamesshowroom.com<\/a><\/p>",
+            "social_icons_footer": false
+          }
+        },
+        "text_GCM3Le": {
+          "type": "text",
+          "settings": {
+            "title": "NYC Showroom",
+            "content": "<p><a href=\"tel:(212) 731-0838\" title=\"tel:(212) 731-0838\">(212) 731-0838<\/a><\/p><p><a href=\"mailto:nyc@jamesshowroom.com\" title=\"mailto:nyc@jamesshowroom.com\">nyc@jamesshowroom.com<\/a><\/p>",
             "social_icons_footer": false
           }
         },
         "f2feb725-c46f-4390-a003-b4100c6365ec": {
           "type": "text",
           "settings": {
-            "title": "",
+            "title": "Stay Connected",
             "content": "",
             "social_icons_footer": true
+          }
+        },
+        "payment_3LzFQW": {
+          "type": "payment",
+          "settings": {
+            "image1": "shopify:\/\/shop_images\/Processor_5.svg",
+            "image2": "shopify:\/\/shop_images\/Processor_7.svg",
+            "image3": "shopify:\/\/shop_images\/Processor_8.svg",
+            "image4": "shopify:\/\/shop_images\/Processor_9.svg",
+            "image5": "shopify:\/\/shop_images\/Processor_10.svg",
+            "image6": "shopify:\/\/shop_images\/Processor_6.svg"
           }
         }
       },
       "block_order": [
+        "logo_r8knhe",
         "f45091ec-0fce-4f24-8679-b433085126b4",
         "36bf1f2c-ded4-4cfc-a5cb-53f9510dfda3",
-        "7a75c9c8-2f9a-4f5b-866a-cfb8cbc243e3",
-        "f2feb725-c46f-4390-a003-b4100c6365ec"
+        "text_4z7EVT",
+        "text_GCM3Le",
+        "f2feb725-c46f-4390-a003-b4100c6365ec",
+        "payment_3LzFQW"
       ],
       "settings": {
         "copyright_text": "",
