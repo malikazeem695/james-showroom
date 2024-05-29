@@ -37,7 +37,7 @@
           "settings": {
           }
         },
-        "tabs_VKrtA3": {
+        "tabs_HVJfNq": {
           "type": "tabs",
           "settings": {
             "show_product_description": false,
@@ -57,7 +57,7 @@
         "form",
         "description",
         "share",
-        "tabs_VKrtA3"
+        "tabs_HVJfNq"
       ],
       "settings": {
         "product_breadcrumb": false,
@@ -92,27 +92,13 @@
       "settings": {
         "show_product_recommendations": true,
         "wide_display": false,
-        "product_recommendations_style": "grid",
-        "product_recommendations_heading": "You May Also Like",
+        "product_recommendations_style": "slider",
+        "product_recommendations_heading": "You might also like",
         "products_per_row": 4,
-        "recommended_products_limit": 10
+        "recommended_products_limit": 8
       }
     },
-    "newsletter": {
-      "type": "newsletter",
-      "disabled": true,
-      "settings": {
-        "wide_display": true,
-        "display_first_name": false,
-        "display_last_name": false,
-        "newsletter_title": "Subscribe",
-        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
-        "newsletter_section_text_align": "center",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "rca_products_reccomendation_mrVX7E": {
+    "rca_products_reccomendation_kM6DGf": {
       "type": "rca-products-reccomendation",
       "settings": {
         "show_product_recommendations": true,
@@ -123,7 +109,7 @@
         "recommended_products_limit": 10
       }
     },
-    "newsletter_DEBUTa": {
+    "newsletter": {
       "type": "newsletter",
       "settings": {
         "wide_display": false,
@@ -142,8 +128,7 @@
     "main",
     "recently-viewed",
     "recommendations",
-    "newsletter",
-    "rca_products_reccomendation_mrVX7E",
-    "newsletter_DEBUTa"
+    "rca_products_reccomendation_kM6DGf",
+    "newsletter"
   ]
 }
