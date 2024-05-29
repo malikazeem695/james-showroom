@@ -113,6 +113,16 @@
     </div>
   {% endif %}
 
+  {% if product.tags contains 'TX' or product.tags contains 'tx' %}
+    <div class="product_badge">
+      TX
+    </div>
+    {% elsif product.tags contains 'NYC' or product.tags contains 'nyc' %}
+      <div class="product_badge">
+      NYC
+    </div>
+    {% endif %}
+
   {% if settings.quick_shop_style == 'inline' and settings.quick_shop_enabled %}
     {% unless collection_handles contains 'coming-soon' %}
       <div

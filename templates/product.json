@@ -36,6 +36,19 @@
           "disabled": true,
           "settings": {
           }
+        },
+        "tabs_VKrtA3": {
+          "type": "tabs",
+          "settings": {
+            "show_product_description": false,
+            "show_tabs_below_product_gallery": false,
+            "tab_heading_1": "Care Instructions",
+            "tab_text_1": "<p>Lorem ipsum dolor sit amet consectetur. Tempor ipsum convallis dolor mauris tempor ullamcorper pulvinar. Egestas eget justo aliquet purus sed eu sit massa. Netus arcu faucibus sed nisi diam nibh. Odio sed lectus vitae nulla nec mattis maecenas egestas ut. Tortor elit quis porta odio.<\/p>",
+            "tab_heading_2": "Tab 02",
+            "tab_text_2": "<p>Use this text to share information about your product.<\/p>",
+            "tab_heading_3": "Tab 03",
+            "tab_text_3": "<p>Use this text to share information about your product.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -43,10 +56,11 @@
         "price",
         "form",
         "description",
-        "share"
+        "share",
+        "tabs_VKrtA3"
       ],
       "settings": {
-        "product_breadcrumb": true,
+        "product_breadcrumb": false,
         "media_position": "is-flex-row",
         "set_product_height": false,
         "product_height": 500,
@@ -74,13 +88,14 @@
     },
     "recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "show_product_recommendations": true,
         "wide_display": false,
-        "product_recommendations_style": "slider",
-        "product_recommendations_heading": "You might also like",
+        "product_recommendations_style": "grid",
+        "product_recommendations_heading": "You May Also Like",
         "products_per_row": 4,
-        "recommended_products_limit": 8
+        "recommended_products_limit": 10
       }
     },
     "newsletter": {
@@ -91,7 +106,31 @@
         "display_first_name": false,
         "display_last_name": false,
         "newsletter_title": "Subscribe",
-        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …</p>",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "rca_products_reccomendation_mrVX7E": {
+      "type": "rca-products-reccomendation",
+      "settings": {
+        "show_product_recommendations": true,
+        "wide_display": false,
+        "product_recommendations_style": "grid",
+        "product_recommendations_heading": "You may also like",
+        "products_per_row": 4,
+        "recommended_products_limit": 10
+      }
+    },
+    "newsletter_DEBUTa": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": false,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Be Inspired & Stay Informed",
+        "newsletter_text": "",
         "newsletter_section_text_align": "center",
         "css_class": "",
         "custom_css": ""
@@ -103,6 +142,8 @@
     "main",
     "recently-viewed",
     "recommendations",
-    "newsletter"
+    "newsletter",
+    "rca_products_reccomendation_mrVX7E",
+    "newsletter_DEBUTa"
   ]
 }

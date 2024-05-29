@@ -4,7 +4,7 @@
   data-section-id="{{ section.id }}"
 >
 </script>
-<div class="section">
+<div class="section_spacing pdp_section">
   <div class="container">
     {% if section.settings.product_breadcrumb %}
       <div class="breadcrumb-wrapper one-whole column">
@@ -465,3 +465,35 @@
 }
 
 {% endschema %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to change the 'd' attribute value
+    function changeSvgPath() {
+        var svgPathElement = document.querySelector('.gallery-arrows--true .product_gallery .flickity-prev-next-button.previous path');
+        if (svgPathElement) {
+            svgPathElement.setAttribute('d', 'M12.6667 7.99998H3.33334M3.33334 7.99998L8.00001 12.6666M3.33334 7.99998L8.00001 3.33331'); // Replace with your desired 'd' value
+            observer.disconnect(); // Stop observing once the element is found and changed
+        }
+    }
+
+    // Set up the MutationObserver
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.addedNodes.length > 0) {
+                changeSvgPath();
+            }
+        });
+    });
+
+    // Configuration of the observer
+    var config = { childList: true, subtree: true };
+
+    // Start observing the document body for changes
+    observer.observe(document.body, config);
+
+    // Initial check in case the element is already present
+    changeSvgPath();
+});
+
+  </script>

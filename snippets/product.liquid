@@ -59,9 +59,10 @@
   span.free-price-text span {
     display: none;
   }
+  
   .option_title .swatch-color-display.normone, span.swatch-color-display.colorone {
-    font-size: 15px;
-    padding-left: 2px;
+    /* font-size: 15px;
+    padding-left: 2px; */
   }
   .swatch_options input:checked + .swatch-element:not(.color) label {
     background: #C7A45C;
@@ -249,7 +250,7 @@ button.action_button {
                   </a>
                 </h2>
               {% endif %}
-              <div class="feature-divider"></div>
+              {% comment %} <div class="feature-divider"></div> {% endcomment %}
             {% when 'price' %}
               {% if onboarding %}
                 <p class="modal_price hidden">
