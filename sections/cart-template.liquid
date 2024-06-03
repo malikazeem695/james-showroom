@@ -13,16 +13,16 @@
   endif
 %}
 
-<section class="section">
+<section class="{% if cart.item_count == 0 %}empty_cart_spacing {% else %}section_spacing{% endif %}">
   <div class="container content">
-    <div class="one-whole column">
+    {% comment %} <div class="one-whole column">
       <h1>{{ 'cart.general.title' | t }}</h1>
       <div class="feature-divider"></div>
-    </div>
+    </div> {% endcomment %}
 
     {% if cart.item_count == 0 %}
       <div
-        class="
+        class="empty-cart 
           three-eighths
           columns
           medium-down--one-whole
@@ -31,17 +31,17 @@
         "
       >
         <p class="quote">
-          {{ 'cart.general.continue_browsing_html' | t }}
+          There are no items in your cart.
         </p>
         <a
           class="
-            cart__continue-shopping
-            global-button
-            global-button--text
+          btn btn-primary
           "
           href="{{ continue_url }}"
         >
-          {{ 'cart.general.continue_shopping' | t }}
+        <span>{{ 'cart.general.continue_shopping' | t }}</span>
+    {% render 'right-brand-arrow' %}
+          
         </a>
       </div>
       <br />
@@ -75,7 +75,12 @@
 
       <form action="{{ routes.cart_url }}" method="post" id="cart_form" data-cart-form="cart-template" data-total-discount="{{ cart.total_discount }}">
         <div class="cart__wrapper is-flex is-flex-wrap">
-          <div class="two-thirds columns medium-down--one-whole">
+          <div class="two-thirds columns medium-down--one-whole cart_items">
+            <div class="free_samples_message">
+              <p>
+                15 Free Samples Per Order
+              </p>
+            </div>
             {%- assign total_saving = 0 -%}
 
             {% for item in cart.items %}
@@ -182,18 +187,18 @@
 
                 <div class="product-quantity-box left">
                   <span class="ss-icon product-minus js-change-quantity" data-func="minus">
-                    <span class="icon-minus"></span>
+                    {% render 'minus-icon' %}
                   </span>
 
                   <input type="number" min="0"   size="2" class="quantity" name="updates[]" id="updates_{{ item.id }}" old-val="{{ item.quantity }}" value="{{ item.quantity }}" data-cart-quantity-input="cart-template" {% if settings.limit_quantity and item.variant.inventory_management != blank and item.variant.inventory_quantity > 0 and item.variant.inventory_policy == "deny" %}max="{{ item.variant.inventory_quantity }}"{% endif %} />
 
                   <span class="ss-icon product-plus js-change-quantity" data-func="plus">
-                    <span class="icon-plus"></span>
+                    {% render 'plus-icon' %}
                   </span>
                 </div>
 
                 <p class="price_total">
-                  <strong>{{ 'cart.general.total' | t }}:</strong>
+                  <strong>Total:</strong>
 
                   {% if item.line_level_discount_allocations.size > 0 %}
                     <span class="money">
@@ -212,13 +217,15 @@
                   </span>
                 </p>
 
-                <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="cart__remove-btn" data-line-id="{{ forloop.index }}" data-remove-item="cart-template"><span class="remove-text">{{ 'cart.general.remove' | t }}</span> <span class="remove-icon"></span></a>
+                <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="cart__remove-btn" data-line-id="{{ forloop.index }}" data-remove-item="cart-template"><span class="remove-text">{{ 'cart.general.remove' | t }}</span> 
+                {% render 'cross-icon' %}
+                </a>
               </div>
             </div>
           {% endfor %}
         </div>
 
-        <div class="one-third column medium-down--one-whole">
+        <div class="one-third column medium-down--one-whole right_side">
           <div class="subtotal">
             {% if cart.cart_level_discount_applications != blank %}
               <p class="cart_discounts js-cart_discounts sale">
@@ -261,9 +268,9 @@
               {%- endif -%}
             {%- endcapture -%}
 
-            <p class="cart-message meta">{{ taxes_shipping_checkout }}</p>
+            {% comment %} <p class="cart-message meta">{{ taxes_shipping_checkout }}</p> {% endcomment %}
 
-            {% if section.settings.display_savings and total_saving > 0 or section.settings.display_savings and cart.total_discount > 0 %}
+            {% if section.settings.display_savings and total_saving > 0 or section.settings.display_savings and cart.total_discount > 0 or cart.total_price == 0 %}
               <p class="cart_savings js-cart_savings sale">
                 <span class="right">
                   <span class="money">
@@ -274,34 +281,18 @@
                     %}
                   </span>
                 </span>
-                <span>{{ 'layout.general.savings' | t }}</span>
+                <span>Total Savings</span>
               </p>
             {% endif %}
 
-            {% unless shop.enabled_currencies.size > 1 %}
-              <p>
-                <small>{{ 'cart.general.orders_processed_in_currency_html' | t: currency: shop.currency }}</small>
-              </p>
-            {% endunless %}
+            
 
             {% if section.settings.display_special_instructions %}
               <label for="note">{{ 'cart.general.note' | t: shop_name: shop.name }}:</label>
               <textarea id="note" name="note" rows="2">{{ cart.note }}</textarea>
             {% endif %}
 
-            {% if settings.display_tos_checkbox %}
-              <p>
-                <input type="checkbox" class="tos_agree" id="cart_agree" required />
-
-                <label class="tos_label" for="cart_agree">
-                  {{ 'cart.general.agree_to_terms_html' | t }}
-                </label>
-
-                {% if settings.tos_page != blank %}
-                  <a href="{{ settings.tos_page }}" target="_blank" class="tos_icon">{{ 'cart.general.view_terms' | t }}</a>
-                {% endif %}
-              </p>
-            {% endif %}
+            
 
             {% if section.settings.cart_message != blank %}
               {{ section.settings.cart_message }}
@@ -310,7 +301,20 @@
                         You have reached the limit of 15 samples per order
                       </div>
             <p class="tos_warning checkout_button">
-              <button type="submit" {% if cart.item_count >15%} style="display:none" {% endif %} class="global-button global-button--primary add_to_cart" id="checkout" name="checkout" data-cart-checkout-button>{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}{{ 'cart.general.checkout' | t }}</button>
+              {% if settings.display_tos_checkbox %}
+                <p class="terms_cond_box">
+                  <input type="checkbox" class="tos_agree" id="cart_agree" required />
+  
+                  <label class="tos_label" for="cart_agree">
+                    I Agree with the Terms & Conditions
+                  </label>
+  
+                  {% if settings.tos_page != blank %}
+                    <a href="{{ settings.tos_page }}" target="_blank" class="tos_icon">{{ 'cart.general.view_terms' | t }}</a>
+                  {% endif %}
+                </p>
+              {% endif %}
+              <button type="submit" {% if cart.item_count >15%} style="display:none" {% endif %} class="btn btn-primary global-button global-button--primary add_to_cart" id="checkout" name="checkout" data-cart-checkout-button>{% if settings.show_lock_icon %}<span class="icon-lock"></span>{% endif %}<span>Checkout</span></button>
             </p>
 
             {% if content_for_additional_checkout_buttons %}

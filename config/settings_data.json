@@ -125,6 +125,7 @@
     "quick_shop_enabled": false,
     "quick_shop_style": "popup",
     "cart_action": "ajax",
+    "show_lock_icon": false,
     "display_tos_checkbox": false,
     "tos_page": "",
     "go_to_checkout": true,
