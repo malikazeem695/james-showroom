@@ -101,7 +101,9 @@
           {% elsif block.type == 'link_list' %}
             <div class="footer_menu">
               {% if block.settings.menu != blank %}
-                <h6>{{ linklists[block.settings.menu].title }}<span class="right icon-down-arrow"></span></h6>
+                <h6>{{ linklists[block.settings.menu].title }}<span class="right icon-down-arrow">
+                  {% render 'icon-down' %}
+                </span></h6>
 
                 <div class="toggle_content">
                   <ul>
@@ -129,12 +131,15 @@
           {% elsif block.type == 'text' %}
             <div class="footer_content footer-text {% if block.settings.title == blank %}no-footer-title{% endif %}">
               {% if block.settings.title != blank %}
-                <h6>{{ block.settings.title }}<span class="right icon-down-arrow"></span></h6>
+                <h6>{{ block.settings.title }}<span class="right icon-down-arrow">
+                  {% render 'icon-down' %}
+                </span></h6>
               {% endif %}
 
               {% if block.settings.content %}
                 <div class="toggle_content">
                   {{ block.settings.content }}
+                 
                 </div>
               {% endif %}
             </div>
