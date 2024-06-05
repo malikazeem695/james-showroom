@@ -5,7 +5,7 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "logo_r8knhe": {
+        "logo_V8Xbpp": {
           "type": "logo",
           "settings": {
             "image": "shopify:\/\/shop_images\/f2895607159a50d5a6415356b2f71e34_1.png",
@@ -13,7 +13,7 @@
             "social_icons_footer": false
           }
         },
-        "f45091ec-0fce-4f24-8679-b433085126b4": {
+        "text_6qcN4r": {
           "type": "text",
           "settings": {
             "title": "Submissions",
@@ -21,7 +21,7 @@
             "social_icons_footer": false
           }
         },
-        "36bf1f2c-ded4-4cfc-a5cb-53f9510dfda3": {
+        "text_bti3b8": {
           "type": "text",
           "settings": {
             "title": "Dallas Showroom",
@@ -29,7 +29,7 @@
             "social_icons_footer": false
           }
         },
-        "text_4z7EVT": {
+        "text_nX7jBf": {
           "type": "text",
           "settings": {
             "title": "Houston Showroom",
@@ -37,7 +37,7 @@
             "social_icons_footer": false
           }
         },
-        "text_GCM3Le": {
+        "text_C8tWLR": {
           "type": "text",
           "settings": {
             "title": "NYC Showroom",
@@ -45,7 +45,7 @@
             "social_icons_footer": false
           }
         },
-        "f2feb725-c46f-4390-a003-b4100c6365ec": {
+        "text_jbVUJc": {
           "type": "text",
           "settings": {
             "title": "Stay Connected",
@@ -53,7 +53,7 @@
             "social_icons_footer": true
           }
         },
-        "payment_3LzFQW": {
+        "payment_q9rWpV": {
           "type": "payment",
           "settings": {
             "image1": "shopify:\/\/shop_images\/Processor_5.svg",
@@ -66,13 +66,13 @@
         }
       },
       "block_order": [
-        "logo_r8knhe",
-        "f45091ec-0fce-4f24-8679-b433085126b4",
-        "36bf1f2c-ded4-4cfc-a5cb-53f9510dfda3",
-        "text_4z7EVT",
-        "text_GCM3Le",
-        "f2feb725-c46f-4390-a003-b4100c6365ec",
-        "payment_3LzFQW"
+        "logo_V8Xbpp",
+        "text_6qcN4r",
+        "text_bti3b8",
+        "text_nX7jBf",
+        "text_C8tWLR",
+        "text_jbVUJc",
+        "payment_q9rWpV"
       ],
       "settings": {
         "copyright_text": "",
