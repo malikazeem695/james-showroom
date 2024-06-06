@@ -994,6 +994,69 @@ letter-spacing: -0.42px;
             width: 100%;
             border: 1px solid var(--theme-surfaces-secondary-base, #648390);
         }
+        .shopify-section--page-faq-template .section{
+width: 737px;
+max-width: 737px;
+        }
+        .shopify-section--page-faq-template .container{
+            padding: 80px 0 0;
+        }
+        .shopify-section--page-faq-template .container .column{
+            margin: unset;
+            width: 100%;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion{
+            margin: unset;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button{
+            padding-top: 8px;
+            color: var(--theme-text-shade-base, #000);
+font-family: "Superior Title";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion p a, .shopify-section--page-faq-template .container .column .faqAccordion p, .shopify-section--page-faq-template .container .column .faqAccordion p strong, .shopify-section--page-faq-template .container .column .faqAccordion p a strong{
+            font-family: "General Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    color: #000000;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true]{
+            border: unset;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dd[aria-hidden=false]{
+            padding-top: unset;
+            padding-bottom: 16px;
+            border-bottom: solid 1px #D4D4D8;
+            margin: unset;
+            padding-left: 44px;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button::after{
+            top: 8px;
+            transform: unset;  
+            width: 14px;
+        }
+        
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt:first-child>button {
+padding-top: unset;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt:first-child>button::after {
+            top: 0;
+            transform: unset;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button{
+            padding-left: 44px;
+            padding-bottom: 16px;
+    border-color: #D4D4D8;
+    padding-right: unset;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button::after{
+left: 12px;
+        }
         @media only screen and (max-width: 1250px) {
             .shopify-section--footer .footer .one-fifth.column.medium-down--one-whole {
                 width: 20%;
@@ -1019,6 +1082,32 @@ letter-spacing: -0.42px;
             display: none;
         }
 @media only screen and (max-width: 798px) {
+    .shopify-section--page-faq-template .section {
+        width: 100%;
+        max-width: 100%;
+    }
+    .shopify-section--page-faq-template .container {
+        padding: 48px 0 0;
+    }
+    body.page-faq .section-hero-banner{
+        display: none;
+    }
+    .shopify-section--page-faq-template .container .column .faqAccordion>dd[aria-hidden=false] {
+        padding-left: 30px;
+    }
+    .shopify-section--page-faq-template .container .column .faqAccordion p a, .shopify-section--page-faq-template .container .column .faqAccordion p, .shopify-section--page-faq-template .container .column .faqAccordion p strong, .shopify-section--page-faq-template .container .column .faqAccordion p a strong{
+        font-size: 12px;
+        line-height: 19px;
+    }
+    .shopify-section--page-faq-template .container .column .faqAccordion {
+        padding: 0 16px;
+    }
+    .shopify-section--page-faq-template .container .column .faqAccordion>dt>button::after {
+        left: 0;
+    }
+    .shopify-section--page-faq-template .container .column .faqAccordion>dt>button {
+        padding-left: 30px;
+    }
     .footer .footer-menu-wrap h6 > span svg{
         display: block;
     }
