@@ -1059,6 +1059,95 @@ font-style: normal;
 font-weight: 400;
 line-height: 26px;
         }
+        .page_login .container{
+            padding: 80px 0 0;
+            place-content: center;
+        }
+        .page_login .container .columns h2{
+            color: #353E44;
+            margin-bottom: 20px;
+        }
+        .page_login .form_fields input {
+            display: flex;
+height: 52px;
+padding: var(--dimensions-spacing-3xs, 8px) var(--dimensions-spacing-sm, 20px);
+align-items: center;
+gap: 4px;
+align-self: stretch;
+border: 1px solid var(--theme-surfaces-neutral-mute, #E2E8F0);
+background: var(--theme-surfaces-neutral-soft, #F8FAFC);
+margin-bottom: 8px;
+        }
+        .page_login p.signup-link a#customer_register_link {
+            color: var(--theme-text-primary-base, #B28940);
+            text-align: center;
+            font-family: "General Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            text-decoration-line: underline;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            gap: 8px;
+        }
+        .page_login p.signup-link svg path{
+            stroke: #B28940;
+        }
+        .page_login p.signup-link{
+            color: var(--theme-text-shade-base, #000);
+text-align: center;
+font-family: "General Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 19px;
+display: flex;
+place-content: center;
+place-items: center;
+gap: 8px;
+        }
+        section.section.page_login {
+            max-width: 100%;
+            width: 100%;
+        }
+        .page_login .form-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .page_login .form-footer button{
+            padding: 12px;
+            border-radius: unset;
+        }
+        .page_login .form_fields a.forgot_password {
+            color: var(--theme-text-primary-base, #B28940);
+            text-align: center;
+            font-family: "General Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            text-decoration-line: underline;
+            text-underline-offset: 2px;
+        }
+        .page_login .form_fields label {
+            color: var(--theme-text-shade-base, #000);
+            font-family: "Superior Title";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            text-transform: capitalize;
+            margin-bottom: 4px;
+        }
+        .page_login .container .columns{
+            margin: unset;
+            width: 737px;
+            left: unset;
+        }
         section.section.template_accessibility-statement .one-whole.column .page-section p,  section.section.template_accessibility-statement .one-whole.column .page-section p span{
             color: var(--theme-text-shade-base, #000);
 
@@ -1131,6 +1220,24 @@ left: 12px;
             display: none;
         }
 @media only screen and (max-width: 798px) {
+    .page_login .container {
+        padding: 48px 16px 0;
+    }
+    .page_login .container .columns h2 {
+        margin-bottom: 28px;
+    }
+    .page_login .form-footer{
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 28px;
+    }
+    .page_login .form-footer button{
+        width: 100%;
+    }
+    .page_login p.signup-link{
+        width: 100%;
+        place-content: end;
+    }
     section.section.template_accessibility-statement .container {
         padding: 48px 16px 0;
     }
