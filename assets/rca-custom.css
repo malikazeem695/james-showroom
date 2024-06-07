@@ -1059,7 +1059,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 26px;
         }
-        .page_login .container{
+        .page_login .container, .account_order_page .container{
             padding: 80px 0 0;
             place-content: center;
         }
@@ -1108,7 +1108,114 @@ place-content: center;
 place-items: center;
 gap: 8px;
         }
-        section.section.page_login {
+        .account_order_page .container .column.one-half{
+            margin: unset;
+            width: 50%;
+            margin-bottom: 36px;
+        }
+        .account_order_page .container h4.name{
+            margin-bottom: 12px;
+        }
+        .account_order_page .container p.email.note {
+            color: var(--theme-text-shade-base, #000);
+            font-family: "General Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            margin-bottom: 20px;
+        }
+        .account_order_page .container .address p {
+            margin-bottom: unset;
+            color: #000000;
+        }
+        .account_order_page .container .address p.more_addresses{
+            color: #B28940;
+            margin-top: 4px;
+        }
+        .account_order_page .container .address p.more_addresses a{
+            color: var(--theme-text-primary-base, #B28940);
+            font-family: "General Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            text-decoration-line: underline;
+            text-underline-offset: 2px;
+        }
+        .account_order_page .container h3.primary_address {
+            color: var(--theme-text-shade-base, #000);
+            font-family: "Superior Title";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 34px;
+            letter-spacing: -0.42px;
+            margin-bottom: 12px;
+        }
+        .account_order_page .container h4.name, .account_order_page .container h4.name a{
+            color: var(--theme-text-primary-base, #B28940);
+            font-family: "Superior Title";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 34px;
+            letter-spacing: -0.42px;
+        }
+        .account_order_page .container .account-main{
+margin: unset;
+width: 66.666%;
+border-left: 1px solid var(--theme-surfaces-primary-base, #C6A55D);
+    min-height: 100px;
+    padding-left: 16px;
+        }
+        .account_order_page .container .account-main p{
+            color: #000000;
+        }
+        .account_order_page .container .account-main h3{
+            color: var(--theme-text-shade-base, #000);
+
+/* 21  |  Heading 03/Bold */
+font-family: "Superior Title";
+font-size: 21px;
+font-style: normal;
+font-weight: 400;
+line-height: 34px; /* 161.905% */
+letter-spacing: -0.42px;
+margin-bottom: 12px;
+        }
+        .account_order_page .container .account-sidebar{
+            margin: unset;
+            padding: unset;
+            border: unset;
+            width: 33.33%;
+        }
+
+        .account_order_page .container .column.one-half.account-header-logout{
+            display: flex;
+            place-content: end;
+            place-items: center;
+            margin-bottom: 36px;
+        }
+        
+a#customer_logout_link {
+    color: var(--theme-text-primary-base, #B28940);
+    font-family: "General Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    text-underline-offset: 2px;
+}
+        .account_order_page .container .column h2{
+            color: #353E44;
+        }
+        .account_order_page .container{
+            max-width: 848px;
+        }
+        section.section.page_login, section.section.account_order_page {
             max-width: 100%;
             width: 100%;
         }
@@ -1220,7 +1327,29 @@ left: 12px;
             display: none;
         }
 @media only screen and (max-width: 798px) {
-    .page_login .container {
+    .account_order_page .container .column.one-half{
+        width: 70%;
+    }
+    .account_order_page .container .column.one-half.account-header-logout{
+        width: 30%;
+    }
+    .account_order_page .container .account-sidebar{
+        width: 100%;
+    }
+    .account_order_page .container .account-main{
+        width: 100%;
+        padding: unset;
+        border: unset;
+        min-height: 50px;
+    }
+    .account_order_page .container .address{
+        margin-bottom: 20px;
+    }
+    .account_order_page .container .column h2{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .page_login .container, .account_order_page .container {
         padding: 48px 16px 0;
     }
     .page_login .container .columns h2 {
