@@ -1040,6 +1040,55 @@ line-height: 26px;
             transform: unset;  
             width: 14px;
         }
+        section.section.template_accessibility-statement .container{
+            padding: 80px 80px 0;
+        }
+        section.section.template_accessibility-statement{
+            width: 100%;
+            max-width: 100%;
+        }
+        section.section.template_accessibility-statement .container h1{
+            color: #000000;
+            margin-bottom: 4px;
+        }
+        section.section.template_accessibility-statement .container h4{
+            color: var(--theme-text-shade-base, #000);
+font-family: "Superior Title";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+        }
+        section.section.template_accessibility-statement .one-whole.column .page-section p,  section.section.template_accessibility-statement .one-whole.column .page-section p span{
+            color: var(--theme-text-shade-base, #000);
+
+/* 16  |  Paragraph/Regular */
+font-family: "General Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 162.5% */
+        }
+        section.section.template_accessibility-statement .one-whole.column .page-section p a{
+            color: var(--theme-text-primary-base, #B28940);
+font-family: "General Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+text-decoration-line: underline;
+text-underline-offset: 3px;
+        }
+        section.section.template_accessibility-statement .one-whole.column .page-section h4{
+            margin-bottom: 8px;
+        }
+        section.section.template_accessibility-statement .one-whole.column {
+            margin: unset;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            width: 100%;
+        }
         
         .shopify-section--page-faq-template .container .column .faqAccordion>dt:first-child>button {
 padding-top: unset;
@@ -1082,6 +1131,17 @@ left: 12px;
             display: none;
         }
 @media only screen and (max-width: 798px) {
+    section.section.template_accessibility-statement .container {
+        padding: 48px 16px 0;
+    }
+    section.section.template_accessibility-statement .container h1{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    section.section.template_accessibility-statement .one-whole.column .page-section p, section.section.template_accessibility-statement .one-whole.column .page-section p span{
+        font-size: 12px;
+        line-height: 19px;
+    }
     .shopify-section--page-faq-template .section {
         width: 100%;
         max-width: 100%;
