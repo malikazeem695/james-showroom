@@ -8,6 +8,14 @@
     "newsletter": {
       "type": "newsletter",
       "settings": {
+        "wide_display": false,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Be Inspired & Stay Informed",
+        "newsletter_text": "",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
       }
     }
   },
