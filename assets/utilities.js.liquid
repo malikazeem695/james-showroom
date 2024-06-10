@@ -763,7 +763,7 @@ window.predictiveSearch = {
   _open(form, resultsContainer, animation) {
     form.classList.add('search-form--active');
     if (!window.PXUTheme.media_queries.medium.matches) {
-      document.body.classList.add('scroll-locked');
+      // document.body.classList.add('scroll-locked');
     }
 
     animation.animateTo('open');
@@ -773,7 +773,7 @@ window.predictiveSearch = {
     form.classList.remove('search-form--active');
 
     if (!window.PXUTheme.media_queries.medium.matches) {
-      document.body.classList.remove('scroll-locked');
+      // document.body.classList.remove('scroll-locked');
     }
 
     animation.animateTo('closed');

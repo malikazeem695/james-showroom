@@ -512,6 +512,9 @@ line-height: 19px; /* 158.333% */
         font-size: 0;
         line-height: 0;
     }
+    .search-form--header .search-form__input[type=text]::placeholder{
+        color: #94A3B8;
+    }
     .nav-desktop__tier-1 .nav-desktop__tier-1-link{
         display: flex;
         justify-content: center;
@@ -521,7 +524,7 @@ line-height: 19px; /* 158.333% */
     }
     .search-form__input-wrapper{
         display: flex;
-        max-height: 48px;
+        max-height: 50px;
         width: 224px;
         padding: 4px 4px 4px var(--dimensions-spacing-sm, 20px);
         justify-content: space-between;

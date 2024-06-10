@@ -1,20 +1,5 @@
 {
   "sections": {
-    "935023ac-3651-4a40-940e-5427582c6dd0": {
-      "type": "apps",
-      "blocks": {
-        "31c1539d-9449-4408-b486-a20269afcbda": {
-          "type": "shopify://apps/boost-ai-search-discovery/blocks/product-filter/7fc998ae-a150-4367-bab8-505d8a4503f7",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "31c1539d-9449-4408-b486-a20269afcbda"
-      ],
-      "settings": {
-      }
-    },
     "main": {
       "type": "collection-template",
       "blocks": {
@@ -39,7 +24,7 @@
           "settings": {
             "sort-dropdown-a-check": true,
             "filter1heading": "Content",
-            "sort_a": "Cotton, Leather, Linen, Linen/Cotton, Outdoor, Performance, Silk, Woven, Clay Coated Paper, Grasscloth, Paperweave"
+            "sort_a": "Cotton, Leather, Linen, Linen\/Cotton, Outdoor, Performance, Silk, Woven, Clay Coated Paper, Grasscloth, Paperweave"
           }
         },
         "b180c2eb-3e51-4b12-b8bb-2f047e113d16": {
@@ -88,17 +73,31 @@
         "display_first_name": false,
         "display_last_name": false,
         "newsletter_title": "Subscribe",
-        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …</p>",
+        "newsletter_text": "<p>Sign up to get the latest on sales, new releases and more …<\/p>",
         "newsletter_section_text_align": "center",
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "33ee8e7f-b39c-4f3a-b360-d78dc0b7b3f1": {
+      "type": "apps",
+      "blocks": {
+        "a395917d-29ba-451c-845f-457678c3e33a": {
+          "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/filter-product-list-ssr\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "a395917d-29ba-451c-845f-457678c3e33a"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
-    "935023ac-3651-4a40-940e-5427582c6dd0",
     "main",
-    "newsletter"
-  ],
-  "wrapper": ".boost-sd__product-filter-fallback"
+    "newsletter",
+    "33ee8e7f-b39c-4f3a-b360-d78dc0b7b3f1"
+  ]
 }

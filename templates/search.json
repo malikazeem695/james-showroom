@@ -2,11 +2,28 @@
   "sections": {
     "main": {
       "type": "search",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "ba5789b6-a0e2-4c06-b239-6a281bcd5e37": {
+      "type": "apps",
+      "blocks": {
+        "dae1daeb-2284-4766-a974-d983f7ca2783": {
+          "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/filter-product-list-ssr\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "dae1daeb-2284-4766-a974-d983f7ca2783"
+      ],
       "settings": {
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "ba5789b6-a0e2-4c06-b239-6a281bcd5e37"
   ]
 }
