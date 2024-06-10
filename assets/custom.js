@@ -465,5 +465,12 @@ $('.boost-sd__quantity').find('.boost-sd__quantity-btn-wrapper:eq(1)').find('.bo
   });
   });
 
+  function redirectToLink(event) {
+    // Get the href attribute of the clicked element
+    var href = event.getAttribute('href');
+    // Redirect to the link
+    window.location.href = href;
+  }
+
  
   

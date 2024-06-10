@@ -230,7 +230,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/18a84a414511ba7c77c78b099c4168d9.png",
             "title": "Caitlain McGauley",
-            "link": "shopify:\/\/collections\/botanica-trading-wallpaper"
+            "link": "shopify:\/\/collections\/caitlin-mcgauley"
           }
         },
         "image_YacKzq": {
@@ -289,11 +289,11 @@
         "bg_color": "#648390",
         "image_alignment": "left",
         "desktop_height": 540,
-        "image": "shopify:\/\/shop_images\/9a8d200e55d1de99f74e6e38179d6691.png",
+        "image": "shopify:\/\/shop_images\/fe5d66092813ff1c3b2c872ef980a7eb_2.png",
         "heading": "Penny Morrison Accessories",
         "text": "JAMES is your home for all things Penny Morrison!\n<br><br>\n\nFrom her luxurious fabrics and wallpapers, to her beautiful bespoke lamps, lampshades and everything in between. <br><br>\n\nContact your nearest showroom to see what we have in stock or have us ship directly to you or your client.",
         "link_text": "View all Penny Morrison accessories",
-        "link_url": "shopify:\/\/collections"
+        "link_url": "shopify:\/\/pages\/penny-morrison-textiles-accessories"
       }
     },
     "collections_tab_Xf643N": {
@@ -361,7 +361,7 @@
             "heading": "Introducing Carolina Irving & Daughters",
             "text": "We are thrilled to welcome carolina irving & daughters to our texas showroom collection. Founded by textile designer carolina irving , with her daughters olympia and ariadne irving, each piece is hand-made by local artisans in independent, family-run ateliers. Click the link below to explore their offerings and let us know what you need to set your table in style!",
             "link_text": "Visit the Carolina Irving & Daughters website",
-            "link_url": "shopify:\/\/collections"
+            "link_url": "shopify:\/\/collections\/carolina-irving-daughters-1"
           }
         },
         "feature_block_w4mY73": {
@@ -372,7 +372,7 @@
             "heading": "Penny Morrison Accessories",
             "text": "JAMES is your home for all things Penny Morrison!<br>\n<br>\n\nFrom her luxurious fabrics and wallpapers, to her beautiful bespoke lamps, lampshades and everything in between. <br>\n<br>\n\nContact your nearest showroom to see what we have in stock or have us ship directly to you or your client.",
             "link_text": "View all Penny Morrison accessories",
-            "link_url": ""
+            "link_url": "shopify:\/\/pages\/penny-morrison-textiles-accessories"
           }
         }
       },
@@ -422,7 +422,7 @@
       "settings": {
         "header_text": "Our Events",
         "link_text": "See All Events",
-        "link_url": "shopify:\/\/collections\/all"
+        "link_url": "shopify:\/\/pages\/events"
       }
     },
     "770ffb1e-71a9-475d-b8d6-5f0fc4ad470d": {

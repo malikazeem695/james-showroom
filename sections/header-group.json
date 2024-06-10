@@ -20,11 +20,11 @@
         "vertical_menu": true,
         "dropdown_click": false,
         "search_enabled": true,
-        "fixed_header": false,
+        "fixed_header": true,
         "logo_position": "left",
         "logo_alignment": "center",
         "menu_position": "inline",
-        "menu_alignment": "align_left"
+        "menu_alignment": "center"
       }
     },
     "mega_menu_1": {
