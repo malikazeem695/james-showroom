@@ -512,8 +512,15 @@ line-height: 19px; /* 158.333% */
         font-size: 0;
         line-height: 0;
     }
+    .shopify-product-form .purchase-details{
+        margin-top: 24px;
+    }
     .search-form--header .search-form__input[type=text]::placeholder{
         color: #94A3B8;
+    }
+    .product-quantity-box.purchase-details__quantity {
+        margin-right: unset;
+        width: 148px;
     }
     .nav-desktop__tier-1 .nav-desktop__tier-1-link{
         display: flex;
@@ -1639,7 +1646,7 @@ flex: 1 0 0;
     justify-content: center;
     align-items: center;
     gap: 4px;
-    flex: 1 0 0;
+    flex: 1 0 calc(50% - 12px);
     border-radius: unset;
     border: 1px solid var(--theme-surfaces-shade-base, #FFF);
     background: var(--theme-surfaces-primary-base, #C6A55D);
@@ -1654,7 +1661,10 @@ flex: 1 0 0;
     width: 100%;
     max-height: 44px;
     margin-top: 0;
-    margin-left: 12px;
+    margin-left: 16px;
+    flex-wrap: wrap;
+    margin-bottom: unset;
+    max-width: 100%;
 }
 .cart_drawer_notification .free_samples_message{
     margin: 4px;
@@ -1868,8 +1878,24 @@ font-style: normal;
 font-weight: 400;
 line-height: 19px; /* 158.333% */
 }
+.product_section .modal_price{
+    padding: unset;
+    margin: unset;
+}
+.product_section .modal_price span.free-price-text {
+    font-family: General Sans;
+    font-size: 16px;
+    line-height: 26px;
+}
 @media only screen and (max-width: 768px) {
     .purchase_inquiry.action_button{
+        margin-top: 20px;
+        margin-left: unset;
+    }
+    .pdp_section .product__details.product__details--product-page .swatch.clearfix.whacad{
+        padding: unset;
+    }
+    .shopify-product-form .purchase-details {
         margin-top: 20px;
     }
     .product-quantity-box.purchase-details__quantity {
@@ -1894,6 +1920,9 @@ line-height: 19px; /* 158.333% */
     .pdp_section .product__details.product__details--product-page .purchase-details__buttons, .pdp_section .product__details.product__details--product-page button.add_to_cart{
 clear: both;
 margin-left: unset;
+    }
+    .pdp_section .product__details.product__details--product-page .purchase-details__buttons{
+        margin-top: unset;
     }
     .pdp_section .product__details.product__details--product-page button.add_to_cart{
         margin-top: 20px;
