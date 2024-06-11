@@ -10,7 +10,7 @@
         <div class="event-date-picker">
         <select>
           <option value="default">
-            {% render 'date-icon' %} Date
+            Date
           </option>
             {% for block in section.blocks %}
                 <option value = "{{ block.settings.event_date |  handleize }}">{{ block.settings.event_date }}</option>
@@ -18,6 +18,9 @@
         </select>
         <div class="custom-select-icon">
             {% render 'select-down' %}
+        </div>
+        <div class="date_icon">
+          {% render 'date-icon' %} 
         </div>
         </div>
         <div class="event-location-picker">

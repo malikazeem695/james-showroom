@@ -1286,6 +1286,13 @@ a#customer_logout_link {
             text-decoration-line: underline;
             text-underline-offset: 2px;
         }
+        .date_icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 12px;
+            display: block;
+        }
         #customer_login .btn-primary span{
             text-transform: capitalize;
         }
