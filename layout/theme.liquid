@@ -269,7 +269,7 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
       {{ settings.custom_scripts }}
     </script>
 
-    {% render 'boost-sd-fallback' %}
+    {% comment %} {% render 'boost-sd-fallback' %} {% endcomment %}
     {{ content_for_header }}
 
     {% render 'social-meta-info' %}

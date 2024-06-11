@@ -9,6 +9,9 @@
     <div class="date-location-selectors">
         <div class="event-date-picker">
         <select>
+          <option value="default">
+            {% render 'date-icon' %} Date
+          </option>
             {% for block in section.blocks %}
                 <option value = "{{ block.settings.event_date |  handleize }}">{{ block.settings.event_date }}</option>
             {% endfor %}
@@ -199,6 +202,9 @@ p.events_quantity {
     height: 19px;
     width: 100%;
 }
+#contact_form .newsletter-form__sign-up span{
+  text-transform: capitalize;
+}
 .date-location-selectors select{
     appearance: none;
     -webkit-appearance: none;
@@ -218,6 +224,9 @@ p.events_quantity {
     line-height: 26px;
     min-height: 40px;
     border-radius: unset;
+    background-color: transparent;
+    z-index: 1;
+    position: relative;
 }
 .custom-select-icon {
     position: absolute;
@@ -232,6 +241,7 @@ p.events_quantity {
 }
 .event-date-picker, .event-location-picker {
     position: relative;
+    background-color: white;
 }
 .custom-select-icon svg{
 width: 16px;
@@ -393,6 +403,14 @@ span.badge.sm-paragraph {
 .event-block img.right {
     order: 0;
 }
+section.showroom-locations .section-heading h2{
+  font-size: 28px;
+  line-height: 40px;
+}
+section.showroom-locations .section-heading p{
+  font-size: 12px;
+  line-height: 19px;
+}
 .event-block {
     /* width: 330px;
     min-width: 330px; */
@@ -401,6 +419,7 @@ span.badge.sm-paragraph {
 }
 .event-block img {
     width: 100%;
+    border-bottom: unset;
     /* max-width: 330px;
         max-height: 358px; */
 }

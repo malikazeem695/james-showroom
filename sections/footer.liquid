@@ -136,10 +136,21 @@
                 </span></h6>
               {% endif %}
 
-              {% if block.settings.content %}
+              {% if block.settings.content or block.settings.phone or block.settings.email %}
                 <div class="toggle_content">
+                  {% if block.settings.content %}
                   {{ block.settings.content }}
-                 
+                  {% endif %}
+                  {% if block.settings.phone != blank %}
+<p><a href="tel:{{ block.settings.phone }}" title="{{ block.settings.phone }}">
+{% render 'telephone' %}  
+{{ block.settings.phone }}</a></p>
+                  {% endif %}
+                  {% if block.settings.email != blank %}
+                    <p><a href="mailto:{{ block.settings.email }}" title="{{ block.settings.email }}">
+                    {% render 'email' %}  
+                    {{ block.settings.email }}</a></p>
+                                      {% endif %}
                 </div>
               {% endif %}
             </div>
@@ -415,6 +426,16 @@
           "id": "content",
           "label": "Text",
           "default": "<p>Use this text to share information about your brand with your customers.</p>"
+        },
+        {
+          "type": "text",
+          "id": "phone",
+          "label": "Phone"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "label": "Email"
         },
         {
           "type": "checkbox",

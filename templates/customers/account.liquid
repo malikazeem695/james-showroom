@@ -22,7 +22,7 @@
         "
       >
         <span>
-          <a href="{{ routes.account_logout_url }}" id="customer_logout_link">
+          <a href="#" id="customer_logout_link">
             Logout
           </a>
         </span>
@@ -123,3 +123,37 @@
 {% endpaginate %}
 
 {% section 'newsletter' %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.addEventListener('click', function(event) {
+    if (event.target && event.target.id === 'customer_logout_link') {
+      event.preventDefault(); // Prevent the default behavior of the link
+      clearCart();
+      setTimeout(function(){
+      window.location.href = '/account/logout';
+      }, 1000);
+    }
+  });
+
+  function clearCart() {
+    fetch('/cart/clear.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({})
+    })
+    .then(response => {
+      if (response.ok) {
+        console.log('Cart cleared successfully');
+      } else {
+        console.error('Failed to clear cart');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
+});
+</script>

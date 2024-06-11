@@ -57,8 +57,21 @@ color: #000000;
 .pdp_section .product__details.product__details--product-page .swatch.clearfix{
 padding: 32px 0;
 }
+#cart_form .btn-primary span{
+    text-transform: capitalize;
+}
+.cart-container .cart_content.cart_drawer_notification .free_samples_message p{
+    color: var(--theme-text-shade-base, #000);
+    text-align: center;
+    font-family: "General Sans";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+}
 .pdp_section .product__details.product__details--product-page .swatch.clearfix.whacad{
     padding-bottom: unset;
+    padding-top: unset;
 }
 .pdp_section .product__details.product__details--product-page .product-quantity-box .product-minus, .pdp_section .product__details.product__details--product-page .product-quantity-box .product-plus{
     padding: 12px;
@@ -587,6 +600,12 @@ background: var(--theme-surfaces-neutral-soft, #F8FAFC);
         content: unset;
         margin: unset;
     }
+    .shopify-section--footer .footer .footer-text .toggle_content p{
+        margin-bottom: 4px;
+    }
+    .shopify-section--footer .footer .footer-text .toggle_content p:last-child{
+        margin: unset;
+    }
     .shopify-section--footer .footer .footer-text .toggle_content p a{
         color: var(--theme-text-neutral-dark, #334155);
 
@@ -596,6 +615,9 @@ font-size: 12px;
 font-style: normal;
 font-weight: 400;
 line-height: 19px; /* 158.333% */
+display: flex;
+align-items: center;
+gap: var(--dimensions-spacing-3xs, 8px);
     }
     .footer .footer-menu-wrap h6{
         color: var(--theme-text-secondary-base, #648390);
@@ -1027,7 +1049,7 @@ max-width: 737px;
             margin: unset;
         }
         .shopify-section--page-faq-template .container .column .faqAccordion>dt>button{
-            padding-top: 8px;
+            padding-top: 13px;
             color: var(--theme-text-shade-base, #000);
 font-family: "Superior Title";
 font-size: 16px;
@@ -1043,10 +1065,16 @@ line-height: 26px;
     line-height: 26px;
     color: #000000;
         }
+        .shopify-section--page-faq-template .container .column .faqAccordion p{
+            margin-bottom: 12px;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion p:last-child{
+            margin-bottom: unset;
+        }
         .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true]{
             border: unset;
         }
-        .shopify-section--page-faq-template .container .column .faqAccordion>dd[aria-hidden=false]{
+        .shopify-section--page-faq-template .container .column .faqAccordion>dd{
             padding-top: unset;
             padding-bottom: 16px;
             border-bottom: solid 1px #D4D4D8;
@@ -1258,6 +1286,9 @@ a#customer_logout_link {
             text-decoration-line: underline;
             text-underline-offset: 2px;
         }
+        #customer_login .btn-primary span{
+            text-transform: capitalize;
+        }
         .page_login .form_fields label {
             color: var(--theme-text-shade-base, #000);
             font-family: "Superior Title";
@@ -1283,6 +1314,22 @@ font-style: normal;
 font-weight: 400;
 line-height: 26px; /* 162.5% */
         }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true] .plus-icon, .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true] .minus-icon, .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=false] .plus-icon, .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=false] .minus-icon{
+font-size: 0;
+line-height: 0;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true] .plus-icon{
+            display: none;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true] .minus-icon{
+            display: block;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=false] .plus-icon{
+            display: block;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=false] .minus-icon{
+            display: none;
+        }
         section.section.template_accessibility-statement .one-whole.column .page-section p a{
             color: var(--theme-text-primary-base, #B28940);
 font-family: "General Sans";
@@ -1291,7 +1338,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 26px;
 text-decoration-line: underline;
-text-underline-offset: 3px;
+/* text-underline-offset: 3px; */
         }
         section.section.template_accessibility-statement .one-whole.column .page-section h4{
             margin-bottom: 8px;
@@ -1310,15 +1357,20 @@ padding-top: unset;
         .shopify-section--page-faq-template .container .column .faqAccordion>dt:first-child>button::after {
             top: 0;
             transform: unset;
+            content: unset;
         }
         .shopify-section--page-faq-template .container .column .faqAccordion>dt>button{
-            padding-left: 44px;
+            padding-left: 12px;
             padding-bottom: 16px;
     border-color: #D4D4D8;
-    padding-right: unset;
+    padding-right: 12px;
+    display: flex;
+    place-content: flex-start;
+    gap: 16px;
         }
         .shopify-section--page-faq-template .container .column .faqAccordion>dt>button::after{
 left: 12px;
+content: unset;
         }
         @media only screen and (max-width: 1250px) {
             .shopify-section--footer .footer .one-fifth.column.medium-down--one-whole {
@@ -1420,7 +1472,11 @@ left: 12px;
         left: 0;
     }
     .shopify-section--page-faq-template .container .column .faqAccordion>dt>button {
-        padding-left: 30px;
+        padding-left: unset;
+        padding-right: unset;
+    }
+    .page-frequently-asked-questions.mobile_nav-fixed--true.promo-banner--show .section-wrapper{
+        margin-top: 103px;
     }
     .footer .footer-menu-wrap h6 > span svg{
         display: block;
@@ -1831,7 +1887,7 @@ font-weight: 400;
 line-height: 26px; /* 200% */
 place-content: flex-start;
 }
-.top-bar .cart_content li.mini-cart__item .mini-cart__item-price{
+.top-bar .cart_content li.mini-cart__item .mini-cart__item-price, .top-bar .cart_content li.mini-cart__item .mini-cart__item-price span{
     color: var(--theme-text-shade-base, #000);
 font-family: "General Sans";
 font-size: 12px;
