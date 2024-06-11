@@ -18,6 +18,8 @@
           "settings": {
             "title": "Submissions",
             "content": "<p><a href=\"\/pages\/accessibility-statement\" target=\"_blank\" title=\"Accessibility Statement\">Accessibility <\/a><\/p>",
+            "phone": "",
+            "email": "",
             "social_icons_footer": false
           }
         },
@@ -25,7 +27,9 @@
           "type": "text",
           "settings": {
             "title": "Dallas Showroom",
-            "content": "<p><a href=\"tel:+1 (214)2957500\" title=\"tel:+1 (214)2957500\">☎ (214) 295-7500<\/a><\/p><p><a href=\"mailto:dallas@jamesshowroom.com\" title=\"mailto:dallas@jamesshowroom.com\">dallas@jamesshowroom.com<\/a><\/p>",
+            "content": "",
+            "phone": "(214) 295-7500",
+            "email": "dallas@jamesshowroom.com",
             "social_icons_footer": false
           }
         },
@@ -33,7 +37,9 @@
           "type": "text",
           "settings": {
             "title": "Houston Showroom",
-            "content": "<p><a href=\"tel:(713) 955-1053\" title=\"tel:(713) 955-1053\">☎ (713) 955-1053<\/a><\/p><p><a href=\"mailto:houston@jamesshowroom.com\" title=\"mailto:houston@jamesshowroom.com\">houston@jamesshowroom.com<\/a><\/p>",
+            "content": "",
+            "phone": "(713) 955-1053",
+            "email": "houston@jamesshowroom.com",
             "social_icons_footer": false
           }
         },
@@ -41,7 +47,9 @@
           "type": "text",
           "settings": {
             "title": "NYC Showroom",
-            "content": "<p><a href=\"tel:(212) 731-0838\" title=\"tel:(212) 731-0838\">(212) 731-0838<\/a><\/p><p><a href=\"mailto:nyc@jamesshowroom.com\" title=\"mailto:nyc@jamesshowroom.com\">nyc@jamesshowroom.com<\/a><\/p>",
+            "content": "",
+            "phone": "(212) 731-0838",
+            "email": "nyc@jamesshowroom.com",
             "social_icons_footer": false
           }
         },
@@ -50,6 +58,8 @@
           "settings": {
             "title": "Stay Connected",
             "content": "",
+            "phone": "",
+            "email": "",
             "social_icons_footer": true
           }
         },
