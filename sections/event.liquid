@@ -7,7 +7,7 @@
         {{ section.settings.description }}
     </p>
     <div class="date-location-selectors">
-        <div class="event-date-picker">
+        <div class="event-date-picker default_value">
         <select>
           <option value="default">
             Date
@@ -23,14 +23,20 @@
           {% render 'date-icon' %} 
         </div>
         </div>
-        <div class="event-location-picker">
+        <div class="event-location-picker default_value">
         <select>
+          <option value="default">
+            Location
+          </option>
             {% for block in section.blocks %}
                 <option value = "{{ block.settings.event_location |  handleize }}">{{ block.settings.event_location }}</option>
             {% endfor %}
         </select>
         <div class="custom-select-icon">
             {% render 'select-down' %}
+        </div>
+        <div class="date_icon">
+          {% render 'location-icon' %} 
         </div>
         </div>
     </div>
@@ -230,6 +236,9 @@ p.events_quantity {
     background-color: transparent;
     z-index: 1;
     position: relative;
+}
+.date-location-selectors .event-date-picker.default_value select, .date-location-selectors .event-location-picker.default_value select{
+padding-left: 32px;
 }
 .custom-select-icon {
     position: absolute;
@@ -468,3 +477,39 @@ a.all-events-link.btn.btn-primary.desktop_only {
 }
 }
     </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  // Select the select element with the class '.event-date-picker select'
+  var selectDateElement = document.querySelector('.event-date-picker select');
+  var selectDateParent = document.querySelector('.event-date-picker');
+  
+  // Check if the select element exists
+  if (selectDateElement) {
+    // Add change event listener to the select element
+    selectDateElement.addEventListener('change', function() {
+      // Check if the selected value is 'default'
+      if (selectDateElement.value === 'default') {
+        console.log('yeshere');
+        // Add the class 'default_value' to the parent element '.event-date-picker'
+        selectDateParent.classList.add('default_value');
+      } else {
+        // If the selected value is not 'default', remove the class 'default_value'
+        selectDateParent.classList.remove('default_value');
+      }
+    });
+  }
+
+  var selectlocationElement = document.querySelector('.event-location-picker select');
+  if (selectlocationElement) {
+    selectlocationElement.addEventListener('change', function() {
+      if (selectlocationElement.value === 'default') {
+        selectlocationElement.closest('.event-location-picker').classList.add('default_value');
+      } else {
+        selectlocationElement.closest('.event-location-picker').classList.remove('default_value');
+      }
+    });
+  }
+});
+
+    </script>

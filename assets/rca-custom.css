@@ -1291,6 +1291,9 @@ a#customer_logout_link {
             top: 50%;
             transform: translateY(-50%);
             left: 12px;
+            display: none;
+        }
+        .default_value .date_icon{
             display: block;
         }
         #customer_login .btn-primary span{
