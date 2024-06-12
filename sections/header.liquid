@@ -306,7 +306,7 @@
             <a href="{{ routes.cart_url }}" class="{% if section.settings.cart_icon == "cart" %}icon-cart{% else %}icon-bag{% endif %} mini_cart dropdown_link" data-no-instant>
               {% render 'cart-icon' %}
               <span>Cart</span>
-              {% comment %} <span class="cart_count">{{ cart.item_count }}</span> {% endcomment %}
+              <span class="cart_count">{{ cart.item_count }}</span>
             </a>
 
             {% unless settings.cart_action == 'ajax' and template contains 'cart' %}
