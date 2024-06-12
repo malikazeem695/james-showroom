@@ -55,18 +55,24 @@
           <p class="sm-paragraph">{{ block.settings.event_details }}</p>
           </div>
           <div class="date_time_loc">
+            {% if block.settings.event_date != blank %}
             <div class="date">
           <p class="semi-bold">Date</p>
           <p>{{ block.settings.event_date }}</p>
           </div>
+            {% endif %}
+            {% if block.settings.event_time != blank %}
           <div class="time">
             <p class="semi-bold">Time</p>
             <p>{{ block.settings.event_time }}</p>
           </div>
+            {% endif %}
+            {% if block.settings.event_location != blank %}
           <div class="location">
             <p class="semi-bold">Location</p>
             <p>{{ block.settings.event_location }}</p>
           </div>
+            {% endif %}
           </div>
           <a href="{{ block.settings.event_rsvp_url }}" class="rsvp-link btn btn-primary full-width">
             <span>{{ block.settings.event_rsvp_text }}</span>
