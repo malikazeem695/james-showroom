@@ -1985,6 +1985,9 @@ line-height: 19px; /* 158.333% */
     padding: unset;
     margin: unset;
 }
+.pdp_section .product_gallery_nav .flickity-viewport .flickity-slider{
+    width: calc(100% - 4px);
+}
 .product_section .modal_price span.free-price-text {
     font-family: General Sans;
     font-size: 16px;
@@ -2002,6 +2005,9 @@ line-height: 19px; /* 158.333% */
     }
     .pdp_section .product_gallery_nav .gallery-cell.is-selected:first-child {
         left: 1px !important;
+    }
+    .pdp_section .product_gallery_nav .flickity-viewport .flickity-slider{
+        width: calc(100% - 2px);
     }
     .purchase_inquiry.action_button{
         margin-top: 20px;
