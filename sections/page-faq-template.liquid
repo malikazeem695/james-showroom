@@ -55,6 +55,7 @@
       content
     "
   >
+  {% unless section.settings.image != blank or section.settings.show_banner %}
     <div
       class="
         one-whole
@@ -71,6 +72,7 @@
         content: page.content,
       %}
     </div>
+  {% endunless %}
 
     {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
@@ -111,6 +113,12 @@
                   aria-controls="panel-01"
                   aria-expanded="true"
                 >
+                <span class="plus-icon">
+                  {% render 'golden-plus' %}
+                </span>
+                <span class="minus-icon">
+                  {% render 'golden-minus' %}
+                </span>
                   {{ block.settings.title }}
                 </button>
               </dt>

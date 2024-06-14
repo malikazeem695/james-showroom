@@ -537,6 +537,7 @@ $(() => {
     let productHasSale = false;
     let productCompareAtPrice = 0;
     let productFinalPrice = 0;
+    var productTitle;
 
     $cartForm.data('total-discount', cart.total_discount);
 
@@ -567,31 +568,6 @@ $(() => {
           discountMessage = `<p class="notification-discount meta">${title}</p>`;
         }
         const lineID = index + 1;
-
-        cartItemsHTML += `<li class="mini-cart__item" data-cart-item data-line-id="${lineID}" data-variant-id="${item.id}">`
-          + `<a href="${item.url}">`;
-        if (item.image) {
-          cartItemsHTML += `${'<div class="cart_image">'
-              + '<img src="'}${item.image.replace(/(\.[^.]*)$/, '_compact$1').replace('http:', '')}" alt="${htmlEncode(item.title)}" />`
-            + '</div></a>';
-        }
-
-        cartItemsHTML += `<div class="mini-cart__item-content"><div class="mini-cart__item-title"><a href="${item.url}">${item.title}</a>`;
-
-        if (item.selling_plan_allocation) {
-          cartItemsHTML += `<div class="meta">${item.selling_plan_allocation.selling_plan.name}</div>`;
-        }
-
-        if (item.properties) {
-          $.each(item.properties, (title, value) => {
-            if (value) {
-              cartItemsHTML += `<div class="line-item">${title}: ${value} </div>`;
-            }
-          });
-        }
-
-        cartItemsHTML += '</div><div class="mini-cart__item-price">';
-
         $.ajax({
           dataType: 'json',
           async: false,
@@ -599,6 +575,7 @@ $(() => {
           url: `/products/${item.handle}.js`,
           success(data) {
             let productData = data;
+           productTitle = data.title;
             // If item has more than one variant, need to make sure we are pulling data from the correct variant
             if (productData.variants) {
               const itemVariants = productData.variants;
@@ -622,6 +599,31 @@ $(() => {
             }
           },
         });
+        
+
+        cartItemsHTML += `<li class="mini-cart__item" data-cart-item data-line-id="${lineID}" data-variant-id="${item.id}">`
+          + `<a href="${item.url}">`;
+        if (item.image) {
+          cartItemsHTML += `${'<div class="cart_image">'
+              + '<img src="'}${item.image.replace(/(\.[^.]*)$/, '_compact$1').replace('http:', '')}" alt="${htmlEncode(item.title)}" />`
+            + '</div></a>';
+        }
+        cartItemsHTML += `<div class="mini-cart__item-content"><div class="mini-cart__item-title"><a href="${item.url}">${productTitle}</a>`;
+        if (item.selling_plan_allocation) {
+          cartItemsHTML += `<div class="meta">${item.selling_plan_allocation.selling_plan.name}</div>`;
+        }
+
+        if (item.properties) {
+          $.each(item.properties, (title, value) => {
+            if (value) {
+              cartItemsHTML += `<div class="line-item">${title}: ${value} </div>`;
+            }
+          });
+        }
+
+        cartItemsHTML += '</div><div class="mini-cart__item-price">';
+
+       
 
         if (productHasSale === true) {
           // puts the slash through the old item price
@@ -663,9 +665,9 @@ $(() => {
         }
 
         cartItemsHTML += '<div class="product-quantity-box">';
-        cartItemsHTML += '<span class="ss-icon product-minus js-change-quantity" data-func="minus"><span class="icon-minus"></span></span>';
+        cartItemsHTML += '<span class="ss-icon product-minus js-change-quantity" data-func="minus"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33337 8H12.6667" stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
         cartItemsHTML += `<input type="number" min="0" class="quantity" name="updates[]" id="updates_${item.id}" value="${item.quantity}" old-val="${item.quantity}" data-cart-quantity-input="mini-cart" />`;
-        cartItemsHTML += '<span class="ss-icon product-plus js-change-quantity" data-func="plus"><span class="icon-plus"></span></span>';
+        cartItemsHTML += '<span class="ss-icon product-plus js-change-quantity" data-func="plus"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8.00004 3.33331V12.6666M3.33337 7.99998H12.6667" stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
         cartItemsHTML += '</div></div></div>';
         cartItemsHTML += `<a href="/cart/change?line=${lineID}&amp;quantity=0" class="js-cart-remove-btn cart__remove-btn" data-line-id="${lineID}" data-remove-item="mini-cart"><span class="remove-icon"></span></a>`;
       });

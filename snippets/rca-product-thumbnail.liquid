@@ -102,7 +102,8 @@
     %}
   </a>
   {% if product.variants.size > 1 and product.options[0] != "Title" %}
-    <div class="swatch_options">
+    <div class="swatch_options yeshereis">
+      
       {% for option in product.options %}
         {%
           render 'rca-product-swatch',
@@ -110,6 +111,7 @@
           product: product
         %}
       {% endfor %}
+      
     </div>
   {% endif %}
 

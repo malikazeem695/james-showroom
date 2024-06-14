@@ -57,8 +57,21 @@ color: #000000;
 .pdp_section .product__details.product__details--product-page .swatch.clearfix{
 padding: 32px 0;
 }
+#cart_form .btn-primary span{
+    text-transform: capitalize;
+}
+.cart-container .cart_content.cart_drawer_notification .free_samples_message p{
+    color: var(--theme-text-shade-base, #000);
+    text-align: center;
+    font-family: "General Sans";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+}
 .pdp_section .product__details.product__details--product-page .swatch.clearfix.whacad{
     padding-bottom: unset;
+    padding-top: unset;
 }
 .pdp_section .product__details.product__details--product-page .product-quantity-box .product-minus, .pdp_section .product__details.product__details--product-page .product-quantity-box .product-plus{
     padding: 12px;
@@ -146,6 +159,8 @@ border: unset;
     min-width: 40px;
     line-height: 40px;
     border: unset;
+    position: relative;
+    z-index: 2;
 }
 .pdp_section .product__details.product__details--product-page .swatch_options{
     margin: 0;
@@ -180,6 +195,9 @@ border: unset;
     opacity: 1;
     border: 1px solid var(--theme-surfaces-primary-base, #C6A55D);
 box-shadow: 0px 0px 0px 4px var(--theme-surfaces-a-light-mute, rgba(13, 63, 130, 0.12));
+}
+.pdp_section .product_gallery_nav .gallery-cell.is-selected:first-child{
+left: 4px !important;
 }
 .pdp_section .product_gallery_nav .flickity-viewport{
     height: 154px !important;
@@ -297,6 +315,7 @@ line-height: 26px; /* 162.5% */
     font-weight: 400;
     line-height: 15px;
     padding: 8px 12px;
+    z-index: 1;
 }
 .pdp_section .product__details.product__details--product-page .swatch .option_title, .pdp_section .product__details.product__details--product-page .swatch .option_title span.swatch-color-display.normone {
     color: var(--theme-text-shade-base, #000);
@@ -341,7 +360,6 @@ width: calc(50% - 24px);
 }
 .cart-container.active_link .mini_cart span {
     background-color: transparent;
-    color: #353E44 !important;
 }
 .search-form {
     position: unset;
@@ -372,13 +390,22 @@ align-self: stretch;
     box-shadow: 0px 0px 0px 2px var(--theme-surfaces-a-light-mute, rgba(13, 63, 130, 0.12));
     flex-shrink: 0;
 }
+body.search .container .column.one-whole{
+    width: 100%;
+    margin: unset;
+}
+body.search .container .column.one-whole .boost-sd__search-result-toolbar-item:first-child{
+    padding-left: unset;
+    padding-right: unset;
+}
+
 button.predictive-search__search-button.global-button {
     display: flex;
     height: 54px;
     justify-content: center;
     align-items: center;
     align-self: stretch;
-    border-radius: var(--dimensions-radii-radii-2, 8px);
+    border-radius: unset;
     display: flex;
     padding: 12px;
     justify-content: center;
@@ -513,6 +540,16 @@ line-height: 19px; /* 158.333% */
         font-size: 0;
         line-height: 0;
     }
+    .shopify-product-form .purchase-details{
+        margin-top: 24px;
+    }
+    .search-form--header .search-form__input[type=text]::placeholder{
+        color: #94A3B8;
+    }
+    .product-quantity-box.purchase-details__quantity {
+        margin-right: unset;
+        width: 148px;
+    }
     .nav-desktop__tier-1 .nav-desktop__tier-1-link{
         display: flex;
         justify-content: center;
@@ -522,7 +559,7 @@ line-height: 19px; /* 158.333% */
     }
     .search-form__input-wrapper{
         display: flex;
-        max-height: 48px;
+        max-height: 50px;
         width: 224px;
         padding: 4px 4px 4px var(--dimensions-spacing-sm, 20px);
         justify-content: space-between;
@@ -578,6 +615,12 @@ background: var(--theme-surfaces-neutral-soft, #F8FAFC);
         content: unset;
         margin: unset;
     }
+    .shopify-section--footer .footer .footer-text .toggle_content p{
+        margin-bottom: 4px;
+    }
+    .shopify-section--footer .footer .footer-text .toggle_content p:last-child{
+        margin: unset;
+    }
     .shopify-section--footer .footer .footer-text .toggle_content p a{
         color: var(--theme-text-neutral-dark, #334155);
 
@@ -587,6 +630,9 @@ font-size: 12px;
 font-style: normal;
 font-weight: 400;
 line-height: 19px; /* 158.333% */
+display: flex;
+align-items: center;
+gap: var(--dimensions-spacing-3xs, 8px);
     }
     .footer .footer-menu-wrap h6{
         color: var(--theme-text-secondary-base, #648390);
@@ -687,6 +733,20 @@ font-style: normal;
 font-weight: 400;
 line-height: 19px; /* 158.333% */
 padding: 0;
+    }
+    .top-bar .top-bar--right-menu .cart-container .mini_cart span.cart_count{
+        position: absolute;
+        left: 9px;
+        top: -11px;
+    }
+    span.current_price .free {
+        font-size: 12px;
+        line-height: 19px;
+        font-family: General Sans;
+        color: #000;
+    }
+    .top-bar .top-bar--right-menu .cart-container .mini_cart:hover span, .top-bar .top-bar--right-menu .cart-container .mini_cart span:hover{
+        color: #c7a55d !important;
     }
     .top-bar .top-bar--right-menu li a span{
         font-family: "General Sans";
@@ -994,6 +1054,354 @@ letter-spacing: -0.42px;
             width: 100%;
             border: 1px solid var(--theme-surfaces-secondary-base, #648390);
         }
+        .shopify-section--page-faq-template .section{
+width: 737px;
+max-width: 737px;
+        }
+        .shopify-section--page-faq-template .container{
+            padding: 80px 0 0;
+        }
+        .shopify-section--page-faq-template .container .column{
+            margin: unset;
+            width: 100%;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion{
+            margin: unset;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button{
+            padding-top: 13px;
+            color: var(--theme-text-shade-base, #000);
+font-family: "Superior Title";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion p a, .shopify-section--page-faq-template .container .column .faqAccordion p, .shopify-section--page-faq-template .container .column .faqAccordion p strong, .shopify-section--page-faq-template .container .column .faqAccordion p a strong{
+            font-family: "General Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    color: #000000;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion p{
+            margin-bottom: 12px;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion p:last-child{
+            margin-bottom: unset;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true]{
+            border: unset;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dd{
+            padding-top: unset;
+            padding-bottom: 16px;
+            border-bottom: solid 1px #D4D4D8;
+            margin: unset;
+            padding-left: 44px;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button::after{
+            top: 8px;
+            transform: unset;  
+            width: 14px;
+        }
+        section.section.template_accessibility-statement .container{
+            padding: 80px 80px 0;
+        }
+        section.section.template_accessibility-statement{
+            width: 100%;
+            max-width: 100%;
+        }
+        section.section.template_accessibility-statement .container h1{
+            color: #000000;
+            margin-bottom: 4px;
+        }
+        section.section.template_accessibility-statement .container h4{
+            color: var(--theme-text-shade-base, #000);
+font-family: "Superior Title";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+        }
+        .page_login .container, .account_order_page .container{
+            padding: 80px 0 0;
+            place-content: center;
+        }
+        .page_login .container .columns h2{
+            color: #353E44;
+            margin-bottom: 20px;
+        }
+        .page_login .form_fields input {
+            display: flex;
+height: 52px;
+padding: var(--dimensions-spacing-3xs, 8px) var(--dimensions-spacing-sm, 20px);
+align-items: center;
+gap: 4px;
+align-self: stretch;
+border: 1px solid var(--theme-surfaces-neutral-mute, #E2E8F0);
+background: var(--theme-surfaces-neutral-soft, #F8FAFC);
+margin-bottom: 8px;
+        }
+        .page_login p.signup-link a#customer_register_link {
+            color: var(--theme-text-primary-base, #B28940);
+            text-align: center;
+            font-family: "General Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            text-decoration-line: underline;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            gap: 8px;
+        }
+        .page_login p.signup-link svg path{
+            stroke: #B28940;
+        }
+        .page_login p.signup-link{
+            color: var(--theme-text-shade-base, #000);
+text-align: center;
+font-family: "General Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 19px;
+display: flex;
+place-content: center;
+place-items: center;
+gap: 8px;
+        }
+        .account_order_page .container .column.one-half{
+            margin: unset;
+            width: 50%;
+            margin-bottom: 36px;
+        }
+        .account_order_page .container h4.name{
+            margin-bottom: 12px;
+        }
+        .account_order_page .container p.email.note {
+            color: var(--theme-text-shade-base, #000);
+            font-family: "General Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            margin-bottom: 20px;
+        }
+        .account_order_page .container .address p {
+            margin-bottom: unset;
+            color: #000000;
+        }
+        .account_order_page .container .address p.more_addresses{
+            color: #B28940;
+            margin-top: 4px;
+        }
+        .account_order_page .container .address p.more_addresses a{
+            color: var(--theme-text-primary-base, #B28940);
+            font-family: "General Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            text-decoration-line: underline;
+            text-underline-offset: 2px;
+        }
+        .account_order_page .container h3.primary_address {
+            color: var(--theme-text-shade-base, #000);
+            font-family: "Superior Title";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 34px;
+            letter-spacing: -0.42px;
+            margin-bottom: 12px;
+        }
+        .account_order_page .container h4.name, .account_order_page .container h4.name a{
+            color: var(--theme-text-primary-base, #B28940);
+            font-family: "Superior Title";
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 34px;
+            letter-spacing: -0.42px;
+        }
+        .account_order_page .container .account-main{
+margin: unset;
+width: 66.666%;
+border-left: 1px solid var(--theme-surfaces-primary-base, #C6A55D);
+    min-height: 100px;
+    padding-left: 16px;
+        }
+        .account_order_page .container .account-main p{
+            color: #000000;
+        }
+        .account_order_page .container .account-main h3{
+            color: var(--theme-text-shade-base, #000);
+
+/* 21  |  Heading 03/Bold */
+font-family: "Superior Title";
+font-size: 21px;
+font-style: normal;
+font-weight: 400;
+line-height: 34px; /* 161.905% */
+letter-spacing: -0.42px;
+margin-bottom: 12px;
+        }
+        .account_order_page .container .account-sidebar{
+            margin: unset;
+            padding: unset;
+            border: unset;
+            width: 33.33%;
+        }
+
+        .account_order_page .container .column.one-half.account-header-logout{
+            display: flex;
+            place-content: end;
+            place-items: center;
+            margin-bottom: 36px;
+        }
+        
+a#customer_logout_link {
+    color: var(--theme-text-primary-base, #B28940);
+    font-family: "General Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    text-underline-offset: 2px;
+}
+        .account_order_page .container .column h2{
+            color: #353E44;
+        }
+        .account_order_page .container{
+            max-width: 848px;
+        }
+        section.section.page_login, section.section.account_order_page {
+            max-width: 100%;
+            width: 100%;
+        }
+        .page_login .form-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .page_login .form-footer button{
+            padding: 12px;
+            border-radius: unset;
+        }
+        .page_login .form_fields a.forgot_password {
+            color: var(--theme-text-primary-base, #B28940);
+            text-align: center;
+            font-family: "General Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            text-decoration-line: underline;
+            text-underline-offset: 2px;
+        }
+        .date_icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 12px;
+            display: none;
+        }
+        .default_value .date_icon{
+            display: block;
+        }
+        #customer_login .btn-primary span{
+            text-transform: capitalize;
+        }
+        .page_login .form_fields label {
+            color: var(--theme-text-shade-base, #000);
+            font-family: "Superior Title";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            text-transform: capitalize;
+            margin-bottom: 4px;
+        }
+        .page_login .container .columns{
+            margin: unset;
+            width: 737px;
+            left: unset;
+        }
+        section.section.template_accessibility-statement .one-whole.column .page-section p,  section.section.template_accessibility-statement .one-whole.column .page-section p span{
+            color: var(--theme-text-shade-base, #000);
+
+/* 16  |  Paragraph/Regular */
+font-family: "General Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px; /* 162.5% */
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true] .plus-icon, .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true] .minus-icon, .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=false] .plus-icon, .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=false] .minus-icon{
+font-size: 0;
+line-height: 0;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true] .plus-icon{
+            display: none;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=true] .minus-icon{
+            display: block;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=false] .plus-icon{
+            display: block;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button[aria-expanded=false] .minus-icon{
+            display: none;
+        }
+        section.section.template_accessibility-statement .one-whole.column .page-section p a{
+            color: var(--theme-text-primary-base, #B28940);
+font-family: "General Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+text-decoration-line: underline;
+/* text-underline-offset: 3px; */
+        }
+        section.section.template_accessibility-statement .one-whole.column .page-section h4{
+            margin-bottom: 8px;
+        }
+        section.section.template_accessibility-statement .one-whole.column {
+            margin: unset;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            width: 100%;
+        }
+        
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt:first-child>button {
+padding-top: unset;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt:first-child>button::after {
+            top: 0;
+            transform: unset;
+            content: unset;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button{
+            padding-left: 12px;
+            padding-bottom: 16px;
+    border-color: #D4D4D8;
+    padding-right: 12px;
+    display: flex;
+    place-content: flex-start;
+    gap: 16px;
+        }
+        .shopify-section--page-faq-template .container .column .faqAccordion>dt>button::after{
+left: 12px;
+content: unset;
+        }
         @media only screen and (max-width: 1250px) {
             .shopify-section--footer .footer .one-fifth.column.medium-down--one-whole {
                 width: 20%;
@@ -1019,6 +1427,87 @@ letter-spacing: -0.42px;
             display: none;
         }
 @media only screen and (max-width: 798px) {
+    .account_order_page .container .column.one-half{
+        width: 70%;
+    }
+    .account_order_page .container .column.one-half.account-header-logout{
+        width: 30%;
+    }
+    .account_order_page .container .account-sidebar{
+        width: 100%;
+    }
+    .account_order_page .container .account-main{
+        width: 100%;
+        padding: unset;
+        border: unset;
+        min-height: 50px;
+    }
+    .account_order_page .container .address{
+        margin-bottom: 20px;
+    }
+    .account_order_page .container .column h2{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .page_login .container, .account_order_page .container {
+        padding: 48px 16px 0;
+    }
+    .page_login .container .columns h2 {
+        margin-bottom: 28px;
+    }
+    .page_login .form-footer{
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 28px;
+    }
+    .page_login .form-footer button{
+        width: 100%;
+    }
+    .page_login p.signup-link{
+        width: 100%;
+        place-content: end;
+    }
+    section.section.template_accessibility-statement .container {
+        padding: 48px 16px 0;
+    }
+    section.section.template_accessibility-statement .container h1{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    section.section.template_accessibility-statement .one-whole.column .page-section p, section.section.template_accessibility-statement .one-whole.column .page-section p span{
+        font-size: 12px;
+        line-height: 19px;
+    }
+    .shopify-section--page-faq-template .section {
+        width: 100%;
+        max-width: 100%;
+    }
+    .shopify-section--page-faq-template .container {
+        padding: 48px 0 0;
+    }
+    body.page-faq .section-hero-banner{
+        display: none;
+    }
+    .shopify-section--page-faq-template .container .column .faqAccordion>dd[aria-hidden=false] {
+        padding-left: 30px;
+    }
+    .shopify-section--page-faq-template .container .column .faqAccordion p a, .shopify-section--page-faq-template .container .column .faqAccordion p, .shopify-section--page-faq-template .container .column .faqAccordion p strong, .shopify-section--page-faq-template .container .column .faqAccordion p a strong{
+        font-size: 12px;
+        line-height: 19px;
+    }
+    .shopify-section--page-faq-template .container .column .faqAccordion {
+        padding: 0 16px;
+    }
+    .shopify-section--page-faq-template .container .column .faqAccordion>dt>button::after {
+        left: 0;
+    }
+    .shopify-section--page-faq-template .container .column .faqAccordion>dt>button {
+        padding-left: unset;
+        padding-right: unset;
+    }
+    .page-frequently-asked-questions.mobile_nav-fixed--true.promo-banner--show .section-wrapper{
+        margin-top: 103px;
+    }
     .footer .footer-menu-wrap h6 > span svg{
         display: block;
     }
@@ -1243,7 +1732,7 @@ flex: 1 0 0;
     justify-content: center;
     align-items: center;
     gap: 4px;
-    flex: 1 0 0;
+    flex: 1 0 calc(50% - 12px);
     border-radius: unset;
     border: 1px solid var(--theme-surfaces-shade-base, #FFF);
     background: var(--theme-surfaces-primary-base, #C6A55D);
@@ -1258,7 +1747,10 @@ flex: 1 0 0;
     width: 100%;
     max-height: 44px;
     margin-top: 0;
-    margin-left: 12px;
+    margin-left: 16px;
+    flex-wrap: wrap;
+    margin-bottom: unset;
+    max-width: 100%;
 }
 .cart_drawer_notification .free_samples_message{
     margin: 4px;
@@ -1320,6 +1812,23 @@ flex: 1 0 0;
 }
 .shopify-section.shopify-section-group-footer-group.shopify-section--footer footer .social_icons {
     margin-top: unset;
+    display: flex;
+    align-items: center;
+    gap: var(--dimensions-spacing-3xs, 8px);
+}
+.shopify-section.shopify-section-group-footer-group.shopify-section--footer footer .social_icons li{
+    margin-bottom: unset;
+    width: 20px;
+    height: 20px;
+    padding: unset;
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+.shopify-section.shopify-section-group-footer-group.shopify-section--footer footer .social_icons li a{
+    margin: unset;
+    font-size: 0;
+    line-height: 0;
 }
 .terms_cond_box label.tos_label{
     color: var(--theme-text-secondary-dark, #353E44);
@@ -1425,7 +1934,7 @@ font-weight: 400;
 line-height: 26px; /* 200% */
 place-content: flex-start;
 }
-.top-bar .cart_content li.mini-cart__item .mini-cart__item-price{
+.top-bar .cart_content li.mini-cart__item .mini-cart__item-price, .top-bar .cart_content li.mini-cart__item .mini-cart__item-price span{
     color: var(--theme-text-shade-base, #000);
 font-family: "General Sans";
 font-size: 12px;
@@ -1472,8 +1981,42 @@ font-style: normal;
 font-weight: 400;
 line-height: 19px; /* 158.333% */
 }
+.product_section .modal_price{
+    padding: unset;
+    margin: unset;
+}
+.pdp_section .product_gallery_nav .flickity-viewport .flickity-slider{
+    width: calc(100% - 4px);
+}
+.product_section .modal_price span.free-price-text {
+    font-family: General Sans;
+    font-size: 16px;
+    line-height: 26px;
+}
 @media only screen and (max-width: 768px) {
+    body.search .container .column.one-whole .boost-sd__search-result-toolbar-panel:not(:last-child){
+        margin-right: unset;
+    }
+    #customer-orders.collapsible-table td:after {
+        width: unset;
+    }
+    #customer-orders.collapsible-table td{
+        text-align: justify;
+    }
+    .pdp_section .product_gallery_nav .gallery-cell.is-selected:first-child {
+        left: 1px !important;
+    }
+    .pdp_section .product_gallery_nav .flickity-viewport .flickity-slider{
+        width: calc(100% - 2px);
+    }
     .purchase_inquiry.action_button{
+        margin-top: 20px;
+        margin-left: unset;
+    }
+    .pdp_section .product__details.product__details--product-page .swatch.clearfix.whacad{
+        padding: unset;
+    }
+    .shopify-product-form .purchase-details {
         margin-top: 20px;
     }
     .product-quantity-box.purchase-details__quantity {
@@ -1498,6 +2041,9 @@ line-height: 19px; /* 158.333% */
     .pdp_section .product__details.product__details--product-page .purchase-details__buttons, .pdp_section .product__details.product__details--product-page button.add_to_cart{
 clear: both;
 margin-left: unset;
+    }
+    .pdp_section .product__details.product__details--product-page .purchase-details__buttons{
+        margin-top: unset;
     }
     .pdp_section .product__details.product__details--product-page button.add_to_cart{
         margin-top: 20px;

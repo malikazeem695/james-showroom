@@ -1,5 +1,5 @@
 {% paginate customer.orders by 20 %}
-  <section class="section">
+  <section class="section account_order_page">
     <div class="container content">
       <div
         class="
@@ -8,9 +8,9 @@
           medium-down--one-whole
         "
       >
-        <h1>
+        <h2>
           {{ 'customer.account.details' | t }}
-        </h1>
+        </h2>
       </div>
 
       <div
@@ -22,14 +22,10 @@
         "
       >
         <span>
-          <a href="{{ routes.account_logout_url }}" id="customer_logout_link">
-            {{ 'layout.customer.log_out' | t }}
+          <a href="#" id="customer_logout_link">
+            Logout
           </a>
         </span>
-      </div>
-
-      <div class="one-whole column">
-        <div class="feature-divider"></div>
       </div>
 
       <aside
@@ -50,7 +46,7 @@
           {{ customer.email }}
         </p>
 
-        <h4>{{ 'customer.addresses.primary' | t }}</h4>
+        <h3 class="primary_address">Primary Address</h3>
 
         <div class="address note">
           {% if customer.default_address != nil %}
@@ -69,7 +65,7 @@
             <p>{{ 'customer.addresses.no_addresses' | t }}</p>
           {% endif %}
 
-          <p>
+          <p class="more_addresses">
             <a href="{{ routes.account_addresses_url }}">
               {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
             </a>
@@ -85,7 +81,7 @@
           account-main
         "
       >
-        <h4>{{ 'customer.orders.title' | t }}</h4>
+        <h3>{{ 'customer.orders.title' | t }}</h3>
 
         {% if customer.orders.size != 0 %}
           <table id="customer-orders" class="collapsible-table">
@@ -103,7 +99,7 @@
               {% for order in customer.orders %}
                 <tr class="{% cycle 'odd', 'even' %} {% if order.cancelled %}cancelled_order{% endif %}">
                   <td data-label="{{ 'customer.orders.order_number' | t }}">{{ order.name | link_to: order.customer_url }}</td>
-                  <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | date: format: "month_day_year" }}</td>
+                  <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | date }}</td>
                   <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
                   <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
                   <td data-label="{{ 'customer.orders.total' | t }}">
@@ -127,3 +123,37 @@
 {% endpaginate %}
 
 {% section 'newsletter' %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.addEventListener('click', function(event) {
+    if (event.target && event.target.id === 'customer_logout_link') {
+      event.preventDefault(); // Prevent the default behavior of the link
+      clearCart();
+      setTimeout(function(){
+      window.location.href = '/account/logout';
+      }, 1000);
+    }
+  });
+
+  function clearCart() {
+    fetch('/cart/clear.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({})
+    })
+    .then(response => {
+      if (response.ok) {
+        console.log('Cart cleared successfully');
+      } else {
+        console.error('Failed to clear cart');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
+});
+</script>

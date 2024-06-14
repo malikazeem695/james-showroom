@@ -1,15 +1,5 @@
-<section class="section">
+<section class="section page_login">
   <div class="container content">
-    <div
-      class="
-        one-whole
-        column
-        collection_nav
-      "
-    >
-      <h1>{{ 'customer.login.title' | t }}</h1>
-      <div class="feature-divider"></div>
-    </div>
 
     <div
       class="
@@ -88,19 +78,12 @@
           <em class="note">{{ 'customer.recover_password.success' | t }}</em>
         </p>
       {% endif %}
-{% unless shop.checkout.guest_login %}
-          <p class="signup-link" style="margin-bottom: 5px; font-size: 17px;">
-            new customer? 
-            <a href="{{ routes.account_register_url }}" id="customer_register_link">
-              apply as a trade partner →
-            </a>
-          </p>
-        {% endunless %}
-        <h1 class="boost-sd__header-title" style="color: rgb(194, 166, 103); font-family: Perpetua; font-style: normal; font-weight: 400; font-size: 30px; text-transform: none; text-align: left;">Already have an account? Sign in below</h1>
+
+        <h2>Already have an account? Sign in below</h2>
       {% form 'customer_login' %}
         {{ recover_password_error }}
         {{ form.errors | default_errors }}
-
+<div class="form_fields">
         <label for="customer_email" class="login">{{ 'customer.login.email' | t }}</label>
         <input
           id="customer_email"
@@ -111,6 +94,7 @@
           autocorrect="off"
           autocapitalize="off"
           tabindex="1"
+          required
         >
 
         {% if form.password_needed %}
@@ -120,7 +104,7 @@
 
           <small class="right">
             <em>
-              <a href="#" onclick="showRecoverPasswordForm()">
+              <a href="#" class="forgot_password" onclick="showRecoverPasswordForm()">
                 {{ 'customer.login.forgot_password' | t }}
               </a>
             </em>
@@ -138,18 +122,24 @@
             name="customer[password]"
             size="16"
             tabindex="2"
+            required
           >
         {% endif %}
-
-        <input
-          class="
-            global-button
-            global-button--primary
-          "
-          type="submit"
-          value="{{ 'customer.login.sign_in' | t }}"
-          tabindex="3"
-        >
+        </div>
+<div class="form-footer">
+  <button type="submit" class="btn btn-primary"  tabindex="3">
+    <span>Login</span>
+    {% render 'right-brand-arrow' %}
+  </button>
+        {% unless shop.checkout.guest_login %}
+          <p class="signup-link">
+            New Customer? 
+            <a href="{{ routes.account_register_url }}" id="customer_register_link">
+              Apply as a trade partner {% render 'right-brand-arrow' %}
+            </a>
+          </p>
+        {% endunless %}
+        </div>
 
         
       {% endform %}

@@ -269,7 +269,7 @@ Shopify.Cart.limit({ limitQuantity: 15, limitPer: 'product' });
       {{ settings.custom_scripts }}
     </script>
 
-    {% render 'boost-sd-fallback' %}
+    {% comment %} {% render 'boost-sd-fallback' %} {% endcomment %}
     {{ content_for_header }}
 
     {% render 'social-meta-info' %}
@@ -309,7 +309,7 @@ if (productTagsElement) {
   if (user_city.includes('New York') && nyc_user === true) {
     if(productTagsText.includes('nyc'))
     {
-    document.querySelector('.purchase-details').style.display = 'block';
+    document.querySelector('.purchase-details').style.display = 'flex';
     }
     else{
       document.querySelector('.purchase-details').style.display = 'none';
@@ -319,7 +319,7 @@ if (productTagsElement) {
   {  
     if(productTagsText.includes('tx'))
     {
-    document.querySelector('.purchase-details').style.display = 'block';
+    document.querySelector('.purchase-details').style.display = 'flex';
     }
     else{
        document.querySelector('.purchase-details').style.display = 'none';
@@ -328,7 +328,7 @@ if (productTagsElement) {
   else{
     if(productTagsText.includes('tx'))
     {
-    document.querySelector('.purchase-details').style.display = 'block';
+    document.querySelector('.purchase-details').style.display = 'flex';
     }
     else{
       document.querySelector('.purchase-details').style.display = 'none';
@@ -430,7 +430,7 @@ if (productTagsElement) {
     </style>
   </noscript>
 
-  <body id="detect_if" class="{% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
+  <body id="detect_if" class="page-{{ handle }} {% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
         data-money-format="
           {%- if settings.currency_format == 'money_with_currency_format' -%}
             {{- shop.money_with_currency_format | strip_html -}}

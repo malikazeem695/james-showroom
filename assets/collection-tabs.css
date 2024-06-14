@@ -148,7 +148,7 @@ p.login_for_pricing a.login {
     margin: 0;
 }
 
-span.more_swatches {
+span.more_swatches, span.more_swatches a {
     color: var(--theme-text-primary-base, #B28940);
     text-align: center;
     font-family: "General Sans";

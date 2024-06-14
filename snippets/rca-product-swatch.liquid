@@ -43,7 +43,7 @@
         {% assign value = variant.options[option_index] %}
         {% unless values contains value %}
     <div class="option_wrapper {% if countswatch > 2 %}desktop_only{% endif %}" {% if countswatch > 4 %}style="display:none"{% endif %}>
-        
+        <a href="{{ variant.url }}" onclick="redirectToLink(this)">
           {% assign values = values | join: ',' %}
           {% assign values = values | append: ',' | append: value %}
           {% assign values = values | split: ',' %}
@@ -89,7 +89,7 @@
           </div>
         
         
-
+</a>
       </div>
     {% endunless %}
 
@@ -98,12 +98,17 @@
     {% assign showthree = totalcountswatch |  minus: 3 %}
     {% if showfive > 0 %}
         <span class="more_swatches showfive">
+          <a href="{{ product.url }}" onclick="redirectToLink(this)">
             +{{ showfive }} More
+            </a>
         </span>
     {% endif %}
     {% if showthree > 0 %}
         <span class="more_swatches showthree">
+          <a href="{{ product.url }}" onclick="redirectToLink(this)">
             +{{ showthree }} More
+            </a>
+            </span>
         </span>
     {% endif %}
   </div>
