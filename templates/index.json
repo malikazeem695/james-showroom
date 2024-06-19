@@ -135,6 +135,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/ec4701509ab4cf115d5a6a9d52bb225f.png",
+            "secondry_image": "shopify:\/\/shop_images\/fe5d66092813ff1c3b2c872ef980a7eb_1.png",
             "title": "Justin Van Breda London",
             "link": "shopify:\/\/collections\/justin-van-breda-london"
           }
@@ -143,6 +144,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/41121da3d06719dd5cfad806500d4be2.png",
+            "secondry_image": "shopify:\/\/shop_images\/OHara_Sofa_3.jpg",
             "title": "Madeline Stuart Collection",
             "link": "shopify:\/\/collections\/madeline-stuart-collection"
           }
@@ -151,6 +153,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/edf62173f28f11ff75e9472f1acd88a8.png",
+            "secondry_image": "shopify:\/\/shop_images\/Wilshire_Sofa_1.jpg",
             "title": "Paolo Moschino Collection",
             "link": "shopify:\/\/collections\/paolo-moschino-furniture"
           }
@@ -159,6 +162,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/12f353d56281aa8008dae737d8f9abef.png",
+            "secondry_image": "shopify:\/\/shop_images\/outdoor-blues-09.jpg",
             "title": "Peter Dunham Furniture",
             "link": "shopify:\/\/collections\/peter-dunham-home-furniture"
           }
@@ -167,6 +171,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/2681ada3b28f6e9b6d316bbf9c9d55f1.png",
+            "secondry_image": "shopify:\/\/shop_images\/mia-reay-english-country-house-library-65ca70d6cd3fa.jpg",
             "title": "Bunny Williams Home",
             "link": "shopify:\/\/collections\/bunny-williams-home-furniture"
           }
@@ -175,6 +180,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/73c9172948c622f2c33decdb3b99774b.png",
+            "secondry_image": "shopify:\/\/shop_images\/WEB-James-Meredith-Ellis-CLAIRE-MCCORMACK-PHOTOGRAPHY-17151.jpg",
             "title": "Meredith Ellis",
             "link": "shopify:\/\/collections\/meredith-ellis-textiles"
           }

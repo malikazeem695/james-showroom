@@ -8,8 +8,11 @@
   <!-- Image blocks -->
   <div class="image-blocks">
     {% for block in section.blocks %}
-      <a href="{{ block.settings.link }}" class="image-block">
-        <img src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.title }}">
+      <a href="{{ block.settings.link }}" class="image-block {% if block.settings.secondry_image %}{% else %}no_secondary_image{% endif %}">
+        <img class="primary_image" src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.title }}">
+        {% if block.settings.secondry_image %}
+        <img class="secondry_image" src="{{ block.settings.secondry_image | img_url: '300x' }}" alt="{{ block.settings.title }}">
+        {% endif %}
         <p>{{ block.settings.title }}</p>
       </a>
     {% endfor %}
@@ -40,7 +43,12 @@
             {
               "type": "image_picker",
               "id": "image",
-              "label": "Image"
+              "label": "Main Image"
+            },
+            {
+              "type": "image_picker",
+              "id": "secondry_image",
+              "label": "Secondary Image"
             },
             {
               "type": "text",

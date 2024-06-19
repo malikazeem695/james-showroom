@@ -60,6 +60,18 @@ place-items: center;
 border: 1px solid #C6A55D;
 box-shadow: 0px 0px 0px 4px #E2E8F0;
   }
+  .proudly-present .image-block img.secondry_image{
+display: none;
+  }
+  .proudly-present .image-blocks a.image-block:hover img.primary_image{
+    display: none;
+  }
+  .proudly-present .image-blocks a.image-block.no_secondary_image:hover img.primary_image{
+    display: flex;
+  }
+  .proudly-present .image-blocks a.image-block:hover img.secondry_image{
+    display: flex;
+  }
   .proudly-present .image-block p{
     color: #0F172A;
 text-align: center;

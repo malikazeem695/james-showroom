@@ -3105,41 +3105,57 @@ window.shoppableImage = {
   Global accordions
 ==============================================================================*/
 window.accordion = {
-  init() {
-    let flg = 0;
-    const $vanillaAccordion = $('.accordion');
-    const $faqHeading = $('.faqAccordion > dt > button, .accordion > dt > a');
-    $('.faqAccordion > dd, .accordion > dd').attr('aria-hidden', true);
+            init() {
+                let flg = 0;
+                const $vanillaAccordion = $('.accordion');
+                const $faqHeading = $('.faqAccordion > dt > button, .accordion > dt > a');
+                const $faqHeading_all = $('.faqAccordion > dt > button, .accordion > dt > a');
+                $('.faqAccordion > dd, .accordion > dd').attr('aria-hidden', true);
 
-    $faqHeading.attr('aria-expanded', false);
+                $faqHeading.attr('aria-expanded', false);
 
-    $faqHeading.on('click activate', function () {
-      if (flg) return false;
-      flg = 1;
-      const state = $(this).attr('aria-expanded') === 'false' ? true : false;
-      $(this).attr('aria-expanded', state);
-      $(this).parent().next().slideToggle(() => {
-        flg = 0;
-      });
-      $(this).parent().next().attr('aria-hidden', !state);
-      return false;
-    });
-    $faqHeading.on('keydown', function (event) {
-      const keyCode = event.keyCode || event.which;
-      if (keyCode === 13) {
-        $(this).trigger('activate');
-      }
-    });
+                $faqHeading.on('click activate', function () {
+                    // if (flg) return false;
+                    flg = 1;
 
-    $vanillaAccordion.each((_, accordion) => {
-      const $accordion = $(accordion);
-      if ($accordion.data('state') === 'open') {
-        $accordion.find($faqHeading[0]).parent().next().slideToggle();
-        $accordion.find($faqHeading[0]).attr('aria-expanded', true);
-      }
-    });
-  }
-}
+                    const getcurrent_status = $(this).attr('aria-expanded');
+                  
+                    // Close all other accordions
+                    $faqHeading_all.attr('aria-expanded', false);
+                    $faqHeading_all.parent().next().slideUp();
+                    $faqHeading_all.parent().next().attr('aria-hidden', true);
+                    
+                    if(getcurrent_status == 'false')
+                    {
+                    const state = $(this).attr('aria-expanded') === 'false' ? true : false;
+                    $(this).attr('aria-expanded', state);
+                    
+                    $(this).parent().next().slideToggle(() => {
+                        flg = 0;
+                    });
+                    $(this).parent().next().attr('aria-hidden', !state);
+                  }
+                   
+                    
+                    return false;
+                });
+
+                $faqHeading.on('keydown', function (event) {
+                    const keyCode = event.keyCode || event.which;
+                    if (keyCode === 13) {
+                        $(this).trigger('activate');
+                    }
+                });
+
+                $vanillaAccordion.each((_, accordion) => {
+                    const $accordion = $(accordion);
+                    if ($accordion.data('state') === 'open') {
+                        $accordion.find($faqHeading[0]).parent().next().slideToggle();
+                        $accordion.find($faqHeading[0]).attr('aria-expanded', true);
+                    }
+                });
+            }
+        }
 
 /*============================================================================
   Global shortcodes
