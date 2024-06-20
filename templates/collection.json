@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -51,9 +60,8 @@
         "b180c2eb-3e51-4b12-b8bb-2f047e113d16",
         "f49e7528-df98-49a4-9571-8dc0e010e931"
       ],
-      "disabled": true,
       "settings": {
-        "featured_collection_image": true,
+        "featured_collection_image": false,
         "wide_display": true,
         "caption_content_background": "original",
         "display_collection_title": false,
@@ -62,12 +70,11 @@
         "collection_sort": true,
         "products_per_row": 3,
         "pagination_limit": 48,
-        "toggle": true
+        "toggle": false
       }
     },
     "newsletter": {
       "type": "newsletter",
-      "disabled": true,
       "settings": {
         "wide_display": true,
         "display_first_name": false,
@@ -78,26 +85,10 @@
         "css_class": "",
         "custom_css": ""
       }
-    },
-    "33ee8e7f-b39c-4f3a-b360-d78dc0b7b3f1": {
-      "type": "apps",
-      "blocks": {
-        "a395917d-29ba-451c-845f-457678c3e33a": {
-          "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/filter-product-list-ssr\/7fc998ae-a150-4367-bab8-505d8a4503f7",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "a395917d-29ba-451c-845f-457678c3e33a"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
     "main",
-    "newsletter",
-    "33ee8e7f-b39c-4f3a-b360-d78dc0b7b3f1"
+    "newsletter"
   ]
 }
