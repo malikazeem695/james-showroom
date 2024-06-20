@@ -42,6 +42,44 @@ font-weight: 400;
 line-height: 54px;
 letter-spacing: -0.76px;
 }
+body.collection .boost-sd__header-main-2{
+  min-height: 300px;
+  height: 300px;
+}
+body.collection .boost-sd-layout--has-filter-horizontal{
+width: 100%;
+max-width: 100%;
+padding: 36px 80px 0;
+}
+body.collection .boost-sd__filter-tree-horizontal-option-list{
+  border: unset;
+  padding: unset;
+  display: flex;
+align-items: flex-start;
+gap: 48px;
+}
+body.collection .boost-sd__filter-option-label--inline-block .boost-sd__filter-option-title{
+  display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: unset;
+    color: var(--Black, #262626);
+font-family: "General Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+text-transform: capitalize;
+}
+body.collection .boost-sd__filter-option-label--inline-block{
+  margin-bottom: unset;
+  margin-right: unset;
+}
+.boost-sd__filter-option--horizontal:not(.boost-sd__filter-option--style-expand) .boost-sd__filter-option-icon{
+  position: static;
+  right: unset;
+  top: unset;
+}
 body.collection .boost-sd__header-description {
   color: var(--theme-text-shade-inverse, #FFF);
   text-align: center;
@@ -50,6 +88,13 @@ body.collection .boost-sd__header-description {
   font-style: normal;
   font-weight: 400;
   line-height: 19px;
+  margin: unset;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+body.collection .boost-sd__header-description:empty, body.collection .boost-sd__header-description div:empty, body.collection .boost-sd__header-description br {
+  display: none;
 }
 .boost-sd__cart-item-quantity .boost-sd__quantity .boost-sd__button[disabled] {
     border: unset !important;
