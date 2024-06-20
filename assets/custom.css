@@ -13,8 +13,43 @@
 .boost-sd__product-label--customLabelByTag{
   background-color: #648390 !important;
 }
-.boost-sd__header-description {
-    color: white;
+body.collection .boost-sd__product-filter-fallback {
+  width: 100%;
+  max-width: 100%;
+}
+body.collection .boost-sd__filter-block .boost-sd__header-image{
+  height: 300px;
+  min-height: 300px;
+  opacity: 1;
+}
+body.collection .boost-sd__header-main-2-content{
+  display: flex;
+    padding: var(--dimensions-spacing-xlg, 48px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    opacity: 0.85;
+    background: #648390;
+}
+body.collection .boost-sd__collection-header .boost-sd__header-title{
+  color: var(--theme-text-shade-inverse, #FFF);
+text-align: center;
+font-family: "Superior Title";
+font-size: 38px;
+font-style: normal;
+font-weight: 400;
+line-height: 54px;
+letter-spacing: -0.76px;
+}
+body.collection .boost-sd__header-description {
+  color: var(--theme-text-shade-inverse, #FFF);
+  text-align: center;
+  font-family: "General Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
 }
 .boost-sd__cart-item-quantity .boost-sd__quantity .boost-sd__button[disabled] {
     border: unset !important;

@@ -2421,6 +2421,10 @@ section.section.template_accessibility-statement .one-whole.column {
 }
 
 @media only screen and (max-width: 768px) {
+    body.collection .boost-sd__collection-header .boost-sd__header-title{
+        font-size: 28px;
+line-height: 40px;
+    }
     body.search .container .column.one-whole .boost-sd__search-result-toolbar-panel:not(:last-child) {
         margin-right: unset;
     }
