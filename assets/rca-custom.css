@@ -2423,8 +2423,18 @@ body.collection .one-whole {
     width: 100%;
     margin: unset;
 }
+body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin{
+    gap: 16px;
+}
+body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin .boost-sd__product-item{
+    margin: unset;
+    width: calc(25% - 12px);
+}
 
 @media only screen and (max-width: 768px) {
+    body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin .boost-sd__product-item{
+        width: calc(50% - 8px);
+    }
     body.collection .boost-sd__collection-header .boost-sd__header-title{
         font-size: 28px;
 line-height: 40px;
@@ -2456,6 +2466,15 @@ padding-bottom: 12px;
 border-bottom: 1px solid var(--theme-surfaces-primary-mute, #E1D3A7);
 flex-basis: 100%;
 place-content: center;
+justify-content: center !important;
+    }
+    body.collection .boost-sd__toolbar-container .boost-sd__toolbar-top-mobile .boost-sd__filter-tree-toggle-button .boost-sd__filter-tree-toggle-button-title{
+        color: var(--theme-text-shade-base, #000);
+    font-family: General Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
     }
     body.collection .boost-sd__header-main-2-content{
         padding: 20px;
