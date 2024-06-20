@@ -60,6 +60,7 @@
         "b180c2eb-3e51-4b12-b8bb-2f047e113d16",
         "f49e7528-df98-49a4-9571-8dc0e010e931"
       ],
+      "disabled": true,
       "settings": {
         "featured_collection_image": false,
         "wide_display": true,
@@ -75,6 +76,7 @@
     },
     "newsletter": {
       "type": "newsletter",
+      "disabled": true,
       "settings": {
         "wide_display": true,
         "display_first_name": false,
@@ -85,10 +87,27 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "e127d47e-8b2a-457a-bfe5-7c301377a684": {
+      "type": "apps",
+      "blocks": {
+        "b4322b28-6d11-405a-bf57-e2d27192b4ab": {
+          "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/product-filter\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "b4322b28-6d11-405a-bf57-e2d27192b4ab"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
+    "e127d47e-8b2a-457a-bfe5-7c301377a684",
     "main",
     "newsletter"
-  ]
+  ],
+  "wrapper": ".boost-sd__product-filter-fallback"
 }
