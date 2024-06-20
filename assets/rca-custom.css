@@ -2429,6 +2429,34 @@ body.collection .one-whole {
         font-size: 28px;
 line-height: 40px;
     }
+    body.collection .boost-sd__toolbar-container .boost-sd__toolbar-content .boost-sd__toolbar-item--sorting{
+        padding-bottom: 16px;
+    }
+    body.collection .boost-sd__toolbar-container .boost-sd__toolbar-content .boost-sd__toolbar-top-mobile{
+        border: unset;
+        gap: 16px;
+    }
+    body.collection .boost-sd__toolbar-container .boost-sd__toolbar-top-mobile .boost-sd__sorting, body.collection .boost-sd__toolbar-container .boost-sd__toolbar-top-mobile .boost-sd__filter-tree-toggle-button{
+        width: calc(50% - 8px);
+    border-right: unset;
+    border-bottom: 1px solid var(--theme-surfaces-primary-mute, #E1D3A7);
+    padding: unset;
+    padding-bottom: 12px;
+    flex: unset;
+    color: var(--theme-text-shade-base, #000);
+font-family: "General Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+    }
+    body.collection .boost-sd__toolbar-container .boost-sd__toolbar-item.boost-sd__toolbar-item--product-count{
+padding: unset;
+padding-bottom: 12px;
+border-bottom: 1px solid var(--theme-surfaces-primary-mute, #E1D3A7);
+flex-basis: 100%;
+place-content: center;
+    }
     body.collection .boost-sd__header-main-2-content{
         padding: 20px;
         max-width: 358px;

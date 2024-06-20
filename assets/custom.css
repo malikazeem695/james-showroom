@@ -79,6 +79,7 @@ body.collection .boost-sd__toolbar-container .boost-sd__toolbar-item.boost-sd__t
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  text-transform: capitalize;
 }
 body.collection .boost-sd__toolbar-container .boost-sd__sorting-button .boost-sd__sorting-label, body.collection .boost-sd__toolbar-container .boost-sd__sorting-button .boost-sd__sorting-value{
   color: #000;
