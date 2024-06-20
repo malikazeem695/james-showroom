@@ -2419,11 +2419,28 @@ section.section.template_accessibility-statement .one-whole.column {
     font-size: 16px;
     line-height: 26px;
 }
+body.collection .one-whole {
+    width: 100%;
+    margin: unset;
+}
 
 @media only screen and (max-width: 768px) {
     body.collection .boost-sd__collection-header .boost-sd__header-title{
         font-size: 28px;
 line-height: 40px;
+    }
+    body.collection .boost-sd__header-main-2-content{
+        padding: 20px;
+        max-width: 358px;
+    }
+    body.collection .boost-sd-layout--has-filter-horizontal{
+        padding: 48px 16px 0;
+    }
+    body.collection .boost-sd__toolbar-container .boost-sd__toolbar-content{
+        padding-top: unset;
+    }
+    body.collection.mobile_nav-fixed--true.promo-banner--show .section-wrapper{
+        margin-top: 103px;
     }
     body.search .container .column.one-whole .boost-sd__search-result-toolbar-panel:not(:last-child) {
         margin-right: unset;
