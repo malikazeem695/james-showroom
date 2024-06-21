@@ -2432,6 +2432,9 @@ body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--marg
     width: calc(25% - 12px);
     gap: 16px;
 }
+body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin .boost-sd__product-item .boost-sd__product-info{
+    gap: unset;
+}
 .for_collection_page_cards{
     display: none;
 }

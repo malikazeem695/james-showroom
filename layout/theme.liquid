@@ -491,6 +491,10 @@ if (productTagsElement) {
 
     <div class="section-wrapper">
       {{ content_for_layout }}
+      {% if template == 'collection' %}
+        {%  section 'events-section' %}
+        {% section 'newsletter' %}
+      {% endif %}
     </div>
 
     <div class="site-overlay" data-site-overlay></div>
