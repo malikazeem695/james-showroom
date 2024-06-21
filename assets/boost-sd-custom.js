@@ -59,7 +59,14 @@ const customize = {
 
             if (productHandles?.length && !isDuplicate) { //Prevent executing callback multiple times
               // Extra function call goes here
-             console.log('Calling extra function')
+             console.log('Calling extra function');
+             var productItems = document.querySelectorAll('.boost-sd__product-item');
+             var promotionBanner = document.querySelector('.promotion_banner_content');
+             if (productItems.length >= 7) {
+               var seventhItem = productItems[6];
+seventhItem.parentNode.insertBefore(promotionBanner, seventhItem.nextSibling);
+             }
+
             }
           }
        })

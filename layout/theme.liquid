@@ -495,6 +495,36 @@ if (productTagsElement) {
         {% section 'rca-coll-image-text' %}
         {%  section 'events-section' %}
         {% section 'newsletter' %}
+        <div class="promotion_banner_content" style="display:none;">
+          <div class="promotion_banner">
+            <div class="promotion_media">
+            {% if collection.metafields.custom.promotion_banner_image_video != blank %}
+              {% assign media_url = collection.metafields.custom.promotion_banner_image_video | file_url %}
+              {% assign file_extension = media_url | split: '.' | last %}
+              {% if file_extension contains 'jpg' or file_extension contains 'jpeg' or file_extension contains 'png' or file_extension contains 'gif' %}
+                <!-- Render as Image -->
+                <img src="{{ media_url }}" alt="Promotion Banner">
+              {% elsif file_extension == 'mp4' or file_extension == 'webm' or file_extension == 'ogg' %}
+                <!-- Render as Video -->
+                <video controls>
+                  <source src="{{ media_url }}" type="video/{{ file_extension }}">
+                  Your browser does not support the video tag.
+                </video>
+              {% endif %}
+            {% endif %}
+            </div>
+            <div class="promotion_text">
+              <h2>
+                {{ collection.metafields.custom.promotion_banner_text }}
+              </h2>
+              {% assign promo_link = collection.metafields.custom.promotion_banner_link.value %}
+              
+              <a href="{{ promo_link.url }}">
+                Shop Now
+              </a>
+            </div>
+          </div>
+        </div>
       {% endif %}
     </div>
 
