@@ -2425,10 +2425,67 @@ body.collection .one-whole {
 }
 body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin{
     gap: 16px;
+    margin: unset;
 }
 body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin .boost-sd__product-item{
     margin: unset;
     width: calc(25% - 12px);
+    gap: 16px;
+}
+.for_collection_page_cards{
+    display: none;
+}
+.boost-sd__product-info p.login_for_pricing {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+    width: 100%;
+}
+.boost-sd__product-info p.login_for_pricing:nth-of-type(2) {
+    display: none;
+}
+.boost-sd__product-info p.login_for_pricing a.login{
+    color: var(--theme-text-primary-base, #B28940);
+    text-align: center;
+    font-family: General Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+}
+.boost-sd__product-info p.login_for_pricing span {
+    color: var(--theme-text-shade-base, #000);
+    text-align: center;
+    font-family: General Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+}
+body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin .boost-sd__product-item .boost-sd__product-title {
+    color: var(--theme-text-shade-base, #000);
+    text-align: center;
+    font-family: "General Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin .boost-sd__product-item .boost-sd__product-label--rectangle{
+    padding: 4px 7px;
+}
+body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin .boost-sd__product-item .boost-sd__product-label--rectangle .boost-sd__product-label-text{
+    color: var(--theme-text-shade-inverse, #FFF);
+    text-align: center;
+    font-family: "General Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
 }
 
 @media only screen and (max-width: 768px) {

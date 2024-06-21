@@ -430,7 +430,7 @@ if (productTagsElement) {
     </style>
   </noscript>
 
-  <body id="detect_if" class="page-{{ handle }} {% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %}"
+  <body id="detect_if" class="page-{{ handle }} {% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %} {% if template == 'collection' %}{% endif %}"
         data-money-format="
           {%- if settings.currency_format == 'money_with_currency_format' -%}
             {{- shop.money_with_currency_format | strip_html -}}
@@ -463,7 +463,6 @@ if (productTagsElement) {
       </clipPath>
     </svg>
     {% comment %}Inject icon-star-symbol end{% endcomment %}
-
 
     {% sections 'header-group' %}
     {% style %}
@@ -528,7 +527,7 @@ if (productTagsElement) {
     {% endif %}
 
 <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "yHeU9pMkdq");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
-          
+   
   </body>
 </html>
 {% endcapture %}
