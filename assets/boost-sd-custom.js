@@ -63,7 +63,12 @@ const customize = {
              var productItems = document.querySelectorAll('.boost-sd__product-item');
              var promotionBanner = document.querySelector('.promotion_banner_content');
              if (productItems.length >= 7) {
+               if (window.innerWidth > 767) {
                var seventhItem = productItems[6];
+               }
+               else{
+                  var seventhItem = productItems[5];
+               }
 seventhItem.parentNode.insertBefore(promotionBanner, seventhItem.nextSibling);
              }
 

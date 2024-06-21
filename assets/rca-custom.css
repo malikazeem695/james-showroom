@@ -2519,10 +2519,111 @@ body.collection .boost-sd__product-list .boost-sd__product-item .boost-sd__produ
     font-weight: 400;
     line-height: 26px;
 }
+.boost-sd__product-list .promotion_banner_content .promotion_banner .promotion_text h2{
+    color: var(--theme-text-shade-inverse, #FFF);
+text-align: center;
+
+/* 28  |  Heading 02/Black */
+font-family: "Superior Title";
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 142.857% */
+letter-spacing: -0.56px;
+}
+.boost-sd__product-list .promotion_banner_content .promotion_banner .promotion_text a{
+    width: 105px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: var(--dimensions-radii-radii-2, 8px);
+    display: flex;
+    padding: 8.5px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--theme-surfaces-shade-base, #FFF);
+    background: var(--theme-buttons-primary-surface, #C6A55D);
+    box-shadow: 0px 0px 0px 1px var(--theme-buttons-primary-surface, #C6A55D);
+    color: var(--theme-buttons-primary-text, #000);
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: -0.24px;
+    border-radius: unset;
+}
+body.collection .boost-sd__filter-option-itemwrapper--horizontal{
+    top: 40px;
+    border-radius: unset;
+    padding: 44px 18px 18px;
+}
+body.collection .boost-sd__filter-option-itemwrapper--horizontal .boost-sd__filter-option-item-button--with-checkbox:before {
+    height: 14px;
+    width: 14px;
+    border: 0.5px solid var(--Grey, #5D5D5D);
+    background: var(--White, #FFF);
+    top: 5.5px;
+}
+body.collection .boost-sd__filter-option-itemwrapper--style1 .boost-sd__filter-option-item{
+    margin-bottom: 10px;
+}
+body.collection .boost-sd__filter-option-itemwrapper--style1 .boost-sd__button--btn-filter-option-color{
+    display: flex;
+    padding: 8.5px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex: 1 0 0;
+    border: 1px solid var(--theme-surfaces-shade-base, #FFF);
+    background: var(--theme-buttons-primary-surface, #C6A55D);
+    box-shadow: 0px 0px 0px 1px var(--theme-buttons-primary-surface, #C6A55D);
+    width: 100%;
+    border-radius: unset;
+    margin-top: 28px;
+}
+body.collection .boost-sd__filter-option-itemwrapper--style1 .boost-sd__button--btn-filter-option-color .boost-sd__button-text{
+    color: var(--theme-buttons-primary-text, #000);
+
+/* 12  |  Paragraph S/Regular */
+font-family: Manrope;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 19px; /* 158.333% */
+letter-spacing: -0.24px;
+text-transform: capitalize;
+}
+body.collection .boost-sd__filter-option-item-button--with-checkbox {
+    padding-left: 27px;}
+    body.collection .boost-sd__filter-option-item-button--with-checkbox .boost-sd__filter-option-item-label{
+        color: var(--Black, #262626);
+        font-family: "General Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        margin-right: 13px;
+        text-transform: capitalize;
+    }
+    body.collection .boost-sd__filter-option-itemwrapper--horizontal .boost-sd__filter-option-item-amount{
+        color: var(--Black, #262626);
+    font-family: "General Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    }
 
 @media only screen and (max-width: 768px) {
     body.collection .boost-sd__product-list .boost-sd__product-item{
         width: calc(50% - 8px);
+    }
+    .boost-sd__product-list .promotion_banner_content{
+        min-height: 270px;
+        width: 100%;
     }
     body.collection .boost-sd__collection-header .boost-sd__header-title{
         font-size: 28px;
