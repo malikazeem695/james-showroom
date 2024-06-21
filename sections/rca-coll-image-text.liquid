@@ -1,0 +1,166 @@
+<section class="rca-custom-section" id="rca-custom-section_{{ section.id }}" style="background-color:{{ section.settings.bg_color }};">
+  <div class="rca-custom-container {{ section.settings.image_alignment }}">
+    {% if collection.metafields.custom.image != blank %}
+    <div class="custom-image">
+      <img src="{{ collection.metafields.custom.image | img_url: 'master' }}" alt="{{ collection.metafields.custom.image.title }}">
+    </div>
+    {% endif %}
+    {% if collection.metafields.custom.brief_description != blank %}
+    <div class="custom-content">
+        <div class="text-content">
+      <h2>Introducing {{ collection.title }}</h2>
+      <p>{{ collection.metafields.custom.brief_description }}</p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+    section.rca-custom-section {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.rca-custom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.rca-custom-container .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+.rca-custom-container .text-content p{
+    color: #FFF;
+}
+.rca-custom-container a{
+    text-underline-offset: 3px;
+    display: flex;
+align-items: center;
+gap: 4px;
+align-self: stretch;
+}
+.rca-custom-container a span{
+    color:#D0B774;
+    text-decoration: underline;
+}
+.rca-custom-container.right {
+  flex-direction: row-reverse;
+}
+#rca-custom-section_{{ section.id }} .rca-custom-container .custom-image {
+  flex-basis: 50%;
+  width: 50%;
+  height: {{ section.settings.desktop_height }}px;
+  font-size: 0;
+    line-height: 0;
+}
+#rca-custom-section_{{ section.id }} .rca-custom-container .custom-image img{
+    width: 100%;
+    height: {{ section.settings.desktop_height }}px;
+    object-fit: cover;
+}
+.rca-custom-container .custom-content {
+    flex-basis: 50%;
+    padding: 0 80px;
+    width: 50%;
+    gap: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.rca-custom-container .custom-content h2 {
+    color:#FFF;
+}
+div#shopify-section-rca-coll-image-text {
+    padding: 80px 80px 0;
+}
+@media screen and (max-width: 991px) {
+    .rca-custom-container .custom-content {
+    padding: 0 16px;
+}
+}
+@media screen and (max-width: 768px) {
+    div#shopify-section-rca-coll-image-text {
+    padding: 80px 16px 0;
+}
+  .rca-custom-section .rca-custom-container {
+    flex-direction: column;
+  }
+  #rca-custom-section_{{ section.id }} .rca-custom-container .custom-image,
+  .rca-custom-container .custom-content {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  #rca-custom-section_{{ section.id }} .rca-custom-container .custom-image{
+    order: 1;
+  }
+  .rca-custom-container .custom-content {
+    padding: 48px 16px;
+    margin: 43px 0;
+}
+.rca-custom-container .text-content {
+    gap: 12px;
+}
+p {
+    font-size: 12px;
+    line-height: 19px;
+}
+.rca-custom-container .custom-content {
+    gap: 28px;
+}
+#rca-custom-section_{{ section.id }} .rca-custom-container .custom-image img{
+    height: auto;
+}
+#rca-custom-section_{{ section.id }} .rca-custom-container .custom-image {
+    height: auto;
+}
+}
+</style>
+
+{% schema %}
+    {
+      "name": "RCA Image/Text Metafield",
+      "settings": [
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "radio",
+          "id": "image_alignment",
+          "label": "Image Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+  "type": "range",
+  "id": "desktop_height",
+  "min": 352,
+  "max": 552,
+  "step": 4,
+  "unit": "px",
+  "label": "Desktop Height",
+  "default": 488
+}
+      ]
+    }
+    {% endschema %}
+    

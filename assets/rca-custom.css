@@ -2439,15 +2439,15 @@ body.collection .boost-sd__product-list-grid--4-col.boost-sd__product-list--marg
     display: none;
 }
 .boost-sd__product-info p.login_for_pricing {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-start;
     gap: 4px;
     align-self: stretch;
     width: 100%;
 }
-.boost-sd__product-info p.login_for_pricing:nth-of-type(2) {
-    display: none;
+.boost-sd__product-info p.login_for_pricing:nth-of-type(1) {
+    display: flex;
 }
 .boost-sd__product-info p.login_for_pricing a.login{
     color: var(--theme-text-primary-base, #B28940);

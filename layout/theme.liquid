@@ -492,6 +492,7 @@ if (productTagsElement) {
     <div class="section-wrapper">
       {{ content_for_layout }}
       {% if template == 'collection' %}
+        {% section 'rca-coll-image-text' %}
         {%  section 'events-section' %}
         {% section 'newsletter' %}
       {% endif %}

@@ -242,6 +242,14 @@
           "link_text": "See All Events",
           "link_url": "shopify:\/\/pages\/events"
         }
+      },
+      "rca-coll-image-text": {
+        "type": "rca-coll-image-text",
+        "settings": {
+          "bg_color": "#648390",
+          "image_alignment": "right",
+          "desktop_height": 484
+        }
       }
     },
     "content_for_index": [
