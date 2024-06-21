@@ -33,7 +33,27 @@ const customize = {
             }
          }),
       });
-   }
+   },
+   productListAfterRender: (componentRegistry) => {
+      let preventReCallProductHandlesTheSame = [];
+      componentRegistry.useComponentPlugin('ProductList', {
+        name: 'Product List After Render',
+        enabled: true,
+        apply: () => ({
+          afterRender(element){
+            const helpersRef = element.getHelpers();
+            const productHandles = helpersRef.getProductHandles();
+            const isDuplicate = JSON.stringify(preventReCallProductHandlesTheSame) === JSON.stringify(productHandles);
+            preventReCallProductHandlesTheSame = productHandles;
+
+            if (productHandles?.length && !isDuplicate) { //Prevent executing callback multiple times
+              // Extra function call goes here
+             console.log('Calling extra function')
+            }
+          }
+       })
+    })
+  }
 }
 
-window.__BoostCustomization__ = (window.__BoostCustomization__ ?? []).concat([customize.updateProductItemGrid]);
+window.__BoostCustomization__ = (window.__BoostCustomization__ ?? []).concat([customize.updateProductItemGrid, customize.productListAfterRender]);
