@@ -2622,6 +2622,7 @@ body.collection .boost-sd__filter-option-item-button--with-checkbox {
     font-style: normal;
     font-weight: 500;
     line-height: 26px;
+    opacity: 1;
     }
 
 @media only screen and (max-width: 768px) {
@@ -2682,6 +2683,7 @@ justify-content: center !important;
     }
     body.collection .boost-sd__toolbar-container .boost-sd__toolbar-content{
         padding-top: unset;
+        border-bottom: unset;
     }
     body.collection.mobile_nav-fixed--true.promo-banner--show .section-wrapper{
         margin-top: 103px;
