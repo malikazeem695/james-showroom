@@ -495,10 +495,11 @@ if (productTagsElement) {
         {% section 'rca-coll-image-text' %}
         {%  section 'events-section' %}
         {% section 'newsletter' %}
+        {% if collection.metafields.custom.promotion_banner_image_video != blank %}
         <div class="promotion_banner_content" style="display:none;">
           <div class="promotion_banner">
             <div class="promotion_media">
-            {% if collection.metafields.custom.promotion_banner_image_video != blank %}
+            
               {% assign media_url = collection.metafields.custom.promotion_banner_image_video | file_url %}
               {% assign file_extension = media_url | split: '.' | last %}
               {% if file_extension contains 'jpg' or file_extension contains 'jpeg' or file_extension contains 'png' or file_extension contains 'gif' %}
@@ -511,7 +512,7 @@ if (productTagsElement) {
                   Your browser does not support the video tag.
                 </video>
               {% endif %}
-            {% endif %}
+            
             </div>
             <div class="promotion_text">
               <h2>
@@ -525,6 +526,7 @@ if (productTagsElement) {
             </div>
           </div>
         </div>
+      {% endif %}
       {% endif %}
     </div>
 
