@@ -2598,6 +2598,13 @@ text-transform: capitalize;
 }
 body.collection .boost-sd__filter-option-item-button--with-checkbox {
     padding-left: 27px;}
+    body.collection .boost-sd__filter-option-item-button--with-checkbox.boost-sd__filter-option-item-button--selected:after{
+        background: black;
+        transform: unset;
+        top: 7px;
+        left: 2px;
+        height: 10.2px;
+    }
     body.collection .boost-sd__filter-option-item-button--with-checkbox .boost-sd__filter-option-item-label{
         color: var(--Black, #262626);
         font-family: "General Sans";

@@ -69,7 +69,9 @@ const customize = {
                else{
                   var seventhItem = productItems[5];
                }
+               if(promotionBanner.length >= 0){
 seventhItem.parentNode.insertBefore(promotionBanner, seventhItem.nextSibling);
+               }
              }
 
             }
