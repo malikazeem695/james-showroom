@@ -75,6 +75,17 @@ seventhItem.parentNode.insertBefore(promotionBanner, seventhItem.nextSibling);
              }
 
             }
+            var toolbar = document.querySelector('.boost-sd__toolbar-top-mobile');
+    
+            window.addEventListener('scroll', function() {
+                var computedStyle = window.getComputedStyle(toolbar);
+                
+                if (computedStyle.position === 'fixed') {
+                    toolbar.classList.add('sticky_is_enabled');
+                } else {
+                    toolbar.classList.remove('sticky_is_enabled');
+                }
+            });
           }
        })
     })

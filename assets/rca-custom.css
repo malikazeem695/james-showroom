@@ -2556,16 +2556,17 @@ letter-spacing: -0.56px;
     border-radius: unset;
 }
 body.collection .boost-sd__filter-option-itemwrapper--horizontal{
-    top: 40px;
+    top: 34px;
     border-radius: unset;
     padding: 44px 18px 18px;
 }
 body.collection .boost-sd__filter-option-itemwrapper--horizontal .boost-sd__filter-option-item-button--with-checkbox:before {
     height: 14px;
     width: 14px;
-    border: 0.5px solid var(--Grey, #5D5D5D);
+    border: .5px solid var(--Grey, #5D5D5D);
     background: var(--White, #FFF);
     top: 5.5px;
+    border-radius: unset;
 }
 body.collection .boost-sd__filter-option-itemwrapper--style1 .boost-sd__filter-option-item{
     margin-bottom: 10px;
@@ -2599,11 +2600,20 @@ text-transform: capitalize;
 body.collection .boost-sd__filter-option-item-button--with-checkbox {
     padding-left: 27px;}
     body.collection .boost-sd__filter-option-item-button--with-checkbox.boost-sd__filter-option-item-button--selected:after{
-        background: black;
+        background: #000;
         transform: unset;
         top: 7px;
-        left: 2px;
-        height: 10.2px;
+        left: 1.3px;
+        height: 12px;
+        width: 12px;
+        border: unset;
+        font-size: 0;
+        line-height: 0;
+    }
+    body.collection .boost-sd__filter-option--horizontal:not(.boost-sd__filter-option--style-expand) .boost-sd__filter-option-title--opening:after{
+        box-shadow: -1px -1px 2px rgba(0, 0, 0, .12);
+        border-bottom: unset;
+        z-index: 4;
     }
     body.collection .boost-sd__filter-option-item-button--with-checkbox .boost-sd__filter-option-item-label{
         color: var(--Black, #262626);
@@ -2627,6 +2637,16 @@ body.collection .boost-sd__filter-option-item-button--with-checkbox {
     body.collection .boost-sd__product-item-grid-view-layout-image{
         border: 1px solid var(--theme-surfaces-primary-base, #C6A55D);
         box-shadow: 0px 0px 0px 4px var(--theme-surfaces-a-light-mute, rgba(13, 63, 130, 0.12));
+    }
+
+    body.collection .boost-sd__toolbar-top-mobile.sticky_is_enabled{
+        padding-top: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-bottom: 1px solid var(--theme-surfaces-primary-mute, #E1D3A7);
+    }
+    body.collection .boost-sd__toolbar-top-mobile.sticky_is_enabled .boost-sd__sorting, body.collection .boost-sd__toolbar-top-mobile.sticky_is_enabled .boost-sd__filter-tree-toggle-button{
+        border-bottom: unset !important;
     }
 
 @media only screen and (max-width: 768px) {
