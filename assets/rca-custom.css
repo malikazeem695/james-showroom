@@ -2648,7 +2648,7 @@ body.collection .boost-sd__filter-option-item-button--with-checkbox {
     body.collection .boost-sd__toolbar-top-mobile.sticky_is_enabled .boost-sd__sorting, body.collection .boost-sd__toolbar-top-mobile.sticky_is_enabled .boost-sd__filter-tree-toggle-button{
         border-bottom: unset !important;
     }
-    body.collection .boost-sd__toolbar-item:last-child .boost-sd__sorting-list {
+    body.collection .boost-sd__toolbar-item .boost-sd__sorting-list {
         right: -22px;
         display: flex;
         padding: 35px 18px 19px 18px;
@@ -2657,7 +2657,7 @@ body.collection .boost-sd__filter-option-item-button--with-checkbox {
         gap: 10px;
         max-width: 163px;
     }
-    body.collection .boost-sd__toolbar-item:last-child .boost-sd__sorting-list .boost-sd__sorting-option {
+    body.collection .boost-sd__toolbar-item .boost-sd__sorting-list .boost-sd__sorting-option {
         margin: 0;
         min-width: 100%;
         padding: unset;
