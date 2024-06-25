@@ -2648,7 +2648,7 @@ body.collection .boost-sd__filter-option-item-button--with-checkbox {
     body.collection .boost-sd__toolbar-top-mobile.sticky_is_enabled .boost-sd__sorting, body.collection .boost-sd__toolbar-top-mobile.sticky_is_enabled .boost-sd__filter-tree-toggle-button{
         border-bottom: unset !important;
     }
-    body.collection .boost-sd__toolbar-item .boost-sd__sorting-list {
+    body.collection .boost-sd__toolbar-item .boost-sd__sorting-list.boost-sd__sorting-list--active {
         right: -22px;
         display: flex;
         padding: 35px 18px 19px 18px;
@@ -2669,7 +2669,8 @@ body.collection .boost-sd__filter-option-item-button--with-checkbox {
         line-height: 26px;
     }
     body.collection .boost-sd__sorting-option--active, body.collection .boost-sd__sorting-option:hover{
-        font-weight: 600;
+        font-weight: 600 !important;
+        text-decoration: unset;
     }
     body.collection .boost-sd__sorting-button.boost-sd__sorting-button--active:before {
         content: '';
