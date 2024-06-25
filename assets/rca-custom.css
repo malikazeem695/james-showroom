@@ -2624,10 +2624,17 @@ body.collection .boost-sd__filter-option-item-button--with-checkbox {
     line-height: 26px;
     opacity: 1;
     }
+    body.collection .boost-sd__product-item-grid-view-layout-image{
+        border: 1px solid var(--theme-surfaces-primary-base, #C6A55D);
+        box-shadow: 0px 0px 0px 4px var(--theme-surfaces-a-light-mute, rgba(13, 63, 130, 0.12));
+    }
 
 @media only screen and (max-width: 768px) {
     body.collection .boost-sd__product-list .boost-sd__product-item{
         width: calc(50% - 8px);
+    }
+    body.collection .boost-sd__product-item-grid-view-layout-image{
+        box-shadow: 0px 0px 0px 2px var(--theme-surfaces-a-light-mute, rgba(13, 63, 130, 0.12));
     }
     .boost-sd__product-list .promotion_banner_content{
         min-height: 270px;
