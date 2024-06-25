@@ -2487,7 +2487,7 @@ body.collection .boost-sd__product-list .boost-sd__product-item .boost-sd__produ
     font-weight: 400;
     line-height: 19px;
     text-decoration-line: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 2.5px;
 }
 .boost-sd__product-info p.login_for_pricing span {
     color: var(--theme-text-shade-base, #000);
