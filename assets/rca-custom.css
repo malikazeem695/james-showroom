@@ -2560,16 +2560,20 @@ body.collection .boost-sd__filter-option-itemwrapper--horizontal{
     border-radius: unset;
     padding: 44px 18px 18px;
 }
+body.collection .boost-sd__filter-option-itemwrapper--horizontal button.boost-sd__button.boost-sd__button--clear {
+    margin-left: unset;
+}
 body.collection .boost-sd__filter-option-itemwrapper--horizontal .boost-sd__filter-option-item-button--with-checkbox:before {
     height: 14px;
     width: 14px;
     border: 1px solid var(--Grey, #5D5D5D);
     background: var(--White, #FFF);
-    top: 5.5px;
+    top: 50%;
     border-radius: unset;
     padding: 1px;
     font-size: 0;
     line-height: 0;
+    transform: translateY(-50%);
 }
 body.collection .boost-sd__filter-option-itemwrapper--style1 .boost-sd__filter-option-item{
     margin-bottom: 10px;
@@ -2605,7 +2609,7 @@ body.collection .boost-sd__filter-option-item-button--with-checkbox {
     body.collection .boost-sd__filter-option-item-button--with-checkbox.boost-sd__filter-option-item-button--selected:after{
         background: #000;
         transform: unset;
-        top: 7.4px;
+        top: 50%;
         left: 1.9px;
         height: 14px;
         width: 14px;
@@ -2613,6 +2617,7 @@ body.collection .boost-sd__filter-option-item-button--with-checkbox {
         font-size: 0;
         line-height: 0;
         padding: 0;
+        transform: translateY(-50%);
     }
     body.collection .boost-sd__filter-option--horizontal:not(.boost-sd__filter-option--style-expand) .boost-sd__filter-option-title--opening:after{
         box-shadow: -1px -1px 2px rgba(0, 0, 0, .12);
