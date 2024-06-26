@@ -75,8 +75,7 @@ seventhItem.parentNode.insertBefore(promotionBanner, seventhItem.nextSibling);
              }
 
             }
-            var toolbar = document.querySelector('.boost-sd__toolbar-top-mobile');
-    
+            var toolbar = document.querySelector('.boost-sd__toolbar-top-mobile');   
             window.addEventListener('scroll', function() {
                 var computedStyle = window.getComputedStyle(toolbar);
                 
@@ -86,6 +85,23 @@ seventhItem.parentNode.insertBefore(promotionBanner, seventhItem.nextSibling);
                     toolbar.classList.remove('sticky_is_enabled');
                 }
             });
+
+            var selectArrows = document.querySelectorAll('body.collection .boost-sd__filter-option-label--inline-block .boost-sd__filter-option-title');
+
+    selectArrows.forEach(function(arrow) {
+        // Find the child element with class 'boost-sd__filter-option-icon'
+        var icon = arrow.querySelector('.boost-sd__filter-option-icon');
+        if (icon) {
+            icon.setAttribute('viewBox', '0 0 11 7'); // Change the class attribute value
+        }
+
+        // Find the child element with class 'boost-sd__filter-option-path'
+        var path = arrow.querySelector('.boost-sd__filter-option-path');
+        if (path) {
+            path.setAttribute('d', 'M1 0.5L5.5 5.5L10 0.5'); // Change the 'd' attribute value
+        }
+    });
+
           }
        })
     })
