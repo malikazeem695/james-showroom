@@ -2563,10 +2563,13 @@ body.collection .boost-sd__filter-option-itemwrapper--horizontal{
 body.collection .boost-sd__filter-option-itemwrapper--horizontal .boost-sd__filter-option-item-button--with-checkbox:before {
     height: 14px;
     width: 14px;
-    border: .5px solid var(--Grey, #5D5D5D);
+    border: 1px solid var(--Grey, #5D5D5D);
     background: var(--White, #FFF);
     top: 5.5px;
     border-radius: unset;
+    padding: 1px;
+    font-size: 0;
+    line-height: 0;
 }
 body.collection .boost-sd__filter-option-itemwrapper--style1 .boost-sd__filter-option-item{
     margin-bottom: 10px;
@@ -2602,13 +2605,14 @@ body.collection .boost-sd__filter-option-item-button--with-checkbox {
     body.collection .boost-sd__filter-option-item-button--with-checkbox.boost-sd__filter-option-item-button--selected:after{
         background: #000;
         transform: unset;
-        top: 7px;
-        left: 1.3px;
-        height: 12px;
-        width: 12px;
+        top: 7.4px;
+        left: 1.9px;
+        height: 14px;
+        width: 14px;
         border: unset;
         font-size: 0;
         line-height: 0;
+        padding: 0;
     }
     body.collection .boost-sd__filter-option--horizontal:not(.boost-sd__filter-option--style-expand) .boost-sd__filter-option-title--opening:after{
         box-shadow: -1px -1px 2px rgba(0, 0, 0, .12);
