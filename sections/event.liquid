@@ -46,7 +46,7 @@
     <p class="events_quantity"><span class="count_events">{{ section.blocks.size }}</span> events found</p>
   <div class="event-blocks">
     {% for block in section.blocks %}
-      <div class="event-block">
+      <div class="event-block showit" event-date="{{ block.settings.event_date | handleize }}" event-location="{{ block.settings.event_location | handleize }}">
         <img class="{{ block.settings.image_alignment }}" src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.event_heading }}" class="event-image">
         <div class="event-content">
             <div class="content_top_container">
@@ -338,9 +338,12 @@ header.events-header {
 .event-block a.rsvp-link {
     max-width: 260px;
 }
+.event-block.showit {
+    display: flex;
+}
 .event-block {
     width: 100%;
-    display: flex;
+    display: none;
     max-height: 520px;
     align-items: center;
     flex: 1 0 0;
@@ -494,15 +497,29 @@ a.all-events-link.btn.btn-primary.desktop_only {
   if (selectDateElement) {
     // Add change event listener to the select element
     selectDateElement.addEventListener('change', function() {
+      var count = 0;
       // Check if the selected value is 'default'
       if (selectDateElement.value === 'default') {
-        console.log('yeshere');
         // Add the class 'default_value' to the parent element '.event-date-picker'
         selectDateParent.classList.add('default_value');
       } else {
         // If the selected value is not 'default', remove the class 'default_value'
         selectDateParent.classList.remove('default_value');
+        var selectedValue = this.value;
+        var eventBlocks = document.querySelectorAll('.event-block');
+
+        eventBlocks.forEach(function(block) {
+            var eventDate = block.getAttribute('event-date');
+            if (eventDate === selectedValue) {
+                block.classList.add('showit');
+                count++;
+            } else {
+                block.classList.remove('showit');
+            }
+        });
+        document.querySelector('.count_events').textContent = count;
       }
+      
     });
   }
 
@@ -513,6 +530,21 @@ a.all-events-link.btn.btn-primary.desktop_only {
         selectlocationElement.closest('.event-location-picker').classList.add('default_value');
       } else {
         selectlocationElement.closest('.event-location-picker').classList.remove('default_value');
+        var selectedValue = this.value;
+    var eventBlocks = document.querySelectorAll('.event-block');
+    var count = 0;
+
+    eventBlocks.forEach(function(block) {
+        var eventLocation = block.getAttribute('event-location');
+        if (eventLocation === selectedValue) {
+            block.classList.add('showit');
+            count++;
+        } else {
+            block.classList.remove('showit');
+        }
+    });
+
+    document.querySelector('.count_events').textContent = count;
       }
     });
   }
