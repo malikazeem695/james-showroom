@@ -68,9 +68,9 @@
             <label for="address_default_address_new" class="inline">{{ 'customer.addresses.set_default' | t }}</label>
           </p>
 
-          <p class="action_bottom">
-            <input class="global-button global-button--primary" type="submit" value="{{ 'customer.addresses.add' | t }}" />
-            <span class="note"> {{ 'customer.addresses.or' | t }} <a href="#" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;">{{ 'customer.addresses.cancel' | t }}</a></span>
+          <p class="action_bottom" style="padding-top:20px;">
+            <button class="global-button global-button--primary" type="submit"> UPDATE </button>
+            <span class="note" style="padding-left:20px;"> or <a href="#" onclick="Shopify.CustomerAddress.toggleNewForm(); return false;" style="padding-left:20px;">{{ 'customer.addresses.cancel' | t }}</a></span>
           </p>
         {% endform %}
       </div>
@@ -143,12 +143,12 @@
                       <label for="address_default_address_new" class="inline">{{ 'customer.addresses.set_default' | t }}</label>
                     </p>
 
-                    <p class="action_bottom">
-                      <input type="submit" class="global-button global-button--primary" value="{{ 'customer.addresses.update' | t }}">
+                    <p class="action_bottom" style="padding-top:20px;">
+                      <button class="global-button global-button--primary" type="submit"> UPDATE </button>
 
-                      <span class="note">
-                        {{ 'customer.addresses.or' | t }}
-                        <a href="#" onclick="Shopify.CustomerAddress.toggleForm({{form.id}}); return false;">{{ 'customer.addresses.cancel' | t }}</a>
+                      <span class="note" style="padding-left:20px;">
+                        or 
+                        <a href="#" onclick="Shopify.CustomerAddress.toggleForm({{form.id}}); return false;" style="padding-left:20px;">{{ 'customer.addresses.cancel' | t }}</a>
                       </span>
                     </p>
                   {% endform %}
