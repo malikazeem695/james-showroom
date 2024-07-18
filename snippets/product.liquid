@@ -360,13 +360,9 @@ button.action_button {
                   <p>{{ 'homepage.onboarding.product_description' | t }}</p>
                 {% else %}
                   {% if context == 'quickshop' %}
-                    {% if product.description != blank %}
+                    {% if product.metafields.custom.specification != blank %}
                       <div class="rte">
-                        {% if block.settings.truncate_description %}
-                          {{ product.description | truncatewords: block.settings.truncated_words }}
-                        {% else %}
-                          {{ product.description | split: '<!-- split -->' | first }}
-                        {% endif %}
+                       {{ product.metafields.custom.specification }}
                       </div>
                     {% endif %}
 
@@ -378,9 +374,9 @@ button.action_button {
                       {{ 'collections.general.view_product_details_html' | t }}
                     </a>
                   {% else %}
-                    {% if product.description != blank %}
-                      <div class="rte">
-                        {{ product.description | split: '<!-- split -->' | first }}
+                  {% if product.metafields.custom.specification != blank %}
+                      <div class="rte yeshereis">
+                        {{ product.metafields.custom.specification }}
                       </div>
                     {% endif %}
                   {% endif %}
