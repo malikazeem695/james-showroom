@@ -360,11 +360,25 @@ button.action_button {
                   <p>{{ 'homepage.onboarding.product_description' | t }}</p>
                 {% else %}
                   {% if context == 'quickshop' %}
-                    {% if product.metafields.custom.specification != blank %}
                       <div class="rte">
-                       {{ product.metafields.custom.specification }}
+                        <div class="rte yeshereis">
+                          {% if product.metafields.custom.sold_by != blank %}
+                          <p>Sold by {{ product.metafields.custom.sold_by }}</p>
+                        {% endif %}
+                        {% if product.metafields.custom.content != blank %}
+                          <p>Content: {{ product.metafields.custom.content }}</p>
+                        {% endif %}
+                        {% if product.metafields.custom.lead_time != blank %}
+                          <p>Lead time: {{ product.metafields.custom.lead_time }}</p>
+                        {% endif %}
+                        {% if product.metafields.custom.width != blank %}
+                          <p>Width: {{ product.metafields.custom.width }}</p>
+                        {% endif %}
+                        {% if product.metafields.custom.repeat != blank %}
+                          <p>Repeat: {{ product.metafields.custom.repeat }}</p>
+                        {% endif %}
+                        </div>
                       </div>
-                    {% endif %}
 
                     <a
                       class="secondary_button"
@@ -374,11 +388,26 @@ button.action_button {
                       {{ 'collections.general.view_product_details_html' | t }}
                     </a>
                   {% else %}
-                  {% if product.metafields.custom.specification != blank %}
+                  
                       <div class="rte yeshereis">
-                        {{ product.metafields.custom.specification }}
+                        {% if product.metafields.custom.sold_by != blank %}
+                        <p>Sold by {{ product.metafields.custom.sold_by }}</p>
+                      {% endif %}
+                      {% if product.metafields.custom.content != blank %}
+                        <p>Content: {{ product.metafields.custom.content }}</p>
+                      {% endif %}
+                      {% if product.metafields.custom.lead_time != blank %}
+                        <p>Lead time: {{ product.metafields.custom.lead_time }}</p>
+                      {% endif %}
+                      {% if product.metafields.custom.width != blank %}
+                        <p>Width: {{ product.metafields.custom.width }}</p>
+                      {% endif %}
+                        {% if product.metafields.custom.repeat != blank %}
+                          <p>Repeat: {{ product.metafields.custom.repeat }}</p>
+                        {% endif %}
+                      
                       </div>
-                    {% endif %}
+                    
                   {% endif %}
                 {% endif %}
               </div>
