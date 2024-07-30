@@ -3,6 +3,7 @@
     height: 91px;
     display: block;
     background-blend-mode: luminosity;
+  background-size: contain !important;
 }
 .logo_wrapper a:hover{
     background-blend-mode: normal;
