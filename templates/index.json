@@ -103,6 +103,7 @@
         "custom_block_NrkUKn": {
           "type": "custom-block",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/Casa_Lopez_Logo.webp",
             "link": ""
           }
         },
