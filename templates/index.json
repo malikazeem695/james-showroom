@@ -110,7 +110,8 @@
         "custom_block_8gHFDW": {
           "type": "custom-block",
           "settings": {
-            "link": ""
+            "logo": "shopify:\/\/shop_images\/Ferrick_Mason_Logo.png",
+            "link": "shopify:\/\/collections\/ferrick-mason-fabric"
           }
         },
         "custom_block_nmDg9K": {
