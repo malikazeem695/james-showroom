@@ -83,7 +83,13 @@
           "type": "custom-block",
           "settings": {
             "logo": "shopify:\/\/shop_images\/Caitlin_McGauley_Logo.jpg",
-            "link": "shopify:\/\/collections"
+            "link": "shopify:\/\/collections\/caitlin-mcgauley-fabric"
+          }
+        },
+        "custom_block_C9XGzd": {
+          "type": "custom-block",
+          "settings": {
+            "link": ""
           }
         },
         "custom_block_T8ij7Y": {
@@ -173,6 +179,7 @@
         "custom_block_HYnkw7",
         "custom_block_8icmXW",
         "custom_block_txqhxY",
+        "custom_block_C9XGzd",
         "custom_block_T8ij7Y",
         "custom_block_x4wtGL",
         "custom_block_NrkUKn",
