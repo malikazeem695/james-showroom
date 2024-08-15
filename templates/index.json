@@ -124,7 +124,8 @@
         "custom_block_QqA6kG": {
           "type": "custom-block",
           "settings": {
-            "link": ""
+            "logo": "shopify:\/\/shop_images\/Helene_Blanche_Logo.webp",
+            "link": "shopify:\/\/collections\/helene-blanche-fabric"
           }
         },
         "custom_block_nmDg9K": {
