@@ -16,9 +16,9 @@
           "type": "image",
           "settings": {
             "layout_style": "text_left",
-            "image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c.png",
-            "heading": "British Wallpaper Designer Mia Reay",
-            "subtext": "Visit JAMES-NYC February 28th!<br> Contact Showroom to RSVP.",
+            "image": "shopify:\/\/shop_images\/NT_WP_4bfc0a3b-008c-43bd-ac9d-a3d5652b4408.png",
+            "heading": "JAMES IS PROUD TO ANNOUNCE THE ARRIVAL OF NATHAN TURNER",
+            "subtext": "",
             "button_url": "shopify:\/\/collections",
             "button_label": "View Recent Features"
           }
@@ -142,17 +142,17 @@
             "link": "shopify:\/\/collections\/lake-august-fabric"
           }
         },
-        "custom_block_nmDg9K": {
-          "type": "custom-block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/Logo_Mark2_Textiles_RGB.png",
-            "link": "shopify:\/\/collections"
-          }
-        },
         "custom_block_Th4xc8": {
           "type": "custom-block",
           "settings": {
             "logo": "shopify:\/\/shop_images\/Lisa_Fine_Logo.jpg",
+            "link": "shopify:\/\/collections"
+          }
+        },
+        "custom_block_nmDg9K": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Logo_Mark2_Textiles_RGB.png",
             "link": "shopify:\/\/collections"
           }
         },
@@ -191,8 +191,8 @@
         "custom_block_QqA6kG",
         "custom_block_haXwRx",
         "custom_block_TwRaUJ",
-        "custom_block_nmDg9K",
         "custom_block_Th4xc8",
+        "custom_block_nmDg9K",
         "custom_block_Mq4cGC",
         "custom_block_fK4FXX",
         "custom_block_hfYeJR"
