@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "sidebar": {
@@ -42,10 +51,10 @@
           "settings": {
             "show_product_description": false,
             "show_tabs_below_product_gallery": false,
-            "tab_heading_1": "Care Instructions",
-            "tab_text_1": "<p>Lorem ipsum dolor sit amet consectetur. Tempor ipsum convallis dolor mauris tempor ullamcorper pulvinar. Egestas eget justo aliquet purus sed eu sit massa. Netus arcu faucibus sed nisi diam nibh. Odio sed lectus vitae nulla nec mattis maecenas egestas ut. Tortor elit quis porta odio.<\/p>",
-            "tab_heading_2": "Tab 02",
-            "tab_text_2": "<p>Use this text to share information about your product.<\/p>",
+            "tab_heading_1": "Sample Orders",
+            "tab_text_1": "<p>Sample orders for fabrics\/wallpapers are reserved for trade clients only.  Please note, there is a 15 sample limit per cart.<\/p><p>Samples will be mailed via USPS with tracking and the client will be notified by email.  <\/p><p>Single sample orders may not have tracking.  If a sample is not in stock, we will do our best to notify client and send when it becomes available.<\/p><p>For furniture and lighting finish samples, please contact your nearest showroom to see if they are available.<\/p>",
+            "tab_heading_2": "Shipping Information",
+            "tab_text_2": "<p>Shipping carrier for showroom orders varies for each vendor.  FedEx, UPS, DHL, or other carrier tracking will be posted to the paid invoice and emailed to client as soon as we receive it from our vendor.<\/p>",
             "tab_heading_3": "Tab 03",
             "tab_text_3": "<p>Use this text to share information about your product.<\/p>"
           }
