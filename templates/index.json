@@ -128,6 +128,19 @@
             "link": "shopify:\/\/collections\/helene-blanche-fabric"
           }
         },
+        "custom_block_haXwRx": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Kathryn_Ireland_Logo.png",
+            "link": "shopify:\/\/collections\/kathryn-m-ireland-textiles-fabric"
+          }
+        },
+        "custom_block_TwRaUJ": {
+          "type": "custom-block",
+          "settings": {
+            "link": ""
+          }
+        },
         "custom_block_nmDg9K": {
           "type": "custom-block",
           "settings": {
@@ -156,18 +169,6 @@
             "link": "shopify:\/\/collections\/peter-dunham-textiles-fabric"
           }
         },
-        "custom_block_haXwRx": {
-          "type": "custom-block",
-          "settings": {
-            "link": ""
-          }
-        },
-        "custom_block_TwRaUJ": {
-          "type": "custom-block",
-          "settings": {
-            "link": ""
-          }
-        },
         "custom_block_hfYeJR": {
           "type": "custom-block",
           "settings": {
@@ -187,12 +188,12 @@
         "custom_block_8gHFDW",
         "custom_block_C9XGzd",
         "custom_block_QqA6kG",
+        "custom_block_haXwRx",
+        "custom_block_TwRaUJ",
         "custom_block_nmDg9K",
         "custom_block_Th4xc8",
         "custom_block_Mq4cGC",
         "custom_block_fK4FXX",
-        "custom_block_haXwRx",
-        "custom_block_TwRaUJ",
         "custom_block_hfYeJR"
       ],
       "settings": {
