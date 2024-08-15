@@ -62,21 +62,21 @@
           "type": "custom-block",
           "settings": {
             "logo": "shopify:\/\/shop_images\/Alamwar_Logo.png",
-            "link": "shopify:\/\/collections"
+            "link": "shopify:\/\/collections\/alamwar-textiles-fabric"
           }
         },
         "custom_block_HYnkw7": {
           "type": "custom-block",
           "settings": {
             "logo": "shopify:\/\/shop_images\/Anna_Spiro_Logo.png",
-            "link": "shopify:\/\/collections"
+            "link": "shopify:\/\/collections\/anna-spiro-textiles-fabric"
           }
         },
         "custom_block_8icmXW": {
           "type": "custom-block",
           "settings": {
             "logo": "shopify:\/\/shop_images\/BT_Logo.webp",
-            "link": "shopify:\/\/collections"
+            "link": "shopify:\/\/collections\/botanica-trading-textiles-fabric"
           }
         },
         "custom_block_txqhxY": {
