@@ -86,13 +86,6 @@
             "link": "shopify:\/\/collections"
           }
         },
-        "custom_block_fK4FXX": {
-          "type": "custom-block",
-          "settings": {
-            "logo": "shopify:\/\/shop_images\/pdtlogo.jpg",
-            "link": "shopify:\/\/collections"
-          }
-        },
         "custom_block_txqhxY": {
           "type": "custom-block",
           "settings": {
@@ -139,6 +132,13 @@
           "settings": {
             "link": ""
           }
+        },
+        "custom_block_fK4FXX": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/pdtlogo.jpg",
+            "link": "shopify:\/\/collections"
+          }
         }
       },
       "block_order": [
@@ -146,14 +146,14 @@
         "custom_block_Mq4cGC",
         "custom_block_HYnkw7",
         "custom_block_8icmXW",
-        "custom_block_fK4FXX",
         "custom_block_txqhxY",
         "custom_block_T8ij7Y",
         "custom_block_x4wtGL",
         "custom_block_NrkUKn",
         "custom_block_nmDg9K",
         "custom_block_Th4xc8",
-        "custom_block_QqA6kG"
+        "custom_block_QqA6kG",
+        "custom_block_fK4FXX"
       ],
       "settings": {
         "speed": 50
