@@ -53,8 +53,16 @@
             "collapsible_tab_text": "<p>Sample orders for fabrics\/wallpapers are reserved for trade clients only. <\/p><p>Please note, there is a 15 sample limit per cart.<\/p><p>Samples will be mailed via USPS with tracking and the client will be notified by email.<\/p><p>Single sample orders may not have tracking. If a sample is not in stock, we will do our best to notify client and send when it becomes available.<\/p><p>For furniture and lighting finish samples, please contact your nearest showroom to see if they are available.<\/p>"
           }
         },
+        "collapsible_tab_QRXbfc": {
+          "type": "collapsible-tab",
+          "settings": {
+            "collapsible_tab_heading": "INFORMATION ON LEAD TIMES",
+            "collapsible_tab_text": "<p>Lead times will vary based on vendor and can fluctuate due to holidays, ground availability, or other factors.  Listed lead times are the average lead time for that product and do include shipping transit to client.<\/p><p>Shipping carrier for showroom orders varies for each vendor.  FedEx, UPS, DHL, or other carrier tracking will be posted to the paid invoice and emailed to client as soon as we receive it from our vendor.<\/p>"
+          }
+        },
         "tabs_HVJfNq": {
           "type": "tabs",
+          "disabled": true,
           "settings": {
             "show_product_description": false,
             "show_tabs_below_product_gallery": false,
@@ -74,6 +82,7 @@
         "description",
         "share",
         "collapsible_tab_eittFr",
+        "collapsible_tab_QRXbfc",
         "tabs_HVJfNq"
       ],
       "settings": {
