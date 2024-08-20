@@ -210,3 +210,13 @@ body.collection .boost-sd__header-description:empty, body.collection .boost-sd__
     aspect-ratio: 1/1 !important;
   object-fit: cover;
   }
+
+  .product-description {
+    margin-bottom: 12px;
+  }
+
+  .details_product {
+    color: #000;
+    text-align: left;
+    margin-bottom: 20px;
+  }

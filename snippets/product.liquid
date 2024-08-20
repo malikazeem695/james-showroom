@@ -356,6 +356,11 @@ button.action_button {
               {{ block.settings.custom_liquid }}
             {% when 'description' %}
               <div class="description">
+                 <div class="product-description">
+                {% if product.description != blank %}
+                  {{product.description }}
+                {% endif %}
+              </div> 
                 {% if onboarding %}
                   <p>{{ 'homepage.onboarding.product_description' | t }}</p>
                 {% else %}
@@ -754,21 +759,79 @@ button.action_button {
           <span itemprop="brand" class="vendor">{{ product.vendor | link_to_vendor }}</span>
         </p>
       <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
-      <ul class="ac2q">
+      {% comment %} <ul class="ac2q"> {% endcomment %}
   
-       
-        
-         {% for option_title in product.options %}
-                     {% if option_title contains 'Color'%}
-       <li><span class="label">{{ option_title }}: <span class="swatch-color-display colorone" ></span></span></li> <span class="dana jj{{forloop.index}}">|</span>
-{% else %} 
-<li><span class="label">{{ option_title }}: <span   class="swatch-color-display normone"></span></span></li> <span class="dana jj{{forloop.index}}">|</span>
-         {% endif %}         
-{% endfor %}
-      </ul>
-    
+{% comment %}        
+        {% for selected_option in product.selected_or_first_available_variant.options %}
+          {% assign lower_option_title = product.options[forloop.index0] | downcase %}
+          <li>
+              <span class="label">{{ product.options[forloop.index0] }}: 
+                  {% if lower_option_title contains 'color' %}
+                      <span class="swatch-color-display colorone">{{ selected_option }}</span>
+                  {% else %}
+                      <span class="swatch-color-display normone">{{ selected_option }}</span>
+                  {% endif %}
+              </span>
+          </li>
+          <span class="dana jj{{ forloop.index }}">|</span>
+      {% endfor %}
+      
+       {% endcomment %}
+      {% comment %} </ul> {% endcomment %}
     <div class="des">
       {{ product.description }}
+    </div>
+    <div class="details_product">
+      {% if product.metafields.custom.sold_by != blank %}
+        <p>Sold by {{ product.metafields.custom.sold_by }}</p>
+      {% endif %}
+      {% if product.metafields.custom.content != blank %}
+        <p>Content: {{ product.metafields.custom.content }}</p>
+      {% endif %}
+      {% if product.metafields.custom.lead_time != blank %}
+        <p>Lead time: {{ product.metafields.custom.lead_time }}</p>
+      {% endif %}
+      {% if product.metafields.custom.width != blank %}
+        <p>Width: {{ product.metafields.custom.width }}</p>
+      {% endif %}
+      {% if product.metafields.custom.repeat != blank %}
+        <p>Repeat: {{ product.metafields.custom.repeat }}</p>
+      {% endif %}
+      {% if product.metafields.custom.rub_count != blank %}
+        <p>Rub Count: {{ product.metafields.custom.rub_count }}</p>
+      {% endif %}
+  
+      {% if product.metafields.custom.minimum_order != blank %}
+        <p>Minimum Order: {{ product.metafields.custom.minimum_order }}</p>
+      {% endif %}
+  
+      {% if product.metafields.custom.cut_fee != blank %}
+        <p>Cut Fee: {{ product.metafields.custom.cut_fee }}</p>
+      {% endif %}
+  
+      {% if product.metafields.custom.country_of_origin != blank %}
+        <p>Country of Origin: {{ product.metafields.custom.country_of_origin }}</p>
+      {% endif %}
+  
+      {% if product.metafields.custom.dimensions != blank %}
+        <p>Dimensions: {{ product.metafields.custom.dimensions }}</p>
+      {% endif %}
+  
+      {% if product.metafields.custom.wood_finish_options != blank %}
+        <p>Wood finish options: {{ product.metafields.custom.wood_finish_options }}</p>
+      {% endif %}
+  
+      {% if product.metafields.custom.metal_finish_options != blank %}
+        <p>Metal finish options: {{ product.metafields.custom.metal_finish_options }}</p>
+      {% endif %}
+  
+      {% if product.metafields.custom.bold_type != blank %}
+        <p>Bold type: {{ product.metafields.custom.bold_type }}</p>
+      {% endif %}
+  
+      {% if product.metafields.custom.additional_info != blank %}
+        <p>Additional Info: {{ product.metafields.custom.additional_info }}</p>
+      {% endif %}
     </div>
   </div>
     </div>
@@ -782,10 +845,10 @@ button.action_button {
   </div>
   <style>
     .productPrintTemplate {
-   display: none;
+   display: block;
 }
 .productPrintTemplate .customContainer {
-  padding: 30px;
+  padding: 16px;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -793,18 +856,18 @@ button.action_button {
   display: inline-block;
   max-width: 100px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .productPrintTemplate--productImage img {
-  width: 68%;
+  width: 58%;
 }
 .productPrintTemplate--productContent {
   display: block;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  margin-top: 20px;
-  width: calc(73% - 40px);
+  margin-top: 10px;
+  width: calc(72% - 40px);
   margin-left: auto;
   margin-right: auto;
 }
@@ -839,8 +902,13 @@ button.action_button {
 span.dana.jj2 {
   display: none;
 }
+
+.productPrintTemplate ul {
+margin-bottom: 10px
+}
+
 .productPrintTemplate--productContent .leftSide .des {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .productPrintTemplate--productContent .leftSide .des p {
   margin: 0;
@@ -853,6 +921,9 @@ span.dana.jj2 {
 }
 .productPrintTemplate--productFooter span {
   font-size: 16px!important;
+  text-align: center;
+  display: flex;
+    justify-content: center;
 }
 @media print {
     @page {
