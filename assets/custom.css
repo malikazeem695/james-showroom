@@ -18,7 +18,7 @@ body.collection .boost-sd__product-filter-fallback {
   max-width: 100%;
 }
 body.collection .boost-sd__filter-block .boost-sd__header-image{
-  height: 300px;
+  max-height: 750px;
   min-height: 300px;
   opacity: 1;
 }
@@ -31,6 +31,7 @@ body.collection .boost-sd__header-main-2-content{
     gap: 16px;
     opacity: 0.85;
     background: #648390;
+    margin: 24px 0;
 }
 body.collection .boost-sd__collection-header .boost-sd__header-title{
   color: var(--theme-text-shade-inverse, #FFF);
@@ -44,7 +45,7 @@ letter-spacing: -0.76px;
 }
 body.collection .boost-sd__header-main-2{
   min-height: 300px;
-  height: 300px;
+  max-height: 750px;
 }
 body.collection .boost-sd-layout--has-filter-horizontal{
 width: 100%;
@@ -128,6 +129,13 @@ body.collection .boost-sd__header-description {
   flex-direction: column;
   gap: 6px;
 }
+
+body.collection .boost-sd__header-description div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 body.collection .boost-sd__header-description:empty, body.collection .boost-sd__header-description div:empty, body.collection .boost-sd__header-description br {
   display: none;
 }
