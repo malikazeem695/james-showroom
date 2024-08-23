@@ -285,9 +285,9 @@
         "image_drBKeK": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/47a1ae3e34ff8d28fc7bff38b32b32b3.png",
-            "title": "Anna Spiro",
-            "link": "shopify:\/\/collections\/anna-spiro"
+            "image": "shopify:\/\/shop_images\/MET-FAB-Deakins_Vine_Swedish_Blue_Indigo_4469a97f-6b0a-4abb-8978-3da268f9bc9c.jpg",
+            "title": "Deakins Vine",
+            "link": "shopify:\/\/products\/meredith-ellis-deakins-vine"
           }
         },
         "image_A34ctx": {
@@ -352,7 +352,7 @@
         "heading": "Newest Releases",
         "btn_text": "View all new Fabrics",
         "btn_link": "shopify:\/\/collections\/new-arrivals",
-        "btn_text_sec": "Browse Heather Chadduck Textiles",
+        "btn_text_sec": "Heather Chadduck Textiles",
         "btn_link_sec": "shopify:\/\/collections\/heather-chadduck-textiles-fabric"
       }
     },
@@ -423,39 +423,6 @@
         "main_heading": "Showroom Locations"
       }
     },
-    "image_text_with_overlay_wpmPY8": {
-      "type": "image-text-with-overlay",
-      "blocks": {
-        "feature_block_bgdKyt": {
-          "type": "feature_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_5255_Copy.jpg",
-            "overlay_color": "#648390",
-            "heading": "Introducing Carolina Irving & Daughters",
-            "text": "We are thrilled to welcome carolina irving & daughters to our texas showroom collection. Founded by textile designer carolina irving , with her daughters olympia and ariadne irving, each piece is hand-made by local artisans in independent, family-run ateliers. Click the link below to explore their offerings and let us know what you need to set your table in style!",
-            "link_text": "Visit the Carolina Irving & Daughters website",
-            "link_url": "shopify:\/\/collections\/carolina-irving-daughters-1"
-          }
-        },
-        "feature_block_w4mY73": {
-          "type": "feature_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/PML_Web_2.jpg",
-            "overlay_color": "#648390",
-            "heading": "Penny Morrison Accessories",
-            "text": "JAMES is your home for all things Penny Morrison!<br>\n<br>\n\nFrom her luxurious fabrics and wallpapers, to her beautiful bespoke lamps, lampshades and everything in between. <br>\n<br>\n\nContact your nearest showroom to see what we have in stock or have us ship directly to you or your client.",
-            "link_text": "View all Penny Morrison accessories",
-            "link_url": "shopify:\/\/collections\/penny-morrison-textiles-fabric"
-          }
-        }
-      },
-      "block_order": [
-        "feature_block_bgdKyt",
-        "feature_block_w4mY73"
-      ],
-      "settings": {
-      }
-    },
     "events_section_hhhFFL": {
       "type": "events-section",
       "blocks": {
@@ -498,6 +465,39 @@
         "link_url": "shopify:\/\/pages\/events"
       }
     },
+    "image_text_with_overlay_wpmPY8": {
+      "type": "image-text-with-overlay",
+      "blocks": {
+        "feature_block_bgdKyt": {
+          "type": "feature_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_5255_Copy.jpg",
+            "overlay_color": "#648390",
+            "heading": "Introducing Carolina Irving & Daughters",
+            "text": "We are thrilled to welcome carolina irving & daughters to our texas showroom collection. Founded by textile designer carolina irving , with her daughters olympia and ariadne irving, each piece is hand-made by local artisans in independent, family-run ateliers. Click the link below to explore their offerings and let us know what you need to set your table in style!",
+            "link_text": "Visit the Carolina Irving & Daughters website",
+            "link_url": "shopify:\/\/collections\/carolina-irving-daughters-1"
+          }
+        },
+        "feature_block_w4mY73": {
+          "type": "feature_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PML_Web_2.jpg",
+            "overlay_color": "#648390",
+            "heading": "Penny Morrison Accessories",
+            "text": "JAMES is your home for all things Penny Morrison!<br>\n<br>\n\nFrom her luxurious fabrics and wallpapers, to her beautiful bespoke lamps, lampshades and everything in between. <br>\n<br>\n\nContact your nearest showroom to see what we have in stock or have us ship directly to you or your client.",
+            "link_text": "View all Penny Morrison accessories",
+            "link_url": "shopify:\/\/collections\/penny-morrison-textiles-fabric"
+          }
+        }
+      },
+      "block_order": [
+        "feature_block_bgdKyt",
+        "feature_block_w4mY73"
+      ],
+      "settings": {
+      }
+    },
     "770ffb1e-71a9-475d-b8d6-5f0fc4ad470d": {
       "type": "newsletter",
       "settings": {
@@ -521,8 +521,8 @@
     "rca_image_text_JbFnqY",
     "collections_tab_Xf643N",
     "showroom_locations_jQ7kW6",
-    "image_text_with_overlay_wpmPY8",
     "events_section_hhhFFL",
+    "image_text_with_overlay_wpmPY8",
     "770ffb1e-71a9-475d-b8d6-5f0fc4ad470d"
   ]
 }
