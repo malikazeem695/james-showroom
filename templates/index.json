@@ -246,6 +246,13 @@
             "logo": "shopify:\/\/shop_images\/pdtlogo.jpg",
             "link": "shopify:\/\/collections\/peter-dunham-textiles-fabric"
           }
+        },
+        "custom_block_dN7KfR": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/ROT_Logo.png",
+            "link": "shopify:\/\/collections\/rule-of-three-studio-fabric"
+          }
         }
       },
       "block_order": [
@@ -275,7 +282,8 @@
         "custom_block_Mq4cGC",
         "custom_block_KdVz6j",
         "custom_block_rVGUtH",
-        "custom_block_fK4FXX"
+        "custom_block_fK4FXX",
+        "custom_block_dN7KfR"
       ],
       "settings": {
         "speed": 50
