@@ -17,7 +17,7 @@
           "settings": {
             "layout_style": "text_left",
             "image": "shopify:\/\/shop_images\/NT_Portrait.jpg",
-            "heading": "JAMES IS THRILLED TO WELCOME NATHAN TURNER AND HIS DEBUT \"CALIFORNIA COLLECTION\" OF FABRICS AND WALLPAPERS!",
+            "heading": "JAMES IS THRILLED TO WELCOME NATHAN TURNER AND HIS DEBUT \"CALIFORNIA COLLECTION\" OF FABRICS AND WALLPAPERS! NOW AVAILABLE THROUGH ALL OUR SHOWROOMS!",
             "subtext": "Stop by to say hello to Nathan and view his designs at our formal JAMES-NYC launch on Sept 18th, 3-5PM",
             "button_url": "shopify:\/\/collections",
             "button_label": "View Nathan's fabrics"
@@ -27,11 +27,11 @@
           "type": "image",
           "settings": {
             "layout_style": "text_right",
-            "image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c.png",
-            "heading": "British Wallpaper Designer Mia Reay",
-            "subtext": "Visit JAMES-NYC February 28th!<br> Contact Showroom to RSVP.",
-            "button_url": "shopify:\/\/collections",
-            "button_label": "View Recent Features"
+            "image": "shopify:\/\/shop_images\/FS_PROFILE.jpg",
+            "heading": "WELCOME FLORA SOAMES!",
+            "subtext": "One of Hosue & Gardens Top 100 designers, JAMES is now proud to offer her exquisite collection through our Dallas and Houston Showrooms!",
+            "button_url": "shopify:\/\/collections\/flora-soames-fabrics",
+            "button_label": "Flora Soames Fabrics"
           }
         },
         "image_fWxray": {
