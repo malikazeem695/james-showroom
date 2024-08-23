@@ -205,6 +205,13 @@
             "link": "shopify:\/\/collections\/martyn-lawrence-bullard-fabric"
           }
         },
+        "custom_block_abriWm": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Screenshot_2024-08-23_at_4.05.49_PM.png",
+            "link": "shopify:\/\/collections\/clay-mclaurin-studio-fabric"
+          }
+        },
         "custom_block_nmDg9K": {
           "type": "custom-block",
           "settings": {
@@ -256,6 +263,7 @@
         "custom_block_t4HcxV",
         "custom_block_Azi8KN",
         "custom_block_Y9t8XG",
+        "custom_block_abriWm",
         "custom_block_nmDg9K",
         "custom_block_Mq4cGC",
         "custom_block_KdVz6j",
