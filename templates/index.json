@@ -233,6 +233,13 @@
             "link": "shopify:\/\/collections\/paolo-moschino-lighting"
           }
         },
+        "custom_block_rVGUtH": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/PM_Logo.jpg",
+            "link": "shopify:\/\/collections\/penny-morrison-textiles-fabric"
+          }
+        },
         "custom_block_fK4FXX": {
           "type": "custom-block",
           "settings": {
@@ -267,6 +274,7 @@
         "custom_block_nmDg9K",
         "custom_block_Mq4cGC",
         "custom_block_KdVz6j",
+        "custom_block_rVGUtH",
         "custom_block_fK4FXX"
       ],
       "settings": {
