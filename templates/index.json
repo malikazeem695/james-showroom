@@ -184,6 +184,13 @@
             "link": "shopify:\/\/collections"
           }
         },
+        "custom_block_t4HcxV": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Mahala_Logo.png",
+            "link": "shopify:\/\/collections\/mahala-textiles-fabric"
+          }
+        },
         "custom_block_nmDg9K": {
           "type": "custom-block",
           "settings": {
@@ -232,6 +239,7 @@
         "custom_block_TwRaUJ",
         "custom_block_TBj7Bq",
         "custom_block_Th4xc8",
+        "custom_block_t4HcxV",
         "custom_block_nmDg9K",
         "custom_block_Mq4cGC",
         "custom_block_KdVz6j",
