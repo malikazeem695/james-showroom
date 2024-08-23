@@ -170,6 +170,13 @@
             "link": "shopify:\/\/collections\/lake-august-fabric"
           }
         },
+        "custom_block_TBj7Bq": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Leah_OConnell_Textiles.webp",
+            "link": "shopify:\/\/collections\/leah-o-connell-textiles-fabric"
+          }
+        },
         "custom_block_Th4xc8": {
           "type": "custom-block",
           "settings": {
@@ -223,6 +230,7 @@
         "custom_block_4YFVCq",
         "custom_block_haXwRx",
         "custom_block_TwRaUJ",
+        "custom_block_TBj7Bq",
         "custom_block_Th4xc8",
         "custom_block_nmDg9K",
         "custom_block_Mq4cGC",
