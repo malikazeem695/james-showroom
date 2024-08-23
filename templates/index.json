@@ -198,6 +198,13 @@
             "link": "shopify:\/\/collections\/mally-skok-fabric"
           }
         },
+        "custom_block_Y9t8XG": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Screenshot_2024-08-23_at_4.03.23_PM.png",
+            "link": "shopify:\/\/collections\/martyn-lawrence-bullard-fabric"
+          }
+        },
         "custom_block_nmDg9K": {
           "type": "custom-block",
           "settings": {
@@ -248,6 +255,7 @@
         "custom_block_Th4xc8",
         "custom_block_t4HcxV",
         "custom_block_Azi8KN",
+        "custom_block_Y9t8XG",
         "custom_block_nmDg9K",
         "custom_block_Mq4cGC",
         "custom_block_KdVz6j",
