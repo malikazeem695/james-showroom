@@ -86,6 +86,13 @@
             "link": "shopify:\/\/collections\/caitlin-mcgauley-fabric"
           }
         },
+        "custom_block_yzjMKB": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Cape_Looms_logo.png",
+            "link": "shopify:\/\/collections\/cape-looms-by-jvb-carpets"
+          }
+        },
         "custom_block_T8ij7Y": {
           "type": "custom-block",
           "settings": {
@@ -197,6 +204,7 @@
         "custom_block_HYnkw7",
         "custom_block_8icmXW",
         "custom_block_txqhxY",
+        "custom_block_yzjMKB",
         "custom_block_T8ij7Y",
         "custom_block_x4wtGL",
         "custom_block_NrkUKn",
