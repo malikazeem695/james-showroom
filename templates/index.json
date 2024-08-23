@@ -260,6 +260,13 @@
             "logo": "shopify:\/\/shop_images\/Screenshot_2024-08-23_at_4.24.24_PM.png",
             "link": "shopify:\/\/collections\/salvesen-graham-fabric"
           }
+        },
+        "custom_block_bRRFmi": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/sarahvanrenen_logo.jpg",
+            "link": "shopify:\/\/collections\/sarah-vanrenen-fabric"
+          }
         }
       },
       "block_order": [
@@ -291,7 +298,8 @@
         "custom_block_rVGUtH",
         "custom_block_fK4FXX",
         "custom_block_dN7KfR",
-        "custom_block_YaxqJC"
+        "custom_block_YaxqJC",
+        "custom_block_bRRFmi"
       ],
       "settings": {
         "speed": 50
