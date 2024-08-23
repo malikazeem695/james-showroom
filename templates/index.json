@@ -253,6 +253,13 @@
             "logo": "shopify:\/\/shop_images\/ROT_Logo.png",
             "link": "shopify:\/\/collections\/rule-of-three-studio-fabric"
           }
+        },
+        "custom_block_YaxqJC": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Screenshot_2024-08-23_at_4.24.24_PM.png",
+            "link": "shopify:\/\/collections\/salvesen-graham-fabric"
+          }
         }
       },
       "block_order": [
@@ -283,7 +290,8 @@
         "custom_block_KdVz6j",
         "custom_block_rVGUtH",
         "custom_block_fK4FXX",
-        "custom_block_dN7KfR"
+        "custom_block_dN7KfR",
+        "custom_block_YaxqJC"
       ],
       "settings": {
         "speed": 50
