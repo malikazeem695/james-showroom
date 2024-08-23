@@ -39,10 +39,10 @@
           "settings": {
             "layout_style": "text_center",
             "image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c.png",
-            "heading": "British Wallpaper Designer Mia Reay",
-            "subtext": "Visit JAMES-NYC February 28th!<br> Contact Showroom to RSVP.",
-            "button_url": "shopify:\/\/collections",
-            "button_label": "View Recent Features"
+            "heading": "FEATURING BRITISH WALLPAPER DESIGNER MIA REAY!",
+            "subtext": "Explore the newest designs from Mia Reay now available through JAMES - NYC!",
+            "button_url": "shopify:\/\/collections\/mia-reay-wallpaper",
+            "button_label": "Mia's latest releases!"
           }
         }
       },
