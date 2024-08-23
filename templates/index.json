@@ -114,6 +114,13 @@
             "link": "shopify:\/\/collections\/ferrick-mason-fabric"
           }
         },
+        "custom_block_UAAfYp": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/FS_Logo.png",
+            "link": ""
+          }
+        },
         "custom_block_C9XGzd": {
           "type": "custom-block",
           "settings": {
@@ -187,6 +194,7 @@
         "custom_block_x4wtGL",
         "custom_block_NrkUKn",
         "custom_block_8gHFDW",
+        "custom_block_UAAfYp",
         "custom_block_C9XGzd",
         "custom_block_QqA6kG",
         "custom_block_haXwRx",
