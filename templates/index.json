@@ -191,6 +191,13 @@
             "link": "shopify:\/\/collections"
           }
         },
+        "custom_block_KdVz6j": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Screenshot_2024-08-23_at_3.54.08_PM.png",
+            "link": "shopify:\/\/collections\/paolo-moschino-lighting"
+          }
+        },
         "custom_block_fK4FXX": {
           "type": "custom-block",
           "settings": {
@@ -219,6 +226,7 @@
         "custom_block_Th4xc8",
         "custom_block_nmDg9K",
         "custom_block_Mq4cGC",
+        "custom_block_KdVz6j",
         "custom_block_fK4FXX"
       ],
       "settings": {
