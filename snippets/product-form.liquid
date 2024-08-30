@@ -92,8 +92,16 @@
       </div>
     {% endif %}
   {% endif %}
+  
+{% assign is_wholesale_customer = false %}
+{% assign customer_tags = customer.tags | downcase %}
+{% if customer_tags contains 'wholesale' %}
+  {% assign is_wholesale_customer = true %}
+{% endif %}
 
- <div class="purchase-details {% if customer %}{% if customer.tags contains 'wholesale' or customer.tags contains 'Wholesale'%}{% else %} customer_not_wholesale{% endif %}{% endif %}" style="display:none;">
+ <div class="purchase-details {% unless is_wholesale_customer %}customer_not_wholesale{% endunless %}"
+   {% comment %} style="display:none;" {% endcomment %}
+  >
     {% if settings.display_product_quantity %}
       <div class="purchase-details__quantity product-quantity-box">
         <label for="quantity">Qty</label>
