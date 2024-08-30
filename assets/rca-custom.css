@@ -140,9 +140,9 @@ body.product .shopify-section--product-template {
 .pdp_section .product__details.product__details--product-page .swatch .swatch-element {
     margin: 0 8px 0px 0;
     transform: translateZ(0);
-    min-width: 42px;
-    height: 42px;
-    max-height: 42px;
+    min-width: 41px;
+    height: 41px;
+    max-height: 41px;
     border: 1px solid var(--theme-surfaces-primary-base, #C6A55D);
     padding: 0;
 }

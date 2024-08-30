@@ -38,7 +38,12 @@
       "placeholder": "Email Address",
       "thank_you": "Thanks for signing up!",
       "thank_you_with_code_html": "Thanks for signing up! Use the code <span>Discount10<\/span> for 10% off.",
-      "error_message": "This customer is already subscribed!"
+      "error_message": "This customer is already subscribed!",
+      "description": "Sign up to get the latest on sales, new releases and more …",
+      "email": "Email",
+      "subscriber_first_name": "First Name",
+      "subscriber_last_name": "Last Name",
+      "success_text": "Thank you for joining our mailing list!"
     },
     "search": {
       "articles": "Blog posts",
@@ -156,6 +161,26 @@
   },
   "cart": {
     "general": {
+      "products": "Products",
+      "price": "Price",
+      "quantity": "Quantity",
+      "maximum_quantity": "Maximum Quantity",
+      "total": "Total",
+      "item": "Item",
+      "free": "Free",
+      "uploaded_file": "uploaded file",
+      "continue_browsing_html": "There are no items in your cart.",
+      "excluding_tax_shipping": "Excluding tax & shipping",
+      "tax_and_shipping": "Taxes and shipping calculated at checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
+      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "orders_processed_in_currency_html": "Orders will be processed in {{ currency }}.",
+      "note": "Order Notes",
+      "agree_to_terms_html": "I Agree with the Terms & Conditions",
+      "view_terms": "[View Terms]",
+      "agree_to_terms_warning": "You must agree with the terms and conditions to checkout.",
+      "discount": "Discount",
       "title": "Cart",
       "vendor": "Vendor",
       "remove": "Remove",
@@ -440,6 +465,17 @@
       "upsell_error_title": "Choose an upsell product",
       "upsell_error_info": "Use metafields to show a product here. Empty upsells will not show on live site.",
       "shop_now": "Shop now"
+    },
+    "notify_form": {
+      "email": "Enter your email address...",
+      "send": "Send",
+      "message_content": "Please notify me when {{ product }} becomes available - {{ url }}",
+      "message_content_first": "Please notify me when ",
+      "message_content_last": " becomes available - ",
+      "post_success": "Thanks! We will notify you when this product becomes available!",
+      "post_error": "Please provide a valid email address.",
+      "notify_me_richtext": "Notify me when this product is available:",
+      "description": "Notify me when this product is available:"
     },
     "product": {
       "regular_price": "Regular price",
