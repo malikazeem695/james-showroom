@@ -2615,7 +2615,7 @@ body.collection .boost-sd__header-description a{
     box-shadow: 0px 0px 0px 1px var(--theme-surfaces-primary-base, #C6A55D);
     height: 44px;
     border-color: #648390;
-    color: #648390;
+    color: #FFF;
 }
 body.collection .boost-sd__header-description a:hover{
     background: #43525B;

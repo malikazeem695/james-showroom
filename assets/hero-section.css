@@ -147,7 +147,7 @@
 
   .hero-slider .swiper-slide {
     flex-direction: column;
-    height: auto;
+    height: 741px;
   }
 
   .swiper-slide.text_left .slide-image,
@@ -201,7 +201,7 @@
   }
 
   .hero-slider .slide-image img {
-    height: auto;
+    height: 390px;
     font-size: 0
   }
 
