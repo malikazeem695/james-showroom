@@ -370,6 +370,17 @@
         "description": "Bespoke Lighting, Furniture, Carpet, and Accessories from around the globe!"
       }
     },
+    "collections_tab_jTqFMB": {
+      "type": "collections-tab",
+      "settings": {
+        "main_heading": "NEWEST RELEASES!",
+        "collection_1": "new-arrivals",
+        "collection_1_title": "Shop All Mia Reay Wallpapers",
+        "collection_1_product_limit": 12,
+        "collection_2": "wallpapers",
+        "collection_2_title": "Browse All Wallpapers"
+      }
+    },
     "rca_image_text_CNHwqY": {
       "type": "rca_image-text",
       "settings": {
@@ -620,6 +631,7 @@
     "rca_hero_section_QnfmXP",
     "rca_logo_section_FHy6qh",
     "rca_proudly_present_M66Hzy",
+    "collections_tab_jTqFMB",
     "rca_image_text_CNHwqY",
     "selling_textiles_UNVikb",
     "rca_image_text_JbFnqY",
