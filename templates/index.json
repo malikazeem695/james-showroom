@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "rca_hero_section_QnfmXP": {
@@ -312,6 +303,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/ec4701509ab4cf115d5a6a9d52bb225f.png",
+            "secondry_image": "shopify:\/\/shop_images\/JVB-Benguela-Stool_92f5794d-b096-4a83-852d-8725f8bb35c3.jpg",
             "title": "Justin Van Breda London",
             "link": "shopify:\/\/collections\/justin-van-breda-london"
           }
@@ -319,7 +311,8 @@
         "image_XgFFaY": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/41121da3d06719dd5cfad806500d4be2.png",
+            "image": "shopify:\/\/shop_images\/madeline.png",
+            "secondry_image": "shopify:\/\/shop_images\/Stanton_Lounge_Chair_Angle_600_09d72cff-9d0e-4471-9e06-3d1b698118d7.jpg",
             "title": "Madeline Stuart Collection",
             "link": "shopify:\/\/collections\/madeline-stuart-collection"
           }
@@ -328,6 +321,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/edf62173f28f11ff75e9472f1acd88a8.png",
+            "secondry_image": "shopify:\/\/shop_images\/Adnet-Bedside-Table-Tan1_7494c3d9-5a92-406b-94bc-3070a3f67304.jpg",
             "title": "Paolo Moschino Collection",
             "link": "shopify:\/\/collections\/paolo-moschino-furniture"
           }
@@ -336,6 +330,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/12f353d56281aa8008dae737d8f9abef.png",
+            "secondry_image": "shopify:\/\/shop_images\/Loma1.jpg",
             "title": "Peter Dunham Furniture",
             "link": "shopify:\/\/collections\/peter-dunham-home-furniture"
           }
@@ -344,6 +339,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/2681ada3b28f6e9b6d316bbf9c9d55f1.png",
+            "secondry_image": "shopify:\/\/shop_images\/KinleyChairSolidWhite.jpg",
             "title": "Bunny Williams Home",
             "link": "shopify:\/\/collections\/bunny-williams-home-furniture"
           }
@@ -352,6 +348,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/73c9172948c622f2c33decdb3b99774b.png",
+            "secondry_image": "shopify:\/\/shop_images\/MET-FAB-Deakins_Vine_Swedish_Blue_14efbfdf-d9c3-4b12-b9de-ce5f6a2ed4f4.jpg",
             "title": "Meredith Ellis",
             "link": "shopify:\/\/collections\/meredith-ellis-textiles"
           }

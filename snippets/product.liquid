@@ -72,20 +72,28 @@ button.action_button {
   background-color: #c7a55d;
   border: 1px solid #c7a55d;
   color: white;
-  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 799px) {
+  button.action_button {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
 }
   .swatch label {
     float: left;
     min-width: 40px;
     margin: 0;
     background: #E0E0E0;
-    padding: 12px 40px;
+    padding: 5px 40px;
     font-size: 12px;
     text-align: center;
     white-space: nowrap;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 3px;
+    {% comment %} border-radius: 3px; {% endcomment %}
 }
   .price-ui span {
     font-size: 28px;
@@ -108,7 +116,7 @@ button.action_button {
       display: block;
     }
      .shopify-product-form .purchase-details {
-      display: block;
+      display: flex;
     }
     .modal_price.hidden {
       display: block;
@@ -860,6 +868,8 @@ button.action_button {
 }
 .productPrintTemplate--productImage img {
   width: 58%;
+  aspect-ratio: 1 / 1 !important;
+    object-fit: cover;
 }
 .productPrintTemplate--productContent {
   display: block;
