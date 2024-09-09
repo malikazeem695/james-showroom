@@ -72,6 +72,7 @@ body.collection .boost-sd__toolbar-container .boost-sd__toolbar--3_1 .boost-sd__
 }
 body.collection .boost-sd__toolbar-container .boost-sd__toolbar-content{
   padding: 28px 0 16px;
+  max-width: 100% !important;
 }
 body.collection .boost-sd__toolbar-container .boost-sd__toolbar-item.boost-sd__toolbar-item--product-count .boost-sd__product-count{
   color: #000;
