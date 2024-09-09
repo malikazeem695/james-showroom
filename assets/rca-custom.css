@@ -2627,7 +2627,7 @@ body.collection .boost-sd__header-description a:hover span{
     color: white;
 }
 body.collection .boost-sd__filter-option--horizontal:not(.boost-sd__filter-option--style-expand) .boost-sd__filter-option-icon{
-    transform: rotate(360deg);
+    /* transform: rotate(360deg); */
     width: 11px;
     height: 7px;
 }
@@ -2635,9 +2635,9 @@ body.collection .boost-sd__filter-option--horizontal:not(.boost-sd__filter-optio
     fill: unset;
     stroke: #262626;
 }
-body.collection .boost-sd__filter-option--horizontal:not(.boost-sd__filter-option--style-expand) .boost-sd__filter-option-title--opening .boost-sd__filter-option-icon{
+/* body.collection .boost-sd__filter-option--horizontal:not(.boost-sd__filter-option--style-expand) .boost-sd__filter-option-title--opening .boost-sd__filter-option-icon{
     transform: rotate(180deg);
-}
+} */
 body.collection .boost-sd__filter-option-item-button--with-checkbox {
     padding-left: 27px;}
     body.collection .boost-sd__filter-option-item-button--with-checkbox.boost-sd__filter-option-item-button--selected:after{
