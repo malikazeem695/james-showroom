@@ -112,17 +112,13 @@
 
 .swiper-slide.text_left .slide-content-container,
 .swiper-slide.text_right .slide-content-container {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px 40px;
   width: 512px;
   height: 547px;
   display: flex;
   justify-content: center;
 }
 
-.swiper-slide.text_right .slide-content-container {
-
-}
 
 .swiper-slide.text_center .slide-content-container {
   width: 448px;
