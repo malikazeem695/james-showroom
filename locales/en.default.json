@@ -45,6 +45,15 @@
       "subscriber_last_name": "Last Name",
       "success_text": "Thank you for joining our mailing list!"
     },
+    "predictive_search": {
+        "no_results_text": "No matching results found.",
+        "query_suggestions_heading": "Suggestions",
+        "product_suggestions_heading": "Products",
+        "posts_suggestions_heading": "Posts",
+        "pages_suggestions_heading": "Pages",
+        "pages_and_posts_suggestions_heading": "Posts & Pages",
+        "search_button_label": "Search for \"{{ search_terms }}\""
+      },
     "search": {
       "articles": "Blog posts",
       "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
