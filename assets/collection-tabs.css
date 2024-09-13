@@ -1,7 +1,7 @@
 .dual_collection_tabs {
     display: block;
     width: 100%;
-    padding: 80px 80px 0;
+    padding: 80px;
     overflow: hidden;
 }
 
@@ -177,7 +177,7 @@ display: none;
 }
 @media screen and (max-width: 768px) {
     .dual_collection_tabs {
-        padding: 48px 16px 0;
+        padding: 48px 16px;
     }
     .more_swatches.showfive{
         display: none;

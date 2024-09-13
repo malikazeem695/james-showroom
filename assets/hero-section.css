@@ -141,6 +141,14 @@
     padding: 36px 16px;
   }
 
+  .text_content {
+    margin-top: 0;
+  }
+
+  .custom-pagination {
+    margin-top: 0;
+  }
+
   .hero-slider .swiper-slide {
     flex-direction: column;
     height: 741px;
@@ -163,11 +171,13 @@
     position: unset;
     transform: unset;
     width: 100%;
+    height: 100%;
+    justify-content: center;
   }
 
   .hero-slider h1 {
-    font-size: 28px;
-    line-height: 40px;
+    font-size: 26px;
+    line-height: 38px;
     text-align: center;
     letter-spacing: -0.56px;
   }
@@ -203,8 +213,8 @@
 
   .swiper-slide.text_left .slide-content-container,
   .swiper-slide.text_right .slide-content-container {
-    padding: 36px 16px;
+    padding: 32px 16px;
     width: 100%;
-    height: unset;
+    height: 351px;
   }
 }

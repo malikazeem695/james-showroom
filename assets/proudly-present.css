@@ -1,5 +1,5 @@
 .proudly-present {
-    padding: 0 80px 80px;
+    padding: 80px;
     display: flex;
     flex-direction: column;
     gap: 36px;
@@ -87,7 +87,7 @@ max-width: 168px;
   }
   @media (max-width: 768px) {
     .proudly-present{
-      padding: 48px 16px;
+      padding: 48px 16px 0;
     }
     .proudly-present .image-blocks{
       gap: 8px;
