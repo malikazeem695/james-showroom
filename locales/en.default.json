@@ -66,6 +66,15 @@
         "one": "{{ count }} result",
         "other": "{{ count }} results"
       },
+      "predictive_search": {
+        "no_results_text": "No matching results found.",
+        "query_suggestions_heading": "Suggestions",
+        "product_suggestions_heading": "Products",
+        "posts_suggestions_heading": "Posts",
+        "pages_suggestions_heading": "Pages",
+        "pages_and_posts_suggestions_heading": "Posts & Pages",
+        "search_button_label": "Search for \"{{ search_terms }}\""
+      },
       "results_with_count_and_term": {
         "one": "{{ count }} result found for “{{ terms }}”",
         "other": "{{ count }} results found for “{{ terms }}”"
