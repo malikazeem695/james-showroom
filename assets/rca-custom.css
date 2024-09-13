@@ -3001,6 +3001,15 @@ text-decoration: underline;
     color: #B28940;
     border: none;
     padding: 0;
+    text-transform: capitalize;
+    border-radius: unset;
+}
+
+.collection .boost-sd__product-swatch-more:hover {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: #0f0f0f;
 }
 
 .collection .boost-sd__radio-label--hide-text {
