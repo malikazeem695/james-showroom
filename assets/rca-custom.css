@@ -3003,6 +3003,9 @@ text-decoration: underline;
     padding: 0;
     text-transform: capitalize;
     border-radius: unset;
+    align-items: flex-start;
+    text-decoration: underline;
+    padding-top: 6px;
 }
 
 .collection .boost-sd__product-swatch-more:hover {
@@ -3010,6 +3013,7 @@ text-decoration: underline;
     background-color: transparent;
     border: none;
     color: #0f0f0f;
+    padding-top: 5px;
 }
 
 .collection .boost-sd__radio-label--hide-text {
