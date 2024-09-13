@@ -2996,3 +2996,13 @@ justify-content: center !important;
 text-decoration: underline;
 }
 
+.collection .boost-sd__product-swatch-more {
+    padding: 0;
+    color: #B28940;
+    border: none;
+    padding: 0;
+}
+
+.collection .boost-sd__radio-label--hide-text {
+border-color: #C6A55D;
+}
