@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "rca_hero_section_QnfmXP": {
@@ -7,9 +16,9 @@
           "type": "image",
           "settings": {
             "layout_style": "text_left",
-            "image": "shopify:\/\/shop_images\/NT_Portrait.jpg",
-            "heading": "WELCOME NATHAN TURNER!",
-            "subtext": "Nathan Turner textiles\/wallpapers now available through JAMES!",
+            "image": "shopify:\/\/shop_images\/NT_Portrait_928.jpg",
+            "heading": "JAMES WELCOMES NATHAN TURNER!",
+            "subtext": "Nathan's debut Callifornia Collection of textiles\/wallpapers is now available through JAMES!",
             "button_url": "shopify:\/\/collections",
             "button_label": "View Nathan's fabrics"
           }
@@ -461,7 +470,7 @@
         "image_R9XdiL"
       ],
       "settings": {
-        "heading": "Newest Releases",
+        "heading": "Featured Furniture",
         "btn_text": "View all new Fabrics",
         "btn_link": "shopify:\/\/collections\/new-arrivals",
         "btn_text_sec": "Heather Chadduck Textiles",
