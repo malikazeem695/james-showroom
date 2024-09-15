@@ -18,6 +18,21 @@
     "event_RrqAjX": {
       "type": "event",
       "blocks": {
+        "feature_block_iaCiBG": {
+          "type": "feature_block",
+          "settings": {
+            "image_alignment": "right",
+            "image": "shopify:\/\/shop_images\/NT_Portrait_928.jpg",
+            "badge_text": "Launch",
+            "event_heading": "Nathan Turner NYC Launch Party",
+            "event_details": "Grab a margarita and join us as Nathan Turner launches his debut \"California Collection\" of textiles, wallpapers., and grasscloths in our NYC Showroom!",
+            "event_date": "September 18, 2024",
+            "event_time": "3pm-5pm",
+            "event_location": "JAMES - NYC",
+            "event_rsvp_text": "RSVP",
+            "event_rsvp_url": "mailto:nyc@jamesshowroom.com"
+          }
+        },
         "feature_block_aYGRWQ": {
           "type": "feature_block",
           "settings": {
@@ -32,26 +47,11 @@
             "event_rsvp_text": "Buy Tickets",
             "event_rsvp_url": "https:\/\/www.texasdesignweek.com\/register"
           }
-        },
-        "feature_block_iaCiBG": {
-          "type": "feature_block",
-          "settings": {
-            "image_alignment": "right",
-            "image": "shopify:\/\/shop_images\/fe5d66092813ff1c3b2c872ef980a7eb_1.png",
-            "badge_text": "Pop Up",
-            "event_heading": "Event Name",
-            "event_details": "Discover the elegance of Blumera's sustainable luxury at our exclusive pop-up event! Join us to explore Mehera Blum's stunning creations, influenced by global travels and her late mother's art, showcasing beautifully crafted pieces that embody sustainability and cultural richness.",
-            "event_date": "February 13th-15th",
-            "event_time": "10AM - 5PM",
-            "event_location": "123 Event Street",
-            "event_rsvp_text": "RSVP",
-            "event_rsvp_url": ""
-          }
         }
       },
       "block_order": [
-        "feature_block_aYGRWQ",
-        "feature_block_iaCiBG"
+        "feature_block_iaCiBG",
+        "feature_block_aYGRWQ"
       ],
       "settings": {
         "desktop_image": "shopify:\/\/shop_images\/Dallas_Main.jpg",
