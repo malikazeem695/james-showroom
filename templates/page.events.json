@@ -22,15 +22,15 @@
           "type": "feature_block",
           "settings": {
             "image_alignment": "left",
-            "image": "shopify:\/\/shop_images\/fe5d66092813ff1c3b2c872ef980a7eb_1.png",
-            "badge_text": "Pop Up",
-            "event_heading": "Event Name",
-            "event_details": "Discover the elegance of Blumera's sustainable luxury at our exclusive pop-up event! Join us to explore Mehera Blum's stunning creations, influenced by global travels and her late mother's art, showcasing beautifully crafted pieces that embody sustainability and cultural richness.",
-            "event_date": "February 13th-16th",
-            "event_time": "10AM - 5PM",
-            "event_location": "123 Event Street",
-            "event_rsvp_text": "RSVP",
-            "event_rsvp_url": ""
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-09-15_at_10.56.23_AM.jpg",
+            "badge_text": "Design Event",
+            "event_heading": "Texas Design Week Dallas - \"Then and Now\"",
+            "event_details": "Discover beauty and inspiration with Lisa Fine, Carolina Irving, and Architectural Digest's Maddie O'Mally as they share their passion's about Designers from the past and the influence they have had on teh style and interiors of today.  Book signing with Pierre Sauvage, founder of Casa Lopez, following the discussion.",
+            "event_date": "October 25th, 2024",
+            "event_time": "9:30AM-11:30AM",
+            "event_location": "JAMES - Dallas",
+            "event_rsvp_text": "Buy Tickets",
+            "event_rsvp_url": "https:\/\/www.texasdesignweek.com\/register"
           }
         },
         "feature_block_iaCiBG": {
@@ -55,9 +55,9 @@
       ],
       "settings": {
         "desktop_image": "shopify:\/\/shop_images\/Dallas_Main.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c_1.png",
-        "heading": "Design Shop Events. Join Us!",
-        "description": "The bright interior at 344 Worth Ave plays host to an exciting lineup of pop-ups, book signings, and design-related events."
+        "mobile_image": "shopify:\/\/shop_images\/Dallas_Main.jpg",
+        "heading": "Upcoming JAMES Events!",
+        "description": "Join us for an exciting lineup of pop-ups, book signings, collection launches and road visits!"
       }
     },
     "collaboration_U6YdEW": {
