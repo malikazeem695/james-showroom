@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -45,7 +54,7 @@
         "feature_block_iaCiBG"
       ],
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c_1.png",
+        "desktop_image": "shopify:\/\/shop_images\/Dallas_Main.jpg",
         "mobile_image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c_1.png",
         "heading": "Design Shop Events. Join Us!",
         "description": "The bright interior at 344 Worth Ave plays host to an exciting lineup of pop-ups, book signings, and design-related events."
