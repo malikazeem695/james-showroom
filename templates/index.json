@@ -311,7 +311,7 @@
         "image_G9BUnU": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2681ada3b28f6e9b6d316bbf9c9d55f1.png",
+            "image": "shopify:\/\/shop_images\/BWH_Spring.webp",
             "secondry_image": "shopify:\/\/shop_images\/KinleyChairSolidWhite.jpg",
             "title": "Bunny Williams Home",
             "link": "shopify:\/\/collections\/bunny-williams-home-furniture"
@@ -400,11 +400,11 @@
       "type": "collections-tab",
       "settings": {
         "main_heading": "Introdcuing Flora Soames!",
-        "collection_1": "new-arrivals",
-        "collection_1_title": "View all New Releases",
+        "collection_1": "flora-soames-fabrics",
+        "collection_1_title": "View Flora's Fabrics",
         "collection_1_product_limit": 12,
-        "collection_2": "fabrics",
-        "collection_2_title": "Browse All Fabrics"
+        "collection_2": "flora-soames-wallpaper",
+        "collection_2_title": "View Flora's Wallpapers"
       }
     },
     "rca_image_text_CNHwqY": {
