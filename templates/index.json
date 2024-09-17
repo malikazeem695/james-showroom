@@ -308,6 +308,42 @@
     "rca_proudly_present_M66Hzy": {
       "type": "rca-proudly-present",
       "blocks": {
+        "image_G9BUnU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2681ada3b28f6e9b6d316bbf9c9d55f1.png",
+            "secondry_image": "shopify:\/\/shop_images\/KinleyChairSolidWhite.jpg",
+            "title": "Bunny Williams Home",
+            "link": "shopify:\/\/collections\/bunny-williams-home-furniture"
+          }
+        },
+        "image_FRKamc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-09-17_at_2.46.13_PM.png",
+            "secondry_image": "shopify:\/\/shop_images\/CL_JVB_1.jpg",
+            "title": "Cape Looms",
+            "link": "shopify:\/\/collections\/cape-looms-by-jvb-carpets"
+          }
+        },
+        "image_Twypre": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ODLR-Manisalez-Blue.jpg",
+            "secondry_image": "shopify:\/\/shop_images\/ODLR-Spain-1971-Blue.jpg",
+            "title": "Elson & Company",
+            "link": ""
+          }
+        },
+        "image_g3kXzJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Jai_1.jpg",
+            "secondry_image": "shopify:\/\/shop_images\/Jai_2.jpg",
+            "title": "From Jaipur With Love",
+            "link": ""
+          }
+        },
         "image_XRkUf9": {
           "type": "image",
           "settings": {
@@ -343,43 +379,17 @@
             "title": "Peter Dunham Home Outdoor Furniture",
             "link": "shopify:\/\/collections\/peter-dunham-home-furniture"
           }
-        },
-        "image_G9BUnU": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2681ada3b28f6e9b6d316bbf9c9d55f1.png",
-            "secondry_image": "shopify:\/\/shop_images\/KinleyChairSolidWhite.jpg",
-            "title": "Bunny Williams Home",
-            "link": "shopify:\/\/collections\/bunny-williams-home-furniture"
-          }
-        },
-        "image_FRKamc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-09-17_at_2.46.13_PM.png",
-            "secondry_image": "shopify:\/\/shop_images\/CL_JVB_1.jpg",
-            "title": "Cape Looms",
-            "link": "shopify:\/\/collections\/cape-looms-by-jvb-carpets"
-          }
-        },
-        "image_g3kXzJ": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Jai_1.jpg",
-            "secondry_image": "shopify:\/\/shop_images\/Jai_2.jpg",
-            "title": "From Jaipur With Love",
-            "link": ""
-          }
         }
       },
       "block_order": [
+        "image_G9BUnU",
+        "image_FRKamc",
+        "image_Twypre",
+        "image_g3kXzJ",
         "image_XRkUf9",
         "image_XgFFaY",
         "image_6bc8Ni",
-        "image_JqcRxT",
-        "image_G9BUnU",
-        "image_FRKamc",
-        "image_g3kXzJ"
+        "image_JqcRxT"
       ],
       "settings": {
         "heading": "JAMES Proudly Represents",
@@ -389,7 +399,7 @@
     "collections_tab_jTqFMB": {
       "type": "collections-tab",
       "settings": {
-        "main_heading": "NEWEST FABRIC RELEASES!",
+        "main_heading": "Introdcuing Flora Soames!",
         "collection_1": "new-arrivals",
         "collection_1_title": "View all New Releases",
         "collection_1_product_limit": 12,
