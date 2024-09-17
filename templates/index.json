@@ -361,6 +361,15 @@
             "title": "Cape Looms",
             "link": "shopify:\/\/collections\/cape-looms-by-jvb-carpets"
           }
+        },
+        "image_g3kXzJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Jai_1.jpg",
+            "secondry_image": "shopify:\/\/shop_images\/Jai_2.jpg",
+            "title": "From Jaipur With Love",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -369,7 +378,8 @@
         "image_6bc8Ni",
         "image_JqcRxT",
         "image_G9BUnU",
-        "image_FRKamc"
+        "image_FRKamc",
+        "image_g3kXzJ"
       ],
       "settings": {
         "heading": "JAMES Proudly Represents",
