@@ -209,7 +209,6 @@ body.collection .boost-sd__header-description:empty, body.collection .boost-sd__
 
   .boost-sd__product-image-wrapper {
     aspect-ratio: 1/1 !important;
- object-fit: contain;
   }
 
   .boost-sd__product-info {
