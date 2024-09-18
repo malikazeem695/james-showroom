@@ -267,6 +267,43 @@
             "logo": "shopify:\/\/shop_images\/sarahvanrenen_logo.jpg",
             "link": "shopify:\/\/collections\/sarah-vanrenen-fabric"
           }
+        },
+        "custom_block_3XqPax": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/Screenshot_2024-09-18_at_10.22.01_AM.png",
+            "link": "shopify:\/\/collections\/schuyler-samperton-textiles-fabric"
+          }
+        },
+        "custom_block_8XfrQb": {
+          "type": "custom-block",
+          "settings": {
+            "link": ""
+          }
+        },
+        "custom_block_kJzhq6": {
+          "type": "custom-block",
+          "settings": {
+            "link": ""
+          }
+        },
+        "custom_block_jVCbyn": {
+          "type": "custom-block",
+          "settings": {
+            "link": ""
+          }
+        },
+        "custom_block_Cm9dbC": {
+          "type": "custom-block",
+          "settings": {
+            "link": ""
+          }
+        },
+        "custom_block_KUFif3": {
+          "type": "custom-block",
+          "settings": {
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -299,7 +336,13 @@
         "custom_block_fK4FXX",
         "custom_block_dN7KfR",
         "custom_block_YaxqJC",
-        "custom_block_bRRFmi"
+        "custom_block_bRRFmi",
+        "custom_block_3XqPax",
+        "custom_block_8XfrQb",
+        "custom_block_kJzhq6",
+        "custom_block_jVCbyn",
+        "custom_block_Cm9dbC",
+        "custom_block_KUFif3"
       ],
       "settings": {
         "speed": 50
@@ -493,7 +536,7 @@
         "heading": "Featured Fabric Collections!",
         "btn_text": "View Newest Releases",
         "btn_link": "shopify:\/\/collections\/new-arrivals",
-        "btn_text_sec": "New",
+        "btn_text_sec": "Testing",
         "btn_link_sec": ""
       }
     },
