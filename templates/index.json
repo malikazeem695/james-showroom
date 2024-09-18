@@ -292,7 +292,8 @@
         "custom_block_jVCbyn": {
           "type": "custom-block",
           "settings": {
-            "link": ""
+            "logo": "shopify:\/\/shop_images\/S4.png",
+            "link": "shopify:\/\/collections\/studio-four-nyc-fabric"
           }
         },
         "custom_block_Cm9dbC": {
