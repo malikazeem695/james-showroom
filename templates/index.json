@@ -285,7 +285,8 @@
         "custom_block_kJzhq6": {
           "type": "custom-block",
           "settings": {
-            "link": ""
+            "logo": "shopify:\/\/shop_images\/SPD.png",
+            "link": "shopify:\/\/collections\/sister-parish-fabric"
           }
         },
         "custom_block_jVCbyn": {
