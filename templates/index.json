@@ -521,6 +521,48 @@
         "collection_2_title": "Browse All Wallpapers"
       }
     },
+    "events_section_hhhFFL": {
+      "type": "events-section",
+      "blocks": {
+        "feature_block_HynJUj": {
+          "type": "feature_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-08-15_at_4.07.44_PM.png",
+            "badge_text": "NYC",
+            "event_heading": "Nathan Turner Launch!",
+            "event_details": "Join us for the launch of Nathan Turner Textiles and Wallcoverings!",
+            "event_date": "September 18th",
+            "event_time": "3pm-5PM",
+            "event_location": "NYC Showroom, 306 E. 61st St 4th Floor",
+            "event_rsvp_text": "RSVP",
+            "event_rsvp_url": "mailto:nyc@jamesshowroom.com"
+          }
+        },
+        "feature_block_np3M64": {
+          "type": "feature_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JAMES_RA_Logo.png",
+            "badge_text": "Grand Opening",
+            "event_heading": "JAMES CABANA x RED ANTLER",
+            "event_details": "Decorated by JAMES Founder, Meredith Ellis, the JAMES Cabana at the Red Antler Bungalows is the new luxurious retreat \/ pool house \/ event space at the Red Antler Bungalows in Round Top!  Featuring JAMES products top to bottom, the space acts as a livable showroom of ideas and inspiration.",
+            "event_date": "October 10th, 2024",
+            "event_time": "",
+            "event_location": "Round Top",
+            "event_rsvp_text": "Enquire",
+            "event_rsvp_url": "mailto:dallas@jamesshowroom.com"
+          }
+        }
+      },
+      "block_order": [
+        "feature_block_HynJUj",
+        "feature_block_np3M64"
+      ],
+      "settings": {
+        "header_text": "Latest Lookbooks",
+        "link_text": "See All Lookbooks",
+        "link_url": "shopify:\/\/pages\/events"
+      }
+    },
     "showroom_locations_jQ7kW6": {
       "type": "showroom-locations",
       "blocks": {
@@ -564,48 +606,6 @@
         "main_heading": "Showroom Locations"
       }
     },
-    "events_section_hhhFFL": {
-      "type": "events-section",
-      "blocks": {
-        "feature_block_HynJUj": {
-          "type": "feature_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-08-15_at_4.07.44_PM.png",
-            "badge_text": "NYC",
-            "event_heading": "Nathan Turner Launch!",
-            "event_details": "Join us for the launch of Nathan Turner Textiles and Wallcoverings!",
-            "event_date": "September 18th",
-            "event_time": "3pm-5PM",
-            "event_location": "NYC Showroom, 306 E. 61st St 4th Floor",
-            "event_rsvp_text": "RSVP",
-            "event_rsvp_url": "mailto:nyc@jamesshowroom.com"
-          }
-        },
-        "feature_block_np3M64": {
-          "type": "feature_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/JAMES_RA_Logo.png",
-            "badge_text": "Grand Opening",
-            "event_heading": "JAMES CABANA x RED ANTLER",
-            "event_details": "Decorated by JAMES Founder, Meredith Ellis, the JAMES Cabana at the Red Antler Bungalows is the new luxurious retreat \/ pool house \/ event space at the Red Antler Bungalows in Round Top!  Featuring JAMES products top to bottom, the space acts as a livable showroom of ideas and inspiration.",
-            "event_date": "October 10th, 2024",
-            "event_time": "",
-            "event_location": "Round Top",
-            "event_rsvp_text": "Enquire",
-            "event_rsvp_url": "mailto:dallas@jamesshowroom.com"
-          }
-        }
-      },
-      "block_order": [
-        "feature_block_HynJUj",
-        "feature_block_np3M64"
-      ],
-      "settings": {
-        "header_text": "Our Events",
-        "link_text": "See All Events",
-        "link_url": "shopify:\/\/pages\/events"
-      }
-    },
     "770ffb1e-71a9-475d-b8d6-5f0fc4ad470d": {
       "type": "newsletter",
       "settings": {
@@ -629,8 +629,8 @@
     "selling_textiles_UNVikb",
     "rca_image_text_JbFnqY",
     "collections_tab_Xf643N",
-    "showroom_locations_jQ7kW6",
     "events_section_hhhFFL",
+    "showroom_locations_jQ7kW6",
     "770ffb1e-71a9-475d-b8d6-5f0fc4ad470d"
   ]
 }
