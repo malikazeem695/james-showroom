@@ -217,7 +217,7 @@ body.collection .boost-sd__header-description:empty, body.collection .boost-sd__
 
   .product_gallery img{
     aspect-ratio: 1/1 !important;
-  object-fit: cover;
+  object-fit: contain;
   }
 
   .product-description {
