@@ -12,6 +12,17 @@
     "rca_hero_section_QnfmXP": {
       "type": "rca_hero-section",
       "blocks": {
+        "image_fWxray": {
+          "type": "image",
+          "settings": {
+            "layout_style": "text_center",
+            "image": "shopify:\/\/shop_images\/Chinoiserie_MU2011.jpg",
+            "heading": "Custom Mural Wallappers by Zoë Design",
+            "subtext": "Inquire with our team!",
+            "button_url": "https:\/\/zoe-design.com\/",
+            "button_label": "View Zoë Design"
+          }
+        },
         "image_wyVXAc": {
           "type": "image",
           "settings": {
@@ -33,23 +44,12 @@
             "button_url": "shopify:\/\/collections",
             "button_label": "View Nathan's fabrics"
           }
-        },
-        "image_fWxray": {
-          "type": "image",
-          "settings": {
-            "layout_style": "text_center",
-            "image": "shopify:\/\/shop_images\/Chinoiserie_MU2011.jpg",
-            "heading": "Custom Mural Wallappers by Zoë Design",
-            "subtext": "Inquire with our team!",
-            "button_url": "https:\/\/zoe-design.com\/",
-            "button_label": "View Zoë Design"
-          }
         }
       },
       "block_order": [
+        "image_fWxray",
         "image_wyVXAc",
-        "image_tDkFLJ",
-        "image_fWxray"
+        "image_tDkFLJ"
       ],
       "settings": {
         "background_color": "#648390"
