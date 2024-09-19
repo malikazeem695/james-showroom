@@ -39,10 +39,10 @@
           "settings": {
             "layout_style": "text_center",
             "image": "shopify:\/\/shop_images\/Chinoiserie_MU2011.jpg",
-            "heading": "BRITISH WALLPAPER DESIGNER MIA REAY",
-            "subtext": "Explore the newest designs from Mia Reay now available through JAMES - NYC!",
-            "button_url": "shopify:\/\/collections\/mia-reay-wallpaper",
-            "button_label": "Mia's latest releases!"
+            "heading": "Custom Mural Wallappers by Zoë Design",
+            "subtext": "Inquire with our team!",
+            "button_url": "https:\/\/zoe-design.com\/",
+            "button_label": "View Zoë Design"
           }
         }
       },
