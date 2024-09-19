@@ -11,19 +11,6 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
-    "rca_image_text_4mcaTK": {
-      "type": "rca_image-text",
-      "settings": {
-        "bg_color": "#ffffff",
-        "image_alignment": "left",
-        "desktop_height": 488,
-        "image": "shopify:\/\/shop_images\/mia-reay-english-country-house-library-65ca70d6cd3fa.jpg",
-        "heading": "Explore Mia Reay's latest lookbook!",
-        "text": "",
-        "link_text": "Learn More",
-        "link_url": ""
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -116,7 +103,6 @@
     }
   },
   "order": [
-    "rca_image_text_4mcaTK",
     "footer"
   ]
 }
