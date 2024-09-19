@@ -12,17 +12,6 @@
     "rca_hero_section_QnfmXP": {
       "type": "rca_hero-section",
       "blocks": {
-        "image_tDkFLJ": {
-          "type": "image",
-          "settings": {
-            "layout_style": "text_left",
-            "image": "shopify:\/\/shop_images\/NT_Portrait_928.jpg",
-            "heading": "JAMES WELCOMES NATHAN TURNER!",
-            "subtext": "Nathan's debut Callifornia Collection of textiles\/wallpapers is now available through JAMES!",
-            "button_url": "shopify:\/\/collections",
-            "button_label": "View Nathan's fabrics"
-          }
-        },
         "image_wyVXAc": {
           "type": "image",
           "settings": {
@@ -34,11 +23,22 @@
             "button_label": "Flora Soames Fabrics"
           }
         },
+        "image_tDkFLJ": {
+          "type": "image",
+          "settings": {
+            "layout_style": "text_left",
+            "image": "shopify:\/\/shop_images\/NT_Portrait_928.jpg",
+            "heading": "JAMES WELCOMES NATHAN TURNER!",
+            "subtext": "Nathan's debut Callifornia Collection of textiles\/wallpapers is now available through JAMES!",
+            "button_url": "shopify:\/\/collections",
+            "button_label": "View Nathan's fabrics"
+          }
+        },
         "image_fWxray": {
           "type": "image",
           "settings": {
             "layout_style": "text_center",
-            "image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c.png",
+            "image": "shopify:\/\/shop_images\/Chinoiserie_MU2011.jpg",
             "heading": "BRITISH WALLPAPER DESIGNER MIA REAY",
             "subtext": "Explore the newest designs from Mia Reay now available through JAMES - NYC!",
             "button_url": "shopify:\/\/collections\/mia-reay-wallpaper",
@@ -47,8 +47,8 @@
         }
       },
       "block_order": [
-        "image_tDkFLJ",
         "image_wyVXAc",
+        "image_tDkFLJ",
         "image_fWxray"
       ],
       "settings": {
@@ -381,13 +381,6 @@
             "link": "shopify:\/\/collections\/elson-and-company-carpets"
           }
         },
-        "image_Eg36HU": {
-          "type": "image",
-          "settings": {
-            "title": "",
-            "link": ""
-          }
-        },
         "image_g3kXzJ": {
           "type": "image",
           "settings": {
@@ -438,7 +431,6 @@
         "image_G9BUnU",
         "image_FRKamc",
         "image_Twypre",
-        "image_Eg36HU",
         "image_g3kXzJ",
         "image_XRkUf9",
         "image_XgFFaY",
