@@ -23,17 +23,6 @@
             "button_label": "View Zoë Design"
           }
         },
-        "image_wyVXAc": {
-          "type": "image",
-          "settings": {
-            "layout_style": "text_right",
-            "image": "shopify:\/\/shop_images\/FS_PROFILE.jpg",
-            "heading": "INTRODUCING FLORA SOAMES!",
-            "subtext": "One of House & Gardens Top 100 designers, JAMES is now proud to offer her exquisite collection through our Dallas and Houston Showrooms!",
-            "button_url": "shopify:\/\/collections\/flora-soames-fabrics",
-            "button_label": "Flora Soames Fabrics"
-          }
-        },
         "image_tDkFLJ": {
           "type": "image",
           "settings": {
@@ -44,12 +33,23 @@
             "button_url": "shopify:\/\/collections",
             "button_label": "View Nathan's fabrics"
           }
+        },
+        "image_wyVXAc": {
+          "type": "image",
+          "settings": {
+            "layout_style": "text_right",
+            "image": "shopify:\/\/shop_images\/FS_PROFILE.jpg",
+            "heading": "INTRODUCING FLORA SOAMES!",
+            "subtext": "One of House & Gardens Top 100 designers, JAMES is now proud to offer her exquisite collection through our Dallas and Houston Showrooms!",
+            "button_url": "shopify:\/\/collections\/flora-soames-fabrics",
+            "button_label": "Flora Soames Fabrics"
+          }
         }
       },
       "block_order": [
         "image_fWxray",
-        "image_wyVXAc",
-        "image_tDkFLJ"
+        "image_tDkFLJ",
+        "image_wyVXAc"
       ],
       "settings": {
         "background_color": "#648390"
