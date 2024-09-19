@@ -378,6 +378,13 @@
             "image": "shopify:\/\/shop_images\/ODLR-Manisalez-Blue.jpg",
             "secondry_image": "shopify:\/\/shop_images\/ODLR-Spain-1971-Blue.jpg",
             "title": "Elson & Company",
+            "link": "shopify:\/\/collections\/elson-and-company-carpets"
+          }
+        },
+        "image_Eg36HU": {
+          "type": "image",
+          "settings": {
+            "title": "",
             "link": ""
           }
         },
@@ -431,6 +438,7 @@
         "image_G9BUnU",
         "image_FRKamc",
         "image_Twypre",
+        "image_Eg36HU",
         "image_g3kXzJ",
         "image_XRkUf9",
         "image_XgFFaY",
