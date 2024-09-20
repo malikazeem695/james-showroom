@@ -1,0 +1,123 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "page-template",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "event_RrqAjX": {
+      "type": "event",
+      "blocks": {
+        "feature_block_iaCiBG": {
+          "type": "feature_block",
+          "settings": {
+            "image_alignment": "right",
+            "image": "shopify:\/\/shop_images\/NT_Portrait_928.jpg",
+            "badge_text": "Launch",
+            "event_heading": "Nathan Turner NYC Launch Party",
+            "event_details": "Grab a margarita and join us as Nathan Turner launches his debut \"California Collection\" of textiles, wallpapers., and grasscloths in our NYC Showroom!",
+            "event_date": "September 18, 2024",
+            "event_time": "3pm-5pm",
+            "event_location": "JAMES - NYC",
+            "event_rsvp_text": "RSVP",
+            "event_rsvp_url": "mailto:nyc@jamesshowroom.com"
+          }
+        },
+        "feature_block_aYGRWQ": {
+          "type": "feature_block",
+          "settings": {
+            "image_alignment": "left",
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-09-15_at_11.17.28_AM.png",
+            "badge_text": "Design Event \/ Book Signing",
+            "event_heading": "Texas Design Week Dallas - \"Then and Now\"",
+            "event_details": "Discover beauty and inspiration with Lisa Fine, Carolina Irving, and Architectural Digest's Maddie O'Mally as they share their passion's about Designers from the past and the influence they have had on the style and interiors of today.  Book signing with Pierre Sauvage, founder of Casa Lopez, following the discussion.",
+            "event_date": "October 25th, 2024",
+            "event_time": "9:30AM-11:30AM",
+            "event_location": "JAMES - Dallas",
+            "event_rsvp_text": "Buy Tickets",
+            "event_rsvp_url": "https:\/\/www.texasdesignweek.com\/register"
+          }
+        }
+      },
+      "block_order": [
+        "feature_block_iaCiBG",
+        "feature_block_aYGRWQ"
+      ],
+      "settings": {
+        "desktop_image": "shopify:\/\/shop_images\/Dallas_Main.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Dallas_Main.jpg",
+        "heading": "Upcoming JAMES Events!",
+        "description": "Join us for an exciting lineup of pop-ups, book signings, collection launches and road visits!"
+      }
+    },
+    "collaboration_U6YdEW": {
+      "type": "collaboration",
+      "blocks": {
+        "custom_block_GfCiFT": {
+          "type": "custom-block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3685bdddcb2848459f4dd7a2165d9b73_2.png",
+            "card_title": "JAMES Showroom on the road",
+            "card_description": "Reach out to our showrooms to request a visit or s"
+          }
+        },
+        "custom_block_UFKpAA": {
+          "type": "custom-block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/40d8861db3ffb7ded23bb2ab8b660b60_1.png",
+            "card_title": "Design Social",
+            "card_description": "Lorem ipsum dolor sit amet consectetur. Quis ut commodo nec egestas amet vitae pharetra tristique quis. Lorem ipsum dolor sit amet consectetur. Quis ut commodo nec egestas amet vitae pharetra tristique quis."
+          }
+        },
+        "custom_block_zDaQKE": {
+          "type": "custom-block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/da0136f7f14df851fa34cd4e658824c6_1.png",
+            "card_title": "Pop Ups",
+            "card_description": "Lorem ipsum dolor sit amet consectetur. Quis ut commodo nec egestas amet vitae pharetra tristique quis. Lorem ipsum dolor sit amet consectetur. Quis ut commodo nec egestas amet vitae pharetra tristique quis."
+          }
+        }
+      },
+      "block_order": [
+        "custom_block_GfCiFT",
+        "custom_block_UFKpAA",
+        "custom_block_zDaQKE"
+      ],
+      "settings": {
+        "main_heading": "JAMES Showroom in Collaboration",
+        "description": "Contact us if you are interested in hosting a pop-up  event in our Worth Avenue space.",
+        "event_rsvp_text": "Schedule An Event",
+        "event_rsvp_url": ""
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "wide_display": false,
+        "display_first_name": false,
+        "display_last_name": false,
+        "newsletter_title": "Be Inspired & Stay Informed",
+        "newsletter_text": "",
+        "newsletter_section_text_align": "center",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "event_RrqAjX",
+    "collaboration_U6YdEW",
+    "newsletter"
+  ]
+}
