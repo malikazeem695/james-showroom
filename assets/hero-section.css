@@ -38,7 +38,7 @@
   width: 100%;
   height: 547px;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
 }
 
 .swiper-slide.text_left .slide-image,

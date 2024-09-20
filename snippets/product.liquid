@@ -67,12 +67,42 @@
   .swatch_options input:checked + .swatch-element:not(.color) label {
     background: #C7A45C;
     color: #FFF;
+    display: flex;
+    width: 96px;
+    padding: 7px var(--dimensions-spacing-sm, 20px);
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: unset;
+    color: var(--theme-text-shade-base, #000);
+    font-family: "General Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+
 }
 button.action_button {
-  background-color: #c7a55d;
-  border: 1px solid #c7a55d;
-  color: white;
-  margin-left: 10px;
+  display: flex !important;
+    padding: 7px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex: 1 0 0;
+    border-radius: unset;
+    border: 1px solid var(--theme-surfaces-shade-base, #FFF);
+    background: var(--theme-surfaces-primary-base, #C6A55D);
+    box-shadow: 0px 0px 0px 1px var(--theme-surfaces-primary-base, #C6A55D);
+    margin-left: 16px;
+    max-width: 570px;
+    color: var(--theme-text-shade-base, #000);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.32px;
+    width: auto;
 }
 
 @media only screen and (max-width: 799px) {
