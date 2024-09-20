@@ -1603,6 +1603,10 @@ Description: Shopify Theme (https://www.shopify.com/&ref=out-of-the-sandbox)
   display: block !important;
 }
 
+.purchase_inquiry.action_button.show {
+  display: flex !important;
+}
+
 .hide {
   display: none !important;
 }
@@ -6637,7 +6641,7 @@ p.checkout_button {
   display: flex;
   flex: 1 0 calc(50% - 12px);
   flex-wrap: wrap;
-  margin-left: 6px;
+  /* margin-left: 6px; */
 }
 @media only screen and (max-width: 798px) {
   .purchase-details__buttons {
@@ -17503,6 +17507,7 @@ content: '';
   display: inline-block;
   opacity: 1;
   transition: opacity 250ms ease-in-out;
+  min-height: 32px;
 }
 
 .product__details--product-page .price-ui {
