@@ -299,7 +299,8 @@
         "custom_block_Cm9dbC": {
           "type": "custom-block",
           "settings": {
-            "link": ""
+            "logo": "shopify://shop_images/TT_logo.png",
+            "link": "shopify://collections/tulu-textiles-fabric"
           }
         },
         "custom_block_KUFif3": {
