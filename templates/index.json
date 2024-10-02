@@ -309,6 +309,13 @@
             "logo": "shopify://shop_images/volga_logo.webp",
             "link": "shopify://collections/volga-linen-fabric"
           }
+        },
+        "custom_block_9KAHLi": {
+          "type": "custom-block",
+          "settings": {
+            "logo": "shopify://shop_images/WG_Logo.jpg",
+            "link": "shopify://collections/walter-g-fabric"
+          }
         }
       },
       "block_order": [
@@ -347,7 +354,8 @@
         "custom_block_kJzhq6",
         "custom_block_jVCbyn",
         "custom_block_Cm9dbC",
-        "custom_block_KUFif3"
+        "custom_block_KUFif3",
+        "custom_block_9KAHLi"
       ],
       "settings": {
         "speed": 50
