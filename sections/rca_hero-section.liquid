@@ -1,11 +1,24 @@
 {{ 'hero-section.css' | asset_url | stylesheet_tag }}
+{% style %}
+  .slide-image:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,var(--overlay-opacity))
+}
+
+{% endstyle %}
 
 <div class="swiper-container hero-slider">
   <!-- Additional wrapper for slides -->
   <div class="swiper-wrapper">
     {% for block in section.blocks %}
     <div class="swiper-slide {{ block.settings.layout_style }}">
-    <div class="slide-image">
+    <div class="slide-image" style="--overlay-opacity:{{ block.settings.overlay }}%;">
         <img src="{{ block.settings.image |  image_url }}" >
     </div>
       <div class="slide-content-container" style="background-color: {{ section.settings.background_color }};">
@@ -49,11 +62,11 @@
     {
         "name": "RCA Hero Slider",
         "settings": [
-            {
-                        "type": "color",
-                        "id": "background_color",
-                        "label": "Background Color"
-                    }
+          {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color"
+          }
         ],
         "blocks": [
             {
@@ -84,7 +97,18 @@
                     {
                         "type": "image_picker",
                         "id": "image",
-                        "label": "Image"
+                        "label": "Image",
+                        "info": "1800 x 1000px recommended"
+                    },
+                    {
+                    "type": "range",
+                    "id": "overlay",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "label": "Overlay Transparency",
+                    "default": 0
                     },
                     {
                         "type": "text",

@@ -2142,6 +2142,9 @@ section.section.template_accessibility-statement .one-whole.column {
     margin-bottom: unset;
     max-width: 570px;
 }
+.purchase_inquiry.hide {
+    display: none !important;
+}
 
 .cart_drawer_notification .free_samples_message {
     margin: 4px;

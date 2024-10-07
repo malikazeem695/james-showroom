@@ -130,6 +130,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   place-items: center;
+  z-index:1;
 }
 
 .hero-slider .swiper-slide.text_center .text_content {
