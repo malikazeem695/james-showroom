@@ -19,7 +19,7 @@
         <div id="create-customer">
           {% form 'create_customer' %}
             {{ form.errors | default_errors }}
-
+            <input type="hidden" id="customer_tags" name="customer[tags]" disabled>
             <div id="first_name">
               <label for="first_name" class="login">{{ 'customer.register.first_name' | t }}</label>
               <input type="text" value="" name="customer[first_name]" id="first_name" size="30" />
@@ -59,7 +59,32 @@
     </div>
   </div>
 </section>
+<script>
+  fetch('https://ipinfo.io/json?token=d7f69d83681305')
+    .then(response => response.json())
+    .then(data => handleLocationData(data.region))
+    .catch(() => {
+        fetch('https://freegeoip.app/json/')
+            .then(response => response.json())
+            .then(data => handleLocationData(data.region))
+            .catch(error => console.error('Error fetching location:', error));
+    });
+function handleLocationData(userCity) {
+    const tagsField = document.getElementById('customer_tags');
+    if (!tagsField) return;
+  
+    let cTag = '';
+    if (userCity.includes('New York')) cTag = 'nyc';
+    else if (userCity.includes('Texas')) cTag = 'tx';
+    else if (userCity.includes('Florida')) cTag = 'fl';
+    else tagsField.disabled = true;
+  
+    tagsField.disabled = cTag === '';
+    tagsField.value = cTag;
+    console.log('User City:', userCity);
+}
 
+</script>
 {% schema %}
 {
   "name": "Register",
