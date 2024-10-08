@@ -153,14 +153,16 @@ body.product .shopify-section--product-template {
 
 .pdp_section .product__details.product__details--product-page .swatch .swatch-element.sample-swatch,
 .pdp_section .product__details.product__details--product-page .swatch .swatch-element.roll-swatch,
-.pdp_section .product__details.product__details--product-page .swatch .swatch-element.yard-swatch {
+.pdp_section .product__details.product__details--product-page .swatch .swatch-element.yard-swatch,
+.pdp_section .product__details.product__details--product-page .swatch .swatch-element{
     box-shadow: unset;
     border: unset;
 }
 
 .pdp_section .product__details.product__details--product-page .swatch .swatch-element.sample-swatch label,
 .pdp_section .product__details.product__details--product-page .swatch .swatch-element.roll-swatch label,
-.pdp_section .product__details.product__details--product-page .swatch .swatch-element.yard-swatch label {
+.pdp_section .product__details.product__details--product-page .swatch .swatch-element.yard-swatch label,
+.pdp_section .product__details.product__details--product-page .swatch .swatch-element label{
     display: flex;
     width: 96px;
     padding: 7px var(--dimensions-spacing-sm, 20px);
@@ -184,14 +186,21 @@ body.product .shopify-section--product-template {
 
 .pdp_section .product__details.product__details--product-page .swatch input:checked+.swatch-element.sample-swatch label,
 .pdp_section .product__details.product__details--product-page .swatch input:checked+.swatch-element.roll-swatch label,
-.pdp_section .product__details.product__details--product-page .swatch input:checked+.swatch-element.yard-swatch label {
+.pdp_section .product__details.product__details--product-page .swatch input:checked+.swatch-element.yard-swatch label,
+.pdp_section .product__details.product__details--product-page .swatch input:checked+.swatch-element label{
     background: var(--theme-surfaces-primary-base, #C6A55D);
 }
 
 .pdp_section .product__details.product__details--product-page .swatch_options input:checked+.swatch-element.color {
     border-width: 2px;
 }
-
+.pdp_section .purchase_inquiry.action_button.show,
+.pdp_section .product__details.product__details--product-page button.add_to_cart{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 !important;
+    flex: 1 0 100%;
+}
 .pdp_section .product__details.product__details--product-page .swatch .color label {
     height: 40px;
     min-width: 40px;
