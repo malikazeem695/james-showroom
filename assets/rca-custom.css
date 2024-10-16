@@ -1705,7 +1705,17 @@ section.section.template_accessibility-statement .one-whole.column {
     left: 12px;
     content: unset;
 }
-
+.pdp_section .product__details.product__details--product-page .swatch_options input +.swatch-element.color>label {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+.pdp_section .product__details.product__details--product-page .swatch input:checked+.swatch-element.color label {
+    width: 42px;
+    height: 42px;
+    min-height: 42px;
+    line-height: 42px;
+}
 @media only screen and (max-width: 1250px) {
     .shopify-section--footer .footer .one-fifth.column.medium-down--one-whole {
         width: 20%;
