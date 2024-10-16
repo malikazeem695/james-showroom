@@ -164,7 +164,7 @@ body.product .shopify-section--product-template {
 .pdp_section .product__details.product__details--product-page .swatch .swatch-element.yard-swatch label,
 .pdp_section .product__details.product__details--product-page .swatch .swatch-element label{
     display: flex;
-    width: 96px;
+    width: auto;
     padding: 7px var(--dimensions-spacing-sm, 20px);
     justify-content: center;
     align-items: center;
@@ -179,7 +179,9 @@ body.product .shopify-section--product-template {
     font-weight: 400;
     line-height: 26px;
 }
-
+.pdp_section .product__details.product__details--product-page .swatch .swatch-element label{
+        width: auto;
+}
 .pdp_section .product__details.product__details--product-page button.add_to_cart.hide {
     display: none !important;
 }
