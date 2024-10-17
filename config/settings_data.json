@@ -232,13 +232,13 @@
             "settings": {
               "image": "shopify://shop_images/Frame_7642_1.png",
               "badge_text": "Pop Up",
-              "event_heading": "Couplet",
-              "event_details": "Couplet is a fine jewelry company dedicated to doing more. Each Couplet piece is handmade to order by craftsmen and artisans in New York City. All of their gemstones are ethically sourced. Couplet partners directly with mines to ensure safe and humane practices throughout the gem discovery and cutting processes. ",
-              "event_date": "February 21st",
-              "event_time": "10AM - 5PM",
-              "event_location": "344 Worth Ave, Palm Beach",
+              "event_heading": "Casa Branca Holiday Kick-off",
+              "event_details": "Celebrate the season with Casa Branca starting November 6th in the Arcade on the ground floor of our building.  We will kick-off their 2-month holiday pop-up on Nov 12th with a Sip-n-See in our showroom to view their newest Fondamenta Collection of textiles and wallpapers.  Then we'll stroll downstairs to experience their festive window display and curated selection of holiday décor and gift ideas.",
+              "event_date": "November 12, 2024",
+              "event_time": "5PM-7PM",
+              "event_location": "JAMES-NYC",
               "event_rsvp_text": "RSVP",
-              "event_rsvp_url": "shopify://collections"
+              "event_rsvp_url": "mailto:nyc@jamesshowroom.com"
             }
           }
         },
