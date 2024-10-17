@@ -216,15 +216,15 @@
           "feature_block_Lcf6F3": {
             "type": "feature_block",
             "settings": {
-              "image": "shopify://shop_images/Frame_7642.png",
-              "badge_text": "Pop Up",
-              "event_heading": "Blumera",
-              "event_details": "Discover the elegance of Blumera's sustainable luxury at our exclusive pop-up event! Join us to explore Mehera Blum's stunning creations, influenced by global travels and her late mother's art, showcasing beautifully crafted pieces that embody sustainability and cultural richness.",
-              "event_date": "February 13th-15th",
-              "event_time": "10AM - 5PM",
-              "event_location": "344 Worth Ave, Palm Beach",
-              "event_rsvp_text": "RSVP",
-              "event_rsvp_url": "shopify://collections"
+              "image": "shopify://shop_images/Screenshot_2024-09-15_at_10.56.23_AM.jpg",
+              "badge_text": "Design Event / Book Signing",
+              "event_heading": "Texas Design Week Dallas - \"Then and Now\"",
+              "event_details": "Discover beauty and inspiration with Lisa Fine and Carolina Irving as they share their passion's about Designers from the past and the influence they have had on the style and interiors of today. Book signing with Pierre Sauvage, founder of Casa Lopez, following the discussion.",
+              "event_date": "October 25, 2024",
+              "event_time": "10AM - 12PM",
+              "event_location": "JAMES - Dallas",
+              "event_rsvp_text": "Ticket info",
+              "event_rsvp_url": "https://www.texasdesignweek.com/"
             }
           },
           "feature_block_U3PtFH": {
