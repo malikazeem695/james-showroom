@@ -384,6 +384,14 @@ if (productTagsElement) {
   });
     </script>
     {% endif %}
+    {% if template contains "collection" and customer %}
+      <style>
+        .boost-sd__product-info p.login_for_pricing {
+          display: none !important;
+        }
+      </style>
+    {% endif %}
+
   </head>
 
   {% if template contains "index" %}
@@ -430,7 +438,7 @@ if (productTagsElement) {
     </style>
   </noscript>
 
-  <body id="detect_if" class="page-{{ handle }} {% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %} {% if template == 'collection' %}{% endif %}"
+  <body id="detect_if" class="{% if customer %}customer_isloggedin{% endif %} page-{{ handle }} {% if template == '404' %}error-404{% else %}{{ template | replace: '.', '-' | handle }}{% endif %} {% if template == 'collection' %}{% endif %}"
         data-money-format="
           {%- if settings.currency_format == 'money_with_currency_format' -%}
             {{- shop.money_with_currency_format | strip_html -}}
