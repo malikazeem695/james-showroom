@@ -1,71 +1,80 @@
+{% if settings.pagination_type == 'load_more_button' %}
+  {% assign paginationType = 'data-load-more--grid' %}
+{% endif %}
 
-  
-  {% if settings.pagination_type == 'load_more_button' %}
-    {% assign paginationType = 'data-load-more--grid' %}
-  {% endif %}
-  
-  <div
-    class="products_list swiper-wrapper  
-      product-list
-      product-list--collection
-      is-flex
-      is-flex-wrap
-      equal-columns--outside-trim
-    "
-    itemtype="http://schema.org/ItemList"
-    {{ paginationType }}
-  >
-    {% assign for_limit = limit %}
-  
-    {% for product in products limit: limit %}
-      {% comment %} if product display is in the loop of products increase limit by one {% endcomment %}
-      {% if product.id == skip_product.id  %}
-        {% assign for_limit = limit | plus: 1 %}
-      {% endif %}
-    {% endfor %}
-  
-    {% for product in products limit: for_limit %}
-      {% comment %} Skip product if we're on its product page {% endcomment %}
-      {% if product.id != skip_product.id %}
-        {%
-          render 'rca-product-thumbnail',
-          product: product,
-          collection: collection,
-          products_per_row: products_per_row,
-          sidebar: sidebar,
-        %}
-      {% endif %}
-    {% endfor %}
-  
-    {% if template contains 'collection' %}
-      {% if settings.pagination_type != 'basic_pagination' %}
-        {% if paginate.next.url %}
-          <span class="js-load-more load-more">
-            <a href="{{ paginate.next.url }}" data-no-instant data-load-more class="global-button global-button--text">
-              {% if template contains 'collection' %}
-                {{ 'collections.general.load_more' | t }}
-              {% elsif template contains 'search' %}
-                {{ 'general.search.load_more' | t }}
-              {% endif %}
-            </a>
-          </span>
-        {% endif %}
-      {% endif %}
-    {% elsif template contains 'search' %}
-      {% if settings.pagination_type != 'basic_pagination' %}
-        {% if paginate.next.url %}
-          <span class="js-load-more load-more">
-            <a href="{{ paginate.next.url }}" data-no-instant data-load-more class="global-button global-button--text">
-              {% if template contains 'collection' %}
-                {{ 'collections.general.load_more' | t }}
-              {% elsif template contains 'search' %}
-                {{ 'general.search.load_more' | t }}
-              {% endif %}
-            </a>
-          </span>
-        {% endif %}
+<div
+  class="
+    products_list swiper-wrapper
+    product-list
+    product-list--collection
+    is-flex
+    is-flex-wrap
+    equal-columns--outside-trim
+  "
+  itemtype="http://schema.org/ItemList"
+  {{ paginationType }}
+>
+  {% assign for_limit = limit %}
+
+  {% for product in products limit: limit %}
+    {% comment %} if product display is in the loop of products increase limit by one {% endcomment %}
+    {% if product.id == skip_product.id %}
+      {% assign for_limit = limit | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% for product in products limit: for_limit %}
+    {% comment %} Skip product if we're on its product page {% endcomment %}
+    {% if product.id != skip_product.id %}
+      {% render 'rca-product-thumbnail',
+        product: product,
+        collection: collection,
+        products_per_row: products_per_row,
+        sidebar: sidebar
+      %}
+    {% endif %}
+  {% endfor %}
+
+  {% if template contains 'collection' %}
+    {% if settings.pagination_type != 'basic_pagination' %}
+      {% if paginate.next.url %}
+        <span class="js-load-more load-more">
+          <a href="{{ paginate.next.url }}" data-no-instant data-load-more class="global-button global-button--text">
+            {% if template contains 'collection' %}
+              {{ 'collections.general.load_more' | t }}
+            {% elsif template contains 'search' %}
+              {{ 'general.search.load_more' | t }}
+            {% endif %}
+          </a>
+        </span>
       {% endif %}
     {% endif %}
+  {% elsif template contains 'search' %}
+    {% if settings.pagination_type != 'basic_pagination' %}
+      {% if paginate.next.url %}
+        <span class="js-load-more load-more">
+          <a href="{{ paginate.next.url }}" data-no-instant data-load-more class="global-button global-button--text">
+            {% if template contains 'collection' %}
+              {{ 'collections.general.load_more' | t }}
+            {% elsif template contains 'search' %}
+              {{ 'general.search.load_more' | t }}
+            {% endif %}
+          </a>
+        </span>
+      {% endif %}
+    {% endif %}
+  {% endif %}
+</div>
+{% if section.settings.show_arrows %}
+  <div class="swiper-button-prev">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.6667 7.99998H3.33334M3.33334 7.99998L8.00001 12.6666M3.33334 7.99998L8.00001 3.33331" stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
-  <div class="swiper-scrollbar"></div>
-  
+  <div class="swiper-button-next">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.6667 7.99998H3.33334M3.33334 7.99998L8.00001 12.6666M3.33334 7.99998L8.00001 3.33331" stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+{% endif %}
+<div class="swiper-scrollbar"></div>

@@ -50,117 +50,118 @@
 
 {% comment %} HTML markup {% endcomment %}
 <style>
-  .modal_price.hidden {
-    display: none;
-  }
-  span.free-price-text:before {
-    /* content: "FREE SAMPLES TO TRADE"; */
-  }
-  span.free-price-text span {
-    display: none;
-  }
-  
-  .option_title .swatch-color-display.normone, span.swatch-color-display.colorone {
-    /* font-size: 15px;
-    padding-left: 2px; */
-  }
-  .swatch_options input:checked + .swatch-element:not(.color) label {
-    background: #C7A45C;
-    color: #FFF;
-    display: flex;
-    width: 96px;
-    padding: 7px var(--dimensions-spacing-sm, 20px);
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    border-radius: unset;
-    color: var(--theme-text-shade-base, #000);
-    font-family: "General Sans";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-
-}
-button.action_button {
-  display: flex !important;
-    padding: 7px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    flex: 1 0 0;
-    border-radius: unset;
-    border: 1px solid var(--theme-surfaces-shade-base, #FFF);
-    background: var(--theme-surfaces-primary-base, #C6A55D);
-    box-shadow: 0px 0px 0px 1px var(--theme-surfaces-primary-base, #C6A55D);
-    margin-left: 16px;
-    max-width: 570px;
-    color: var(--theme-text-shade-base, #000);
-    font-family: Manrope;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: -0.32px;
-    width: auto;
-}
-
-@media only screen and (max-width: 799px) {
-  button.action_button {
-    margin-top: 10px;
-    margin-left: 0;
-  }
-}
-}
-  .swatch label {
-    float: left;
-    min-width: 40px;
-    margin: 0;
-    background: #E0E0E0;
-    padding: 5px 40px;
-    font-size: 12px;
-    text-align: center;
-    white-space: nowrap;
-    text-transform: uppercase;
-    cursor: pointer;
-    {% comment %} border-radius: 3px; {% endcomment %}
-}
-  .price-ui span {
-    font-size: 28px;
-  }
-  a.product-info__caption .price {
-    display: none;
-}
-  {% if customer %}
-    {% if customer.tags contains 'wholesale' or customer.tags contains 'Wholesale'%}
-      .swatch.clearfix.whacad, .hidiein {
-        display: block;
+    .modal_price.hidden {
+      display: none;
     }
-       .nplo{
-        display: none;
+    span.free-price-text:before {
+      /* content: "FREE SAMPLES TO TRADE"; */
+    }
+    span.free-price-text span {
+      display: none;
+    }
+
+    .option_title .swatch-color-display.normone, span.swatch-color-display.colorone {
+      /* font-size: 15px;
+      padding-left: 2px; */
+    }
+    .swatch_options input:checked + .swatch-element:not(.color) label {
+      background: #C7A45C;
+      color: #FFF;
+      display: flex;
+      width: 96px;
+      padding: 7px var(--dimensions-spacing-sm, 20px);
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: unset;
+      color: var(--theme-text-shade-base, #000);
+      font-family: "General Sans";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+
+  }
+  button.action_button {
+    display: flex !important;
+      padding: 7px 12px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      flex: 1 0 0;
+      border-radius: unset;
+      border: 1px solid var(--theme-surfaces-shade-base, #FFF);
+      background: var(--theme-surfaces-primary-base, #C6A55D);
+      box-shadow: 0px 0px 0px 1px var(--theme-surfaces-primary-base, #C6A55D);
+      margin-left: 16px;
+      max-width: 570px;
+      color: var(--theme-text-shade-base, #000);
+      font-family: Manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: -0.32px;
+      width: auto;
+  }
+
+  @media only screen and (max-width: 799px) {
+    button.action_button {
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  }
+  }
+    .swatch label {
+      float: left;
+      min-width: 40px;
+      margin: 0;
+      background: #E0E0E0;
+      padding: 5px 40px;
+      font-size: 12px;
+      text-align: center;
+      white-space: nowrap;
+      text-transform: uppercase;
+      cursor: pointer;
+      {% comment %} border-radius: 3px; {% endcomment %}
+  }
+    .price-ui span {
+      font-size: 28px;
     }
     a.product-info__caption .price {
-      display: block;
+      display: none;
   }
-     .add_to_cart.action_butto {
-      display: block;
+    {% if customer %}
+      {% if customer.tags contains 'wholesale' or customer.tags contains 'Wholesale'%}
+        .swatch.clearfix.whacad, .hidiein {
+          display: block;
+      }
+         .nplo{
+          display: none;
+      }
+      a.product-info__caption .price {
+        display: block;
     }
-     .shopify-product-form .purchase-details {
-      display: flex;
-    }
-    .modal_price.hidden {
-      display: block;
-    }
-    {% endif %}
-    {% endif %}
+       .add_to_cart.action_butto {
+        display: block;
+      }
+       .shopify-product-form .purchase-details {
+        display: flex;
+      }
+      .modal_price.hidden {
+        display: block;
+      }
+      {% endif %}
+      {% endif %}
 </style>
 {% if product != blank and context == 'product' %}
-  {%
-    render 'product__structured-data',
-    product: product
-  %}
+  {% render 'product__structured-data', product: product %}
 {% endif %}
-<div class="product_tags" style="display: none;">{% for tag in product.tags %}{{ tag }},{% endfor %}</div>
+<div class="product_tags" style="display: none;">
+  {% for tag in product.tags -%}
+    {{- tag }},
+  {%- endfor %}
+</div>
 <div class="product-main product-{{ product.id }}">
   <div
     class="
@@ -178,7 +179,6 @@ button.action_button {
       data-rv-handle="{{ product.handle }}"
     {% endif %}
   >
-
     <div
       class="
         product__images
@@ -200,19 +200,18 @@ button.action_button {
         {% capture i %}{% cycle "1", "2" %}{% endcapture %}
         {{ 'product-' | append: i | placeholder_svg_tag: 'placeholder-svg placeholder-svg--product' }}
       {% else %}
-        {%
-          render 'product-images',
+        {% render 'product-images',
           product: product,
           gallery_thumbnails: gallery_thumbnails,
           gallery_thumbnail_slider: gallery_thumbnail_slider,
           gallery_click_to_zoom: gallery_click_to_zoom,
           gallery_hover_zoom: gallery_hover_zoom,
           gallery_arrows: gallery_arrows,
-          set_product_height: set_product_height
+          set_product_height: set_product_height,
           gallery_slideshow_transition: gallery_slideshow_transition,
           gallery_slideshow_speed: gallery_slideshow_speed,
           gallery_thumbnail_position: gallery_thumbnail_position,
-          video_looping: video_looping,
+          video_looping: video_looping
         %}
       {% endif %}
     </div>
@@ -236,11 +235,7 @@ button.action_button {
     >
       {% assign collection_handles = product.collections | map: 'handle' %}
 
-      {%
-        render 'price-ui-badges',
-        product: product,
-        collection_handles: collection_handles,
-      %}
+      {% render 'price-ui-badges', product: product, collection_handles: collection_handles %}
 
       {% for block in section.blocks %}
         <div
@@ -300,11 +295,16 @@ button.action_button {
                 {% if collection_handles contains 'coming-soon' %}
                   <p class="modal_price">{{ 'collections.general.coming_soon' | t }}</p>
                 {% else %}
-                {% if product.type == 'Lighting' or  product.type == 'Furniture' or product.type == 'Carpets' or product.tags contains 'carpets' or product.type == 'Carpet' %}
-                  <p class="nplo"><a href="/account/login">Log in</a> for pricing</p>
-                {% else %}
-                  <p class="nplo"><a href="/account/login">Log in</a> for pricing and samples</p>
-                {% endif %}
+                  {% if product.type == 'Lighting'
+                    or product.type == 'Furniture'
+                    or product.type == 'Carpets'
+                    or product.tags contains 'carpets'
+                    or product.type == 'Carpet'
+                  %}
+                    <p class="nplo"><a href="/account/login">Log in</a> for pricing</p>
+                  {% else %}
+                    <p class="nplo"><a href="/account/login">Log in</a> for pricing and samples</p>
+                  {% endif %}
                   <div class="modal_price hidden" data-display-savings="{{ block.settings.display_savings }}">
                     {% comment %}Inject @pixelunion/shopify-price-ui/price-ui begin{% endcomment %}
                     <div class="price-ui price-ui--loading" data-price-ui>
@@ -317,7 +317,7 @@ button.action_button {
                         </style>
                       </noscript>
                       {% assign compare_at_price = false %}
-                    
+
                       {% if product.compare_at_price and product.compare_at_price != product.price %}
                         {% if product.compare_at_price_varies %}
                           {%- capture price_min -%}
@@ -327,7 +327,7 @@ button.action_button {
                               value: product.compare_at_price_min,
                             -%}
                           {%- endcapture -%}
-                    
+
                           {%- capture price_max -%}
                             {%-
                               render 'price-ui-templates',
@@ -335,8 +335,10 @@ button.action_button {
                               value: product.compare_at_price_max,
                             -%}
                           {%- endcapture -%}
-                    
-                          {%- assign compare_at_price = 'product.price.range_html' | t: price_min: price_min, price_max: price_max -%}
+
+                          {%- assign compare_at_price = 'product.price.range_html'
+                            | t: price_min: price_min, price_max: price_max
+                          -%}
                         {% else %}
                           {%- capture compare_at_price -%}
                             {%-
@@ -347,7 +349,7 @@ button.action_button {
                           {%- endcapture -%}
                         {% endif %}
                       {% endif %}
-                    
+
                       {% if product.price_varies %}
                         {%- capture price_min -%}
                           {%-
@@ -356,7 +358,7 @@ button.action_button {
                             value: product.price_min,
                           -%}
                         {%- endcapture -%}
-                    
+
                         {%- capture price_max -%}
                           {%-
                             render 'price-ui-templates',
@@ -364,8 +366,10 @@ button.action_button {
                             value: product.price_max,
                           -%}
                         {%- endcapture -%}
-                    
-                        {%- assign price = 'product.price.range_html' | t: price_min: price_min, price_max: price_max -%}
+
+                        {%- assign price = 'product.price.range_html'
+                          | t: price_min: price_min, price_max: price_max
+                        -%}
                       {% else %}
                         {%- capture price -%}
                           {%-
@@ -375,13 +379,12 @@ button.action_button {
                           -%}
                         {%- endcapture -%}
                       {% endif %}
-                    
-                      {%-
-                        render 'price-ui-templates',
+
+                      {%- render 'price-ui-templates',
                         template: 'price-ui',
                         compare_at_price: compare_at_price,
                         price: price,
-                        unit_pricing: false,
+                        unit_pricing: false
                       -%}
                     </div>
                     {% comment %}Inject @pixelunion/shopify-price-ui/price-ui end{% endcomment %}
@@ -394,18 +397,18 @@ button.action_button {
               {{ block.settings.custom_liquid }}
             {% when 'description' %}
               <div class="description">
-                 <div class="product-description">
-                {% if product.description != blank %}
-                  {{product.description }}
-                {% endif %}
-              </div> 
+                <div class="product-description">
+                  {% if product.description != blank %}
+                    {{ product.description }}
+                  {% endif %}
+                </div>
                 {% if onboarding %}
                   <p>{{ 'homepage.onboarding.product_description' | t }}</p>
                 {% else %}
                   {% if context == 'quickshop' %}
-                      <div class="rte">
-                        <div class="rte yeshereis">
-                          {% if product.metafields.custom.sold_by != blank %}
+                    <div class="rte">
+                      <div class="rte yeshereis">
+                        {% if product.metafields.custom.sold_by != blank %}
                           <p>Sold by {{ product.metafields.custom.sold_by }}</p>
                         {% endif %}
                         {% if product.metafields.custom.content != blank %}
@@ -455,8 +458,8 @@ button.action_button {
                         {% if product.metafields.custom.additional_info != blank %}
                           <p>Additional Info: {{ product.metafields.custom.additional_info }}</p>
                         {% endif %}
-                        </div>
                       </div>
+                    </div>
 
                     <a
                       class="secondary_button"
@@ -466,9 +469,8 @@ button.action_button {
                       {{ 'collections.general.view_product_details_html' | t }}
                     </a>
                   {% else %}
-                  
-                      <div class="rte yeshereis">
-                        {% if product.metafields.custom.sold_by != blank %}
+                    <div class="rte yeshereis">
+                      {% if product.metafields.custom.sold_by != blank %}
                         <p>Sold by {{ product.metafields.custom.sold_by }}</p>
                       {% endif %}
                       {% if product.metafields.custom.content != blank %}
@@ -480,48 +482,46 @@ button.action_button {
                       {% if product.metafields.custom.width != blank %}
                         <p>Width: {{ product.metafields.custom.width }}</p>
                       {% endif %}
-                        {% if product.metafields.custom.repeat != blank %}
-                          <p>Repeat: {{ product.metafields.custom.repeat }}</p>
-                        {% endif %}
+                      {% if product.metafields.custom.repeat != blank %}
+                        <p>Repeat: {{ product.metafields.custom.repeat }}</p>
+                      {% endif %}
 
-                        {% if product.metafields.custom.rub_count != blank %}
-                          <p>Rub Count: {{ product.metafields.custom.rub_count }}</p>
-                        {% endif %}
+                      {% if product.metafields.custom.rub_count != blank %}
+                        <p>Rub Count: {{ product.metafields.custom.rub_count }}</p>
+                      {% endif %}
 
-                        {% if product.metafields.custom.minimum_order != blank %}
-                          <p>Minimum Order: {{ product.metafields.custom.minimum_order }}</p>
-                        {% endif %}
+                      {% if product.metafields.custom.minimum_order != blank %}
+                        <p>Minimum Order: {{ product.metafields.custom.minimum_order }}</p>
+                      {% endif %}
 
-                        {% if product.metafields.custom.cut_fee != blank %}
-                          <p>Cut Fee: {{ product.metafields.custom.cut_fee }}</p>
-                        {% endif %}
+                      {% if product.metafields.custom.cut_fee != blank %}
+                        <p>Cut Fee: {{ product.metafields.custom.cut_fee }}</p>
+                      {% endif %}
 
-                        {% if product.metafields.custom.country_of_origin != blank %}
-                          <p>Country of Origin: {{ product.metafields.custom.country_of_origin }}</p>
-                        {% endif %}
+                      {% if product.metafields.custom.country_of_origin != blank %}
+                        <p>Country of Origin: {{ product.metafields.custom.country_of_origin }}</p>
+                      {% endif %}
 
-                        {% if product.metafields.custom.dimensions != blank %}
-                          <p>Dimensions: {{ product.metafields.custom.dimensions }}</p>
-                        {% endif %}
+                      {% if product.metafields.custom.dimensions != blank %}
+                        <p>Dimensions: {{ product.metafields.custom.dimensions }}</p>
+                      {% endif %}
 
-                        {% if product.metafields.custom.wood_finish_options != blank %}
-                          <p>Wood finish options: {{ product.metafields.custom.wood_finish_options }}</p>
-                        {% endif %}
+                      {% if product.metafields.custom.wood_finish_options != blank %}
+                        <p>Wood finish options: {{ product.metafields.custom.wood_finish_options }}</p>
+                      {% endif %}
 
-                        {% if product.metafields.custom.metal_finish_options != blank %}
-                          <p>Metal finish options: {{ product.metafields.custom.metal_finish_options }}</p>
-                        {% endif %}
+                      {% if product.metafields.custom.metal_finish_options != blank %}
+                        <p>Metal finish options: {{ product.metafields.custom.metal_finish_options }}</p>
+                      {% endif %}
 
-                        {% if product.metafields.custom.bold_type != blank %}
-                          <p>Bold type: {{ product.metafields.custom.bold_type }}</p>
-                        {% endif %}
+                      {% if product.metafields.custom.bold_type != blank %}
+                        <p>Bold type: {{ product.metafields.custom.bold_type }}</p>
+                      {% endif %}
 
-                        {% if product.metafields.custom.additional_info != blank %}
-                          <p>Additional Info: {{ product.metafields.custom.additional_info }}</p>
-                        {% endif %}
-                      
-                      </div>
-                    
+                      {% if product.metafields.custom.additional_info != blank %}
+                        <p>Additional Info: {{ product.metafields.custom.additional_info }}</p>
+                      {% endif %}
+                    </div>
                   {% endif %}
                 {% endif %}
               </div>
@@ -537,24 +537,19 @@ button.action_button {
                     "
                     name="add"
                     type="submit"
-                    data-label={{ add_to_cart_label | json }}
+                    data-label="{{ add_to_cart_label | json }}"
                   >
                     <span class="text">{{ 'products.product.add_to_cart' | t }}</span>
                   </button>
                 </form>
               {% else %}
-
                 {% unless collection_handles contains 'coming-soon' %}
-                  {%
-                    render 'product-form',
+                  {% render 'product-form',
                     product: product,
                     show_payment_button: show_dynamic_checkout_button,
                     collection_handles: collection_handles
                   %}
-                  {%
-                    render 'product-notify-me',
-                    product: product
-                  %}
+                  {% render 'product-notify-me', product: product %}
                 {% endunless %}
               {% endif %}
 
@@ -570,7 +565,8 @@ button.action_button {
                       <span class="label">{{ 'products.product.collections' | t }}:</span>
                       <span>
                         {% for col in product.collections %}
-                          <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>{% unless forloop.last %},{% endunless %}
+                          <a href="{{ col.url }}" title="{{ col.title }}">{{ col.title }}</a>
+                          {%- unless forloop.last %},{% endunless %}
                         {% endfor %}
                       </span>
                     </p>
@@ -594,8 +590,14 @@ button.action_button {
 
                         {% unless tag contains 'meta-' %}
                           <span>
-                            <a href="{{ routes.collections_url }}/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}" title="{{ 'products.product.products_tagged' | t: tag: tag }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
-                            </span>
+                            <a
+                              href="{{ routes.collections_url }}/{% if collection %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handle }}"
+                              title="{{ 'products.product.products_tagged' | t: tag: tag }}"
+                            >
+                              {{- tag -}}
+                            </a>
+                            {%- unless forloop.last %},{% endunless %}
+                          </span>
                         {% endunless %}
                       {% endfor %}
                     </p>
@@ -604,10 +606,7 @@ button.action_button {
               {% endif %}
             {% when 'share' %}
               <div class="meta">
-                {%
-                  render 'social-buttons',
-                  context: 'product'
-                %}
+                {% render 'social-buttons', context: 'product' %}
               </div>
             {% when 'collapsible-tab' %}
               {% if block.settings.collapsible_tab_heading != blank %}
@@ -703,17 +702,22 @@ button.action_button {
             {% when 'rating' %}
               {% if product.metafields.reviews.rating.value != blank %}
                 <div class="product-rating">
-                  {%
-                    render 'rating-stars',
+                  {% render 'rating-stars',
                     value: product.metafields.reviews.rating.value.rating,
-                    scale_max: product.metafields.reviews.rating.value.scale_max,
+                    scale_max: product.metafields.reviews.rating.value.scale_max
                   %}
                   <p class="rating__text">
-                    <span aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
+                    <span aria-hidden="true">
+                      {{- product.metafields.reviews.rating.value }} /
+                      {{ product.metafields.reviews.rating.value.scale_max -}}
+                    </span>
                   </p>
                   <p class="rating__count">
                     <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
-                    <span class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "general.accessibility.total_reviews" | t }}</span>
+                    <span class="visually-hidden">
+                      {{- product.metafields.reviews.rating_count }}
+                      {{ 'general.accessibility.total_reviews' | t -}}
+                    </span>
                   </p>
                 </div>
               {% endif %}
@@ -754,17 +758,13 @@ button.action_button {
                 </div>
               {% endif %}
             {% when 'complementary_products' %}
-              {%
-                render 'complementary-products',
-                product: product,
-                block: block,
-              %}
+              {% render 'complementary-products', product: product, block: block %}
           {% endcase %}
         </div>
       {% endfor %}
     </div>
 
-    {% if product.description != blank and product.description contains "<!-- split -->" %}
+    {% if product.description != blank and product.description contains '<!-- split -->' %}
       <div class="sixteen columns rte">
         {{ product.description | split: '<!-- split -->' | last }}
       </div>
@@ -779,201 +779,202 @@ button.action_button {
 </div>
 <div class="productPrintTemplate text-center" id="printableArea">
   <div class="Cotainer customContainer">
-  <div class="productPrintTemplate--logo" style="text-align: center;">
-    <img src="//cdn.shopify.com/s/files/1/0079/4142/3185/files/James_Rec_Logo_NOBKGR_410x.png?v=1553647251">
-  </div>
-  {% if product.type == 'Furniture'%}
-     <div class="productPrintTemplate--productImage" style="text-align: center;">
-    <img  id="image-url" src="{{ product.featured_image.src | img_url: 'master' }}">
-  </div>
+    <div class="productPrintTemplate--logo" style="text-align: center;">
+      <img src="//cdn.shopify.com/s/files/1/0079/4142/3185/files/James_Rec_Logo_NOBKGR_410x.png?v=1553647251">
+    </div>
+    {% if product.type == 'Furniture' %}
+      <div class="productPrintTemplate--productImage" style="text-align: center;">
+        <img id="image-url" src="{{ product.featured_image.src | img_url: 'master' }}">
+      </div>
     {% else %}
-  <div class="productPrintTemplate--productImage" style="text-align: center;">
-    <img  id="image-url" src="{{ variant.image | img_url: 'master' }}">
-  </div>
-   {% endif %}
-  <div class="productPrintTemplate--productContent">
-    <div class="leftSide">
-       <p class="vendor">
+      <div class="productPrintTemplate--productImage" style="text-align: center;">
+        <img id="image-url" src="{{ variant.image | img_url: 'master' }}">
+      </div>
+    {% endif %}
+    <div class="productPrintTemplate--productContent">
+      <div class="leftSide">
+        <p class="vendor">
           <span itemprop="brand" class="vendor">{{ product.vendor | link_to_vendor }}</span>
         </p>
-      <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
-      {% comment %} <ul class="ac2q"> {% endcomment %}
-  
-{% comment %}        
-        {% for selected_option in product.selected_or_first_available_variant.options %}
-          {% assign lower_option_title = product.options[forloop.index0] | downcase %}
-          <li>
-              <span class="label">{{ product.options[forloop.index0] }}: 
-                  {% if lower_option_title contains 'color' %}
-                      <span class="swatch-color-display colorone">{{ selected_option }}</span>
-                  {% else %}
-                      <span class="swatch-color-display normone">{{ selected_option }}</span>
-                  {% endif %}
-              </span>
-          </li>
-          <span class="dana jj{{ forloop.index }}">|</span>
-      {% endfor %}
-      
-       {% endcomment %}
-      {% comment %} </ul> {% endcomment %}
-    <div class="des">
-      {{ product.description }}
+        <h1 class="product_name" itemprop="name">{{ product.title }}</h1>
+        {% comment %} <ul class="ac2q"> {% endcomment %}
+
+        {% comment %}
+            {% for selected_option in product.selected_or_first_available_variant.options %}
+              {% assign lower_option_title = product.options[forloop.index0] | downcase %}
+              <li>
+                  <span class="label">{{ product.options[forloop.index0] }}:
+                      {% if lower_option_title contains 'color' %}
+                          <span class="swatch-color-display colorone">{{ selected_option }}</span>
+                      {% else %}
+                          <span class="swatch-color-display normone">{{ selected_option }}</span>
+                      {% endif %}
+                  </span>
+              </li>
+              <span class="dana jj{{ forloop.index }}">|</span>
+          {% endfor %}
+        {% endcomment %}
+        {% comment %} </ul> {% endcomment %}
+        <div class="des">
+          {{ product.description }}
+        </div>
+        <div class="details_product">
+          {% if product.metafields.custom.sold_by != blank %}
+            <p>Sold by {{ product.metafields.custom.sold_by }}</p>
+          {% endif %}
+          {% if product.metafields.custom.content != blank %}
+            <p>Content: {{ product.metafields.custom.content }}</p>
+          {% endif %}
+          {% if product.metafields.custom.lead_time != blank %}
+            <p>Lead time: {{ product.metafields.custom.lead_time }}</p>
+          {% endif %}
+          {% if product.metafields.custom.width != blank %}
+            <p>Width: {{ product.metafields.custom.width }}</p>
+          {% endif %}
+          {% if product.metafields.custom.repeat != blank %}
+            <p>Repeat: {{ product.metafields.custom.repeat }}</p>
+          {% endif %}
+          {% if product.metafields.custom.rub_count != blank %}
+            <p>Rub Count: {{ product.metafields.custom.rub_count }}</p>
+          {% endif %}
+
+          {% if product.metafields.custom.minimum_order != blank %}
+            <p>Minimum Order: {{ product.metafields.custom.minimum_order }}</p>
+          {% endif %}
+
+          {% if product.metafields.custom.cut_fee != blank %}
+            <p>Cut Fee: {{ product.metafields.custom.cut_fee }}</p>
+          {% endif %}
+
+          {% if product.metafields.custom.country_of_origin != blank %}
+            <p>Country of Origin: {{ product.metafields.custom.country_of_origin }}</p>
+          {% endif %}
+
+          {% if product.metafields.custom.dimensions != blank %}
+            <p>Dimensions: {{ product.metafields.custom.dimensions }}</p>
+          {% endif %}
+
+          {% if product.metafields.custom.wood_finish_options != blank %}
+            <p>Wood finish options: {{ product.metafields.custom.wood_finish_options }}</p>
+          {% endif %}
+
+          {% if product.metafields.custom.metal_finish_options != blank %}
+            <p>Metal finish options: {{ product.metafields.custom.metal_finish_options }}</p>
+          {% endif %}
+
+          {% if product.metafields.custom.bold_type != blank %}
+            <p>Bold type: {{ product.metafields.custom.bold_type }}</p>
+          {% endif %}
+
+          {% if product.metafields.custom.additional_info != blank %}
+            <p>Additional Info: {{ product.metafields.custom.additional_info }}</p>
+          {% endif %}
+        </div>
+      </div>
     </div>
-    <div class="details_product">
-      {% if product.metafields.custom.sold_by != blank %}
-        <p>Sold by {{ product.metafields.custom.sold_by }}</p>
-      {% endif %}
-      {% if product.metafields.custom.content != blank %}
-        <p>Content: {{ product.metafields.custom.content }}</p>
-      {% endif %}
-      {% if product.metafields.custom.lead_time != blank %}
-        <p>Lead time: {{ product.metafields.custom.lead_time }}</p>
-      {% endif %}
-      {% if product.metafields.custom.width != blank %}
-        <p>Width: {{ product.metafields.custom.width }}</p>
-      {% endif %}
-      {% if product.metafields.custom.repeat != blank %}
-        <p>Repeat: {{ product.metafields.custom.repeat }}</p>
-      {% endif %}
-      {% if product.metafields.custom.rub_count != blank %}
-        <p>Rub Count: {{ product.metafields.custom.rub_count }}</p>
-      {% endif %}
-  
-      {% if product.metafields.custom.minimum_order != blank %}
-        <p>Minimum Order: {{ product.metafields.custom.minimum_order }}</p>
-      {% endif %}
-  
-      {% if product.metafields.custom.cut_fee != blank %}
-        <p>Cut Fee: {{ product.metafields.custom.cut_fee }}</p>
-      {% endif %}
-  
-      {% if product.metafields.custom.country_of_origin != blank %}
-        <p>Country of Origin: {{ product.metafields.custom.country_of_origin }}</p>
-      {% endif %}
-  
-      {% if product.metafields.custom.dimensions != blank %}
-        <p>Dimensions: {{ product.metafields.custom.dimensions }}</p>
-      {% endif %}
-  
-      {% if product.metafields.custom.wood_finish_options != blank %}
-        <p>Wood finish options: {{ product.metafields.custom.wood_finish_options }}</p>
-      {% endif %}
-  
-      {% if product.metafields.custom.metal_finish_options != blank %}
-        <p>Metal finish options: {{ product.metafields.custom.metal_finish_options }}</p>
-      {% endif %}
-  
-      {% if product.metafields.custom.bold_type != blank %}
-        <p>Bold type: {{ product.metafields.custom.bold_type }}</p>
-      {% endif %}
-  
-      {% if product.metafields.custom.additional_info != blank %}
-        <p>Additional Info: {{ product.metafields.custom.additional_info }}</p>
-      {% endif %}
+    <hr class="productPrintTemplate--separator">
+
+    <div class="productPrintTemplate--productFooter">
+      <span>1025 N. STEMMONS FWY, #250, DALLAS, TX75207 | (214) 295-7500 | DALLAS@JAMESSHOWROOM.COM</span>
     </div>
-  </div>
-    </div>
-  <hr class="productPrintTemplate--separator">
-   
-  <div class="productPrintTemplate--productFooter">
-    <span>1025 N. STEMMONS FWY, #250, DALLAS, TX75207 | (214) 295-7500 | DALLAS@JAMESSHOWROOM.COM</span>
-  </div>
-    
-    
   </div>
   <style>
     .productPrintTemplate {
-   display: none;
-}
-.productPrintTemplate .customContainer {
-  padding: 16px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.productPrintTemplate--logo img {
-  display: inline-block;
-  max-width: 100px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.productPrintTemplate--productImage img {
-  width: 58%;
-  aspect-ratio: 1 / 1 !important;
-    object-fit: cover;
-}
-.productPrintTemplate--productContent {
-  display: block;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  margin-top: 10px;
-  width: calc(72% - 40px);
-  margin-left: auto;
-  margin-right: auto;
-}
-.productPrintTemplate--productContent .leftSide, .productPrintTemplate--productContent .rightSide {
-  text-align: center;
-}
-.productPrintTemplate--productContent .leftSide p, .productPrintTemplate--productContent .rightSide p {
-  text-transform: none!important;
-}
-.productPrintTemplate--productContent .vendor {
-  margin-bottom: 6px;
-}
-.productPrintTemplate--productContent .leftSide h1.product_name {
-  font-size: 30px!important;
-  letter-spacing: normal!important;
-  color: #000!important;
-  border: none;
-  padding: 0;
-  margin-bottom: 2px!important;
-}
-.productPrintTemplate--productContent .leftSide ul, .productPrintTemplate--productContent .rightSide ul {
-  padding: 0;
-  list-style: none;
-  margin-top: 0;
-}
-.productPrintTemplate--productContent .leftSide ul li, .productPrintTemplate--productContent .rightSide ul li {
-  text-transform: none!important;
-  margin-bottom: 0;
-  color: #000!important;
-  display: inline;
-}
-span.dana.jj2 {
-  display: none;
-}
+      display: none;
+    }
+    .productPrintTemplate .customContainer {
+      padding: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .productPrintTemplate--logo img {
+      display: inline-block;
+      max-width: 100px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .productPrintTemplate--productImage img {
+      width: 58%;
+      aspect-ratio: 1 / 1 !important;
+      object-fit: cover;
+    }
+    .productPrintTemplate--productContent {
+      display: block;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      margin-top: 10px;
+      width: calc(72% - 40px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .productPrintTemplate--productContent .leftSide,
+    .productPrintTemplate--productContent .rightSide {
+      text-align: center;
+    }
+    .productPrintTemplate--productContent .leftSide p,
+    .productPrintTemplate--productContent .rightSide p {
+      text-transform: none !important;
+    }
+    .productPrintTemplate--productContent .vendor {
+      margin-bottom: 6px;
+    }
+    .productPrintTemplate--productContent .leftSide h1.product_name {
+      font-size: 30px !important;
+      letter-spacing: normal !important;
+      color: #000 !important;
+      border: none;
+      padding: 0;
+      margin-bottom: 2px !important;
+    }
+    .productPrintTemplate--productContent .leftSide ul,
+    .productPrintTemplate--productContent .rightSide ul {
+      padding: 0;
+      list-style: none;
+      margin-top: 0;
+    }
+    .productPrintTemplate--productContent .leftSide ul li,
+    .productPrintTemplate--productContent .rightSide ul li {
+      text-transform: none !important;
+      margin-bottom: 0;
+      color: #000 !important;
+      display: inline;
+    }
+    span.dana.jj2 {
+      display: none;
+    }
 
-.productPrintTemplate ul {
-margin-bottom: 10px
-}
+    .productPrintTemplate ul {
+      margin-bottom: 10px;
+    }
 
-.productPrintTemplate--productContent .leftSide .des {
-  margin-bottom: 10px;
-}
-.productPrintTemplate--productContent .leftSide .des p {
-  margin: 0;
-  color: #000;
-  font-size: 16px;
-}
-.productPrintTemplate--separator {
-  border-bottom: 2px solid #C7A45C!important;
-  border: none;
-}
-.productPrintTemplate--productFooter span {
-  font-size: 16px!important;
-  text-align: center;
-  display: flex;
-    justify-content: center;
-}
-@media print {
-    @page {
+    .productPrintTemplate--productContent .leftSide .des {
+      margin-bottom: 10px;
+    }
+    .productPrintTemplate--productContent .leftSide .des p {
       margin: 0;
+      color: #000;
+      font-size: 16px;
     }
+    .productPrintTemplate--separator {
+      border-bottom: 2px solid #c7a45c !important;
+      border: none;
+    }
+    .productPrintTemplate--productFooter span {
+      font-size: 16px !important;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    @media print {
+      @page {
+        margin: 0;
+      }
 
-    body {
-      margin: 0.8cm;
+      body {
+        margin: 0.8cm;
+      }
     }
-  }
   </style>
 </div>
 {% if set_product_height %}
@@ -1004,11 +1005,24 @@ margin-bottom: 10px
   <script defer src="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.en.js"></script>
 {% endif %}
 <script>
-  function printPageArea(areaID){
+  function stringToHTML(str) {
+    const parser = new DOMParser();
+    const div = parser.parseFromString(str, 'text/html');
+    console.log("🚀 ~ stringToHTML ~ div:", div)
+    
+    return div.querySelector('body').innerHTML;
+  }
+
+  function printPageArea(areaID) {
     var printContent = document.getElementById(areaID).innerHTML;
     var originalContent = document.body.innerHTML;
+    var productSection = document.querySelector('.product-main.product-{{ product.id }}');
+
+    {% comment %} console.log({ printContent, originalContent, productSection }); {% endcomment %}
+
     document.body.innerHTML = printContent;
     window.print();
-    document.body.innerHTML = originalContent;
-}
+    {% comment %} document.body.innerHTML = originalContent; {% endcomment %}
+    window.location.reload();
+  }
 </script>

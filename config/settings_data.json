@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "current": {
     "performance": "ludicrous",
@@ -155,7 +146,7 @@
     "newsletter_bg": "",
     "newsletter_popup_image_align": "left",
     "newsletter_popup_title": "Sign up today",
-    "newsletter_popup_text": "<p></p>",
+    "newsletter_popup_text": "<p><\/p>",
     "newsletter_popup_text_align": "center",
     "newsletter_popup_seconds": 0,
     "newsletter_popup_days": "14",
@@ -163,16 +154,16 @@
     "clubhouse_link": "",
     "discord_link": "",
     "email_link": "dallas@jamesshowroom.com",
-    "facebook_link": "https://www.facebook.com/JamesShowroomAustin",
+    "facebook_link": "https:\/\/www.facebook.com\/JamesShowroomAustin",
     "flickr_link": "",
     "houzz_link": "",
-    "instagram_link": "https://instagram.com/jamesshowroom/",
+    "instagram_link": "https:\/\/instagram.com\/jamesshowroom\/",
     "kickstarter_link": "",
     "linkedin_link": "",
     "medium_link": "",
     "messenger_link": "",
     "opensea_link": "",
-    "pinterest_link": "https://www.pinterest.com/jamesshowroomtx/",
+    "pinterest_link": "https:\/\/www.pinterest.com\/jamesshowroomtx\/",
     "reddit_link": "",
     "rss_link": "",
     "snapchat_link": "",
@@ -183,7 +174,7 @@
     "vimeo_link": "",
     "whatsapp_link": "",
     "youtube_link": "",
-    "favicon": "shopify://shop_images/favicon.png",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "disqus_enabled": false,
     "disqus_shortname": "",
     "enable_shopify_review_comments": false,
@@ -216,7 +207,7 @@
           "feature_block_Lcf6F3": {
             "type": "feature_block",
             "settings": {
-              "image": "shopify://shop_images/Dallas_Main.jpg",
+              "image": "shopify:\/\/shop_images\/Dallas_Main.jpg",
               "badge_text": "Design Event",
               "event_heading": "Texas Design Week Dallas - \"Then and Now\"",
               "event_details": "Discover beauty and inspiration with Lisa Fine and Carolina Irving as they share their passion's about Designers from the past and the influence they have had on the style and interiors of today. Book signing with Pierre Sauvage, founder of Casa Lopez, following the discussion.",
@@ -224,13 +215,13 @@
               "event_time": "10AM - 12PM",
               "event_location": "JAMES - Dallas",
               "event_rsvp_text": "Ticket info",
-              "event_rsvp_url": "https://www.texasdesignweek.com/"
+              "event_rsvp_url": "https:\/\/www.texasdesignweek.com\/"
             }
           },
           "feature_block_U3PtFH": {
             "type": "feature_block",
             "settings": {
-              "image": "shopify://shop_images/Screenshot_2024-10-17_at_11.25.25_AM.png",
+              "image": "shopify:\/\/shop_images\/Screenshot_2024-10-17_at_11.25.25_AM.png",
               "badge_text": "Pop Up",
               "event_heading": "Casa Branca Holiday Kick-off",
               "event_details": "Celebrate the season with Casa Branca starting November 6th in the Arcade on the ground floor of our building.  We will kick-off their 2-month holiday pop-up on Nov 12th with a Sip-n-See in our showroom to view their newest Fondamenta Collection of textiles and wallpapers.  Then we'll stroll downstairs to experience their festive window display and curated selection of holiday décor and gift ideas.",
@@ -249,7 +240,7 @@
         "settings": {
           "header_text": "Texas Design Week - Dallas",
           "link_text": "See All Events",
-          "link_url": "shopify://pages/events"
+          "link_url": "shopify:\/\/pages\/events"
         }
       },
       "rca-coll-image-text": {
@@ -266,16 +257,28 @@
     ],
     "blocks": {
       "4318962865815008709": {
-        "type": "shopify://apps/boost-ai-search-discovery/blocks/boost-sd/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/boost-sd\/7fc998ae-a150-4367-bab8-505d8a4503f7",
         "disabled": false,
         "settings": {
         }
       },
       "3678330922655817062": {
-        "type": "shopify://apps/boost-ai-search-discovery/blocks/boost-sd-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/boost-sd-ssr\/7fc998ae-a150-4367-bab8-505d8a4503f7",
         "disabled": true,
         "settings": {
           "templateId": "DXmvmlk6gB"
+        }
+      },
+      "9776720720251544092": {
+        "type": "shopify:\/\/apps\/helium-customer-fields\/blocks\/app-embed\/bab58598-3e6a-4377-aaaa-97189b15f131",
+        "disabled": false,
+        "settings": {
+          "registration_form_id": "kntL8M",
+          "edit_account_form_id": "",
+          "edit_account_link_text": "Edit account",
+          "edit_account_heading": "Edit account",
+          "edit_account_back_link_text": "Back to account",
+          "enable_js_api": false
         }
       }
     }

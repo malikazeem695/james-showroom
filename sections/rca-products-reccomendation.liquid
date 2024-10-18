@@ -3,9 +3,7 @@
   type="application/json"
   data-section-type="product-recommendations"
   data-section-id="{{ section.id }}"
->
-</script>
-
+></script>
 
 {% style %}
   #shopify-section-{{ section.id }}{
@@ -19,9 +17,9 @@
 {% comment %} End content settings {% endcomment %}
 
 {% comment %} NE compatibility {% endcomment %}
-{% comment%} This setting and conditional should be removed in the New Editor {% endcomment %}
+{% comment %} This setting and conditional should be removed in the New Editor {% endcomment %}
 {% if section.settings.show_product_recommendations %}
-{% comment %} Ends NE compatibility {% endcomment %}
+  {% comment %} Ends NE compatibility {% endcomment %}
   {% comment %} Check whether product has any tags for custom related products {% endcomment %}
   {% for tag in product.tags %}
     {% if tag contains 'meta-related-collection-' %}
@@ -80,44 +78,41 @@
   {% endcapture %}
 
   <section
-    class="dual_collection_tabs 
+    class="
+      dual_collection_tabs
       {% if section.settings.wide_display == true %}
         is-width-wide
       {% endif %}
     "
   >
-
-      
-        {% if show_custom_collection %}
-          <div
-            class="
-              product-recommendations
-              product-recommendations--{{ template | replace: '.', '-' | handle }}
-              meta-related-recommended-collection
-            "
-            data-product-recommendations
-            data-enabled="{{ section.settings.show_product_recommendations }}"
-          >
-            {{ product_collections_markup }}
-          </div>
-        {% elsif show_dynamic_collection %}
-          <div
-            class="
-              product-recommendations
-              product-recommendations--{{ template | replace: '.', '-' | handle }}
-            "
-            data-product-recommendations
-            data-section-id="{{ section.id }}"
-            data-recommendations-url="{{ routes.product_recommendations_url }}"
-            data-product-id="{{ product.id }}"
-            data-limit="{{ section.settings.recommended_products_limit }}"
-            data-enabled="{{ section.settings.show_product_recommendations }}"
-          >
-            {{ product_collections_markup }}
-          </div>
-        {% endif %}
-      
- 
+    {% if show_custom_collection %}
+      <div
+        class="
+          product-recommendations
+          product-recommendations--{{ template | replace: '.', '-' | handle }}
+          meta-related-recommended-collection
+        "
+        data-product-recommendations
+        data-enabled="{{ section.settings.show_product_recommendations }}"
+      >
+        {{ product_collections_markup }}
+      </div>
+    {% elsif show_dynamic_collection %}
+      <div
+        class="
+          product-recommendations
+          product-recommendations--{{ template | replace: '.', '-' | handle }}
+        "
+        data-product-recommendations
+        data-section-id="{{ section.id }}"
+        data-recommendations-url="{{ routes.product_recommendations_url }}"
+        data-product-id="{{ product.id }}"
+        data-limit="{{ section.settings.recommended_products_limit }}"
+        data-enabled="{{ section.settings.show_product_recommendations }}"
+      >
+        {{ product_collections_markup }}
+      </div>
+    {% endif %}
   </section>
 {% endif %}
 
@@ -178,47 +173,58 @@
       "max": 10,
       "step": 1,
       "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show arrows control",
+      "default": true
     }
   ],
-  "presets": [{
-        "name": "RCA Related products",
-        "category": "Custom"
-      }]
+  "presets": [
+    {
+      "name": "RCA Related products",
+      "category": "Custom"
+    }
+  ]
 }
-
 {% endschema %}
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      setTimeout(function(){
-        var first_coll_Swiper = new Swiper('.collection_products', {
-  slidesPerView: 'auto', // Adjust 'auto' to the number of slides you want to see on the screen
-  spaceBetween: 16, // Space between slides
-  on: {
-    init: function () {
-      if (window.innerWidth < 769) {
-        this.params.spaceBetween = 8;
-        this.update();
-      }
-    },
-    resize: function () {
-      if (window.innerWidth < 769) {
-        this.params.spaceBetween = 8;
-      } else {
-        this.params.spaceBetween = 16;
-      }
-      this.update();
-    }
-  },
-  freeMode: true, // Enable free mode for smooth dragging
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    hide: false, // Set to true if you want the scrollbar to hide automatically
-    draggable: true, // Enable dragging the scrollbar
-  },
-  mousewheelControl: true, // Enable mouse wheel navigation
-  keyboardControl: true, // Enable keyboard navigation
-});
-}, 4000);
-});
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+      var first_coll_Swiper = new Swiper('.collection_products', {
+        slidesPerView: 'auto', // Adjust 'auto' to the number of slides you want to see on the screen
+        spaceBetween: 16, // Space between slides
+        on: {
+          init: function () {
+            if (window.innerWidth < 769) {
+              this.params.spaceBetween = 8;
+              this.update();
+            }
+          },
+          resize: function () {
+            if (window.innerWidth < 769) {
+              this.params.spaceBetween = 8;
+            } else {
+              this.params.spaceBetween = 16;
+            }
+            this.update();
+          },
+        },
+        freeMode: true, // Enable free mode for smooth dragging
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          hide: false, // Set to true if you want the scrollbar to hide automatically
+          draggable: true, // Enable dragging the scrollbar
+        },
+        mousewheelControl: true, // Enable mouse wheel navigation
+        keyboardControl: true, // Enable keyboard navigation
+      });
+    }, 4000);
+  });
 </script>
