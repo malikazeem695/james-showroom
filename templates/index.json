@@ -11,7 +11,7 @@
             "overlay": 0,
             "heading": "Custom Mural Wallpapers by Zoë Design",
             "subtext": "Inquire with our team!",
-            "button_url": "https:\/\/zoe-design.com\/",
+            "button_url": "https://zoe-design.com/",
             "button_label": "View Zoë Design",
             "box_transparency": 72
           }
@@ -24,7 +24,7 @@
             "overlay": 0,
             "heading": "JAMES WELCOMES NATHAN TURNER!",
             "subtext": "Nathan's Callifornia Collection Now Available through JAMES!",
-            "button_url": "shopify:\/\/collections\/nathan-turner-fabrics",
+            "button_url": "shopify://collections/nathan-turner-fabrics",
             "button_label": "View Nathan's fabrics",
             "box_transparency": 100
           }
@@ -37,7 +37,7 @@
             "overlay": 0,
             "heading": "INTRODUCING FLORA SOAMES!",
             "subtext": "One of House & Gardens Top 100 designers, JAMES is now proud to offer her exquisite collection through our Dallas and Houston Showrooms!",
-            "button_url": "shopify:\/\/collections\/flora-soames-fabrics",
+            "button_url": "shopify://collections/flora-soames-fabrics",
             "button_label": "Flora Soames Fabrics",
             "box_transparency": 100
           }
@@ -212,8 +212,8 @@
         "custom_block_nmDg9K": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Logo_Mark2_Textiles_RGB.png",
-            "link": "shopify:\/\/collections\/meredith-ellis-textiles"
+            "logo": "shopify://shop_images/Logo_Mark2_Textiles_RGB.png",
+            "link": "shopify://collections/meredith-ellis-textiles"
           }
         },
         "custom_block_Mq4cGC": {

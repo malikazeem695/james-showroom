@@ -72,7 +72,14 @@
           "type": "question",
           "settings": {
             "title": "What is the best way to get a quote or place an order with the showroom?",
-            "content": "<p>There are 2 ways to request a quote from the showroom.<\/p><p>First, you can submit a Purchase Inquiry directly from the product on our website by filling out all teh respective fields.  You will designate which showroom will receive this at the top of your form.<\/p><p><\/p><p>Second, you can email the showroom directly with all of the information we will need for your quote... Product, Quantity, Sidemark, Shipping Address, etc.<\/p><p>Once requests are received, our team will confirm stock\/availability and you should receive a link to your interactive quote the same day.  In some cases, it could take up to 24-48 hours due to time differences or customization requests.<\/p><p><\/p>"
+            "content": "<p>There are 2 ways to request a quote from the showroom.</p><p>First, you can submit a Purchase Inquiry directly from the product on our website by filling out all the respective fields.  You will designate which showroom will receive this at the top of your form.</p><p></p><p>Second, you can email the showroom directly with all of the information we will need for your quote... Product, Quantity, Sidemark, Shipping Address, etc.</p><p>Once requests are received, our team will confirm stock/availability and you should receive a link to your interactive quote the same day.  In some cases, it could take up to 24-48 hours due to time differences or customization requests.</p><p></p>"
+          }
+        },
+        "question_xpzznP": {
+          "type": "question",
+          "settings": {
+            "title": "When will I receive tracking?",
+            "content": "<p>Once we will receive tracking for your order, we will post it to the Special Instructions section at the bottom of your paid invoice and resend it to you for notification.  If you do not see it at the bottom of your invoice and it is nearing the estimated shipping date for your order please contact the showroom for more information.</p>"
           }
         }
       },
@@ -85,7 +92,8 @@
         "question_QBignN",
         "question_rhcV9J",
         "question_YQfYCh",
-        "question_NA3Fib"
+        "question_NA3Fib",
+        "question_xpzznP"
       ],
       "settings": {
         "wide_display": false,

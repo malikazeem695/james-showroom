@@ -270,7 +270,7 @@
         }
       },
       "9776720720251544092": {
-        "type": "shopify:\/\/apps\/helium-customer-fields\/blocks\/app-embed\/bab58598-3e6a-4377-aaaa-97189b15f131",
+        "type": "shopify://apps/helium-customer-fields/blocks/app-embed/bab58598-3e6a-4377-aaaa-97189b15f131",
         "disabled": false,
         "settings": {
           "registration_form_id": "kntL8M",
