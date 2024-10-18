@@ -47,7 +47,7 @@
           data-nav-desktop-submenu
           data-nav-desktop-full-width-menu
           data-meganav-target-container
-          >
+          ></div>
       </details>
     </li>
   </template>
@@ -60,7 +60,9 @@
       {% if link_tier_1.links.size > 0 %}
         {% assign has_tier_2 = true %}
       {% endif %}
-{% if link_tier_1.url contains 'trade-frequently-asked-questions' %}
+      
+      {%- assign link_tier_1_title = link_tier_1.title | upcase -%}
+{% if link_tier_1_title contains 'TRADE FAQS' %}
   {% if customer %}
     <li
         class="
@@ -197,7 +199,7 @@
         {% endif %}
       </li>
   {% endif %}
-  {% else %}
+{% else %}
       <li
         class="
           nav-desktop__tier-1-item

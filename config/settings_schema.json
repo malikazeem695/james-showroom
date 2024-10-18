@@ -4,8 +4,8 @@
     "theme_name": "Turbo",
     "theme_author": "Out of the Sandbox",
     "theme_version": "9.0.0",
-    "theme_documentation_url": "https:\/\/help.outofthesandbox.com\/",
-    "theme_support_url": "https:\/\/help.outofthesandbox.com\/hc\/en-us\/requests\/new"
+    "theme_documentation_url": "https://help.outofthesandbox.com/",
+    "theme_support_url": "https://help.outofthesandbox.com/hc/en-us/requests/new"
   },
   {
     "name": "t:settings_schema.age_gate.name",
@@ -1213,7 +1213,7 @@
         "type": "select",
         "id": "product_form_style",
         "label": "Option style",
-        "info": "[Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006911447-Enabling-Color-Swatches-for-Products)",
+        "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/115006911447-Enabling-Color-Swatches-for-Products)",
         "options": [
           {
             "value": "select",
@@ -1231,7 +1231,7 @@
         "id": "show_dynamic_checkout_button",
         "label": "Show dynamic checkout button",
         "default": true,
-        "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+        "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
       },
       {
         "type": "checkbox",
@@ -1265,7 +1265,7 @@
         "type": "checkbox",
         "id": "notify_me_form",
         "label": "Enable \"Back in stock request\" form",
-        "info": "[Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115013035567-How-does-the-back-in-stock-notification-form-work-)"
+        "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/115013035567-How-does-the-back-in-stock-notification-form-work-)"
       }
     ]
   },
@@ -1285,13 +1285,13 @@
         "type": "checkbox",
         "id": "collection_swatches",
         "label": "Show color swatches",
-        "info": "[Learn more](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006911447-Enabling-Color-Swatches-for-Products)"
+        "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/115006911447-Enabling-Color-Swatches-for-Products)"
       },
       {
         "type": "checkbox",
         "id": "show_star_ratings",
         "label": "Show star ratings",
-        "info": "To display a rating, add a product rating app. [Learn more](https:\/\/apps.shopify.com\/product-reviews)",
+        "info": "To display a rating, add a product rating app. [Learn more](https://apps.shopify.com/product-reviews)",
         "default": false
       },
       {
@@ -1449,7 +1449,7 @@
         "type": "checkbox",
         "id": "display_tos_checkbox",
         "label": "Show \"agree to terms\" checkbox",
-        "info": "If the dynamic payment button is enabled, customers will be able to bypass these terms. [Learn more](https:\/\/help.shopify.com\/en\/manual\/sell-online\/online-store\/dynamic-checkout)"
+        "info": "If the dynamic payment button is enabled, customers will be able to bypass these terms. [Learn more](https://help.shopify.com/en/manual/sell-online/online-store/dynamic-checkout)"
       },
       {
         "type": "url",
@@ -1527,7 +1527,7 @@
       {
         "type": "header",
         "content": "Custom theme currency converter",
-        "info": "If custom converter is enabled, the native multi-country selector will be disabled. [Learn more](https:\/\/help.shopify.com\/en\/manual\/payments\/shopify-payments\/multi-currency\/setup)"
+        "info": "If custom converter is enabled, the native multi-country selector will be disabled. [Learn more](https://help.shopify.com/en/manual/payments/shopify-payments/multi-currency/setup)"
       },
       {
         "type": "checkbox",
@@ -1541,7 +1541,7 @@
         "id": "supported_currencies",
         "label": "Supported currencies",
         "default": "USD CAD INR GBP AUD EUR JPY",
-        "info": "Use the country's ISO [currency code](http:\/\/www.xe.com\/iso4217.php). Separate your currency codes with a space."
+        "info": "Use the country's ISO [currency code](http://www.xe.com/iso4217.php). Separate your currency codes with a space."
       },
       {
         "type": "text",
@@ -1558,7 +1558,7 @@
         "type": "text",
         "id": "mailchimp_link",
         "label": "Newsletter form action URL",
-        "info": "[Find your form action URL](https:\/\/help.outofthesandbox.com\/hc\/en-us\/articles\/115006912487-Setting-Up-MailChimp-Turbo-)"
+        "info": "[Find your form action URL](https://help.outofthesandbox.com/hc/en-us/articles/115006912487-Setting-Up-MailChimp-Turbo-)"
       }
     ]
   },
@@ -1638,7 +1638,7 @@
         "type": "richtext",
         "id": "newsletter_popup_text",
         "label": "Text",
-        "default": "<p><\/p>"
+        "default": "<p></p>"
       },
       {
         "type": "select",
@@ -1747,25 +1747,89 @@
         "type": "text",
         "id": "behance_link",
         "label": "Behance",
-        "info": "https:\/\/behance.net\/"
+        "info": "https://behance.net/"
+      },
+      {
+        "type": "select",
+        "id": "behance_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "clubhouse_link",
         "label": "Clubhouse",
-        "info": "https:\/\/www.clubhouse.com\/"
+        "info": "https://www.clubhouse.com/"
+      },
+      {
+        "type": "select",
+        "id": "clubhouse_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "discord_link",
         "label": "Discord",
-        "info": "https:\/\/discord.com\/"
+        "info": "https://discord.com/"
+      },
+      {
+        "type": "select",
+        "id": "discord_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "dribbble_link",
         "label": "Dribbble",
-        "info": "https:\/\/dribbble.com\/shopify"
+        "info": "https://dribbble.com/shopify"
+      },
+      {
+        "type": "select",
+        "id": "dribbble_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
@@ -1773,130 +1837,482 @@
         "label": "Email address"
       },
       {
+        "type": "select",
+        "id": "email_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
+      },
+      {
         "type": "text",
         "id": "facebook_link",
         "label": "Facebook",
-        "info": "https:\/\/www.facebook.com\/shopify"
+        "info": "https://www.facebook.com/shopify"
+      },
+      {
+        "type": "select",
+        "id": "facebook_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "flickr_link",
         "label": "Flickr",
-        "info": "https:\/\/flickr.com\/"
+        "info": "https://flickr.com/"
+      },
+      {
+        "type": "select",
+        "id": "flickr_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "houzz_link",
         "label": "Houzz",
-        "info": "https:\/\/www.houzz.com\/"
+        "info": "https://www.houzz.com/"
+      },
+      {
+        "type": "select",
+        "id": "houzz_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "instagram_link",
         "label": "Instagram",
-        "info": "https:\/\/instagram.com\/shopify"
+        "info": "https://instagram.com/shopify"
+      },
+      {
+        "type": "select",
+        "id": "instagram_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "kickstarter_link",
         "label": "Kickstarter",
-        "info": "https:\/\/www.kickstarter.com\/"
+        "info": "https://www.kickstarter.com/"
+      },
+      {
+        "type": "select",
+        "id": "kickstarter_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "linkedin_link",
         "label": "LinkedIn",
-        "info": "https:\/\/www.linkedin.com\/company\/shopify"
+        "info": "https://www.linkedin.com/company/shopify"
+      },
+      {
+        "type": "select",
+        "id": "linkedin_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "medium_link",
         "label": "Medium",
-        "info": "https:\/\/medium.com\/"
+        "info": "https://medium.com/"
+      },
+      {
+        "type": "select",
+        "id": "medium_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "messenger_link",
         "label": "Messenger",
-        "info": "https:\/\/www.messenger.com\/"
+        "info": "https://www.messenger.com/"
+      },
+      {
+        "type": "select",
+        "id": "messenger_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "opensea_link",
         "label": "OpenSea",
-        "info": "https:\/\/opensea.io\/"
+        "info": "https://opensea.io/"
+      },
+      {
+        "type": "select",
+        "id": "opensea_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "pinterest_link",
         "label": "Pinterest",
-        "info": "https:\/\/www.pinterest.com\/shopify"
+        "info": "https://www.pinterest.com/shopify"
+      },
+      {
+        "type": "select",
+        "id": "pinterest_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "reddit_link",
         "label": "Reddit",
-        "info": "https:\/\/www.reddit.com\/r\/shopify\/"
+        "info": "https://www.reddit.com/r/shopify/"
+      },
+      {
+        "type": "select",
+        "id": "reddit_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "rss_link",
         "label": "RSS",
-        "info": "https:\/\/www.shopify.com\/content-services\/feeds\/ecommerce.atom"
+        "info": "https://www.shopify.com/content-services/feeds/ecommerce.atom"
+      },
+      {
+        "type": "select",
+        "id": "rss_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "snapchat_link",
         "label": "Snapchat",
-        "info": "https:\/\/www.snapchat.com\/"
+        "info": "https://www.snapchat.com/"
+      },
+      {
+        "type": "select",
+        "id": "snapchat_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "spotify_link",
         "label": "Spotify",
-        "info": "https:\/\/www.spotify.com\/"
+        "info": "https://www.spotify.com/"
+      },
+      {
+        "type": "select",
+        "id": "spotify_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "tiktok_link",
         "label": "TikTok",
-        "info": "https:\/\/tiktok.com\/@shopify"
+        "info": "https://tiktok.com/@shopify"
+      },
+      {
+        "type": "select",
+        "id": "tiktok_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "tumblr_link",
         "label": "Tumblr",
-        "info": "https:\/\/shopify.tumblr.com"
+        "info": "https://shopify.tumblr.com"
+      },
+      {
+        "type": "select",
+        "id": "tumblr_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "twitch_link",
         "label": "Twitch",
-        "info": "https:\/\/www.twitch.tv\/"
+        "info": "https://www.twitch.tv/"
+      },
+      {
+        "type": "select",
+        "id": "twitch_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "twitter_link",
         "label": "Twitter",
-        "info": "https:\/\/twitter.com\/shopify"
+        "info": "https://twitter.com/shopify"
+      },
+      {
+        "type": "select",
+        "id": "twitter_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "vimeo_link",
         "label": "Vimeo",
-        "info": "https:\/\/vimeo.com\/"
+        "info": "https://vimeo.com/"
+      },
+      {
+        "type": "select",
+        "id": "vimeo_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "whatsapp_link",
         "label": "WhatsApp",
-        "info": "https:\/\/www.whatsapp.com\/"
+        "info": "https://www.whatsapp.com/"
+      },
+      {
+        "type": "select",
+        "id": "whatsapp_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       },
       {
         "type": "text",
         "id": "youtube_link",
         "label": "YouTube",
-        "info": "https:\/\/www.youtube.com\/user\/shopify"
+        "info": "https://www.youtube.com/user/shopify"
+      },
+      {
+        "type": "select",
+        "id": "youtube_target",
+        "label": "Open link behavior",
+        "options": [
+          {
+            "value": "_blank",
+            "label": "Open in new tab"
+          },
+          {
+            "value": "_self",
+            "label": "Open in current tab"
+          }
+        ],
+        "default": "_blank"
       }
     ]
   },
@@ -1917,14 +2333,14 @@
       {
         "type": "checkbox",
         "id": "disqus_enabled",
-        "label": "Enable [DISQUS](http:\/\/disqus.com\/) comments",
+        "label": "Enable [DISQUS](http://disqus.com/) comments",
         "info": "Replaces Shopify's default comments"
       },
       {
         "type": "text",
         "id": "disqus_shortname",
-        "label": "[DISQUS](http:\/\/help.disqus.com\/en\/articles\/1717111-what-s-a-shortname\/) shortname"
+        "label": "[DISQUS](http://help.disqus.com/en/articles/1717111-what-s-a-shortname/) shortname"
       }
     ]
-  },
+  }
 ]
