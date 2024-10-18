@@ -1,19 +1,19 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_banner_section_gYgn99": {
       "type": "hero-banner-section",
       "settings": {
-        "desktop_image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c_2.png",
-        "mobile_image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c_1.png",
+        "desktop_image": "shopify://shop_images/e8fdafe16ff432196e7b67adc941352c_2.png",
+        "mobile_image": "shopify://shop_images/e8fdafe16ff432196e7b67adc941352c_1.png",
         "heading": "FAQs",
         "description": ""
       }
@@ -31,57 +31,57 @@
         "question_gPLxHx": {
           "type": "question",
           "settings": {
-            "title": "How do I open a Trade Account?",
-            "content": "<p>Please visit our <a href=\"https:\/\/jamesshowroom.com\/account\/register\" title=\"https:\/\/jamesshowroom.com\/account\/register\"><strong>trade account page<\/strong><\/a>, fill out the required fields and submit the necessary forms.  You can download the required forms right from the application page.  Please ensure to upload a copy of your state resale certificate for our files. In the event you do not have a resale certificate, we will need appropriate documentation showing your company TIN\/EIN to verify your trade status.  We usually approve all trade applications the day they are submitted.  You will be contacted if our team needs additional information. For urgent requests, send an email to your respective showroom:<\/p><p><strong>DALLAS:  <\/strong><a href=\"mailto:dallas@jamesshowrooom.com\" target=\"_blank\" title=\"mailto:dallas@jamesshowrooom.com\">dallas@jamesshowroom.com<\/a><\/p><p><strong>HOUSTON:<\/strong>  <a href=\"mailto:houston@jamesshowroom.com\" target=\"_blank\" title=\"mailto:houston@jamesshowroom.com\">houston@jamesshowroom.com<\/a><\/p><p><strong>NYC:<\/strong>  <a href=\"mailto:nyc@jamesshowroom.com\" target=\"_blank\" title=\"mailto:nyc@jamesshowroom.com\">nyc@jamesshowroom.com<\/a><\/p><p><\/p>"
+            "title": "Can I visit your showroom? Are you open to the public?",
+            "content": "<p>Anyone is welcome to visit JAMES Showroom. However, we reserve samples and pricing for our trade partners only. For information on becoming a trade partner, please visit our <a href=\"/pages/frequently-asked-questions\" title=\"Trade FAQs\"><strong>Trade FAQ page</strong></a><strong>. </strong></p><p></p>"
           }
         },
         "block-2": {
           "type": "question",
           "settings": {
             "title": "I created my Trade Account, what can I expect next?",
-            "content": "<p>Welcome to JAMES Showroom!   Your account will usually be verified the same day.  Should our team need additional information, we will reach out directly. <\/p><p>As a trade client, you now have access to online sample ordering and trade pricing 24\/7.  We do ask that you verify pricing with your respective showroom before submitting proposals to your clients to ensure there has not been a recent price increase not yet reflected on our website.  We only honor pricing for 30 days that is provided by a formal quote from our sales team.<\/p>"
+            "content": "<p>Welcome to JAMES Showroom!   Your account will usually be verified the same day.  Should our team need additional information, we will reach out directly. </p><p>As a trade client, you now have access to online sample ordering and trade pricing 24/7.  We do ask that you verify pricing with your respective showroom before submitting proposals to your clients to ensure there has not been a recent price increase not yet reflected on our website.  We only honor pricing for 30 days that is provided by a formal quote from our sales team.</p>"
           }
         },
         "question_WDFgyy": {
           "type": "question",
           "settings": {
             "title": "Which showroom do I work with?",
-            "content": "<p>Essentially this is up to you, but we do like our trade clients not living in the general vicinity of the showroom, to chose the showroom they are most likely to visit.  Working consistently with one showroom ensures clear communication and allows our team to better suit your needs.<\/p>"
+            "content": "<p>Essentially this is up to you, but we do like our trade clients not living in the general vicinity of the showroom, to chose the showroom they are most likely to visit.  Working consistently with one showroom ensures clear communication and allows our team to better suit your needs.</p>"
           }
         },
         "question_QYiLCM": {
           "type": "question",
           "settings": {
             "title": "How many samples can I order?",
-            "content": "<p>Due to the boutique, handmade nature of many of our lines, we have limited the number of samples per cart to 15.  If you place multiple orders back to back, our team may contact you to inquire about your needs. <\/p><p>While we are thrilled you want so many of our samples, we unfortunately cannot stock libraries for every design firm.  However, we have worked with many of our lines to offer rings sets of the entire collection, or segments of the collection, for a reasonable fee.  JAMES will apply a credit for the cost of the ring set on your first order of 10 yards or more for that respective line.  Please contact the showrooms for pricing.<\/p>"
+            "content": "<p>Due to the boutique, handmade nature of many of our lines, we have limited the number of samples per cart to 15.  If you place multiple orders back to back, our team may contact you to inquire about your needs. </p><p>While we are thrilled you want so many of our samples, we unfortunately cannot stock libraries for every design firm.  However, we have worked with many of our lines to offer rings sets of the entire collection, or segments of the collection, for a reasonable fee.  JAMES will apply a credit for the cost of the ring set on your first order of 10 yards or more for that respective line.  Please contact the showrooms for pricing.</p>"
           }
         },
         "question_QBignN": {
           "type": "question",
           "settings": {
             "title": "I cannot add some samples to my cart?",
-            "content": "<p>Because our collection varies between Texas and New York, trade clients will be tagged with the respective showroom they work with.  You will be able to see pricing for everything, but New York clients will not be able to add samples to their cart for lines only represented in Texas.  Texas clients will not be able to add samples to their cart for lines only represented in New York.  Should you have a specific question regarding a line not represented in your area, please contact the showroom.<\/p>"
+            "content": "<p>Because our collection varies between Texas and New York, trade clients will be tagged with the respective showroom they work with.  You will be able to see pricing for everything, but New York clients will not be able to add samples to their cart for lines only represented in Texas.  Texas clients will not be able to add samples to their cart for lines only represented in New York.  Should you have a specific question regarding a line not represented in your area, please contact the showroom.</p>"
           }
         },
         "question_rhcV9J": {
           "type": "question",
           "settings": {
             "title": "Can I order carpet or finish samples online?",
-            "content": "<p>We do have limited numbers of carpet and finish samples for furniture and lighting.  We ask that you contact the showroom for availability.  For verified trade clients, samples can be checked out   for short periods of time to be used for scheming and client presentations.  We usually like to have these back within 48 hours to to the limited availability.<\/p><p>In some cases, these samples can be mailed, but we do ask that the samples be returned in a reasonable amount of time.  <\/p><p>** JAMES RESERVES THE RIGHT TO CHARGE FOR ANY LOST OR DAMAGED SAMPLES.**<\/p>"
+            "content": "<p>We do have limited numbers of carpet and finish samples for furniture and lighting.  We ask that you contact the showroom for availability.  For verified trade clients, samples can be checked out   for short periods of time to be used for scheming and client presentations.  We usually like to have these back within 48 hours to to the limited availability.</p><p>In some cases, these samples can be mailed, but we do ask that the samples be returned in a reasonable amount of time.  </p><p>** JAMES RESERVES THE RIGHT TO CHARGE FOR ANY LOST OR DAMAGED SAMPLES.**</p>"
           }
         },
         "question_YQfYCh": {
           "type": "question",
           "settings": {
             "title": "How will my samples be shipped?",
-            "content": "<p>For our trade clients, JAMES is happy to provide free USPS shipping with tracking for all sample orders.  (PLEASE NOTE: Small sample orders may not have tracking).  Should you need Priority or Overnight Shipping, you can select and pay for that service on checkout and it will be flagged accordingly in our system.  If you wish to provide your FEDEX\/UPS account number, please contact your designated showroom.<\/p><p>Once samples are sent, you will receive an email with a link to tracking.  In the event, we are out of a specific sample, our team may contact you to give you an ETA for that design.<\/p><p><\/p><p><\/p>"
+            "content": "<p>For our trade clients, JAMES is happy to provide free USPS shipping with tracking for all sample orders.  (PLEASE NOTE: Small sample orders may not have tracking).  Should you need Priority or Overnight Shipping, you can select and pay for that service on checkout and it will be flagged accordingly in our system.  If you wish to provide your FEDEX/UPS account number, please contact your designated showroom.</p><p>Once samples are sent, you will receive an email with a link to tracking.  In the event, we are out of a specific sample, our team may contact you to give you an ETA for that design.</p><p></p><p></p>"
           }
         },
         "question_NA3Fib": {
           "type": "question",
           "settings": {
             "title": "What is the best way to get a quote or place an order with the showroom?",
-            "content": "<p>There are 2 ways to request a quote from the showroom.<\/p><p>First, you can submit a Purchase Inquiry directly from the product on our website by filling out all teh respective fields.  You will designate which showroom will receive this at the top of your form.<\/p><p><\/p><p>Second, you can email the showroom directly with all of the information we will need for your quote... Product, Quantity, Sidemark, Shipping Address, etc.<\/p><p>Once requests are received, our team will confirm stock\/availability and you should receive a link to your interactive quote the same day.  In some cases, it could take up to 24-48 hours due to time differences or customization requests.<\/p><p><\/p>"
+            "content": "<p>There are 2 ways to request a quote from the showroom.</p><p>First, you can submit a Purchase Inquiry directly from the product on our website by filling out all teh respective fields.  You will designate which showroom will receive this at the top of your form.</p><p></p><p>Second, you can email the showroom directly with all of the information we will need for your quote... Product, Quantity, Sidemark, Shipping Address, etc.</p><p>Once requests are received, our team will confirm stock/availability and you should receive a link to your interactive quote the same day.  In some cases, it could take up to 24-48 hours due to time differences or customization requests.</p><p></p>"
           }
         }
       },
@@ -99,7 +99,7 @@
       "settings": {
         "wide_display": false,
         "show_banner": false,
-        "image": "shopify:\/\/shop_images\/banner_75b9bc60-fef7-4816-acfe-c8d1486d3505.jpg",
+        "image": "shopify://shop_images/banner_75b9bc60-fef7-4816-acfe-c8d1486d3505.jpg",
         "caption_content_background": "original",
         "pretext": "",
         "title": "FAQS",
