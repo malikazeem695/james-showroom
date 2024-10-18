@@ -38,8 +38,8 @@
         "block-2": {
           "type": "question",
           "settings": {
-            "title": "I created my Trade Account, what can I expect next?",
-            "content": "<p>Welcome to JAMES Showroom!   Your account will usually be verified the same day.  Should our team need additional information, we will reach out directly. </p><p>As a trade client, you now have access to online sample ordering and trade pricing 24/7.  We do ask that you verify pricing with your respective showroom before submitting proposals to your clients to ensure there has not been a recent price increase not yet reflected on our website.  We only honor pricing for 30 days that is provided by a formal quote from our sales team.</p>"
+            "title": "Do I need an appointment?",
+            "content": "<p>No, you do not need an appointment to visit our showrooms. Walk-ins are always welcome!</p>"
           }
         },
         "question_WDFgyy": {
