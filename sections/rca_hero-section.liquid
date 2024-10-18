@@ -1,171 +1,199 @@
 {{ 'hero-section.css' | asset_url | stylesheet_tag }}
 {% style %}
   .slide-image:before {
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,var(--overlay-opacity))
-}
-
+    background-color: rgba(0, 0, 0, var(--overlay-opacity));
+  }
 {% endstyle %}
 
 <div class="swiper-container hero-slider">
   <!-- Additional wrapper for slides -->
   <div class="swiper-wrapper">
     {% for block in section.blocks %}
-    <div class="swiper-slide {{ block.settings.layout_style }}">
-    <div class="slide-image" style="--overlay-opacity:{{ block.settings.overlay }}%;">
-        <img src="{{ block.settings.image |  image_url }}" >
-    </div>
-      <div class="slide-content-container" style="background-color: {{ section.settings.background_color }};">
-        <div class="text_content">
-        <h1>{{ block.settings.heading }}</h1>
-        <p class="body-regular">{{ block.settings.subtext }}</p>
+      <div class="swiper-slide {{ block.settings.layout_style }}">
+        <div class="slide-image" style="--overlay-opacity:{{ block.settings.overlay }}%;">
+          <img src="{{ block.settings.image |  image_url }}" width="928" height="547" loading="lazy">
         </div>
-        <div class="slide_buttons">
-        <a href="{{ block.settings.button_url }}" class="btn">
-        <span class="btn-text">   
-        {{ block.settings.button_label }}
-        </span>
-            {% render 'right-arrow' %}
-        </a>
+        <div
+          class="slide-content-container"
+          data-bg-color="{{ section.settings.background_color }}"
+          data-bg-opacity="{{ block.settings.box_transparency }}"
+          style="background-color: {{ section.settings.background_color }};"
+        >
+          <div class="text_content">
+            <h1>{{ block.settings.heading }}</h1>
+            <p class="body-regular">{{ block.settings.subtext }}</p>
+          </div>
+          <div class="slide_buttons">
+            <a href="{{ block.settings.button_url }}" class="btn">
+              <span class="btn-text">
+                {{ block.settings.button_label }}
+              </span>
+              {% render 'right-arrow' %}
+            </a>
+          </div>
+          {% if section.blocks.size > 1 %}
+            <div class="custom-pagination">
+              {% assign loopindex = forloop.index %}
+              {% for index in section.blocks %}
+                {% if forloop.index == loopindex %}
+                  <span class="active-slide-dot" index="{{ forloop.index0 }}">
+                    {% render 'active-dot' %}
+                  </span>
+                {% else %}
+                  <span class="slide-dot hero_section_dot" index="{{ forloop.index0 }}">
+                    {% render 'slider-dot' %}
+                  </span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
-        {% if section.blocks.size > 1 %}
-        <div class="custom-pagination">
-{% assign loopindex = forloop.index %}
-{% for index in section.blocks %}
-    {% if forloop.index == loopindex %}
-    <span class="active-slide-dot" index="{{ forloop.index0 }}">
-            {% render 'active-dot' %}
-    </span>
-    {% else %}
-    <span class="slide-dot hero_section_dot" index="{{ forloop.index0 }}">
-            {% render 'slider-dot' %}
-    </span>
-    {% endif %}
-{% endfor %}
-
-        </div>
-    {% endif %}
       </div>
-    </div>
     {% endfor %}
   </div>
   <!-- Add Pagination -->
   <div class="swiper-pagination" style="display: none;"></div>
 </div>
 {% schema %}
+{
+  "name": "RCA Hero Slider",
+  "settings": [
     {
-        "name": "RCA Hero Slider",
-        "settings": [
-          {
-          "type": "color",
-          "id": "background_color",
-          "label": "Background Color"
-          }
-        ],
-        "blocks": [
-            {
-                "type": "image",
-                "name": "Slide",
-                "limit": 3,
-                "settings": [
-                    {
-                "type": "select",
-                "id": "layout_style",
-                "label": "Layout Style",
-                "options": [
-                    {
-                        "value": "text_left",
-                        "label": "Text Block Left"
-                    },
-                    {
-                        "value": "text_right",
-                        "label": "Text Block Right"
-                    },
-                    {
-                        "value": "text_center",
-                        "label": "Text Block Center"
-                    }
-                ],
-                "default": "text_left"
-            },
-                    {
-                        "type": "image_picker",
-                        "id": "image",
-                        "label": "Image",
-                        "info": "1440px x 547px recommended"
-                    },
-                    {
-                    "type": "range",
-                    "id": "overlay",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "unit": "%",
-                    "label": "Overlay Transparency",
-                    "default": 0
-                    },
-                    {
-                        "type": "text",
-                        "id": "heading",
-                        "label": "Heading"
-                    },
-                    {
-                        "type": "text",
-                        "id": "subtext",
-                        "label": "Subtext"
-                    },
-                    {
-                        "type": "url",
-                        "id": "button_url",
-                        "label": "Button URL"
-                    },
-                    {
-                        "type": "text",
-                        "id": "button_label",
-                        "label": "Button Label"
-                    }
-                ]
-            }
-        ],
-        "presets": [
-            {
-                "name": "RCA Hero Slider",
-                "category": "Image"
-            }
-        ]
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
     }
-    {% endschema %}
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Slide",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "select",
+          "id": "layout_style",
+          "label": "Layout Style",
+          "options": [
+            {
+              "value": "text_left",
+              "label": "Text Block Left"
+            },
+            {
+              "value": "text_right",
+              "label": "Text Block Right"
+            },
+            {
+              "value": "text_center",
+              "label": "Text Block Center"
+            }
+          ],
+          "default": "text_left"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1440px x 547px recommended"
+        },
+        {
+          "type": "range",
+          "id": "overlay",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Overlay Transparency",
+          "default": 0
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "subtext",
+          "label": "Subtext"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label"
+        },
+        {
+          "type": "range",
+          "id": "box_transparency",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Box Transparency",
+          "default": 100
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RCA Hero Slider",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
     // Initialize Swiper after the document is fully loaded
     var heroSlider = new Swiper('.hero-slider', {
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-        },
-        loop: true,
-        autoplay: {
-            delay: 5000, // Delay between transitions (in milliseconds)
-            disableOnInteraction: false, // Continue autoplay after interaction
-        },
-
-        autoHeight: false // You can set this to false if you want a fixed height
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: true,
+      {% comment %} autoplay: {
+        delay: 5000, // Delay between transitions (in milliseconds)
+        disableOnInteraction: false, // Continue autoplay after interaction
+      }, {% endcomment %}
+      autoHeight: false, // You can set this to false if you want a fixed height
     });
-    document.querySelectorAll('.hero_section_dot').forEach(dot => {
-  dot.addEventListener('click', function() {
-    const index = this.getAttribute('index'); // Get the index attribute
-    const swiper = document.querySelector('.hero-slider').swiper; // Get the Swiper instance
-    swiper.slideTo(index); // Move to the slide with the retrieved index
-  });
-});
 
-});
-    </script>
-    
+    function hexToRgb(hex) {
+        const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+          r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
+          b: parseInt(result[3], 16)
+        } : null;
+      }
+
+    document.querySelectorAll('.hero_section_dot').forEach((dot) => {
+      dot.addEventListener('click', function () {
+        const index = this.getAttribute('index'); // Get the index attribute
+        const swiper = document.querySelector('.hero-slider').swiper; // Get the Swiper instance
+        swiper.slideTo(index); // Move to the slide with the retrieved index
+      });
+    });
+
+    document.querySelectorAll('.slide-content-container').forEach((item) => {
+        if (item.dataset.bgOpacity === "100") return;
+
+        const rgbColor = hexToRgb(item.dataset.bgColor);
+
+        item.style.background = `rgba(${rgbColor.r},${rgbColor.g},${rgbColor.b},${parseInt(item.dataset.bgOpacity)/100})`
+    })
+  });
+</script>
