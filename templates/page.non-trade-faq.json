@@ -1,19 +1,10 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "hero_banner_section_gYgn99": {
       "type": "hero-banner-section",
       "settings": {
-        "desktop_image": "shopify://shop_images/e8fdafe16ff432196e7b67adc941352c_2.png",
-        "mobile_image": "shopify://shop_images/e8fdafe16ff432196e7b67adc941352c_1.png",
+        "desktop_image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c_2.png",
+        "mobile_image": "shopify:\/\/shop_images\/e8fdafe16ff432196e7b67adc941352c_1.png",
         "heading": "FAQs",
         "description": ""
       }
@@ -32,56 +23,56 @@
           "type": "question",
           "settings": {
             "title": "Can I visit your showroom? Are you open to the public?",
-            "content": "<p>Anyone is welcome to visit JAMES Showroom. However, we reserve samples and pricing for our trade partners only. For information on becoming a trade partner, please visit our <a href=\"/pages/frequently-asked-questions\" title=\"Trade FAQs\"><strong>Trade FAQ page</strong></a><strong>. </strong></p><p></p>"
+            "content": "<p>Anyone is welcome to visit JAMES Showroom. However, we reserve samples and pricing for our trade partners only. For information on becoming a trade partner, please visit our <a href=\"\/pages\/frequently-asked-questions\" title=\"Trade FAQs\"><strong>Trade FAQ page<\/strong><\/a><strong>. <\/strong><\/p><p><\/p>"
           }
         },
         "block-2": {
           "type": "question",
           "settings": {
             "title": "Do I need an appointment?",
-            "content": "<p>No, you do not need an appointment to visit our showrooms. Walk-ins are always welcome!</p>"
+            "content": "<p>No, you do not need an appointment to visit our showrooms. Walk-ins are always welcome!<\/p>"
           }
         },
         "question_WDFgyy": {
           "type": "question",
           "settings": {
             "title": "If I’m not a designer, can I order samples or purchase your products?",
-            "content": "<p>You must be a trade partner to order samples from us. Please visit our <a href=\"/pages/frequently-asked-questions\" title=\"Trade FAQs\"><strong>Trade FAQ page</strong></a> for more information. </p>"
+            "content": "<p>You must be a trade partner to order samples from us. Please visit our <a href=\"\/pages\/frequently-asked-questions\" title=\"Trade FAQs\"><strong>Trade FAQ page<\/strong><\/a> for more information. <\/p>"
           }
         },
         "question_QYiLCM": {
           "type": "question",
           "settings": {
             "title": "How many samples can I order?",
-            "content": "<p>Due to the boutique, handmade nature of many of our lines, we have limited the number of samples per cart to 15.  If you place multiple orders back to back, our team may contact you to inquire about your needs. </p><p>While we are thrilled you want so many of our samples, we unfortunately cannot stock libraries for every design firm.  However, we have worked with many of our lines to offer rings sets of the entire collection, or segments of the collection, for a reasonable fee.  JAMES will apply a credit for the cost of the ring set on your first order of 10 yards or more for that respective line.  Please contact the showrooms for pricing.</p>"
+            "content": "<p>Due to the boutique, handmade nature of many of our lines, we have limited the number of samples per cart to 15.  If you place multiple orders back to back, our team may contact you to inquire about your needs. <\/p><p>While we are thrilled you want so many of our samples, we unfortunately cannot stock libraries for every design firm.  However, we have worked with many of our lines to offer rings sets of the entire collection, or segments of the collection, for a reasonable fee.  JAMES will apply a credit for the cost of the ring set on your first order of 10 yards or more for that respective line.  Please contact the showrooms for pricing.<\/p>"
           }
         },
         "question_QBignN": {
           "type": "question",
           "settings": {
             "title": "What are your locations and hours?",
-            "content": "<p>Our showrooms are open from 9:00am – 5:00pm Monday through Friday. The Austin office is by appointment only. </p><p><br/><strong>Dallas Showroom</strong>: 1025 N. Stemmons Fwy #250 Dallas, Texas 75207</p><p><em>Located by the EC Dicken Showroom in the Dallas Design Center </em></p><p><br/><strong>Houston Showroom</strong>: 5120 Woodway Drive #3029 Houston, Texas 77056 </p><p><em>Located on the third floor of the Decorative Center of Houston   </em></p><p><br/><strong>Austin Office</strong> – 6521 Burnet Lane Austin, Texas 78757</p><p><em>Located at Burnet Lane Design Collective; By appointment only. To make an appointment, please email lisa@jamesshowroom.com. </em></p><p><br/><strong>NYC Showroom</strong>: 306 E. 61st Street, 4th Floor New York, New York 10065  </p><p><em>Located in the Interior Arts Building </em></p>"
+            "content": "<p>Our showrooms are open from 9:00am – 5:00pm Monday through Friday. The Austin office is by appointment only. <\/p><p><br\/><strong>Dallas Showroom<\/strong>: 1025 N. Stemmons Fwy #250 Dallas, Texas 75207<\/p><p><em>Located by the EC Dicken Showroom in the Dallas Design Center <\/em><\/p><p><br\/><strong>Houston Showroom<\/strong>: 5120 Woodway Drive #3029 Houston, Texas 77056 <\/p><p><em>Located on the third floor of the Decorative Center of Houston   <\/em><\/p><p><br\/><strong>Austin Office<\/strong> – 6521 Burnet Lane Austin, Texas 78757<\/p><p><em>Located at Burnet Lane Design Collective; By appointment only. To make an appointment, please email lisa@jamesshowroom.com. <\/em><\/p><p><br\/><strong>NYC Showroom<\/strong>: 306 E. 61st Street, 4th Floor New York, New York 10065  <\/p><p><em>Located in the Interior Arts Building <\/em><\/p>"
           }
         },
         "question_rhcV9J": {
           "type": "question",
           "settings": {
             "title": "What is the minimum order for your fabric?",
-            "content": "<p>All the lines we represent have at least a 2-yard minimum for fabric. Some lines have higher minimums and, in some cases, may offer a cut fee for orders under the minimum requirement.</p>"
+            "content": "<p>All the lines we represent have at least a 2-yard minimum for fabric. Some lines have higher minimums and, in some cases, may offer a cut fee for orders under the minimum requirement.<\/p>"
           }
         },
         "question_YQfYCh": {
           "type": "question",
           "settings": {
             "title": "Do you offer interior design or installation services? ",
-            "content": "<p>No, JAMES does not offer these services. </p><p></p><p></p>"
+            "content": "<p>No, JAMES does not offer these services. <\/p><p><\/p><p><\/p>"
           }
         },
         "question_NA3Fib": {
           "type": "question",
           "settings": {
             "title": "Is your fabric and wallcovering in stock or print to order? ",
-            "content": "<p>Please refer to the specific product listing or reach out to the showroom for more information.</p><p></p>"
+            "content": "<p>Please refer to the specific product listing or reach out to the showroom for more information.<\/p><p><\/p>"
           }
         }
       },
@@ -99,7 +90,7 @@
       "settings": {
         "wide_display": false,
         "show_banner": false,
-        "image": "shopify://shop_images/banner_75b9bc60-fef7-4816-acfe-c8d1486d3505.jpg",
+        "image": "shopify:\/\/shop_images\/banner_75b9bc60-fef7-4816-acfe-c8d1486d3505.jpg",
         "caption_content_background": "original",
         "pretext": "",
         "title": "FAQS",

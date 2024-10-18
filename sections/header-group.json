@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "type": "header",
   "name": "Header",
@@ -14,7 +5,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "promo_text": "<p>OUR WEBSITE HAS A NEW LOOK! </p>",
+        "promo_text": "<p>OUR WEBSITE HAS A NEW LOOK! <\/p>",
         "social_icons_header": true,
         "phone_number": "",
         "top_bar_menu": "",
@@ -23,7 +14,7 @@
         "show_locale_selector": false,
         "show_currency_selector": false,
         "logo_display_width": 120,
-        "logo": "shopify://shop_images/James_Rec_Logo_NOBKGR.png",
+        "logo": "shopify:\/\/shop_images\/James_Rec_Logo_NOBKGR.png",
         "main_linklist": "new-main-menu",
         "main_linklist2": "",
         "vertical_menu": true,
