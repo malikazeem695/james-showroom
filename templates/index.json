@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "rca_hero_section_QnfmXP": {
@@ -7,7 +16,7 @@
           "type": "image",
           "settings": {
             "layout_style": "text_center",
-            "image": "shopify:\/\/shop_images\/Chinoiserie_MU2011.jpg",
+            "image": "shopify://shop_images/Chinoiserie_MU2011.jpg",
             "overlay": 0,
             "heading": "Custom Mural Wallpapers by Zoë Design",
             "subtext": "Inquire with our team!",
@@ -20,7 +29,7 @@
           "type": "image",
           "settings": {
             "layout_style": "text_left",
-            "image": "shopify:\/\/shop_images\/NT_Portrait_928.jpg",
+            "image": "shopify://shop_images/NT_Portrait_928.jpg",
             "overlay": 0,
             "heading": "JAMES WELCOMES NATHAN TURNER!",
             "subtext": "Nathan's Callifornia Collection Now Available through JAMES!",
@@ -33,7 +42,7 @@
           "type": "image",
           "settings": {
             "layout_style": "text_right",
-            "image": "shopify:\/\/shop_images\/FS_PROFILE.jpg",
+            "image": "shopify://shop_images/FS_PROFILE.jpg",
             "overlay": 0,
             "heading": "INTRODUCING FLORA SOAMES!",
             "subtext": "One of House & Gardens Top 100 designers, JAMES is now proud to offer her exquisite collection through our Dallas and Houston Showrooms!",
@@ -58,155 +67,155 @@
         "custom_block_b4H6ih": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Alamwar_Logo.png",
-            "link": "shopify:\/\/collections\/alamwar-textiles-fabric"
+            "logo": "shopify://shop_images/Alamwar_Logo.png",
+            "link": "shopify://collections/alamwar-textiles-fabric"
           }
         },
         "custom_block_HYnkw7": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Anna_Spiro_Logo.png",
-            "link": "shopify:\/\/collections\/anna-spiro-textiles-fabric"
+            "logo": "shopify://shop_images/Anna_Spiro_Logo.png",
+            "link": "shopify://collections/anna-spiro-textiles-fabric"
           }
         },
         "custom_block_8icmXW": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/BT_Logo.webp",
-            "link": "shopify:\/\/collections\/botanica-trading-textiles-fabric"
+            "logo": "shopify://shop_images/BT_Logo.webp",
+            "link": "shopify://collections/botanica-trading-textiles-fabric"
           }
         },
         "custom_block_txqhxY": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Caitlin_McGauley_Logo.jpg",
-            "link": "shopify:\/\/collections\/caitlin-mcgauley-fabric"
+            "logo": "shopify://shop_images/Caitlin_McGauley_Logo.jpg",
+            "link": "shopify://collections/caitlin-mcgauley-fabric"
           }
         },
         "custom_block_yzjMKB": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Cape_Looms_logo.png",
-            "link": "shopify:\/\/collections\/cape-looms-by-jvb-carpets"
+            "logo": "shopify://shop_images/Cape_Looms_logo.png",
+            "link": "shopify://collections/cape-looms-by-jvb-carpets"
           }
         },
         "custom_block_T8ij7Y": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Carolina_Iriving_Logo_d4feb207-2e20-4308-ae5f-4a98e2758939.png",
-            "link": "shopify:\/\/collections"
+            "logo": "shopify://shop_images/Carolina_Iriving_Logo_d4feb207-2e20-4308-ae5f-4a98e2758939.png",
+            "link": "shopify://collections"
           }
         },
         "custom_block_x4wtGL": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Casa_Branca_Logo_d3595956-ed72-4bbd-bb5c-99c62af48fa4.webp",
-            "link": "shopify:\/\/collections\/casa-branca-fabrics"
+            "logo": "shopify://shop_images/Casa_Branca_Logo_d3595956-ed72-4bbd-bb5c-99c62af48fa4.webp",
+            "link": "shopify://collections/casa-branca-fabrics"
           }
         },
         "custom_block_NrkUKn": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Casa_Lopez_Logo.jpg",
-            "link": "shopify:\/\/collections\/casa-lopez-fabric"
+            "logo": "shopify://shop_images/Casa_Lopez_Logo.jpg",
+            "link": "shopify://collections/casa-lopez-fabric"
           }
         },
         "custom_block_hfYeJR": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Casamota_Logo.webp",
-            "link": "shopify:\/\/collections\/casamota-new-fabric"
+            "logo": "shopify://shop_images/Casamota_Logo.webp",
+            "link": "shopify://collections/casamota-new-fabric"
           }
         },
         "custom_block_8gHFDW": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Ferrick_Mason_Logo.png",
-            "link": "shopify:\/\/collections\/ferrick-mason-fabric"
+            "logo": "shopify://shop_images/Ferrick_Mason_Logo.png",
+            "link": "shopify://collections/ferrick-mason-fabric"
           }
         },
         "custom_block_UAAfYp": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/FS_Logo.png",
-            "link": "shopify:\/\/collections\/flora-soames-fabrics"
+            "logo": "shopify://shop_images/FS_Logo.png",
+            "link": "shopify://collections/flora-soames-fabrics"
           }
         },
         "custom_block_C9XGzd": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Heather_Chadduck_Logo.png",
-            "link": "shopify:\/\/collections\/heather-chadduck-textiles-fabric"
+            "logo": "shopify://shop_images/Heather_Chadduck_Logo.png",
+            "link": "shopify://collections/heather-chadduck-textiles-fabric"
           }
         },
         "custom_block_QqA6kG": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Helene_Blanche_Logo.webp",
-            "link": "shopify:\/\/collections\/helene-blanche-fabric"
+            "logo": "shopify://shop_images/Helene_Blanche_Logo.webp",
+            "link": "shopify://collections/helene-blanche-fabric"
           }
         },
         "custom_block_4YFVCq": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/JVB_logo.webp",
-            "link": "shopify:\/\/collections\/justin-van-breda-london"
+            "logo": "shopify://shop_images/JVB_logo.webp",
+            "link": "shopify://collections/justin-van-breda-london"
           }
         },
         "custom_block_haXwRx": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Kathryn_Ireland_Logo.png",
-            "link": "shopify:\/\/collections\/kathryn-m-ireland-textiles-fabric"
+            "logo": "shopify://shop_images/Kathryn_Ireland_Logo.png",
+            "link": "shopify://collections/kathryn-m-ireland-textiles-fabric"
           }
         },
         "custom_block_TwRaUJ": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Lake_August_Logo.webp",
-            "link": "shopify:\/\/collections\/lake-august-fabric"
+            "logo": "shopify://shop_images/Lake_August_Logo.webp",
+            "link": "shopify://collections/lake-august-fabric"
           }
         },
         "custom_block_TBj7Bq": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Leah_OConnell_Textiles.webp",
-            "link": "shopify:\/\/collections\/leah-o-connell-textiles-fabric"
+            "logo": "shopify://shop_images/Leah_OConnell_Textiles.webp",
+            "link": "shopify://collections/leah-o-connell-textiles-fabric"
           }
         },
         "custom_block_Th4xc8": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Lisa_Fine_Logo.jpg",
-            "link": "shopify:\/\/collections"
+            "logo": "shopify://shop_images/Lisa_Fine_Logo.jpg",
+            "link": "shopify://collections"
           }
         },
         "custom_block_t4HcxV": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Mahala_Logo.png",
-            "link": "shopify:\/\/collections\/mahala-textiles-fabric"
+            "logo": "shopify://shop_images/Mahala_Logo.png",
+            "link": "shopify://collections/mahala-textiles-fabric"
           }
         },
         "custom_block_Azi8KN": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Mally_Logo.png",
-            "link": "shopify:\/\/collections\/mally-skok-fabric"
+            "logo": "shopify://shop_images/Mally_Logo.png",
+            "link": "shopify://collections/mally-skok-fabric"
           }
         },
         "custom_block_Y9t8XG": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Screenshot_2024-08-23_at_4.03.23_PM.png",
-            "link": "shopify:\/\/collections\/martyn-lawrence-bullard-fabric"
+            "logo": "shopify://shop_images/Screenshot_2024-08-23_at_4.03.23_PM.png",
+            "link": "shopify://collections/martyn-lawrence-bullard-fabric"
           }
         },
         "custom_block_abriWm": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/MCP_Logo.jpg",
-            "link": "shopify:\/\/collections\/clay-mclaurin-studio-fabric"
+            "logo": "shopify://shop_images/MCP_Logo.jpg",
+            "link": "shopify://collections/clay-mclaurin-studio-fabric"
           }
         },
         "custom_block_nmDg9K": {
@@ -219,105 +228,105 @@
         "custom_block_Mq4cGC": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/NileandYork.png",
-            "link": "shopify:\/\/collections"
+            "logo": "shopify://shop_images/NileandYork.png",
+            "link": "shopify://collections"
           }
         },
         "custom_block_KdVz6j": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Screenshot_2024-08-23_at_3.54.08_PM.png",
-            "link": "shopify:\/\/collections\/paolo-moschino-lighting"
+            "logo": "shopify://shop_images/Screenshot_2024-08-23_at_3.54.08_PM.png",
+            "link": "shopify://collections/paolo-moschino-lighting"
           }
         },
         "custom_block_rVGUtH": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/PM_Logo.jpg",
-            "link": "shopify:\/\/collections\/penny-morrison-textiles-fabric"
+            "logo": "shopify://shop_images/PM_Logo.jpg",
+            "link": "shopify://collections/penny-morrison-textiles-fabric"
           }
         },
         "custom_block_fK4FXX": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/pdtlogo.jpg",
-            "link": "shopify:\/\/collections\/peter-dunham-textiles-fabric"
+            "logo": "shopify://shop_images/pdtlogo.jpg",
+            "link": "shopify://collections/peter-dunham-textiles-fabric"
           }
         },
         "custom_block_dN7KfR": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/ROT_Logo.png",
-            "link": "shopify:\/\/collections\/rule-of-three-studio-fabric"
+            "logo": "shopify://shop_images/ROT_Logo.png",
+            "link": "shopify://collections/rule-of-three-studio-fabric"
           }
         },
         "custom_block_YaxqJC": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Screenshot_2024-08-23_at_4.24.24_PM.png",
-            "link": "shopify:\/\/collections\/salvesen-graham-fabric"
+            "logo": "shopify://shop_images/Screenshot_2024-08-23_at_4.24.24_PM.png",
+            "link": "shopify://collections/salvesen-graham-fabric"
           }
         },
         "custom_block_bRRFmi": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/sarahvanrenen_logo.jpg",
-            "link": "shopify:\/\/collections\/sarah-vanrenen-fabric"
+            "logo": "shopify://shop_images/sarahvanrenen_logo.jpg",
+            "link": "shopify://collections/sarah-vanrenen-fabric"
           }
         },
         "custom_block_3XqPax": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Screenshot_2024-09-18_at_10.22.01_AM.png",
-            "link": "shopify:\/\/collections\/schuyler-samperton-textiles-fabric"
+            "logo": "shopify://shop_images/Screenshot_2024-09-18_at_10.22.01_AM.png",
+            "link": "shopify://collections/schuyler-samperton-textiles-fabric"
           }
         },
         "custom_block_8XfrQb": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/Screenshot_2024-09-18_at_10.24.52_AM.png",
-            "link": "shopify:\/\/collections\/serena-dugan-studio-fabric"
+            "logo": "shopify://shop_images/Screenshot_2024-09-18_at_10.24.52_AM.png",
+            "link": "shopify://collections/serena-dugan-studio-fabric"
           }
         },
         "custom_block_kJzhq6": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/SPD.png",
-            "link": "shopify:\/\/collections\/sister-parish-fabric"
+            "logo": "shopify://shop_images/SPD.png",
+            "link": "shopify://collections/sister-parish-fabric"
           }
         },
         "custom_block_jVCbyn": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/S4.png",
-            "link": "shopify:\/\/collections\/studio-four-nyc-fabric"
+            "logo": "shopify://shop_images/S4.png",
+            "link": "shopify://collections/studio-four-nyc-fabric"
           }
         },
         "custom_block_Cm9dbC": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/TT_logo.png",
-            "link": "shopify:\/\/collections\/tulu-textiles-fabric"
+            "logo": "shopify://shop_images/TT_logo.png",
+            "link": "shopify://collections/tulu-textiles-fabric"
           }
         },
         "custom_block_KUFif3": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/volga_logo.webp",
-            "link": "shopify:\/\/collections\/volga-linen-fabric"
+            "logo": "shopify://shop_images/volga_logo.webp",
+            "link": "shopify://collections/volga-linen-fabric"
           }
         },
         "custom_block_9KAHLi": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/WG_Logo.jpg",
-            "link": "shopify:\/\/collections\/walter-g-fabric"
+            "logo": "shopify://shop_images/WG_Logo.jpg",
+            "link": "shopify://collections/walter-g-fabric"
           }
         },
         "custom_block_BAfHUG": {
           "type": "custom-block",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/ZoeDesignLogo-white.png",
+            "logo": "shopify://shop_images/ZoeDesignLogo-white.png",
             "link": ""
           }
         }
@@ -363,7 +372,7 @@
         "custom_block_BAfHUG"
       ],
       "settings": {
-        "speed": 50
+        "speed": 100
       }
     },
     "rca_proudly_present_M66Hzy": {
@@ -372,35 +381,35 @@
         "image_G9BUnU": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/BWH_Spring.webp",
-            "secondry_image": "shopify:\/\/shop_images\/KinleyChairSolidWhite.jpg",
+            "image": "shopify://shop_images/BWH_Spring.webp",
+            "secondry_image": "shopify://shop_images/KinleyChairSolidWhite.jpg",
             "title": "Bunny Williams Home",
-            "link": "shopify:\/\/collections\/bunny-williams-home-furniture"
+            "link": "shopify://collections/bunny-williams-home-furniture"
           }
         },
         "image_FRKamc": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-09-17_at_2.46.13_PM.png",
-            "secondry_image": "shopify:\/\/shop_images\/CL_JVB_1.jpg",
+            "image": "shopify://shop_images/Screenshot_2024-09-17_at_2.46.13_PM.png",
+            "secondry_image": "shopify://shop_images/CL_JVB_1.jpg",
             "title": "Cape Looms",
-            "link": "shopify:\/\/collections\/cape-looms-by-jvb-carpets"
+            "link": "shopify://collections/cape-looms-by-jvb-carpets"
           }
         },
         "image_Twypre": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ODLR-Manisalez-Blue.jpg",
-            "secondry_image": "shopify:\/\/shop_images\/ODLR-Spain-1971-Blue.jpg",
+            "image": "shopify://shop_images/ODLR-Manisalez-Blue.jpg",
+            "secondry_image": "shopify://shop_images/ODLR-Spain-1971-Blue.jpg",
             "title": "Elson & Company",
-            "link": "shopify:\/\/collections\/elson-and-company-carpets"
+            "link": "shopify://collections/elson-and-company-carpets"
           }
         },
         "image_g3kXzJ": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Jai_1.jpg",
-            "secondry_image": "shopify:\/\/shop_images\/Jai_2.jpg",
+            "image": "shopify://shop_images/Jai_1.jpg",
+            "secondry_image": "shopify://shop_images/Jai_2.jpg",
             "title": "From Jaipur With Love",
             "link": ""
           }
@@ -408,37 +417,37 @@
         "image_XRkUf9": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ec4701509ab4cf115d5a6a9d52bb225f.png",
-            "secondry_image": "shopify:\/\/shop_images\/JVB-Benguela-Stool_92f5794d-b096-4a83-852d-8725f8bb35c3.jpg",
+            "image": "shopify://shop_images/ec4701509ab4cf115d5a6a9d52bb225f.png",
+            "secondry_image": "shopify://shop_images/JVB-Benguela-Stool_92f5794d-b096-4a83-852d-8725f8bb35c3.jpg",
             "title": "Justin Van Breda London",
-            "link": "shopify:\/\/collections\/justin-van-breda-london"
+            "link": "shopify://collections/justin-van-breda-london"
           }
         },
         "image_XgFFaY": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Nimes_Install_2_600.jpg",
-            "secondry_image": "shopify:\/\/shop_images\/Stanton_Lounge_Chair_Angle_600_09d72cff-9d0e-4471-9e06-3d1b698118d7.jpg",
+            "image": "shopify://shop_images/Nimes_Install_2_600.jpg",
+            "secondry_image": "shopify://shop_images/Stanton_Lounge_Chair_Angle_600_09d72cff-9d0e-4471-9e06-3d1b698118d7.jpg",
             "title": "Madeline Stuart Collection",
-            "link": "shopify:\/\/collections\/madeline-stuart-collection"
+            "link": "shopify://collections/madeline-stuart-collection"
           }
         },
         "image_6bc8Ni": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/PML_STORE.jpg",
-            "secondry_image": "shopify:\/\/shop_images\/Adnet-Bedside-Table-Tan1_7494c3d9-5a92-406b-94bc-3070a3f67304.jpg",
+            "image": "shopify://shop_images/PML_STORE.jpg",
+            "secondry_image": "shopify://shop_images/Adnet-Bedside-Table-Tan1_7494c3d9-5a92-406b-94bc-3070a3f67304.jpg",
             "title": "Paolo Moschino Collection",
-            "link": "shopify:\/\/collections\/paolo-moschino-furniture"
+            "link": "shopify://collections/paolo-moschino-furniture"
           }
         },
         "image_JqcRxT": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/12f353d56281aa8008dae737d8f9abef.png",
-            "secondry_image": "shopify:\/\/shop_images\/Loma1.jpg",
+            "image": "shopify://shop_images/12f353d56281aa8008dae737d8f9abef.png",
+            "secondry_image": "shopify://shop_images/Loma1.jpg",
             "title": "Peter Dunham Home Outdoor Furniture",
-            "link": "shopify:\/\/collections\/peter-dunham-home-furniture"
+            "link": "shopify://collections/peter-dunham-home-furniture"
           }
         }
       },
@@ -474,11 +483,11 @@
         "bg_color": "#648390",
         "image_alignment": "right",
         "desktop_height": 488,
-        "image": "shopify:\/\/shop_images\/9a8d200e55d1de99f74e6e38179d6691.png",
+        "image": "shopify://shop_images/9a8d200e55d1de99f74e6e38179d6691.png",
         "heading": "SET YOUR TABLE WITH CAROLINA IRVING & DAUGHTERS!",
         "text": "We are thrilled to represent Carolina Irving & Daughters through our Texas showrooms. Founded by textile designer Carolina Irving , with her daughters Olympia and Ariadne Irving, each piece is hand-made by local artisans in independent, family-run ateliers. Click the link below to explore their offerings and let us know what you need to entertain in style!",
         "link_text": "VIEW THEIR COLLECTION OF TABLE TOP",
-        "link_url": "shopify:\/\/collections\/carolina-irving-daughters-1"
+        "link_url": "shopify://collections/carolina-irving-daughters-1"
       }
     },
     "selling_textiles_UNVikb": {
@@ -487,57 +496,57 @@
         "image_drBKeK": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MET-FAB-Zuma_Emerald_49216819-e3ab-4d72-b947-1063f49992fb.jpg",
+            "image": "shopify://shop_images/MET-FAB-Zuma_Emerald_49216819-e3ab-4d72-b947-1063f49992fb.jpg",
             "title": "Meredith Ellis Textiles",
-            "link": "shopify:\/\/collections\/meredith-ellis-textiles"
+            "link": "shopify://collections/meredith-ellis-textiles"
           }
         },
         "image_A34ctx": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Pink_City.jpg",
+            "image": "shopify://shop_images/Pink_City.jpg",
             "title": "Jennifer Shorto Wallpapers",
-            "link": "shopify:\/\/collections\/jennifer-shorto-textiles-wallpaper"
+            "link": "shopify://collections/jennifer-shorto-textiles-wallpaper"
           }
         },
         "image_Q8JeAL": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SDS-FAB-Anya-Azure_3dd3280d-37ca-4ac1-bce8-71c65a4dc6b0.jpg",
+            "image": "shopify://shop_images/SDS-FAB-Anya-Azure_3dd3280d-37ca-4ac1-bce8-71c65a4dc6b0.jpg",
             "title": "Serena Dugan Studio",
-            "link": "shopify:\/\/collections\/serena-dugan-studio-fabric"
+            "link": "shopify://collections/serena-dugan-studio-fabric"
           }
         },
         "image_YacKzq": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/f489a78b950844b3158652bfc23149f3.png",
+            "image": "shopify://shop_images/f489a78b950844b3158652bfc23149f3.png",
             "title": "Carolina Irving",
-            "link": "shopify:\/\/collections\/carolina-irving-textiles-fabric"
+            "link": "shopify://collections/carolina-irving-textiles-fabric"
           }
         },
         "image_dEVJMX": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/aa07a141f815c60cc52e13399df513cf.png",
+            "image": "shopify://shop_images/aa07a141f815c60cc52e13399df513cf.png",
             "title": "Casa Branca",
-            "link": "shopify:\/\/collections\/casa-branca-fabrics"
+            "link": "shopify://collections/casa-branca-fabrics"
           }
         },
         "image_DApxAE": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/e3665e65b978e64520d0a43d96da48fa.png",
+            "image": "shopify://shop_images/e3665e65b978e64520d0a43d96da48fa.png",
             "title": "Casa Lopez",
-            "link": "shopify:\/\/collections\/casa-lopez-fabric"
+            "link": "shopify://collections/casa-lopez-fabric"
           }
         },
         "image_R9XdiL": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/18852248ddc31578bac62b57cbbbc382.png",
+            "image": "shopify://shop_images/18852248ddc31578bac62b57cbbbc382.png",
             "title": "Casamota",
-            "link": "shopify:\/\/collections\/casamota-new-fabric"
+            "link": "shopify://collections/casamota-new-fabric"
           }
         }
       },
@@ -553,7 +562,7 @@
       "settings": {
         "heading": "Featured Fabric Collections!",
         "btn_text": "View Newest Releases",
-        "btn_link": "shopify:\/\/collections\/new-arrivals",
+        "btn_link": "shopify://collections/new-arrivals",
         "btn_text_sec": "Testing",
         "btn_link_sec": ""
       }
@@ -564,11 +573,11 @@
         "bg_color": "#648390",
         "image_alignment": "left",
         "desktop_height": 540,
-        "image": "shopify:\/\/shop_images\/fe5d66092813ff1c3b2c872ef980a7eb_2.png",
+        "image": "shopify://shop_images/fe5d66092813ff1c3b2c872ef980a7eb_2.png",
         "heading": "PENNY MORRISON ACCESSORIES",
         "text": "JAMES is your home for all things Penny Morrison!\n<br><br>\n\nFrom her luxurious fabrics and wallpapers, to her beautiful bespoke lamps, lampshades and everything in between. <br><br>\n\nContact your nearest showroom to see what we have in stock or have us ship directly to you or your client.",
         "link_text": "View all Penny Morrison accessories",
-        "link_url": "shopify:\/\/collections\/penny-morrison-textiles-fabric"
+        "link_url": "shopify://collections/penny-morrison-textiles-fabric"
       }
     },
     "collections_tab_Xf643N": {
@@ -588,7 +597,7 @@
         "feature_block_HynJUj": {
           "type": "feature_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-08-15_at_4.07.44_PM.png",
+            "image": "shopify://shop_images/Screenshot_2024-08-15_at_4.07.44_PM.png",
             "badge_text": "NYC",
             "event_heading": "Nathan Turner Launch!",
             "event_details": "Join us for the launch of Nathan Turner Textiles and Wallcoverings!",
@@ -602,10 +611,10 @@
         "feature_block_np3M64": {
           "type": "feature_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/JAMES_RA_Logo.png",
+            "image": "shopify://shop_images/JAMES_RA_Logo.png",
             "badge_text": "Grand Opening",
             "event_heading": "JAMES CABANA x RED ANTLER",
-            "event_details": "Decorated by JAMES Founder, Meredith Ellis, the JAMES Cabana at the Red Antler Bungalows is the new luxurious retreat \/ pool house \/ event space at the Red Antler Bungalows in Round Top!  Featuring JAMES products top to bottom, the space acts as a livable showroom of ideas and inspiration.",
+            "event_details": "Decorated by JAMES Founder, Meredith Ellis, the JAMES Cabana at the Red Antler Bungalows is the new luxurious retreat / pool house / event space at the Red Antler Bungalows in Round Top!  Featuring JAMES products top to bottom, the space acts as a livable showroom of ideas and inspiration.",
             "event_date": "October 10th, 2024",
             "event_time": "",
             "event_location": "Round Top",
@@ -622,7 +631,7 @@
       "settings": {
         "header_text": "Latest Lookbooks",
         "link_text": "See All Lookbooks",
-        "link_url": "shopify:\/\/pages\/events"
+        "link_url": "shopify://pages/events"
       }
     },
     "showroom_locations_jQ7kW6": {
@@ -631,7 +640,7 @@
         "custom_block_WrJBQM": {
           "type": "custom-block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/3685bdddcb2848459f4dd7a2165d9b73.png",
+            "image": "shopify://shop_images/3685bdddcb2848459f4dd7a2165d9b73.png",
             "card_title": "Dallas Showroom",
             "address": "1025 N. Stemmons Fwy #250\nDallas, TX 75207",
             "phone": "(214)295-7500",
@@ -641,7 +650,7 @@
         "custom_block_UXPcew": {
           "type": "custom-block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/40d8861db3ffb7ded23bb2ab8b660b60.png",
+            "image": "shopify://shop_images/40d8861db3ffb7ded23bb2ab8b660b60.png",
             "card_title": "Houston Showroom",
             "address": "5120 Woodway Drive #3029\nHouston, TX 77056",
             "phone": "(713)955-1053",
@@ -651,7 +660,7 @@
         "custom_block_An6d8h": {
           "type": "custom-block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/da0136f7f14df851fa34cd4e658824c6.png",
+            "image": "shopify://shop_images/da0136f7f14df851fa34cd4e658824c6.png",
             "card_title": "NYC Showroom",
             "address": "306 E. 61st Street, 4th Floor\nNew York, NY 10065",
             "phone": "(212) 731-0838",
