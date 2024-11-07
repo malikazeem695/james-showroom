@@ -76,7 +76,7 @@
           "settings": {
             "image": "shopify://shop_images/40d8861db3ffb7ded23bb2ab8b660b60_1.png",
             "card_title": "Design Social",
-            "card_description": "Lorem ipsum dolor sit amet consectetur. Quis ut commodo nec egestas amet vitae pharetra tristique quis. Lorem ipsum dolor sit amet consectetur. Quis ut commodo nec egestas amet vitae pharetra tristique quis."
+            "card_description": "Looking ahead to 2025, JAMES will be a sponsor for the April Design Social Pop-up in Dallas featuring many of our talented vendors"
           }
         },
         "custom_block_zDaQKE": {
@@ -94,10 +94,10 @@
         "custom_block_zDaQKE"
       ],
       "settings": {
-        "main_heading": "JAMES Showroom in Collaboration",
-        "description": "Contact us if you are interested in hosting a pop-up  event in our Worth Avenue space.",
-        "event_rsvp_text": "Schedule An Event",
-        "event_rsvp_url": ""
+        "main_heading": "Upcoming Opportunities with JAMES Showroom",
+        "description": "Contact any of our showrooms to chat with our teams about future events and collection releases.",
+        "event_rsvp_text": "Request information",
+        "event_rsvp_url": "mailto:hello@jamesshowroom.com"
       }
     },
     "newsletter": {
