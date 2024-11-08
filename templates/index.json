@@ -563,7 +563,7 @@
         "heading": "Featured Fabric Collections!",
         "btn_text": "View Newest Releases",
         "btn_link": "shopify://collections/new-arrivals",
-        "btn_text_sec": "Testing",
+        "btn_text_sec": "",
         "btn_link_sec": ""
       }
     },
