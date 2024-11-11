@@ -466,6 +466,19 @@
         "description": "In additon to our highly curated collection of textiles and wall coverings, we offer some of the best bespoke Lighting, Furniture, Carpet, and Accessories from around the globe!"
       }
     },
+    "rca_image_text_teXRKU": {
+      "type": "rca_image-text",
+      "settings": {
+        "bg_color": "#648390",
+        "image_alignment": "left",
+        "desktop_height": 460,
+        "image": "shopify://shop_images/CB_FondamentaCollection.jpg",
+        "heading": "Introducing the Casa Branca Fondamenta Collection!",
+        "text": "Fondamenta, or \"foundation\", is Casa Branca's newest collection one can return to time after time. These timeless textiles are born from one of the most basic and essential senses: touch.",
+        "link_text": "Explore Fondamenta",
+        "link_url": ""
+      }
+    },
     "collections_tab_jTqFMB": {
       "type": "collections-tab",
       "settings": {
@@ -695,6 +708,7 @@
     "rca_hero_section_QnfmXP",
     "rca_logo_section_FHy6qh",
     "rca_proudly_present_M66Hzy",
+    "rca_image_text_teXRKU",
     "collections_tab_jTqFMB",
     "rca_image_text_CNHwqY",
     "selling_textiles_UNVikb",
