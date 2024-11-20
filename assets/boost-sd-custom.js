@@ -105,6 +105,23 @@ seventhItem.parentNode.insertBefore(promotionBanner, seventhItem.nextSibling);
           }
        })
     })
+   },
+   productListAfterRender: (componentRegistry) => {
+      componentRegistry.useComponentPlugin('HeaderDescription', {
+          name: 'Modify Collection Header',
+          enabled: true,
+          apply: () => ({
+              afterRender(element) {
+                const richtextMetafield = document.querySelector('.richtextMetafield');
+                const headerDescription = document.querySelector('.boost-sd__header-description');
+                
+                if (richtextMetafield && headerDescription && !headerDescription.dataset.appended) {
+                    headerDescription.innerHTML += richtextMetafield.innerHTML;
+                    headerDescription.dataset.appended = 'true';
+                }
+              },
+          }),
+      });
   }
 }
 

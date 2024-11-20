@@ -31,7 +31,7 @@
 {% schema %}
     {
       "name": "Showroom Locations",
-      "max_blocks": 3,
+      "max_blocks": 6,
       "settings": [
         {
           "type": "text",
@@ -110,7 +110,7 @@ section.showroom-locations h2{
     display: flex;
     padding-bottom: 24px;
     flex-direction: column;
-    width: 416px;
+    width: 32%;
     justify-content: center;
     align-items: flex-start;
     gap: var(--dimensions-spacing-md, 28px);
@@ -140,6 +140,7 @@ p.value {
     gap: 16px;
     align-self: stretch;
     place-content: center;
+        flex-wrap: wrap;
 }
   
   .showroom-card img {

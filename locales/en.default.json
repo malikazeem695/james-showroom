@@ -469,6 +469,8 @@
   "products": {
     "general": {
       "previous": "Previous",
+      "previous_product_html": "Previous",
+      "next_product_html": "Next",
       "next": "Next",
       "from": "From",
       "quick_add": "Quick add",
