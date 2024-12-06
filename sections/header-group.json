@@ -14,7 +14,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "promo_text": "<p>PENNY MORRISON AND SARAH VANRENEN NOW AVAILABLE THROUGH JAMES-NYC!</p>",
+        "promo_text": "<p><a href=\"/collections/penny-morrison-textiles-fabric\" target=\"_blank\" title=\"Penny Morrison Textiles | Fabric\">PENNY MORRISON</a> AND <a href=\"/collections/sarah-vanrenen-fabric\" target=\"_blank\" title=\"Sarah Vanrenen | Fabric\">SARAH VANRENEN</a> NOW AVAILABLE THROUGH JAMES-NYC!</p>",
         "social_icons_header": true,
         "phone_number": "",
         "top_bar_menu": "",
